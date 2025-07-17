@@ -88,7 +88,7 @@ public class IntegrationTests : IDisposable
         
         result.IsSuccess.ShouldBeTrue();
         result.Value.XmlContent.ShouldNotBeNullOrEmpty();
-        result.Value.XmlContent.ShouldContain("DecodedData_Simulated");
+        result.Value.XmlContent.ShouldContain("<RLLContent>");
         result.Value.Warnings.ShouldNotBeEmpty();
     }
 

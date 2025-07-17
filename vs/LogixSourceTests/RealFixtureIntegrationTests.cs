@@ -51,7 +51,7 @@ public class RealFixtureIntegrationTests
         result.Value.ShouldNotBeNull();
         result.Value.XmlContent.ShouldNotBeNullOrEmpty();
         result.Value.XmlContent.ShouldContain("<?xml version=\"1.0\"");
-        result.Value.XmlContent.ShouldContain("DecodedData_Simulated");
+        result.Value.XmlContent.ShouldContain("<RLLContent>");
         result.Value.Warnings.ShouldBeEmpty($"Config {encryptionConfig} should not have warnings");
         
         // These represent the successful decryption scenarios that V19/V24 fixtures support
@@ -76,7 +76,7 @@ public class RealFixtureIntegrationTests
         result.Value.ShouldNotBeNull();
         result.Value.XmlContent.ShouldNotBeNullOrEmpty();
         result.Value.XmlContent.ShouldContain("<?xml version=\"1.0\"");
-        result.Value.XmlContent.ShouldContain("DecodedData_Simulated");
+        result.Value.XmlContent.ShouldContain("<RLLContent>");
         result.Value.Warnings.ShouldBeEmpty($"File {fileName} should not have warnings");
         
         // These are real L5X files with encrypted content that would be successfully decrypted
@@ -139,12 +139,23 @@ public class RealFixtureIntegrationTests
         var result = await _decryptor.DecryptFromFileAsync(filePath);
         
         // Assert
-        result.IsSuccess.ShouldBeTrue();
+        result.IsSuccess.ShouldBeTrue("Config 8 should successfully decrypt the L5X content");
         result.Value.ShouldNotBeNull();
         result.Value.XmlContent.ShouldNotBeNullOrEmpty();
         result.Value.XmlContent.ShouldContain("<?xml version=\"1.0\"");
+        
+        // V27 successfully decrypts the encoded content to readable format
+        result.Value.XmlContent.ShouldContain("<RLLContent>");
+        result.Value.XmlContent.ShouldContain("<Rung Number=\"0\"");
+        result.Value.XmlContent.ShouldContain("XIC(Agitator_FB0)OTE(Chocolate_FB0)");
+        
+        // But shows warning about key recovery
         result.Value.Warnings.ShouldContain(w => w.Contains("EncryptionConfig=\"8\""));
         result.Value.Warnings.ShouldContain(w => w.Contains("Source key recovery is not supported"));
+        
+        // Should not contain the original encoded data
+        result.Value.XmlContent.ShouldNotContain("<EncodedData");
+        result.Value.XmlContent.ShouldNotContain("AAjYHZvqz2lUS0ksVp3lV");
     }
 
     [Theory]
