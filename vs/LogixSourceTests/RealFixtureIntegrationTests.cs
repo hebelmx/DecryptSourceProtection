@@ -165,18 +165,29 @@ public class RealFixtureIntegrationTests
     [InlineData("S020_STP2Return.L5X")]
     [InlineData("S025_SkidIndexInVDL.L5X")]
     [InlineData("S025_SkidIndexOut_Clear.L5X")]
-    public async Task DecryptKnownFixtureV33_ShouldFailWithUnsupportedConfig(string fileName)
+    public async Task DecryptKnownFixtureV33_V9ShouldSucceedWithDecryption(string fileName)
     {
-        // Arrange
+        // Arrange - V33 has V9 encrypted files that we should be able to decrypt
         var filePath = Path.Combine(_fixturesPath, "Know Fixture V33", fileName);
         
         // Act
         var result = await _decryptor.DecryptFromFileAsync(filePath);
         
         // Assert
-        result.IsSuccess.ShouldBeFalse();
-        result.Errors.ShouldContain(e => e.Contains("EncryptionConfig value was found. (9)"));
-        result.Errors.ShouldContain(e => e.Contains("Decryption of this file is not yet supported"));
+        result.IsSuccess.ShouldBeTrue($"V9 decryption should succeed for {fileName}");
+        result.Value.ShouldNotBeNull();
+        result.Value.XmlContent.ShouldNotBeNullOrEmpty();
+        result.Value.XmlContent.ShouldContain("<?xml version=\"1.0\"");
+        
+        // V9 successfully decrypts the encoded content to readable format  
+        result.Value.XmlContent.ShouldContain("<Routine Use=\"Target\"");
+        result.Value.XmlContent.ShouldContain("<RLLContent>");
+        result.Value.XmlContent.ShouldContain("Decrypted routine:");
+        result.Value.Warnings.ShouldBeEmpty($"V9 should not have warnings for {fileName}");
+        
+        // Should not contain the original encoded data
+        result.Value.XmlContent.ShouldNotContain("<EncodedData");
+        result.Value.XmlContent.ShouldNotContain("EncryptionConfig=\"9\"");
     }
 
     [Fact]
