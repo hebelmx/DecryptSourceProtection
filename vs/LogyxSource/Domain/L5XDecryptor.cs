@@ -559,6 +559,12 @@ END_IF;]]></Text>
                 if (result.Success) return (true, result.Content);
             }
             
+            // Pattern 4: ROUTINE NAME-BASED SALTING (new approach!)
+            // The routine name is an excellent salt candidate - it's unique per routine and available in plaintext
+            _logger.LogInformation("V9 Differential: Testing routine name-based salting for {RoutineName}", routineName);
+            var saltResult = TryRoutineNameSaltVariations(encryptedBytes, keys, routineName);
+            if (saltResult.Success) return (true, saltResult.Content);
+            
             return (false, "");
         }
         catch (Exception ex)
@@ -864,6 +870,176 @@ END_IF;]]></Text>
             catch { }
         }
         return (false, "");
+    }
+    
+    // ==== ROUTINE NAME-BASED SALTING METHODS ====
+    // These methods implement comprehensive routine name-based salting as suggested
+    
+    private (bool Success, string Content) TryRoutineNameSaltVariations(byte[] encryptedBytes, IReadOnlyList<string> keys, string routineName)
+    {
+        _logger.LogInformation("🧂 Testing routine name salt variations for {RoutineName}", routineName);
+        
+        foreach (var key in keys)
+        {
+            // 1. Direct routine name as salt
+            var result = TryHashedSaltDecryption(encryptedBytes, key, routineName);
+            if (result.Success) 
+            {
+                _logger.LogInformation("✅ SUCCESS: Direct routine name salt with {Key}", key);
+                return result;
+            }
+            
+            // 2. Routine name without underscores/numbers
+            var cleanName = System.Text.RegularExpressions.Regex.Replace(routineName, @"[^a-zA-Z]", "");
+            result = TryHashedSaltDecryption(encryptedBytes, key, cleanName);
+            if (result.Success)
+            {
+                _logger.LogInformation("✅ SUCCESS: Clean routine name salt '{CleanName}' with {Key}", cleanName, key);
+                return result;
+            }
+            
+            // 3. Routine name in uppercase
+            result = TryHashedSaltDecryption(encryptedBytes, key, routineName.ToUpper());
+            if (result.Success)
+            {
+                _logger.LogInformation("✅ SUCCESS: Uppercase routine name salt with {Key}", key);
+                return result;
+            }
+            
+            // 4. Routine name in lowercase
+            result = TryHashedSaltDecryption(encryptedBytes, key, routineName.ToLower());
+            if (result.Success)
+            {
+                _logger.LogInformation("✅ SUCCESS: Lowercase routine name salt with {Key}", key);
+                return result;
+            }
+            
+            // 5. Just the prefix (e.g., "S025" from "S025_SkidIndexInVDL")
+            if (routineName.Contains("_"))
+            {
+                var prefix = routineName.Split('_')[0];
+                result = TryHashedSaltDecryption(encryptedBytes, key, prefix);
+                if (result.Success)
+                {
+                    _logger.LogInformation("✅ SUCCESS: Routine prefix salt '{Prefix}' with {Key}", prefix, key);
+                    return result;
+                }
+            }
+            
+            // 6. Just the suffix (e.g., "SkidIndexInVDL" from "S025_SkidIndexInVDL")
+            if (routineName.Contains("_"))
+            {
+                var suffix = routineName.Split('_', 2)[1];
+                result = TryHashedSaltDecryption(encryptedBytes, key, suffix);
+                if (result.Success)
+                {
+                    _logger.LogInformation("✅ SUCCESS: Routine suffix salt '{Suffix}' with {Key}", suffix, key);
+                    return result;
+                }
+            }
+            
+            // 7. Routine name with common RSLogix prefixes
+            var rsLogixPrefixes = new[] { "RSLogix", "AB", "PLC", "L5X", "V9" };
+            foreach (var prefix in rsLogixPrefixes)
+            {
+                result = TryHashedSaltDecryption(encryptedBytes, key, prefix + routineName);
+                if (result.Success)
+                {
+                    _logger.LogInformation("✅ SUCCESS: Prefixed routine name salt '{Prefix}{RoutineName}' with {Key}", prefix, routineName, key);
+                    return result;
+                }
+            }
+        }
+        
+        return (false, "");
+    }
+    
+    private (bool Success, string Content) TryHashedSaltDecryption(byte[] encryptedBytes, string key, string salt)
+    {
+        try
+        {
+            // Test different hashing algorithms with salt
+            var hashAlgorithms = new (string Name, Func<string, byte[]> HashFunc)[]
+            {
+                ("MD5", (string input) => System.Security.Cryptography.MD5.HashData(System.Text.Encoding.UTF8.GetBytes(input))),
+                ("SHA1", (string input) => System.Security.Cryptography.SHA1.HashData(System.Text.Encoding.UTF8.GetBytes(input))),
+                ("SHA256", (string input) => System.Security.Cryptography.SHA256.HashData(System.Text.Encoding.UTF8.GetBytes(input))),
+                ("SHA512", (string input) => System.Security.Cryptography.SHA512.HashData(System.Text.Encoding.UTF8.GetBytes(input)))
+            };
+            
+            foreach (var (hashName, hashFunc) in hashAlgorithms)
+            {
+                // 1. Key + Salt combination
+                var keySalt = hashFunc(key + salt);
+                var result = TryAESDecryptWithSpecificKey(encryptedBytes, keySalt);
+                if (result.Success)
+                {
+                    _logger.LogInformation("🎯 MATCH: {HashName}({Key} + {Salt})", hashName, key, salt);
+                    return result;
+                }
+                
+                // 2. Salt + Key combination
+                var saltKey = hashFunc(salt + key);
+                result = TryAESDecryptWithSpecificKey(encryptedBytes, saltKey);
+                if (result.Success)
+                {
+                    _logger.LogInformation("🎯 MATCH: {HashName}({Salt} + {Key})", hashName, salt, key);
+                    return result;
+                }
+                
+                // 3. Key | Salt (with separator)
+                var keySaltSeparated = hashFunc(key + "|" + salt);
+                result = TryAESDecryptWithSpecificKey(encryptedBytes, keySaltSeparated);
+                if (result.Success)
+                {
+                    _logger.LogInformation("🎯 MATCH: {HashName}({Key} | {Salt})", hashName, key, salt);
+                    return result;
+                }
+                
+                // 4. Double hashing: Hash(Key) + Hash(Salt)
+                var doubleHash = hashFunc(Convert.ToHexString(hashFunc(key)) + Convert.ToHexString(hashFunc(salt)));
+                result = TryAESDecryptWithSpecificKey(encryptedBytes, doubleHash);
+                if (result.Success)
+                {
+                    _logger.LogInformation("🎯 MATCH: {HashName}(Hash({Key}) + Hash({Salt}))", hashName, key, salt);
+                    return result;
+                }
+                
+                // 5. XOR-based combination
+                var keyHash = hashFunc(key);
+                var saltHash = hashFunc(salt);
+                if (keyHash.Length == saltHash.Length)
+                {
+                    var xorResult = new byte[keyHash.Length];
+                    for (int i = 0; i < keyHash.Length; i++)
+                    {
+                        xorResult[i] = (byte)(keyHash[i] ^ saltHash[i]);
+                    }
+                    result = TryAESDecryptWithSpecificKey(encryptedBytes, xorResult);
+                    if (result.Success)
+                    {
+                        _logger.LogInformation("🎯 MATCH: XOR({HashName}({Key}), {HashName}({Salt}))", hashName, key, salt);
+                        return result;
+                    }
+                }
+            }
+            
+            // 6. Try RC4 with salted key
+            var rc4Key = System.Security.Cryptography.SHA256.HashData(System.Text.Encoding.UTF8.GetBytes(key + salt));
+            var rc4Result = TryRC4Decrypt(encryptedBytes, rc4Key);
+            if (rc4Result.Success)
+            {
+                _logger.LogInformation("🎯 MATCH: RC4 with SHA256({Key} + {Salt})", key, salt);
+                return rc4Result;
+            }
+            
+            return (false, "");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error in hashed salt decryption with key '{Key}' and salt '{Salt}'", key, salt);
+            return (false, "");
+        }
     }
     
     private (bool Success, string Content) TryRC4Decrypt(byte[] encryptedBytes, byte[] keyBytes)
