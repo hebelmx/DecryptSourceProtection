@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="27.00" TargetName="MainRoutine" TargetType="Routine" TargetSubType="RLL" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Wed Jul 16 23:00:14 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="l71">
+<DataTypes Use="Context">
+</DataTypes>
+<Programs Use="Context">
+<Program Use="Context" Name="MainProgram">
+<Tags Use="Context">
+<Tag Name="bits" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+</Tags>
+<Routines Use="Context">
+<EncodedData EncodedType="Routine" Name="MainRoutine" Type="RLL" EncryptionConfig="8">
+AAgPcTGXiHuBR0CegTIbHFk7A0+/BDXbY4LDxdjDDffAa/3/x+sS2v3KuR9D76p68a9U9evb8C4X8C84Papw86/TUWjR/dFis9XUeTrrA8EVglJq9v0z3sCPderBYLh9HHKVb/ZG/T94Udzta5CNKkut9TwgcKKfzvoqYFFfDBaC6nWFBV+noSv1BZaCownDPrS2eqp5jxJBGXopySHpp8siWxRevQ3GJr9a+T/qwue9isZpO+nNhRDg0dnoQWN2XNKRx/1V9L8LabXpIQDSOX+bnnBFwSHcYEkwzJXkE7Mk/wkUhJSrG6MGFvaeWiQe8dcqnqzRXny5pdH8RNZTiQKLEbGGe24UBF8uev/ot1747Pbjiva4jYN8vshoesCUVAa92yC20qE5KvuzkcVJkb0rQktBpFKsziRqWvyCNXpa/cP3ZH5MdRhBmfSiTmJ/4aiv75vv2NoZEgHufBF6x+ol490KIwspXfPSeodjrXKVoi5d5u1g//eBuEfdX7on9WaGei/BLZUouHG2QBsOFpalEwm2S8p/LQj3u2A1bgMKRgDQGShyrD4UrbZe9B8ZLnR1I3EkegCdLq+EfQfK64g9gOK2jf25jDHOE9ly0GcGYNzz7qt8qH7oIllLPpmMWiIRB++PWrVFOeDBIU2NtcwynKZJuBYgWD7MZ4GW2IzW8wNBKRF9NZQlZu7pzKAQILDoZBRsMMz3pLfnWAzZ4qBD</EncodedData>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>
