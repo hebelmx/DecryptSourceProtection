@@ -1,0 +1,1315 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Maintenance And
+Stopping Modes for
+Typical Station-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="32.02" TargetName="M010_StationStopModes" TargetType="Routine" TargetSubType="RLL" TargetClass="Standard" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Thu Jul 17 08:03:02 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="RM21HWO10001C1">
+<DataTypes Use="Context">
+<DataType Name="uc_CellHoldModesUser" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Additional User
+Cell Stop And
+Maintenance
+Operating
+Mode Requests
+<@VER 1.170>
+<Edits Allowed>]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZuc_CellHol0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="User1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZuc_CellHol0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Hold Mode 1]]>
+</Description>
+</Member>
+<Member Name="User2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZuc_CellHol0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Hold Mode 2]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="uz_HoldModes" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Cell / Station
+Stop And Hold
+Mode Requests
+<@VER 1.312>
+<@EDITS ALLOWED>]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZuz_HoldMod0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="FastStop" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZuz_HoldMod0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Stop Now
+Do Not Start
+New Actions]]>
+</Description>
+</Member>
+<Member Name="EOCHold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZuz_HoldMod0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Stop At
+End Of Cycle]]>
+</Description>
+</Member>
+<Member Name="Runout" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZuz_HoldMod0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Run Empty]]>
+</Description>
+</Member>
+<Member Name="EnergyStop" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZuz_HoldMod0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Stop In
+Position For
+Power Shutdown]]>
+</Description>
+</Member>
+<Member Name="PrepForStop" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZuz_HoldMod0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Prepare Robots
+For Stop]]>
+</Description>
+</Member>
+<Member Name="CapChange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZuz_HoldMod0" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Stop In
+Cap Change
+Position]]>
+</Description>
+</Member>
+<Member Name="Transfer" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZuz_HoldMod0" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Hold Transfer
+Systems
+Do Not Transfer
+Parts]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="za_Action" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Base Motion Action Data
+<@VER 1.000>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZza_Action0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Comp" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Complete]]>
+</Description>
+</Member>
+<Member Name="ProcComp" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Process Complete]]>
+</Description>
+</Member>
+<Member Name="Auto" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Auto Mode
+Conditions]]>
+</Description>
+</Member>
+<Member Name="AutoSetup" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Auto Mode
+Setup Conditions]]>
+</Description>
+</Member>
+<Member Name="Clear" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Clear Conditions]]>
+</Description>
+</Member>
+<Member Name="ClrSetup" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Clear Setup
+Conditions]]>
+</Description>
+</Member>
+<Member Name="OutPwr" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Output Power For Action]]>
+</Description>
+</Member>
+<Member Name="Cmd" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Command]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZza_Action9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Out" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Internal Output]]>
+</Description>
+</Member>
+<Member Name="Mem" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Memory]]>
+</Description>
+</Member>
+<Member Name="PB" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Pushbutton (manual request)]]>
+</Description>
+</Member>
+<Member Name="FLT" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Faulted]]>
+</Description>
+</Member>
+<Member Name="Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Is Active]]>
+</Description>
+</Member>
+<Member Name="EnableSkip" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Can Be Skipped]]>
+</Description>
+</Member>
+<Member Name="EnableBypass" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Can Be Bypassed]]>
+</Description>
+</Member>
+<Member Name="Bypassed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Is Bypassed]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZza_Action18" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Prompt" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Display Action's Prompt]]>
+</Description>
+</Member>
+<Member Name="OutPwrPrompt" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Output Power Prompt]]>
+</Description>
+</Member>
+<Member Name="Setup1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Setup Bit 1]]>
+</Description>
+</Member>
+<Member Name="Setup2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Setup Bit 2]]>
+</Description>
+</Member>
+<Member Name="Setup3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Setup Bit 3]]>
+</Description>
+</Member>
+<Member Name="Setup4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Setup Bit 4]]>
+</Description>
+</Member>
+<Member Name="AntiRept" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Anti Repeat Do / Undo Requests from HMIs]]>
+</Description>
+</Member>
+<Member Name="OneShot" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action One Shot]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZza_Action27" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="FltCheck" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action27" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Fault Check]]>
+</Description>
+</Member>
+<Member Name="RecipeEnable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action27" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Recipe Enable]]>
+</Description>
+</Member>
+<Member Name="Text" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Scrollist Text Value]]>
+</Description>
+</Member>
+<Member Name="StatusType" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Scrollist Status Type]]>
+</Description>
+</Member>
+<Member Name="TMR" DataType="TIMER" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Timer]]>
+</Description>
+</Member>
+<Member Name="Dwell" DataType="TIMER" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Dwell Timer]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="zc_CellHoldModes" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Cell Stop And
+Maintenance
+Operating
+Mode Requests
+<@VER 1.312>
+<@NO EDITS>
+]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZzc_CellHol0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Stopped" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_CellHol0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Stopped
+At Hold]]>
+</Description>
+</Member>
+<Member Name="NoHoldActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_CellHol0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[No Holds
+Active
+In Cell]]>
+</Description>
+</Member>
+<Member Name="Active" DataType="uz_HoldModes" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Active Holds
+In the Cell]]>
+</Description>
+</Member>
+<Member Name="Selected" DataType="uz_HoldModes" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Selected
+Holds In
+The Cell]]>
+</Description>
+</Member>
+<Member Name="Timeout" DataType="TIMER" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Timeout Timer For Selected Stop Mode]]>
+</Description>
+</Member>
+<Member Name="Pulse" DataType="uz_HoldModes" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Toggle
+Hold Mode]]>
+</Description>
+</Member>
+<Member Name="OneShot" DataType="uz_HoldModes" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[One Shot
+Bits]]>
+</Description>
+</Member>
+<Member Name="User" DataType="uc_CellHoldModesUser" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[User Cell Stop Modes]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="uz_HoldModes"/>
+<Dependency Type="DataType" Name="uz_HoldModes"/>
+<Dependency Type="DataType" Name="uz_HoldModes"/>
+<Dependency Type="DataType" Name="uz_HoldModes"/>
+<Dependency Type="DataType" Name="uc_CellHoldModesUser"/>
+</Dependencies>
+</DataType>
+<DataType Name="zc_Station" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Station Mode/Status Data
+<@VER 1.000>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="Mode" DataType="zz_StaMode" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Mode Information]]>
+</Description>
+</Member>
+<Member Name="Sts" DataType="zz_StaStatus" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Status Information]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="zz_StaMode"/>
+<Dependency Type="DataType" Name="zz_StaStatus"/>
+</Dependencies>
+</DataType>
+<DataType Name="zc_StationHold" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Station And
+MH Robot
+Stopping Status
+<@VER 1.312>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZzc_Station0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="StopEmpty" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_Station0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Stop Station/
+Robot With
+No Parts]]>
+</Description>
+</Member>
+<Member Name="StopWithParts" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_Station0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Stop Station/
+Robot With Or
+Without Parts]]>
+</Description>
+</Member>
+<Member Name="PartsOkToStop" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_Station0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station/Robot
+Parts Ok
+For Stopping
+Mode]]>
+</Description>
+</Member>
+<Member Name="Stopped" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_Station0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station/Robot
+At Stop
+Position]]>
+</Description>
+</Member>
+<Member Name="ReqStopEmpty" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_Station0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Request
+Station/ Robot
+Stop With
+No Parts]]>
+</Description>
+</Member>
+<Member Name="ReqStopWithParts" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_Station0" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Request
+Station/ Robot
+Stop With or
+Without Parts]]>
+</Description>
+</Member>
+<Member Name="StopLoad" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_Station0" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station
+Stopping
+Do Not Allow
+Part Load]]>
+</Description>
+</Member>
+<Member Name="StopUnload" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_Station0" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station
+Stopping
+Do Not Allow
+Part Unload]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzc_Station9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="NoPartPresent" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_Station9" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station/Robot
+Has No Part
+Present]]>
+</Description>
+</Member>
+<Member Name="MHRobotPrepEmpty" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_Station9" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[MH Robot
+Is Prepared
+For Empty
+Stop]]>
+</Description>
+</Member>
+<Member Name="StationNoHoldActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_Station9" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Level
+No Holds
+Active]]>
+</Description>
+</Member>
+<Member Name="ReqPart" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Part Requests
+To Previous
+Stations]]>
+</Description>
+</Member>
+<Member Name="Timeout" DataType="TIMER" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station / Robot
+Stopped
+Timeout]]>
+</Description>
+</Member>
+<Member Name="Active" DataType="uz_HoldModes" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station
+Holds]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="uz_HoldModes"/>
+</Dependencies>
+</DataType>
+<DataType Name="zz_StaMode" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Station Mode Information
+<@VER 1.000>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZzz_StaMode0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="AutoReqAntiRpt" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaMode0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Auto Request AntiRepeat]]>
+</Description>
+</Member>
+<Member Name="AutoRdy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaMode0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Ready for Auto]]>
+</Description>
+</Member>
+<Member Name="Auto" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaMode0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station in Auto Mode]]>
+</Description>
+</Member>
+<Member Name="ExtrnAutoRdy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaMode0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station External Auto Conditions Ready]]>
+</Description>
+</Member>
+<Member Name="Man" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaMode0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station in Manual Mode]]>
+</Description>
+</Member>
+<Member Name="Tryout" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaMode0" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station in Tryout Mode]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="zz_StaStatus" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Station Status Information
+<@VER 1.120>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZzz_StaStat0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="CommOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Communications are OK]]>
+</Description>
+</Member>
+<Member Name="NoParts" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station has no parts present]]>
+</Description>
+</Member>
+<Member Name="AllParts" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station has all parts present]]>
+</Description>
+</Member>
+<Member Name="EnteringAuto" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is entering Auto Mode]]>
+</Description>
+</Member>
+<Member Name="Man" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station in Manual Mode]]>
+</Description>
+</Member>
+<Member Name="Auto" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station in Auto Mode]]>
+</Description>
+</Member>
+<Member Name="Tryout" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station in Tryout Mode]]>
+</Description>
+</Member>
+<Member Name="Held" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is Held]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzz_StaStat9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="HoldActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Has an End of Cycle Hold Active]]>
+</Description>
+</Member>
+<Member Name="AtLoad" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station at Load Position]]>
+</Description>
+</Member>
+<Member Name="AtUnload" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station at Unload Position]]>
+</Description>
+</Member>
+<Member Name="Bypass" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is Bypassed]]>
+</Description>
+</Member>
+<Member Name="HasBypass" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station has a Scrollist / Switch Bypass]]>
+</Description>
+</Member>
+<Member Name="Faulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is faulted]]>
+</Description>
+</Member>
+<Member Name="InCycle" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is in cycle]]>
+</Description>
+</Member>
+<Member Name="AllProcessesComplete" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station all processes complete]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzz_StaStat18" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="NotClear" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is not clear for transfer]]>
+</Description>
+</Member>
+<Member Name="Idle" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is idle]]>
+</Description>
+</Member>
+<Member Name="ReadyForTryout" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is ready for tryout mode]]>
+</Description>
+</Member>
+<Member Name="AirOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Air Is On]]>
+</Description>
+</Member>
+<Member Name="AirOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Air Is Off]]>
+</Description>
+</Member>
+<Member Name="WaterFlowOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Water Flow is On]]>
+</Description>
+</Member>
+<Member Name="WaterFlowOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Water Flow is Off]]>
+</Description>
+</Member>
+<Member Name="ProcNotEnbld" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Has At Least One Process Not On]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzz_StaStat27" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="ProcEnbld" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat27" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Has At Least One Process Not Off]]>
+</Description>
+</Member>
+<Member Name="PartPres" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Individual Parts Present]]>
+</Description>
+</Member>
+<Member Name="PartNotPres" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Individual Parts Not Present]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+<Tags Use="Context">
+<Tag Name="AlwaysOff" Class="Standard" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Always Off Bit
+For Permanent
+Block Only]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="Cell1HoldRequest" Class="Standard" TagType="Base" DataType="zc_CellHoldModes" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Cell Stop Modes
+]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[[2,[0],[0],[0,0,0],[0],[0],[0]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="zc_CellHoldModes">
+<DataValueMember Name="Stopped" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NoHoldActive" DataType="BOOL" Value="1"/>
+<StructureMember Name="Active" DataType="uz_HoldModes">
+<DataValueMember Name="FastStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EOCHold" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Runout" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnergyStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PrepForStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CapChange" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Transfer" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Selected" DataType="uz_HoldModes">
+<DataValueMember Name="FastStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EOCHold" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Runout" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnergyStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PrepForStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CapChange" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Transfer" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Timeout" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Pulse" DataType="uz_HoldModes">
+<DataValueMember Name="FastStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EOCHold" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Runout" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnergyStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PrepForStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CapChange" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Transfer" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="OneShot" DataType="uz_HoldModes">
+<DataValueMember Name="FastStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EOCHold" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Runout" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnergyStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PrepForStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CapChange" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Transfer" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="User" DataType="uc_CellHoldModesUser">
+<DataValueMember Name="User1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="User2" DataType="BOOL" Value="0"/>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="RungComment" Class="Standard" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[1]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="WO1405CC01" Class="Standard" TagType="Base" DataType="zc_Station" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[[0],[1,0,1,1,0,0]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="zc_Station">
+<StructureMember Name="Mode" DataType="zz_StaMode">
+<DataValueMember Name="AutoReqAntiRpt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AutoRdy" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Auto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ExtrnAutoRdy" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Man" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Tryout" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Sts" DataType="zz_StaStatus">
+<DataValueMember Name="CommOK" DataType="BOOL" Value="1"/>
+<DataValueMember Name="NoParts" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AllParts" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnteringAuto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Man" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Auto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Tryout" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Held" DataType="BOOL" Value="0"/>
+<DataValueMember Name="HoldActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AtLoad" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AtUnload" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bypass" DataType="BOOL" Value="0"/>
+<DataValueMember Name="HasBypass" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Faulted" DataType="BOOL" Value="0"/>
+<DataValueMember Name="InCycle" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AllProcessesComplete" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NotClear" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Idle" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ReadyForTryout" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AirOn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AirOff" DataType="BOOL" Value="0"/>
+<DataValueMember Name="WaterFlowOn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="WaterFlowOff" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ProcNotEnbld" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ProcEnbld" DataType="BOOL" Value="1"/>
+<DataValueMember Name="PartPres" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="PartNotPres" DataType="DINT" Radix="Decimal" Value="0"/>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="WO1405CC01StopModes" Class="Standard" TagType="Base" DataType="zc_StationHold" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[0,4,0,[984305,120000,0],[0]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="zc_StationHold">
+<DataValueMember Name="StopEmpty" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StopWithParts" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PartsOkToStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Stopped" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ReqStopEmpty" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ReqStopWithParts" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StopLoad" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StopUnload" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NoPartPresent" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MHRobotPrepEmpty" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StationNoHoldActive" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ReqPart" DataType="SINT" Radix="Decimal" Value="0"/>
+<StructureMember Name="Timeout" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="120000"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Active" DataType="uz_HoldModes">
+<DataValueMember Name="FastStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EOCHold" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Runout" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnergyStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PrepForStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CapChange" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Transfer" DataType="BOOL" Value="0"/>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+</Tags>
+<Programs Use="Context">
+<Program Use="Context" Name="WO1405CC01" Class="Standard">
+<Tags Use="Context">
+<Tag Name="CellHold" TagType="Alias" AliasFor="Cell1HoldRequest" ExternalAccess="Read/Write"/>
+<Tag Name="Mode" TagType="Alias" AliasFor="WO1405CC01.Mode" ExternalAccess="Read/Write"/>
+<Tag Name="NextStopModes" TagType="Base" DataType="zc_StationHold" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[0,0,0,[0,0,0],[0]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="zc_StationHold">
+<DataValueMember Name="StopEmpty" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StopWithParts" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PartsOkToStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Stopped" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ReqStopEmpty" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ReqStopWithParts" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StopLoad" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StopUnload" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NoPartPresent" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MHRobotPrepEmpty" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StationNoHoldActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ReqPart" DataType="SINT" Radix="Decimal" Value="0"/>
+<StructureMember Name="Timeout" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Active" DataType="uz_HoldModes">
+<DataValueMember Name="FastStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EOCHold" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Runout" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnergyStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PrepForStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CapChange" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Transfer" DataType="BOOL" Value="0"/>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="PrevStopModes" TagType="Base" DataType="zc_StationHold" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[0,0,0,[0,0,0],[0]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="zc_StationHold">
+<DataValueMember Name="StopEmpty" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StopWithParts" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PartsOkToStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Stopped" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ReqStopEmpty" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ReqStopWithParts" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StopLoad" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StopUnload" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NoPartPresent" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MHRobotPrepEmpty" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StationNoHoldActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ReqPart" DataType="SINT" Radix="Decimal" Value="0"/>
+<StructureMember Name="Timeout" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Active" DataType="uz_HoldModes">
+<DataValueMember Name="FastStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EOCHold" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Runout" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnergyStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PrepForStop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CapChange" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Transfer" DataType="BOOL" Value="0"/>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="SkidIndexIn" TagType="Base" DataType="za_Action" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Index Skid In
+]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[[80,0,64,0,999140,170,[0,0,0],[0,0,0]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="za_Action">
+<DataValueMember Name="Comp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ProcComp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Auto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AutoSetup" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Clear" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ClrSetup" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OutPwr" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Cmd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Mem" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FLT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableSkip" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableBypass" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bypassed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Prompt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OutPwrPrompt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AntiRept" DataType="BOOL" Value="1"/>
+<DataValueMember Name="OneShot" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FltCheck" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RecipeEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Text" DataType="DINT" Radix="Decimal" Value="999140"/>
+<DataValueMember Name="StatusType" DataType="DINT" Radix="Decimal" Value="170"/>
+<StructureMember Name="TMR" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Dwell" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="StopModes" TagType="Alias" AliasFor="WO1405CC01StopModes" ExternalAccess="Read/Write"/>
+<Tag Name="Sts" TagType="Alias" AliasFor="WO1405CC01.Sts" ExternalAccess="Read/Write"/>
+</Tags>
+<Routines Use="Context">
+<Routine Use="Target" Name="M010_StationStopModes" Type="RLL">
+<Description>
+<![CDATA[Maintenance And
+Stopping Modes for
+Typical Station]]>
+</Description>
+<RLLContent>
+<Rung Number="0" Type="N">
+<Comment>
+<![CDATA[<@VER 1.410><@EDITS ALLOWED>
+<@INFO>
+################################################################
+# Station Stopping Mode Logic
+#
+# The logic in this routine is used to stop the station operation in the proper state
+# for different possible cell stopping modes.  Some examples of the cell
+# stopping modes are an "End Of Cycle Hold" from the gate box, runout
+# mode selected from the HMI, a request to change caps made from the
+# HMI, etc.
+#
+# No matter what stopping mode is selected for the cell, the station will either
+# stop without parts or stop with parts.  Adding a new stopping mode for the cell
+# will only require that the stop with parts or stop without parts be selected
+# in this routine.
+#
+# This logic will look at the upstream stations or robots and downstream stations
+# or robots to make sure that the parts in the cell are in the correct state before
+# stopping.  The stations or robots before this station must have the correct part
+# present condition and the stations or robots after this station must not be
+# requesting additional parts.
+################################################################]]>
+</Comment>
+<Text>
+<![CDATA[OTE(RungComment);]]>
+</Text>
+</Rung>
+<Rung Number="1" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Station Stopping Instructions
+#
+# Cell level holds are mapped into the station holds with this rung.
+# This allows station level holds to take prioirity over cell holds if needed.
+################################################################
+<@TODO>
+################################################################
+# Add any user StopModes.Active.????? outputs on this rung.
+# 
+# If station level stop modes are added, program the priority on this rung so that
+# only one StopModes.Active.????? is on.
+################################################################
+]]>
+</Comment>
+<Text>
+<![CDATA[[XIC(CellHold.Active.FastStop) OTE(StopModes.Active.FastStop) ,XIC(CellHold.Active.EOCHold) OTE(StopModes.Active.EOCHold) ,XIC(CellHold.Active.Runout) OTE(StopModes.Active.Runout) ,XIC(CellHold.Active.EnergyStop) OTE(StopModes.Active.EnergyStop) ,XIC(CellHold.Active.CapChange) OTE(StopModes.Active.CapChange) ,XIC(AlwaysOff) OTE(StopModes.Active.Transfer) ];]]>
+</Text>
+</Rung>
+<Rung Number="2" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Station Stopping Instructions
+#
+# StopModes.NoHoldActive can be used as needed.
+################################################################
+<@TODO>
+################################################################
+# Add any station level StopModes.Active.????? bits on this rung.
+# 
+# If station level stop modes are added, program the priority on this rung so that
+# only one StopModes.Active.????? is on.
+################################################################
+]]>
+</Comment>
+<Text>
+<![CDATA[XIC(CellHold.NoHoldActive)XIO(StopModes.Active.Transfer)OTE(StopModes.StationNoHoldActive);]]>
+</Text>
+</Rung>
+<Rung Number="3" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Station Stopping Instructions
+#
+# ReqStopEmpty and ReqStopWithParts are used to tell the station
+# the proper part present condition to stop running.
+#
+# ReqStopEmpty must stop the station without a part.
+#
+# ReqStopWithParts can stop the station without a part or
+# with a part.  It does NOT mean that the station must have a part
+# before stopping.
+################################################################
+<@TODO>
+################################################################
+# Parallel the different cell operating mode requests that require the station to
+# stop without a part into the ReqStopEmpty.  An example of this type
+# of stopping mode would be Runout mode.
+################################################################
+<@eLogic RPLIns XIC(CellHold.Active.Runout) "[XIC(CellHold.Active.Runout) ,XIC(CellHold.User.Prod.ToolsEmpty) ,XIC(CellHold.User.Prod.AllEmpty) ]" Parent.Parent.PMP Yes EQU>]]>
+</Comment>
+<Text>
+<![CDATA[XIC(CellHold.Active.Runout)OTE(StopModes.ReqStopEmpty);]]>
+</Text>
+</Rung>
+<Rung Number="4" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Station Stopping Instructions
+#
+# ReqStopEmpty and ReqStopWithParts are used to tell the station
+# the proper part present condition to stop running.
+#
+# ReqStopEmpty must stop the station without a part.
+#
+# ReqStopWithParts can stop the station without a part or
+# with a part.  It does NOT mean that the station must have a part
+# before stopping.
+################################################################
+<@TODO>
+################################################################
+# Parallel the different cell operating mode requests where the station can
+# stop wit a part into the ReqStopWithParts.  An example of this type
+# of stopping mode would a hold request.
+################################################################
+<@eLogic ADDBranch XIC(CellHold.Active.EOCHold) XIC(CellHold.User.Prod.NextCycle) Parent.Parent.PMP Yes EQU>
+<@eLogic ADDBranch XIC(CellHold.Active.EOCHold) XIC(CellHold.User.Prod.RobotsEmpty) Parent.Parent.PMP Yes EQU>]]>
+</Comment>
+<Text>
+<![CDATA[[XIC(CellHold.Active.CapChange) ,XIC(CellHold.Active.EnergyStop) ,XIC(CellHold.Active.EOCHold) ,XIC(CellHold.Active.FastStop) ]XIO(StopModes.ReqStopEmpty)OTE(StopModes.ReqStopWithParts);]]>
+</Text>
+</Rung>
+<Rung Number="5" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Station Stopping Instructions
+#
+# NoPartPresent is used to tell the next station that no parts are present.
+################################################################
+<@TODO>
+################################################################
+# Typical Rung Below.
+################################################################]]>
+</Comment>
+<Text>
+<![CDATA[XIC(Sts.NoParts)OTE(StopModes.NoPartPresent);]]>
+</Text>
+</Rung>
+<Rung Number="6" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Station / Robot Stopping Instructions
+#
+# PartsOkForStop allows this station to stop and allows the next station to
+# determine when to stop.  This interlock insures that this station will not block
+# previous stations from reaching the correct stopping position.
+#
+# The bottom branch turns on the output if no requests are active in this station
+# and the next station has a request.  This allows the stopping modes to be
+# interlocked across a cell boundary.
+################################################################
+<@TODO>
+################################################################
+# For the request to stop empty branch, add Sts.NoParts.
+# For the request to stop with parts branch, no additional conditions are
+# required.
+#
+# Add all previous stations .PartsOkToStop in series.
+#
+# If more than 1 next station is present, parallel all next station request bits
+# in the bottom branch.
+################################################################
+]]>
+</Comment>
+<Text>
+<![CDATA[[[XIC(StopModes.ReqStopEmpty) XIC(Sts.NoParts) ,XIC(StopModes.ReqStopWithParts) ] XIC(PrevStopModes.PartsOkToStop) ,[XIC(NextStopModes.ReqStopEmpty) ,XIC(NextStopModes.ReqStopWithParts) ] XIO(StopModes.ReqStopEmpty) XIO(StopModes.ReqStopWithParts) ]OTE(StopModes.PartsOkToStop);]]>
+</Text>
+</Rung>
+<Rung Number="7" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Station Stopping Instructions
+#
+# ReqPart bits request parts from previous stations.  This keeps the previous
+# station from stopping until the station has all the necessary parts.  This is especially
+# important in runout mode.
+#
+# For the station, the request from the next station is passed back
+# to the previous station or individual requests can be passed back
+# if parts come from more than one location.
+#
+# ReqPart is a SINT.  There are 8 bits available to interlock part requests
+# to previous stations.  If a station or a robot handles multiple parts or if the system
+# has multiple styles, a bit for each style or part should be used.  For example
+# .ReqPart.0 can be sent to the first part load robot, .ReqPart.1 can be sent
+# to the second part load robot, etc.
+################################################################
+<@TODO>
+################################################################
+# Add .ReqPart.X outputs to the rung.  One for each part loaded in the station.
+#
+# If multiple parts are automatically loaded in the station, use XIO of the
+# PartName.Load.Comp bit to turn on the part request output.
+#
+# If the station has only one automatically loaded part, use the next station request
+# in series with no parts present.
+#
+# If there is not a "Next" station or the "Next" station does not have stop modes, and
+# only one part is automatically loaded, then turn off the output using XIC AlwaysOff.
+################################################################]]>
+</Comment>
+<Text>
+<![CDATA[XIC(NextStopModes.ReqPart.0)XIC(Sts.NoParts)OTE(StopModes.ReqPart.0);]]>
+</Text>
+</Rung>
+<Rung Number="8" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Station Stopping Instructions
+#
+# StopEmpty and StopWithParts tell the sequence logic to stop the
+# station at a specific location.
+#
+# The station is not allowed to stop until the previous station parts are OK to stop.
+# This makes sure that parts are removed from the previous station
+# or robot if it is configured to stop empty.  The station is not allowed
+# to stop if the next station or robot is requesting a part.  This makes sure that
+# the next station or robot has the necessary parts to complete a job.
+#
+# StopEmpty and StopWithParts should stop the station at either the load
+# or unload positions.  
+################################################################
+<@TODO>
+################################################################
+# The typical station logic is shown below.  Add all previous stations .PartsOkToStop
+# in series.
+################################################################]]>
+</Comment>
+<Text>
+<![CDATA[XIO(Mode.Man)XIC(PrevStopModes.PartsOkToStop)XIO(NextStopModes.ReqPart.0)[XIC(StopModes.ReqStopEmpty) OTE(StopModes.StopEmpty) ,XIC(StopModes.ReqStopWithParts) OTE(StopModes.StopWithParts) ];]]>
+</Text>
+</Rung>
+<Rung Number="9" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+Station Stopping Instructions
+
+Stopped tells the cell stopping logic that the station or robot has stopped
+in the requested state.
+################################################################
+<@TODO>
+################################################################
+The rung below is typical for a station.  If the station does not have cycle logic,
+remove the MainCycle bits and program the tool stopping positions.
+
+Clear of station bits should be included for loading and unloading robots only.
+
+Replace the TBD by the CellHold.Active.FastStop with turntable position or action complete
+for slow moving actions if the position is not the load or unload positions.
+################################################################
+]]>
+</Comment>
+<Text>
+<![CDATA[XIC(StopModes.PartsOkToStop)[XIC(StopModes.StopEmpty) ,XIC(StopModes.StopWithParts) ][XIC(CellHold.Active.FastStop) XIC(SkidIndexIn.Comp) ,XIC(StopModes.Timeout.DN) [XIC(CellHold.Active.EOCHold) ,XIC(CellHold.Active.FastStop) ] ]OTE(StopModes.Stopped);]]>
+</Text>
+</Rung>
+<Rung Number="10" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Station Stopping Instructions
+#
+# StopLoad and StopUnload are used to stop loading and unloading actions in
+# the station sequence.  These bits are then used in the loading and unloading
+# actions to actually stop the equipment.
+#
+# Load actions should be stopped when either the stop with parts or stop
+# empty bits are on.
+################################################################
+<@TODO>
+################################################################
+# The typical content for this rung is XIC StopModes.StopEmpty, 
+# XIC StopModes.StopWithParts, and PrevStopModes.StopWithParts all in
+# parallel.
+#
+# If this is a marriage station loaded by automation, the PrevXStopModes.StopWithParts
+# bits should be added to the specific load action for that previous station or robot.
+################################################################]]>
+</Comment>
+<Text>
+<![CDATA[[XIC(StopModes.StopEmpty) ,XIC(StopModes.StopWithParts) ,XIC(PrevStopModes.StopWithParts) ]OTE(StopModes.StopLoad);]]>
+</Text>
+</Rung>
+<Rung Number="11" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Station Stopping Instructions
+#
+# StopLoad and StopUnload are used to stop loading and unloading actions in
+# the station sequence.  These bits are then used in the loading and unloading
+# actions to actually stop the equipment.
+#
+# Unload actions should be stopped when the stop with parts bit is on.
+################################################################
+<@TODO>
+################################################################
+# The typical content for this rung is XIC StopModes.StopWithParts, 
+# XIC NextStopModes.StopWithParts, and XIC NextStopModes.StopEmpty all in
+# parallel.
+################################################################]]>
+</Comment>
+<Text>
+<![CDATA[[XIC(StopModes.StopWithParts) ,XIC(NextStopModes.StopWithParts) ,XIC(NextStopModes.StopEmpty) ]OTE(StopModes.StopUnload);]]>
+</Text>
+</Rung>
+<Rung Number="12" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+Station Stopping Instructions
+
+The timeout timer is used to indicate stopped status when the a device in the cell
+cannot reach a normal stop position because of an equipment fault.
+################################################################
+<@TODO>
+################################################################
+For Sts.Faulted or CellHold.Active.EOCHold:
+Set the timer (update the MOV) for 2x the normal cycle time of the robot or station.
+
+For CellHold.Active.FastStop:
+Set the timer (update the MOV) to 15000 or the longest robot segment time, whichever
+is greater.
+################################################################
+]]>
+</Comment>
+<Text>
+<![CDATA[[[XIC(Sts.Faulted) ,XIC(CellHold.Active.EOCHold) ] MOV(120000,StopModes.Timeout.PRE) ,XIC(CellHold.Active.FastStop) MOV(15000,StopModes.Timeout.PRE) ][GRT(StopModes.Timeout.PRE,StopModes.Timeout.ACC) OTU(StopModes.Timeout.DN) ,TON(StopModes.Timeout,?,?) ];]]>
+</Text>
+</Rung>
+</RLLContent>
+</Routine>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>

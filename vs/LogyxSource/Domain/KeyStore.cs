@@ -1,4 +1,5 @@
 using LogyxSource.Models;
+using System.Text.Json;
 
 namespace LogyxSource.Domain;
 
@@ -6,21 +7,22 @@ public class KeyStore
 {
     private readonly Dictionary<int, List<string>> _keysByConfig = new();
     private readonly List<string> _allKeys = new();
+    private readonly List<string> _candidateKeys = new();
 
     public KeyStore()
     {
-        InitializeHardcodedKeys();
+        InitializeFromJsonFile();
     }
 
     public KeyStore(string skDatFilePath)
     {
-        InitializeHardcodedKeys();
+        InitializeFromJsonFile();
         LoadKeysFromFile(skDatFilePath);
     }
 
     public KeyStore(IEnumerable<string> keys)
     {
-        InitializeHardcodedKeys();
+        InitializeFromJsonFile();
         foreach (var key in keys)
         {
             _allKeys.Add(key);
@@ -42,6 +44,59 @@ public class KeyStore
         return Result<IReadOnlyList<string>>.Success(_allKeys.AsReadOnly());
     }
 
+    public Result<IReadOnlyList<string>> GetCandidateKeys()
+    {
+        return Result<IReadOnlyList<string>>.Success(_candidateKeys.AsReadOnly());
+    }
+
+    private void InitializeFromJsonFile()
+    {
+        try
+        {
+            var jsonPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "keys.json");
+            if (!File.Exists(jsonPath))
+            {
+                // Fallback to hardcoded keys if JSON file doesn't exist
+                InitializeHardcodedKeys();
+                return;
+            }
+
+            var jsonContent = File.ReadAllText(jsonPath);
+            var keyConfig = JsonSerializer.Deserialize<KeyConfiguration>(jsonContent);
+            
+            if (keyConfig?.Keys != null)
+            {
+                foreach (var keyInfo in keyConfig.Keys)
+                {
+                    _allKeys.Add(keyInfo.Name);
+                    
+                    // Associate key with specific encryption configs
+                    if (keyInfo.EncryptionConfigs != null)
+                    {
+                        foreach (var config in keyInfo.EncryptionConfigs)
+                        {
+                            if (!_keysByConfig.ContainsKey(config))
+                            {
+                                _keysByConfig[config] = new List<string>();
+                            }
+                            _keysByConfig[config].Add(keyInfo.Name);
+                        }
+                    }
+                }
+            }
+
+            if (keyConfig?.CandidateKeys != null)
+            {
+                _candidateKeys.AddRange(keyConfig.CandidateKeys);
+            }
+        }
+        catch (Exception)
+        {
+            // Fallback to hardcoded keys if JSON parsing fails
+            InitializeHardcodedKeys();
+        }
+    }
+
     private void InitializeHardcodedKeys()
     {
         _allKeys.AddRange(new[]
@@ -49,7 +104,8 @@ public class KeyStore
             "Visual2025",
             "Doug'sExportEncryption",
             "defaultkey",
-            "testkey"
+            "testkey",
+            "Stana7"
         });
     }
 
