@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="18.02" TargetName="R01_Speed_Trim" TargetType="Routine" TargetSubType="FBD" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Wed Jul 16 23:32:32 2025" ExportOptions="References DecoratedData Context Dependencies AllProjDocTrans">
+<Controller Use="Context" Name="DSL_250A">
+<DataTypes Use="Context">
+</DataTypes>
+<Modules Use="Context">
+<Module Use="Reference" Name="K300_Conveyor">
+</Module>
+</Modules>
+<Tags Use="Context">
+</Tags>
+<Programs Use="Context">
+<Program Use="Context" Name="EM01_k300_Control_Conveyor">
+<Tags Use="Context">
+<Tag Name="SCRV_01" TagType="Base" DataType="S_CURVE" Constant="false" ExternalAccess="Read/Write">
+<Data>01 00 00 00 00 00 00 00 00 00 00 00 00 00 B4 42 
+00 00 C8 42 00 00 70 42 00 00 00 00 00 00 00 00 
+01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 
+00 00 00 00 0A D7 A3 3C 00 00 00 00 00 00 00 00 
+C2 99 06 00 00 00 00 00 00 62 00 00 0A D7 A3 3C 
+00 00 A0 43 0A D7 A3 3C 8C 6C CE BE 00 00 49 40 
+04 00 60 09 5B CE B4 3F 00 92 CD EA 00 00 00 00 
+00 00 00 00 04 00 00 00</Data>
+<Data Format="Decorated">
+<Structure DataType="S_CURVE">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="In" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Initialize" DataType="BOOL" Value="0"/>
+<DataValueMember Name="InitialValue" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="AbsAlgRamp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AccelRate" DataType="REAL" Radix="Float" Value="90.0"/>
+<DataValueMember Name="DecelRate" DataType="REAL" Radix="Float" Value="100.0"/>
+<DataValueMember Name="JerkRate" DataType="REAL" Radix="Float" Value="60.0"/>
+<DataValueMember Name="HoldMode" DataType="BOOL" Value="0"/>
+<DataValueMember Name="HoldEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TimingMode" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="OversampleDT" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RTSTime" DataType="DINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="RTSTimeStamp" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="S_Mode" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Rate" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="DeltaT" DataType="REAL" Radix="Float" Value="0.02"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AccelRateInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DecelRateInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="JerkRateInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TimingModeInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSMissed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSTimeInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RTSTimeStampInv" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DeltaTInv" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="Conveyor_Speed" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00 00 00 00</Data>
+<Data Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+</Tags>
+<Routines Use="Context">
+<Routine Use="Target" Name="R01_Speed_Trim" Type="FBD">
+<FBDContent SheetSize="Letter - 8.5 x 11 in" SheetOrientation="Landscape">
+<Sheet Number="1">
+<IRef ID="0" X="380" Y="120" Operand="Conveyor_Speed" HideDesc="false"/>
+<ORef ID="1" X="600" Y="180" Operand="K300_Conveyor:O.CommandCurrentOrVelocity" HideDesc="false"/>
+<Block Type="SCRV" ID="2" X="460" Y="120" Operand="SCRV_01" VisiblePins="In Out" HideDesc="false"/>
+<Wire FromID="0" ToID="2" ToParam="In"/>
+<Wire FromID="2" FromParam="Out" ToID="1"/>
+</Sheet>
+</FBDContent>
+</Routine>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>
