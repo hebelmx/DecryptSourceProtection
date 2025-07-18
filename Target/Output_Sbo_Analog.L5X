@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="30.01" TargetName="Output_Sbo_Analog" TargetType="Routine" TargetSubType="RLL" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Wed Jul 16 18:20:44 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="Disa2070mk2">
+<DataTypes Use="Context">
+</DataTypes>
+<Modules Use="Context">
+<Module Use="Reference" Name="Local">
+</Module>
+<Module Use="Reference" Name="x1Ao12_Sbo">
+</Module>
+</Modules>
+<Tags Use="Context">
+<Tag Name="N77" TagType="Base" DataType="INT" Dimensions="20" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[AO CONTROL]]>
+</Description>
+<Comments>
+<Comment Operand="[5]">
+<![CDATA[SBO1 BRAKE
+PRESSURE
+CH1]]>
+</Comment>
+<Comment Operand="[6]">
+<![CDATA[SBO1 DRIVE
+PRESSURE
+CH2]]>
+</Comment>
+<Comment Operand="[7]">
+<![CDATA[SBO2 BRAKE
+PRESSURE
+CH3]]>
+</Comment>
+<Comment Operand="[8]">
+<![CDATA[SBO2
+DRIVE
+PRESSURE
+CH 4]]>
+</Comment>
+</Comments>
+<Data Format="L5K">
+<![CDATA[[44,5,0,77,5,0,0,0,0,-32768,44,5,0,77,15,0,0,0,0,0]]]>
+</Data>
+<Data Format="Decorated">
+<Array DataType="INT" Dimensions="20" Radix="Decimal">
+<Element Index="[0]" Value="44"/>
+<Element Index="[1]" Value="5"/>
+<Element Index="[2]" Value="0"/>
+<Element Index="[3]" Value="77"/>
+<Element Index="[4]" Value="5"/>
+<Element Index="[5]" Value="0"/>
+<Element Index="[6]" Value="0"/>
+<Element Index="[7]" Value="0"/>
+<Element Index="[8]" Value="0"/>
+<Element Index="[9]" Value="-32768"/>
+<Element Index="[10]" Value="44"/>
+<Element Index="[11]" Value="5"/>
+<Element Index="[12]" Value="0"/>
+<Element Index="[13]" Value="77"/>
+<Element Index="[14]" Value="15"/>
+<Element Index="[15]" Value="0"/>
+<Element Index="[16]" Value="0"/>
+<Element Index="[17]" Value="0"/>
+<Element Index="[18]" Value="0"/>
+<Element Index="[19]" Value="0"/>
+</Array>
+</Data>
+</Tag>
+</Tags>
+<Programs Use="Context">
+<Program Use="Context" Name="Top">
+<Routines Use="Context">
+<EncodedData EncodedType="Routine" Name="Output_Sbo_Analog" Type="RLL" EncryptionConfig="9">
+AAkVpLtpHZ8cdGZ963aK3RKt14uW4jwQZafpRaCxvSHmlONMx9bO7v9ZTx3wHBjZGq9BxgOZXT+/XZJvTkV/ms6cuii0mkCtrTSHwy17SUc7qHoZHvjAn2slC7ItX8aSEtQtpGFqk601TEL5ZuXAs6ys0tt2ACp9E5PgAVLWNqJlB+vYB2AwKr8a/iJNjnRqisMeZ+cuAu54Nrt/DqEgJPN3r/Umt1ky1hRE7CBGa8DCuazIz9IcbxUKbveBtIBPTEtEPJLFdPFsEY+ckyT6NL1YvRxohuCPnR65PRxNBPSBcSs1hq58q5eZQ73hnZTtGtcXvC2AAHfMusP4pcJs+CxqgzPrMl7kOOC5E8u3WDrkUypWdd8x/IntgOM5DbVkjsvZg3/Y2lw2nSsWN0BiuF1MQv6cytCdIKleMAQ/sW3fFf74mmYxthhPg6rtapUOTE3vntkwYBPz76DPSL703Y5fNiX/KSQOE6U80vdwoxBrsa+egziNk7L1Qf+pQgJ7EJ6Mf7yC3W1eIuXMJgqdZTlQ3gNnO41mLFasaQcmJgqf5as6D70aShhSaLXPsM/i/iJlegtFjp6NVL828DGIqO9U4Oi4MnLGjD82ajLxGsn/XkFEgO7aX+rBtYJZLHSk3IElIaZ1n9c0jdWooklEHDxW5GJnfL4s6ayjKIvwc3/OYlA38dsOpoLPr+MgB5srCbcI2goHot4sMAmv7k1Y40NkwWxaYNG1uqa6dSEefrcICy1tVb70pYubBNcKJraVVLiUb/B0xTrrCWNQwszt8IMDI5Z9x1HrMnNaWPyfLteib39Ow3iAYbA2yJ2PHKXseEK9bXG7fJRGGXz5LojXJMWbNCa4EUEtPkrUsFRxF9J4bS67NFxn0I3BsEeXlCuy/TZjJIi9HnqTG7b/xvbWlZ5ARgZNUlIUiR+vgwgRNBZ6Qu3/v0Cq0WkGOZtFWl/F79xKoQsu/5Qm3lPGCyj52vyD9Ba0VLsnvbJo13ZDX0yjcnhSG/mR9hlawGXOgBd9j0ps07R+8dyeAATxKvFg+7M5qzV5RJ9Zp3zMF6wPY3TAYm5k/I7hzJquWKkCqBK+TcciX8yqBV/Jx8EW0TZwH4y6pUd6nFu8/ORl3MJT1V4gBTcx7pXuKX/19Zjs2y47DSYxQcSpqF8rqnrKtq2bXm1/zUR0JyF12Q31EUdT1BQsRJSed9gdtGNC+bIOqhxix5AGUWr0tpVHqE5AnTxhhe1slV5zKnsUmZsgVrHG7LNTOL8R4Gxg748Lpu/TTTzuHsbhBULFg2w7BeR6htCukpuofnQCf6mf</EncodedData>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>

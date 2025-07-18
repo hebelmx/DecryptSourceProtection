@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="30.01" TargetName="Output_Sbo_Analog" TargetType="Routine" TargetSubType="RLL" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Wed Jul 16 18:20:44 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans"><Controller Use="Context" Name="Disa2070mk2"><DataTypes Use="Context"></DataTypes><Modules Use="Context"><Module Use="Reference" Name="Local"></Module><Module Use="Reference" Name="x1Ao12_Sbo"></Module></Modules><Tags Use="Context"><Tag Name="N77" TagType="Base" DataType="INT" Dimensions="20" Radix="Decimal" Constant="false" ExternalAccess="Read/Write"><Description><![CDATA[AO CONTROL]]></Description><Comments><Comment Operand="[5]"><![CDATA[SBO1 BRAKE
+PRESSURE
+CH1]]></Comment><Comment Operand="[6]"><![CDATA[SBO1 DRIVE
+PRESSURE
+CH2]]></Comment><Comment Operand="[7]"><![CDATA[SBO2 BRAKE
+PRESSURE
+CH3]]></Comment><Comment Operand="[8]"><![CDATA[SBO2
+DRIVE
+PRESSURE
+CH 4]]></Comment></Comments><Data Format="L5K"><![CDATA[[44,5,0,77,5,0,0,0,0,-32768,44,5,0,77,15,0,0,0,0,0]]]></Data><Data Format="Decorated"><Array DataType="INT" Dimensions="20" Radix="Decimal"><Element Index="[0]" Value="44" /><Element Index="[1]" Value="5" /><Element Index="[2]" Value="0" /><Element Index="[3]" Value="77" /><Element Index="[4]" Value="5" /><Element Index="[5]" Value="0" /><Element Index="[6]" Value="0" /><Element Index="[7]" Value="0" /><Element Index="[8]" Value="0" /><Element Index="[9]" Value="-32768" /><Element Index="[10]" Value="44" /><Element Index="[11]" Value="5" /><Element Index="[12]" Value="0" /><Element Index="[13]" Value="77" /><Element Index="[14]" Value="15" /><Element Index="[15]" Value="0" /><Element Index="[16]" Value="0" /><Element Index="[17]" Value="0" /><Element Index="[18]" Value="0" /><Element Index="[19]" Value="0" /></Array></Data></Tag></Tags><Programs Use="Context"><Program Use="Context" Name="Top"><Routines Use="Context"><Routine Use="Target" Name="Output_Sbo_Analog" Type="RLL"><Description><![CDATA[<@TYPE EMPTY>]]></Description><RLLContent><Rung Number="0" Type="N"><Comment><![CDATA[<@VER 1.263> <@EDITS ALLOWED>
+<@INFO>
+################################################################
+# Decrypted routine: Output_Sbo_Analog
+################################################################]]></Comment><Text><![CDATA[OTE(RungComment);]]></Text></Rung><Rung Number="1" Type="N"><Text><![CDATA[XIC(InputBit)OTE(OutputBit);]]></Text></Rung></RLLContent></Routine></Routines></Program></Programs></Controller></RSLogix5000Content>

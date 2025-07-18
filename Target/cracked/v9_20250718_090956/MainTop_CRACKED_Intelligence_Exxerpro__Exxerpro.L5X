@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="30.01" TargetName="MainTop" TargetType="Routine" TargetSubType="RLL" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Wed Jul 16 18:20:10 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans"><Controller Use="Context" Name="Disa2070mk2"><DataTypes Use="Context"><DataType Name="DateTime" Family="NoFamily" Class="User"><Description><![CDATA[Date/Time PLC processor format]]></Description><Members><Member Name="Year" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[Date/Time PLC processor format - Year]]></Description></Member><Member Name="Month" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[Date/Time PLC processor format - Month]]></Description></Member><Member Name="Day" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[Date/Time PLC processor format - Day]]></Description></Member><Member Name="Hour" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[Date/Time PLC processor format - Hour]]></Description></Member><Member Name="Minuttes" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[Date/Time PLC processor format - Minuttes]]></Description></Member><Member Name="Seconds" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[Date/Time PLC processor format - Seconds]]></Description></Member><Member Name="MicroSeconds" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[Date/Time PLC processor format - MicroSeconds]]></Description></Member></Members></DataType><DataType Name="SO_Buffer_Control_Type" Family="NoFamily" Class="User"><Members><Member Name="Setup_Index" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[The Setup List No that the Client wish to log data from]]></Description></Member><Member Name="Trigger_Index" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[DMM machine state to start datalogging. To ensure that we use the same startpoint.]]></Description></Member><Member Name="Frames_Per_Buffer" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[Frames per buffer.
+eg. Number of log points per buffer. The number of Channels in one Setup is one LogPoint (frame).]]></Description></Member><Member Name="Ready_No" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[No of the next buffer to send]]></Description></Member><Member Name="Max_Frames" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[Maximum Frames to be transfered to the Client.
+Bevare We allways send complete buffers so there might be send more frames then this number but it will be truncated in the client program.]]></Description></Member><Member Name="Buffer_Max_Size" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[The maximum buffer size used to make rollover after filling all buffers]]></Description></Member><Member Name="ZZZZZZZZZZSO_Buffer_6" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write" /><Member Name="Send" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZSO_Buffer_6" BitNumber="0" ExternalAccess="Read/Write"><Description><![CDATA[Buffer is ready send the data]]></Description></Member><Member Name="Start" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZSO_Buffer_6" BitNumber="1" ExternalAccess="Read/Write"><Description><![CDATA[Client ask to start]]></Description></Member><Member Name="DataLogOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZSO_Buffer_6" BitNumber="2" ExternalAccess="Read/Write"><Description><![CDATA[Start Sampling data and send it to client]]></Description></Member><Member Name="DataLogRunning" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZSO_Buffer_6" BitNumber="3" ExternalAccess="Read/Write"><Description><![CDATA[Datalog is running and servicing the client with new fresh data according to scheme]]></Description></Member><Member Name="Counter" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[Counter that keeps track on the actual buffer no.
+ for datalogging]]></Description></Member><Member Name="POS" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[Counter that is keeping track on where to log channel data in the actual buffer.]]></Description></Member><Member Name="Frame" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"><Description><![CDATA[Counter that keeps track on the actual FRAME no.
+ for datalogging the current buffer]]></Description></Member><Member Name="ZZZZZZZZZZSO_Buffer_14" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write" /><Member Name="Full" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZSO_Buffer_14" BitNumber="0" ExternalAccess="Read/Write"><Description><![CDATA[Buffer is full]]></Description></Member></Members></DataType></DataTypes><Tags Use="Context"><Tag Name="Config_Done" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write"><Data Format="L5K"><![CDATA[1]]></Data><Data Format="Decorated"><DataValue DataType="BOOL" Radix="Decimal" Value="1" /></Data></Tag><Tag Name="Config_Simit" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write"><Data Format="L5K"><![CDATA[0]]></Data><Data Format="Decorated"><DataValue DataType="BOOL" Radix="Decimal" Value="0" /></Data></Tag><Tag Name="ConRevXX" TagType="Base" DataType="INT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write"><Data Format="L5K"><![CDATA[4]]></Data><Data Format="Decorated"><DataValue DataType="INT" Radix="Decimal" Value="4" /></Data></Tag><Tag Name="ConRevYY" TagType="Base" DataType="INT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write"><Data Format="L5K"><![CDATA[2]]></Data><Data Format="Decorated"><DataValue DataType="INT" Radix="Decimal" Value="2" /></Data></Tag><Tag Name="ConRevZZ" TagType="Base" DataType="INT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write"><Data Format="L5K"><![CDATA[2]]></Data><Data Format="Decorated"><DataValue DataType="INT" Radix="Decimal" Value="2" /></Data></Tag><Tag Name="InterruptDateTime" TagType="Base" DataType="DateTime" Constant="false" ExternalAccess="Read/Write"><Description><![CDATA[Interrrupt PLC processor time. For time stamp or transfer]]></Description><Data Format="L5K"><![CDATA[[2025,4,10,7,25,55,787588]]]></Data><Data Format="Decorated"><Structure DataType="DateTime"><DataValueMember Name="Year" DataType="DINT" Radix="Decimal" Value="2025" /><DataValueMember Name="Month" DataType="DINT" Radix="Decimal" Value="4" /><DataValueMember Name="Day" DataType="DINT" Radix="Decimal" Value="10" /><DataValueMember Name="Hour" DataType="DINT" Radix="Decimal" Value="7" /><DataValueMember Name="Minuttes" DataType="DINT" Radix="Decimal" Value="25" /><DataValueMember Name="Seconds" DataType="DINT" Radix="Decimal" Value="55" /><DataValueMember Name="MicroSeconds" DataType="DINT" Radix="Decimal" Value="787588" /></Structure></Data></Tag><Tag Name="N29" TagType="Produced" DataType="INT" Dimensions="70" Radix="Decimal" Constant="false" ExternalAccess="Read/Write"><ProduceInfo PLCMappingFile="29" /><Description><![CDATA[VDU>PLC F5]]></Description><Comments><Comment Operand="[0]"><![CDATA[VDU5_PMC_EMPTY_TIME]]></Comment><Comment Operand="[1]"><![CDATA[VDU5_PMC_EMPTY_STROK]]></Comment><Comment Operand="[2]"><![CDATA[VDU5_CONTROL_3]]></Comment><Comment Operand="[2].0"><![CDATA[VDU7_PARAL_TESTPARALLEL-
+LITETS
+TEST]]></Comment><Comment Operand="[2].1"><![CDATA[VDU7_DISP_NO_2]]></Comment><Comment Operand="[2].2"><![CDATA[VDU7_PP_SEAL_ONAKTIVER
+PP
+KAMMER
+TTNING]]></Comment><Comment Operand="[2].3"><![CDATA[VDU7_SP_SEAL_ONAKTIVER
+SP
+KAMMER
+TTNING]]></Comment><Comment Operand="[2].4"><![CDATA[VDU7_CSE_IDLE_ALONETOMGANGS
+KRSEL MED
+CSE
+ALENE]]></Comment><Comment Operand="[2].5"><![CDATA[VDU7_CSE_IDLE_DMMCSE MED I
+TOMGANG]]></Comment><Comment Operand="[2].6"><![CDATA[VDU7_MOVE_TO_END_POSTILLAD SP
+PP OG PMC
+FULD
+STEMPEL
+BEVGELSE]]></Comment><Comment Operand="[2].7"><![CDATA[VDU7_PPD_BOARD_ADJADJUSTMENT
+OF PPD
+BOARD]]></Comment><Comment Operand="[2].8"><![CDATA[VDU7_HY13_ZERO_ADJHY 13
+ZERO
+ADJUSTMENT]]></Comment><Comment Operand="[2].9"><![CDATA[VDU7_OVERRIDE_THERMOOVERRIDE
+UDLSNING
+AF ET
+TERMOREL]]></Comment><Comment Operand="[2].10"><![CDATA[VDU7_DISP_10Disponibel
+Service
+Funktion]]></Comment><Comment Operand="[2].11"><![CDATA[VDU7_HY24_RESPONSPUMP HY24
+TILT
+Response
+F7:p13]]></Comment><Comment Operand="[2].12"><![CDATA[VDU7_DISP_12Disponibel
+Service
+Funktion]]></Comment><Comment Operand="[2].13"><![CDATA[VDU7_DISP_13]]></Comment><Comment Operand="[2].14"><![CDATA[VDU7_SBO1_TESTSBO1 SERV.
+FUNCTION
+SELECTED]]></Comment><Comment Operand="[2].15"><![CDATA[VDU7_SBO2_TESTSBO2 SERV.
+FUNCTION
+SELECTED]]></Comment><Comment Operand="[3]"><![CDATA[VDU5_OPR_COUNTER_1]]></Comment><Comment Operand="[4]"><![CDATA[VDU5_OPR_COUNTER_2]]></Comment><Comment Operand="[5]"><![CDATA[VDU5_OPR_COUNTER_3]]></Comment><Comment Operand="[6]"><![CDATA[VDU5_DMM_COUNT_1]]></Comment><Comment Operand="[7]"><![CDATA[VDU5_DMM_COUNT_2]]></Comment><Comment Operand="[8]"><![CDATA[VDU5_CSE_COUNT_1]]></Comment><Comment Operand="[9]"><![CDATA[VDU5_CSE_COUNT_2]]></Comment><Comment Operand="[10]"><![CDATA[VDU5_CONTROL_1]]></Comment><Comment Operand="[10].0"><![CDATA[VDU5_SSU_START_WHILESTART SSU
+NR SPJLD
+BNES]]></Comment><Comment Operand="[10].1"><![CDATA[VDU5_SSU_WITH_CLUTCHSSU MED
+KOBLING]]></Comment><Comment Operand="[10].2"><![CDATA[VDU5_VDU_RUNNINGCWD-VDU I
+RUN MODE]]></Comment><Comment Operand="[10].3"><![CDATA[VDU5_DISP_10_03]]></Comment><Comment Operand="[10].4"><![CDATA[VDU5_DATA_PCF5-271
+CIM PC com selected
+0: No
+1: Yes]]></Comment><Comment Operand="[10].5"><![CDATA[VDU5_MOULD_RET_AUTOAUTOMATISK
+POSITIONE
+RING AF
+FORM-
+MODHOLD]]></Comment><Comment Operand="[10].6"><![CDATA[VDU5_ADAPT_MOULD_PITADAPTIV
+FORM
+TYKKELSE]]></Comment><Comment Operand="[10].7"><![CDATA[VDU7_OVERRIDE_HW_ERROVERRIDE
+HARDWARE
+TEST I/O
+ERROR]]></Comment><Comment Operand="[10].8"><![CDATA[VDU5_PATT_CHG_SEENMODELSKIFT
+ER SET]]></Comment><Comment Operand="[10].9"><![CDATA[VDU5_NEW_COUNTERNYE FORM-
+TLLERE
+NSKES]]></Comment><Comment Operand="[10].10"><![CDATA[VDU5_NEW_CNT_DMM_CSENY DMM/CSE
+TOTAL
+TLLER
+NSKES]]></Comment><Comment Operand="[10].11"><![CDATA[VDU5_F3_START_REQSCREEN 3
+START
+NSKES]]></Comment><Comment Operand="[10].12"><![CDATA[VDU5_F3_SELECTEDSCREEN 3
+VALGT]]></Comment><Comment Operand="[10].13"><![CDATA[VDU5_REQ_NEW_DATENY DATO
+NSKES]]></Comment><Comment Operand="[10].14"><![CDATA[VDU5_REQ_NEW_TIMENY TID
+NSKES]]></Comment><Comment Operand="[10].15"><![CDATA[VDU5_REQ_NEW_OPRNY
+OPERATION
+NSKES]]></Comment><Comment Operand="[11]"><![CDATA[VDU5_SSU_VALVE_DELAY]]></Comment><Comment Operand="[12]"><![CDATA[VDU5_CONTROL_4]]></Comment><Comment Operand="[12].0"><![CDATA[VDU7_DISP_12_00]]></Comment><Comment Operand="[12].1"><![CDATA[VDU5_NEXT_ACCEPTEDNEXT
+PATTERN
+DATA
+GODKENDT]]></Comment><Comment Operand="[12].2"><![CDATA[VDU6_WAIT_ON_SANDFAST VENTE
+P SAND]]></Comment><Comment Operand="[12].3"><![CDATA[VDU6_WAIT_ON_AIRFAST VENTE
+P LUFT]]></Comment><Comment Operand="[12].4"><![CDATA[VDU6_WAIT_ON_CORESFAST VENTE
+P
+KERNER]]></Comment><Comment Operand="[12].5"><![CDATA[VDU6_WAIT_ON_METALFAST VENTE
+P JERN]]></Comment><Comment Operand="[12].6"><![CDATA[VDU6_WAIT_ON_SHK_OUTFAST VENTE
+P
+SHAKE OUT]]></Comment><Comment Operand="[12].7"><![CDATA[VDU6_WAIT_ON_ACEFAST VENTE
+P ACE]]></Comment><Comment Operand="[12].8"><![CDATA[VDU6_WAIT_ON_PATTERNFAST VENTE
+P
+MODELLER]]></Comment><Comment Operand="[12].9"><![CDATA[VDU5_CIM_8_1_INSTCode-Reader inst.]]></Comment><Comment Operand="[12].10"><![CDATA[VDU4_EXT_CODE_REQEXT KODE
+DATA SGES]]></Comment><Comment Operand="[12].11"><![CDATA[VDU5_DISP_12_11]]></Comment><Comment Operand="[12].12"><![CDATA[VDU5_MOULD_POUR_INSTOneMouldPoured inst.]]></Comment><Comment Operand="[12].13"><![CDATA[VDU5_ACF_GATE_INSTOnly 3062]]></Comment><Comment Operand="[12].14"><![CDATA[F5-273
+CIM 2.6
+installed IMCT
+module 0: No 1: Yes]]></Comment><Comment Operand="[12].15"><![CDATA[F5-274
+CIM 2.7
+installed casting
+sorting 0: No 1: Yes]]></Comment><Comment Operand="[13]"><![CDATA[VDU5_SSU_EXHST_DELAY]]></Comment><Comment Operand="[14]"><![CDATA[VDU5_CH_SEAL_DLY_ON]]></Comment><Comment Operand="[15]"><![CDATA[VDU5_CH_SEAL_DLY_OFF]]></Comment><Comment Operand="[16]"><![CDATA[VDU5_DMS_NO]]></Comment><Comment Operand="[17]"><![CDATA[VDU5_SBO_ACTIVE]]></Comment><Comment Operand="[17].0"><![CDATA[BOOSTER
+KRSELS
+MDE
+AKTIV
+MODE ]]></Comment><Comment Operand="[18]"><![CDATA[VDU5_OIL_TMP_COOL_ON]]></Comment><Comment Operand="[19]"><![CDATA[VDU5_OIL_TMP_HEAT_ONOLIE
+TEMPERATUR]]></Comment><Comment Operand="[20]"><![CDATA[VDU5_SBO_INSTSBO Inst.]]></Comment><Comment Operand="[20].0"><![CDATA[SBO1 IN-
+STALLERET]]></Comment><Comment Operand="[20].1"><![CDATA[SBO2 IN-
+STALLERET]]></Comment><Comment Operand="[21]"><![CDATA[VDU5_REQ_YEAR]]></Comment><Comment Operand="[22]"><![CDATA[VDU5_REQ_MONTH]]></Comment><Comment Operand="[23]"><![CDATA[VDU5_REQ_DAY]]></Comment><Comment Operand="[24]"><![CDATA[VDU5_REQ_HOUR]]></Comment><Comment Operand="[25]"><![CDATA[VDU5_REQ_MINUTES]]></Comment><Comment Operand="[26]"><![CDATA[VDU5_REQ_LANGUAGE]]></Comment><Comment Operand="[27]"><![CDATA[VDU5_REQ_PIN_F7]]></Comment><Comment Operand="[28]"><![CDATA[VDU5_PPC_MIN_SPEED]]></Comment><Comment Operand="[29]"><![CDATA[VDU5_PPC_INSTALLED]]></Comment><Comment Operand="[30]"><![CDATA[VDU5_PMC_SBC_INSTPMC & SBC Inst
+0: No
+1: PMC
+2: PMC+SBC]]></Comment><Comment Operand="[31]"><![CDATA[VDU5_CSE_INST]]></Comment><Comment Operand="[32]"><![CDATA[VDU5_RDU1_SELECTIONREMOTE
+DISPLAY 1
+VALG]]></Comment><Comment Operand="[33]"><![CDATA[VDU5_PLC_PRG_VR_HIGH]]></Comment><Comment Operand="[34]"><![CDATA[VDU5_PLC_PRG_VR_MID]]></Comment><Comment Operand="[35]"><![CDATA[VDU5_PLC_PRG_VR_LOW]]></Comment><Comment Operand="[36]"><![CDATA[VDU5_CONTROL_2]]></Comment><Comment Operand="[36].0"><![CDATA[VDU9_MAN_MOVE_OKMAN
+BEVGELSE
+MULIG]]></Comment><Comment Operand="[36].1"><![CDATA[VDU9_MAN_MOVE_PPMANUEL
+KRSEL MED
+PP VALGT]]></Comment><Comment Operand="[36].2"><![CDATA[VDU9_MAN_MOVE_SPMANUEL
+KRSEL MED
+SP VALGT]]></Comment><Comment Operand="[36].3"><![CDATA[VDU9_MOVEABLE_HORIZBEVGELIGE
+RISTE MAN
+FREM/BAK]]></Comment><Comment Operand="[36].4"><![CDATA[VDU9_MOVEABLE_UPDOWNBEVGELIGE
+RISTE MAN
+OP/NED]]></Comment><Comment Operand="[36].5"><![CDATA[VDU9_FIXED_UPDOWNFASTE
+RISTE MAN
+OP/NED]]></Comment><Comment Operand="[36].6"><![CDATA[VDU9_CSE_IN_OUTCSE MANUEL
+IND/UD]]></Comment><Comment Operand="[36].7"><![CDATA[VDU9_CSE_REV_FWDCSE MANUEL
+BAK/FREM]]></Comment><Comment Operand="[36].8"><![CDATA[VDU9_SBC_CLUTCHSBC KLEMME
+OG BNE]]></Comment><Comment Operand="[36].9"><![CDATA[VDU9_SSU_VALVE_OPENSANDSPJLD
+BNE OG
+LUKKE]]></Comment><Comment Operand="[36].10"><![CDATA[VDU9_MOULD_RET_UPDOWFORM
+MODHOLD
+KLEMME OG
+BNE]]></Comment><Comment Operand="[36].11"><![CDATA[VDU9_MOULD_RET_MOVEFORM
+MODHOLD
+FREM OG
+TILBAGE]]></Comment><Comment Operand="[36].12"><![CDATA[VDU9_MSS_SELECTEDMMS
+AKTIVERES]]></Comment><Comment Operand="[36].13"><![CDATA[VDU9_PMC_ALTERNATINGPMC
+STAMPNING
+VALGT P
+VDU]]></Comment><Comment Operand="[36].14"><![CDATA[VDU9_PMC_AND_IDELINGPMC MED I
+TOMGANG]]></Comment><Comment Operand="[36].15"><![CDATA[VDU9_LAMP_TESTLAMPETEST]]></Comment><Comment Operand="[37]"><![CDATA[VDU5_REQ_OPR_DMM]]></Comment><Comment Operand="[38]"><![CDATA[VDU5_REQ_OPR_PMC]]></Comment><Comment Operand="[39]"><![CDATA[VDU5_REQ_OPR_CSE]]></Comment><Comment Operand="[40]"><![CDATA[VDU5_PLC_CPU_VERSION]]></Comment><Comment Operand="[41]"><![CDATA[VDU7_ADJ_PPD_BOARDJUSTERING
+AF PPD
+KORT
+SET PUNKT]]></Comment><Comment Operand="[42]"><![CDATA[VDU7_ADJ_HY13_ZERO]]></Comment><Comment Operand="[43]"><![CDATA[VDU5_SBO1_TMPHEAT_ONSBO1
+OLIE
+TEMPERATUR]]></Comment><Comment Operand="[44]"><![CDATA[VDU5_SBO2_TMPHEAT_ONSBO2
+OLIE
+TEMPERATUR]]></Comment><Comment Operand="[45]"><![CDATA[VDU5_PMC_WARN_PRESS]]></Comment><Comment Operand="[46]"><![CDATA[VDU5_SSC_INSTALLED]]></Comment><Comment Operand="[46].0"><![CDATA[SSC1 IN-
+STALLERET]]></Comment><Comment Operand="[46].1"><![CDATA[SSC2 IN-
+STALLERET]]></Comment><Comment Operand="[47]"><![CDATA[VDU7_SBO1_HY1924_TSTHY 1924
+SETP.
+SERVICE
+FCT 16]]></Comment><Comment Operand="[48]"><![CDATA[VDU7_SBO1_HY1922_TST]]></Comment><Comment Operand="[49]"><![CDATA[VDU7_SBO2_HY2924_TSTHY2924
+SETP.
+SERVICE
+FCT 17]]></Comment><Comment Operand="[50]"><![CDATA[VDU7_SBO2_HY2922_TST]]></Comment><Comment Operand="[51]"><![CDATA[VDU5_AFB_SEL_4BPP_Acc.
+Feed-Back
+0: Off
+1: 4B
+2: Auto]]></Comment><Comment Operand="[52]"><![CDATA[VDU5_AFB_SEL_SPSP_Acc.
+Feed-Back
+VDU_Select]]></Comment><Comment Operand="[53]"><![CDATA[VDU7_ADJ_HY24_ZEROPUMP HY24
+ZERO Adj.
+0=OFF
+1=Auto/Man
+2=Reset]]></Comment><Comment Operand="[54]"><![CDATA[VDU5_CSE6_MAX_TIME]]></Comment><Comment Operand="[55]"><![CDATA[VDU5_BLOW_SP_TOPVDU F5 Parm 311
+SP top Blow-off
+1: Selected]]></Comment><Comment Operand="[56]"><![CDATA[VDU5_BLOW_PP_IMPRESSVDU F5 Parm 312
+PP impress Blow-off
+1: Opr 3B
+2: Opr 6
+3: Opr 3B & 6]]></Comment><Comment Operand="[57]"><![CDATA[VDU5_BLOW_SP_IMPRESSVDU F5 Parm 313
+SP impress Blow-off
+1: Opr 4A]]></Comment><Comment Operand="[58]"><![CDATA[VDU5_SEL_SHOT_VALVDU F5 Parm xx
+Sel. of shot valves
+A&S=0: PN7AB/BC/CA
+B&C=0: PN7AC/CD
+All   =1: PN7ABCD]]></Comment><Comment Operand="[59]"><![CDATA[VDU5_SPRAY_REARFRONT0=No
+1=Rear, 2=Front
+3=Rear+Front]]></Comment></Comments><Data Format="L5K"><![CDATA[[0,4500,0,0,0,0,0,0,0,0,87,0,0,0,0,0,3081,0,480,300,0,2025,2,28,21,10,2,0,7,2,2,1,-1,4,2,2,2,41,220,300,0,0,0,0,0,1500,0,0,0,0,0,0,0,0,200
+					,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0]]]></Data><Data Format="Decorated"><Array DataType="INT" Dimensions="70" Radix="Decimal"><Element Index="[0]" Value="0" /><Element Index="[1]" Value="4500" /><Element Index="[2]" Value="0" /><Element Index="[3]" Value="0" /><Element Index="[4]" Value="0" /><Element Index="[5]" Value="0" /><Element Index="[6]" Value="0" /><Element Index="[7]" Value="0" /><Element Index="[8]" Value="0" /><Element Index="[9]" Value="0" /><Element Index="[10]" Value="87" /><Element Index="[11]" Value="0" /><Element Index="[12]" Value="0" /><Element Index="[13]" Value="0" /><Element Index="[14]" Value="0" /><Element Index="[15]" Value="0" /><Element Index="[16]" Value="3081" /><Element Index="[17]" Value="0" /><Element Index="[18]" Value="480" /><Element Index="[19]" Value="300" /><Element Index="[20]" Value="0" /><Element Index="[21]" Value="2025" /><Element Index="[22]" Value="2" /><Element Index="[23]" Value="28" /><Element Index="[24]" Value="21" /><Element Index="[25]" Value="10" /><Element Index="[26]" Value="2" /><Element Index="[27]" Value="0" /><Element Index="[28]" Value="7" /><Element Index="[29]" Value="2" /><Element Index="[30]" Value="2" /><Element Index="[31]" Value="1" /><Element Index="[32]" Value="-1" /><Element Index="[33]" Value="4" /><Element Index="[34]" Value="2" /><Element Index="[35]" Value="2" /><Element Index="[36]" Value="2" /><Element Index="[37]" Value="41" /><Element Index="[38]" Value="220" /><Element Index="[39]" Value="300" /><Element Index="[40]" Value="0" /><Element Index="[41]" Value="0" /><Element Index="[42]" Value="0" /><Element Index="[43]" Value="0" /><Element Index="[44]" Value="0" /><Element Index="[45]" Value="1500" /><Element Index="[46]" Value="0" /><Element Index="[47]" Value="0" /><Element Index="[48]" Value="0" /><Element Index="[49]" Value="0" /><Element Index="[50]" Value="0" /><Element Index="[51]" Value="0" /><Element Index="[52]" Value="0" /><Element Index="[53]" Value="0" /><Element Index="[54]" Value="200" /><Element Index="[55]" Value="0" /><Element Index="[56]" Value="0" /><Element Index="[57]" Value="0" /><Element Index="[58]" Value="1" /><Element Index="[59]" Value="0" /><Element Index="[60]" Value="0" /><Element Index="[61]" Value="0" /><Element Index="[62]" Value="0" /><Element Index="[63]" Value="0" /><Element Index="[64]" Value="0" /><Element Index="[65]" Value="0" /><Element Index="[66]" Value="0" /><Element Index="[67]" Value="0" /><Element Index="[68]" Value="0" /><Element Index="[69]" Value="0" /></Array></Data></Tag><Tag Name="SO_Buffer_Control" TagType="Base" DataType="SO_Buffer_Control_Type" Constant="false" ExternalAccess="Read/Write"><Data Format="L5K"><![CDATA[[2,0,6,0,0,999,0,0,0,0,0]]]></Data><Data Format="Decorated"><Structure DataType="SO_Buffer_Control_Type"><DataValueMember Name="Setup_Index" DataType="DINT" Radix="Decimal" Value="2" /><DataValueMember Name="Trigger_Index" DataType="DINT" Radix="Decimal" Value="0" /><DataValueMember Name="Frames_Per_Buffer" DataType="DINT" Radix="Decimal" Value="6" /><DataValueMember Name="Ready_No" DataType="DINT" Radix="Decimal" Value="0" /><DataValueMember Name="Max_Frames" DataType="DINT" Radix="Decimal" Value="0" /><DataValueMember Name="Buffer_Max_Size" DataType="DINT" Radix="Decimal" Value="999" /><DataValueMember Name="Send" DataType="BOOL" Value="0" /><DataValueMember Name="Start" DataType="BOOL" Value="0" /><DataValueMember Name="DataLogOn" DataType="BOOL" Value="0" /><DataValueMember Name="DataLogRunning" DataType="BOOL" Value="0" /><DataValueMember Name="Counter" DataType="DINT" Radix="Decimal" Value="0" /><DataValueMember Name="POS" DataType="DINT" Radix="Decimal" Value="0" /><DataValueMember Name="Frame" DataType="DINT" Radix="Decimal" Value="0" /><DataValueMember Name="Full" DataType="BOOL" Value="0" /></Structure></Data></Tag></Tags><Programs Use="Context"><Program Use="Context" Name="Top"><Tags Use="Context"><Tag Name="Bip" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write"><Data Format="L5K"><![CDATA[1]]></Data><Data Format="Decorated"><DataValue DataType="BOOL" Radix="Decimal" Value="1" /></Data></Tag></Tags><Routines Use="Context"><Routine Use="Reference" Name="Config"></Routine><Routine Use="Reference" Name="DataLog"></Routine><Routine Use="Reference" Name="Input_Dms_Analog"></Routine><Routine Use="Reference" Name="Input_Dms_Digital"></Routine><Routine Use="Reference" Name="Input_Sbo_Analog"></Routine><Routine Use="Reference" Name="Input_Sbo_Digital"></Routine><Routine Use="Target" Name="MainTop" Type="RLL"><Description><![CDATA[<@TYPE EMPTY>]]></Description><RLLContent><Rung Number="0" Type="N"><Comment><![CDATA[<@VER 1.263> <@EDITS ALLOWED>
+<@INFO>
+################################################################
+# Decrypted routine: MainTop
+################################################################]]></Comment><Text><![CDATA[OTE(RungComment);]]></Text></Rung><Rung Number="1" Type="N"><Text><![CDATA[XIC(InputBit)OTE(OutputBit);]]></Text></Rung></RLLContent></Routine><Routine Use="Reference" Name="Output_Dms_Analog"></Routine><Routine Use="Reference" Name="Output_Dms_Digital"></Routine><Routine Use="Reference" Name="Output_Sbo_Analog"></Routine><Routine Use="Reference" Name="Output_Sbo_Digital"></Routine><Routine Use="Reference" Name="StatusFile"></Routine></Routines></Program></Programs><Tasks Use="Context"><Task Use="Reference" Name="_2_Main_Program"></Task></Tasks><WallClockTime Use="Reference"></WallClockTime></Controller></RSLogix5000Content>

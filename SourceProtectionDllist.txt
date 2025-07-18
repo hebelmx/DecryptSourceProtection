@@ -1,0 +1,855 @@
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v21\Bin\AFLib.dll
+Offset: 3780399
+Context (hex): 4974656d404000000068b92510000000002e3f415641465f43526f7574696e65536f7572636550726f74656374696f6e477269644974656d404000000068b92510000000002e3f415641465f43457874
+Context (ascii): Item@@...h.%......?AVAF_CRoutineSourceProtectionGridItem@@...h.%......?AVAF_CExt
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v21\Bin\afutil.dll
+Offset: 1852603
+Context (hex): 5f4346696c65446c67576974685372634374726c404053415f4e585a003f4973536f7572636550726f74656374696f6e456e6372797074696f6e55736572436f6e666967757261626c65404059415f4e
+Context (ascii): _CFileDlgWithSrcCtrl@@SA_NXZ.?IsSourceProtectionEncryptionUserConfigurable@@YA_N
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v21\Bin\FBDLang.dll
+Offset: 2669603
+Context (hex): 404040404d42454a4141564342797465417272617940405f4e405a0000ec663f536f7572636550726f74656374696f6e4b65794174747269627574654964405278526f7574696e6540404d424547585a
+Context (ascii): @@@@MBEJAAVCByteArray@@_N@Z...f?SourceProtectionKeyAttributeId@RxRoutine@@MBEGXZ
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v21\Bin\Logix5000.ManagedBridge.dll
+Offset: 236473
+Context (hex): 3c52784d657461646174613e00527849536f7572636550726f74656374656400536f7572636550726f74656374696f6e547970650043416e696d6174696f6e47726f757000443244315f475241444945
+Context (ascii): <RxMetadata>.RxISourceProtected.SourceProtectionType.CAnimationGroup.D2D1_GRADIE
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v21\Bin\LogixDesigner.Exe
+Offset: 2587473
+Context (hex): 0069006e0065000000000041465f434e6176436f6e7465787456697369746f72536f7572636550726f74656374696f6e3a3a50726f63657373000018576a007e215e00a0a55200309a52008012400090
+Context (ascii): .i.n.e.....AF_CNavContextVisitorSourceProtection::Process...Wj.~!^...R.0.R...@..
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v21\Bin\Services.DLL
+Offset: 17604436
+Context (hex): 6e74726f6c6c6572404051414558585a003f416c6c6f77436f6e666967757265536f7572636550726f74656374696f6e405278536f757263654b657946696c6540405542454a41415f4e405a003f416c
+Context (ascii): ntroller@@QAEXXZ.?AllowConfigureSourceProtection@RxSourceKeyFile@@UBEJAA_N@Z.?Al
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v21\Bin\SFCLang.dll
+Offset: 1165337
+Context (hex): 404040404d42454a4141564342797465417272617940405f4e405a0000ec663f536f7572636550726f74656374696f6e4b65794174747269627574654964405278526f7574696e6540404d424547585a
+Context (ascii): @@@@MBEJAAVCByteArray@@_N@Z...f?SourceProtectionKeyAttributeId@RxRoutine@@MBEGXZ
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v21\Bin\STXLang.DLL
+Offset: 708517
+Context (hex): 404040404d42454a4141564342797465417272617940405f4e405a0000ec663f536f7572636550726f74656374696f6e4b65794174747269627574654964405278526f7574696e6540404d424547585a
+Context (ascii): @@@@MBEJAAVCByteArray@@_N@Z...f?SourceProtectionKeyAttributeId@RxRoutine@@MBEGXZ
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v21\Bin\Umbrella.dll
+Offset: 565279
+Context (hex): 404040404d42454a4141564342797465417272617940405f4e405a0000ec663f536f7572636550726f74656374696f6e4b65794174747269627574654964405278526f7574696e6540404d424547585a
+Context (ascii): @@@@MBEJAAVCByteArray@@_N@Z...f?SourceProtectionKeyAttributeId@RxRoutine@@MBEGXZ
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v23\Bin\afutil.dll
+Offset: 1852619
+Context (hex): 5f4346696c65446c67576974685372634374726c404053415f4e585a003f4973536f7572636550726f74656374696f6e456e6372797074696f6e55736572436f6e666967757261626c65404059415f4e
+Context (ascii): _CFileDlgWithSrcCtrl@@SA_NXZ.?IsSourceProtectionEncryptionUserConfigurable@@YA_N
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v23\Bin\FBDLang.dll
+Offset: 2669705
+Context (hex): 404040404d42454a4141564342797465417272617940405f4e405a00000d673f536f7572636550726f74656374696f6e4b65794174747269627574654964405278526f7574696e6540404d424547585a
+Context (ascii): @@@@MBEJAAVCByteArray@@_N@Z...g?SourceProtectionKeyAttributeId@RxRoutine@@MBEGXZ
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v23\Bin\Logix5000.ManagedBridge.dll
+Offset: 236549
+Context (hex): 3c52784d657461646174613e00527849536f7572636550726f74656374656400536f7572636550726f74656374696f6e547970650043416e696d6174696f6e47726f757000443244315f475241444945
+Context (ascii): <RxMetadata>.RxISourceProtected.SourceProtectionType.CAnimationGroup.D2D1_GRADIE
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v23\Bin\Services.DLL
+Offset: 18485676
+Context (hex): 6e74726f6c6c6572404051414558585a003f416c6c6f77436f6e666967757265536f7572636550726f74656374696f6e405278536f757263654b657946696c6540405542454a41415f4e405a003f416c
+Context (ascii): ntroller@@QAEXXZ.?AllowConfigureSourceProtection@RxSourceKeyFile@@UBEJAA_N@Z.?Al
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v23\Bin\SFCLang.dll
+Offset: 1165471
+Context (hex): 404040404d42454a4141564342797465417272617940405f4e405a00000d673f536f7572636550726f74656374696f6e4b65794174747269627574654964405278526f7574696e6540404d424547585a
+Context (ascii): @@@@MBEJAAVCByteArray@@_N@Z...g?SourceProtectionKeyAttributeId@RxRoutine@@MBEGXZ
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v23\Bin\STXLang.DLL
+Offset: 708635
+Context (hex): 404040404d42454a4141564342797465417272617940405f4e405a00000d673f536f7572636550726f74656374696f6e4b65794174747269627574654964405278526f7574696e6540404d424547585a
+Context (ascii): @@@@MBEJAAVCByteArray@@_N@Z...g?SourceProtectionKeyAttributeId@RxRoutine@@MBEGXZ
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v23\Bin\Umbrella.dll
+Offset: 1452897
+Context (hex): 404040404d42454a4141564342797465417272617940405f4e405a00000d673f536f7572636550726f74656374696f6e4b65794174747269627574654964405278526f7574696e6540404d424547585a
+Context (ascii): @@@@MBEJAAVCByteArray@@_N@Z...g?SourceProtectionKeyAttributeId@RxRoutine@@MBEGXZ
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v24\Bin\afutil.dll
+Offset: 1332956
+Context (hex): 5f4346696c65446c67576974685372634374726c404053415f4e585a003f4973536f7572636550726f74656374696f6e456e6372797074696f6e55736572436f6e666967757261626c65404059415f4e
+Context (ascii): _CFileDlgWithSrcCtrl@@SA_NXZ.?IsSourceProtectionEncryptionUserConfigurable@@YA_N
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v24\Bin\FBDLang.dll
+Offset: 1865088
+Context (hex): 526f7574696e6540405542454a484848405a00006b243f43616e4368616e6765536f7572636550726f74656374696f6e405278526f7574696e6540404d41454a585a00006d243f43616e4368616e6765
+Context (ascii): Routine@@UBEJHHH@Z..k$?CanChangeSourceProtection@RxRoutine@@MAEJXZ..m$?CanChange
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v24\Bin\Logix5000.ManagedBridge.dll
+Offset: 47541
+Context (hex): 506173735468726f756768004d65746164617461436f6d626f486f73742e4973536f7572636550726f74656374696f6e4c6f636b6564004d65746164617461436f6d626f486f73742e49735365616c65
+Context (ascii): PassThrough.MetadataComboHost.IsSourceProtectionLocked.MetadataComboHost.IsSeale
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v24\Bin\Services.DLL
+Offset: 14607860
+Context (hex): 6e74726f6c6c6572404051414558585a003f416c6c6f77436f6e666967757265536f7572636550726f74656374696f6e405278536f757263654b657946696c6540405542454a41415f4e405a003f416c
+Context (ascii): ntroller@@QAEXXZ.?AllowConfigureSourceProtection@RxSourceKeyFile@@UBEJAA_N@Z.?Al
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v24\Bin\SFCLang.dll
+Offset: 817700
+Context (hex): 526f7574696e6540405542454a484848405a00006b243f43616e4368616e6765536f7572636550726f74656374696f6e405278526f7574696e6540404d41454a585a00006d243f43616e4368616e6765
+Context (ascii): Routine@@UBEJHHH@Z..k$?CanChangeSourceProtection@RxRoutine@@MAEJXZ..m$?CanChange
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v24\Bin\STXLang.DLL
+Offset: 577078
+Context (hex): 526f7574696e6540405542454a484848405a00006b243f43616e4368616e6765536f7572636550726f74656374696f6e405278526f7574696e6540404d41454a585a00006d243f43616e4368616e6765
+Context (ascii): Routine@@UBEJHHH@Z..k$?CanChangeSourceProtection@RxRoutine@@MAEJXZ..m$?CanChange
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v24\Bin\Umbrella.dll
+Offset: 836170
+Context (hex): 526f7574696e6540405542454a484848405a00006b243f43616e4368616e6765536f7572636550726f74656374696f6e405278526f7574696e6540404d41454a585a00006d243f43616e4368616e6765
+Context (ascii): Routine@@UBEJHHH@Z..k$?CanChangeSourceProtection@RxRoutine@@MAEJXZ..m$?CanChange
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\afinfo.dll
+Offset: 325741
+Context (hex): 535050535f4445434f44455f5448524f574e5f56414c55450000005278476574536f7572636550726f74656374696f6e50726976696c6567657300696e76616c696420737472696e6720706f73697469
+Context (ascii): SPPS_DECODE_THROWN_VALUE...RxGetSourceProtectionPrivileges.invalid string positi
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\afutil.dll
+Offset: 857189
+Context (hex): 535050535f4445434f44455f5448524f574e5f56414c55450000005278476574536f7572636550726f74656374696f6e50726976696c65676573005278496e666f5374727563743a3a49735374727563
+Context (ascii): SPPS_DECODE_THROWN_VALUE...RxGetSourceProtectionPrivileges.RxInfoStruct::IsStruc
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\CompareServices.dll
+Offset: 167629
+Context (hex): 535050535f4445434f44455f5448524f574e5f56414c55450000005278476574536f7572636550726f74656374696f6e50726976696c6567657300a4dd0210909700105278436f6d7061726553657276
+Context (ascii): SPPS_DECODE_THROWN_VALUE...RxGetSourceProtectionPrivileges.........RxCompareServ
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\ContOrg.dll
+Offset: 293005
+Context (hex): 535050535f4445434f44455f5448524f574e5f56414c55450000005278476574536f7572636550726f74656374696f6e50726976696c656765730058fe0410e03b001070ff0410a8f40210d039001060
+Context (ascii): SPPS_DECODE_THROWN_VALUE...RxGetSourceProtectionPrivileges.X....;..p........9..`
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\dataedit.dll
+Offset: 873861
+Context (hex): 535050535f4445434f44455f5448524f574e5f56414c55450000005278476574536f7572636550726f74656374696f6e50726976696c6567657300f4c20e10c0580110cc9c0a10c69c0a100e9d0a10ea
+Context (ascii): SPPS_DECODE_THROWN_VALUE...RxGetSourceProtectionPrivileges......X...............
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\dsi.dll
+Offset: 1046037
+Context (hex): 535050535f4445434f44455f5448524f574e5f56414c55450000005278476574536f7572636550726f74656374696f6e50726976696c6567657300c069111050b90c10696e76616c696420737472696e
+Context (ascii): SPPS_DECODE_THROWN_VALUE...RxGetSourceProtectionPrivileges..i..P...invalid strin
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\EPhase.dll
+Offset: 228557
+Context (hex): 535050535f4445434f44455f5448524f574e5f56414c55450000005278476574536f7572636550726f74656374696f6e50726976696c6567657300696e76616c696420737472696e6720706f73697469
+Context (ascii): SPPS_DECODE_THROWN_VALUE...RxGetSourceProtectionPrivileges.invalid string positi
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\ExtRoutines.dll
+Offset: 116317
+Context (hex): 535050535f4445434f44455f5448524f574e5f56414c55450000005278476574536f7572636550726f74656374696f6e50726976696c65676573006c0d02100ac1001040c1001016c100103ac1001010
+Context (ascii): SPPS_DECODE_THROWN_VALUE...RxGetSourceProtectionPrivileges.l.......@.......:....
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\FBDLang.dll
+Offset: 1541989
+Context (hex): 784973536f7572636550726f7465637461626c65576974680000005278476574536f7572636550726f74656374696f6e50726976696c6567657300381f1a10c0370810fcb00c1002b10c10aeb00c106c
+Context (ascii): xIsSourceProtectableWith...RxGetSourceProtectionPrivileges.8....7..............l
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\Logix5000.ManagedBridge.dll
+Offset: 22493
+Context (hex): 736974696f6e00737472696e6720746f6f206c6f6e6700000000005278476574536f7572636550726f74656374696f6e50726976696c656765730067656e6572696300756e6b6e6f776e206572726f72
+Context (ascii): sition.string too long.....RxGetSourceProtectionPrivileges.generic.unknown error
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\motion.dll
+Offset: 2261940
+Context (hex): 494469616c6f6744617461404000000078241d10000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e65724040000078241d1000000000
+Context (ascii): IDialogData@@...x$.......?AVAF_CSourceProtectionNotificationListener@@..x$......
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\reports.dll
+Offset: 286741
+Context (hex): 535050535f4445434f44455f5448524f574e5f56414c55450000005278476574536f7572636550726f74656374696f6e50726976696c6567657300696e76616c696420737472696e6720706f73697469
+Context (ascii): SPPS_DECODE_THROWN_VALUE...RxGetSourceProtectionPrivileges.invalid string positi
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\SearchCoordinator.dll
+Offset: 181045
+Context (hex): 535050535f4445434f44455f5448524f574e5f56414c55450000005278476574536f7572636550726f74656374696f6e50726976696c6567657300696e76616c696420737472696e6720706f73697469
+Context (ascii): SPPS_DECODE_THROWN_VALUE...RxGetSourceProtectionPrivileges.invalid string positi
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\SFCLang.dll
+Offset: 602245
+Context (hex): 784973536f7572636550726f7465637461626c65576974680000005278476574536f7572636550726f74656374696f6e50726976696c6567657300946d0a10c0970010f2e20710f8e20710b0e20710ba
+Context (ascii): xIsSourceProtectableWith...RxGetSourceProtectionPrivileges..m...................
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\STXLang.DLL
+Offset: 450965
+Context (hex): 784973536f7572636550726f7465637461626c65576974680000005278476574536f7572636550726f74656374696f6e50726976696c6567657300dc74071070f20110887005108e70051040700510c2
+Context (ascii): xIsSourceProtectableWith...RxGetSourceProtectionPrivileges..t..p....p...p..@p...
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\UDI.dll
+Offset: 362717
+Context (hex): 535050535f4445434f44455f5448524f574e5f56414c55450000005278476574536f7572636550726f74656374696f6e50726976696c6567657300696e76616c696420737472696e6720706f73697469
+Context (ascii): SPPS_DECODE_THROWN_VALUE...RxGetSourceProtectionPrivileges.invalid string positi
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v26\Bin\xref.dll
+Offset: 303717
+Context (hex): 535050535f4445434f44455f5448524f574e5f56414c55450000005278476574536f7572636550726f74656374696f6e50726976696c65676573006c270510507c011064fb02105efb0210f4fb021082
+Context (ascii): SPPS_DECODE_THROWN_VALUE...RxGetSourceProtectionPrivileges.l'..P|..d...^........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v27\Bin\afutil.dll
+Offset: 1303692
+Context (hex): 63654b65794040407374644040000000a0880e10000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000a0880e1000000000
+Context (ascii): ceKey@@@std@@............?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v27\Bin\dsi.dll
+Offset: 1420321
+Context (hex): 67404040003f3f5f3744455f437265617465546167446c674040364241465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404040003f3f5f3744455f43
+Context (ascii): g@@@.??_7DE_CreateTagDlg@@6BAF_CSourceProtectionNotificationListener@@@.??_7DE_C
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v27\Bin\Logix5000.ManagedBridge.dll
+Offset: 23005
+Context (hex): 736974696f6e00737472696e6720746f6f206c6f6e6700000000005278476574536f7572636550726f74656374696f6e50726976696c656765730067656e6572696300756e6b6e6f776e206572726f72
+Context (ascii): sition.string too long.....RxGetSourceProtectionPrivileges.generic.unknown error
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v27\Bin\motion.dll
+Offset: 2223540
+Context (hex): 494469616c6f67446174614040000000f81e1d10000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000f81e1d1000000000
+Context (ascii): IDialogData@@............?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v27\Bin\UDI.dll
+Offset: 554904
+Context (hex): 494469616c6f67446174614040000000b4230610000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000b423061000000000
+Context (ascii): IDialogData@@....#.......?AVAF_CSourceProtectionNotificationListener@@...#......
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\afutil.dll
+Offset: 1335688
+Context (hex): 63654b6579404040737464404000000000ed0e10000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e65724040000000ed0e1000000000
+Context (ascii): ceKey@@@std@@............?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\dsi.dll
+Offset: 1457886
+Context (hex): 67404040003f3f5f3744455f437265617465546167446c674040364241465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404040003f3f5f3744455f43
+Context (ascii): g@@@.??_7DE_CreateTagDlg@@6BAF_CSourceProtectionNotificationListener@@@.??_7DE_C
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\FBD.dll
+Offset: 1860052
+Context (hex): 6c656d656e7442617365446c674040007c841610000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404000007c84161000000000
+Context (ascii): lementBaseDlg@@.|........?AVAF_CSourceProtectionNotificationListener@@..|.......
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\gle.dll
+Offset: 1162408
+Context (hex): 6c656d656e7442617365446c67404000acf60c10000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000acf60c1000000000
+Context (ascii): lementBaseDlg@@..........?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\Logix5000.ManagedBridge.dll
+Offset: 22441
+Context (hex): 7849536f7572636550726f74656374656448656c706572732e68005278476574536f7572636550726f74656374696f6e50726976696c656765730067656e6572696300756e6b6e6f776e206572726f72
+Context (ascii): xISourceProtectedHelpers.h.RxGetSourceProtectionPrivileges.generic.unknown error
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\Logix5000.SequenceEditor.dll
+Offset: 1722110
+Context (hex): 6f7200557064617465536563757269747953657474696e677300557064617465536f7572636550726f74656374696f6e00486173416e79496e6c696e65456469744d6f64696669656400436c6561724d
+Context (ascii): or.UpdateSecuritySettings.UpdateSourceProtection.HasAnyInlineEditModified.ClearM
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\Logix5000.ServicesInterop.Services.dll
+Offset: 246037
+Context (hex): 706572732e680052784973536f7572636550726f746563746564005278476574536f7572636550726f74656374696f6e50726976696c6567657300fcffffff04000000fcffffff0c000000fcffffff30
+Context (ascii): pers.h.RxIsSourceProtected.RxGetSourceProtectionPrivileges.....................0
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\LogixServices.dll
+Offset: 1035223
+Context (hex): 40404b50415041554944697370617463684040405a003f437265617465414f5f536f7572636550726f74656374696f6e496e7374616e6365404059414a50415041554944697370617463684040405a00
+Context (ascii): @@KPAPAUIDispatch@@@Z.?CreateAO_SourceProtectionInstance@@YAJPAPAUIDispatch@@@Z.
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\motion.dll
+Offset: 2235316
+Context (hex): 494469616c6f67446174614040000000b8511d10000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e65724040000000000000b9010000
+Context (ascii): IDialogData@@....Q.......?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\rll.dll
+Offset: 1484252
+Context (hex): 476f546f4469616c6f67404000000000e4c81210000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e65724040000024576f726b66696c
+Context (ascii): GoToDialog@@.............?AVAF_CSourceProtectionNotificationListener@@..$Workfil
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\RSLogix5000Services.exe
+Offset: 44325
+Context (hex): 466f726d61745f436f6d706f6e656e744c3558c8000000ffffffff19380ec149536f7572636550726f74656374696f6e50726f7669646572575757c8000000ffffffff14008254416c6c6f7743726561
+Context (ascii): Format_ComponentL5X.........8..ISourceProtectionProviderWWW...........TAllowCrea
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\Sequence.dll
+Offset: 565753
+Context (hex): 7849536f7572636550726f74656374656448656c706572732e68005278476574536f7572636550726f74656374696f6e50726976696c656765730000000000184a1410c0de0010ca7c0210c47c02105a
+Context (ascii): xISourceProtectedHelpers.h.RxGetSourceProtectionPrivileges......J.......|...|..Z
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\SFCEditor.dll
+Offset: 1690928
+Context (hex): 494469616c6f6744617461404000000068721410000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404000006872141000000000
+Context (ascii): IDialogData@@...hr.......?AVAF_CSourceProtectionNotificationListener@@..hr......
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\stx.dll
+Offset: 827980
+Context (hex): 6c656d656e7442617365446c67404000f0670910000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000f067091000000000
+Context (ascii): lementBaseDlg@@..g.......?AVAF_CSourceProtectionNotificationListener@@...g......
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v28\Bin\UDI.dll
+Offset: 565884
+Context (hex): 494469616c6f6744617461404000000024550610000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404000000000000024550610
+Context (ascii): IDialogData@@...$U.......?AVAF_CSourceProtectionNotificationListener@@......$U..
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\afutil.dll
+Offset: 1381080
+Context (hex): 63654b65794040407374644040000000ec640f10000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000ec640f1000000000
+Context (ascii): ceKey@@@std@@....d.......?AVAF_CSourceProtectionNotificationListener@@...d......
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\dsi.dll
+Offset: 1473488
+Context (hex): 67404040003f3f5f3744455f437265617465546167446c674040364241465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404040003f3f5f3744455f43
+Context (ascii): g@@@.??_7DE_CreateTagDlg@@6BAF_CSourceProtectionNotificationListener@@@.??_7DE_C
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\FBD.dll
+Offset: 1882092
+Context (hex): 6c656d656e7442617365446c67404000cccc1610000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000cccc161000000000
+Context (ascii): lementBaseDlg@@..........?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\gle.dll
+Offset: 1174320
+Context (hex): 6c656d656e7442617365446c67404000b01c0d10000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000b01c0d1000000000
+Context (ascii): lementBaseDlg@@..........?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\Logix5000.ManagedBridge.dll
+Offset: 22473
+Context (hex): 7849536f7572636550726f74656374656448656c706572732e68005278476574536f7572636550726f74656374696f6e50726976696c656765730067656e6572696300756e6b6e6f776e206572726f72
+Context (ascii): xISourceProtectedHelpers.h.RxGetSourceProtectionPrivileges.generic.unknown error
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\Logix5000.SequenceEditor.dll
+Offset: 1723103
+Context (hex): 6f7200557064617465536563757269747953657474696e677300557064617465536f7572636550726f74656374696f6e00486173416e79496e6c696e65456469744d6f64696669656400436c6561724d
+Context (ascii): or.UpdateSecuritySettings.UpdateSourceProtection.HasAnyInlineEditModified.ClearM
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\Logix5000.ServicesInterop.Services.dll
+Offset: 403909
+Context (hex): 706572732e680052784973536f7572636550726f746563746564005278476574536f7572636550726f74656374696f6e50726976696c6567657300fcffffff04000000fcffffff0c000000fcffffff30
+Context (ascii): pers.h.RxIsSourceProtected.RxGetSourceProtectionPrivileges.....................0
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\LogixServices.dll
+Offset: 1038503
+Context (hex): 40404b50415041554944697370617463684040405a003f437265617465414f5f536f7572636550726f74656374696f6e496e7374616e6365404059414a50415041554944697370617463684040405a00
+Context (ascii): @@KPAPAUIDispatch@@@Z.?CreateAO_SourceProtectionInstance@@YAJPAPAUIDispatch@@@Z.
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\motion.dll
+Offset: 2266548
+Context (hex): 494469616c6f6744617461404000000014ba1d10000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e65724040000000000000b9010000
+Context (ascii): IDialogData@@............?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\rll.dll
+Offset: 1499612
+Context (hex): 476f546f4469616c6f6740400000000060ff1210000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e65724040000024576f726b66696c
+Context (ascii): GoToDialog@@....`........?AVAF_CSourceProtectionNotificationListener@@..$Workfil
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\RSLogix5000Services.exe
+Offset: 44325
+Context (hex): 466f726d61745f436f6d706f6e656e744c3558c8000000ffffffff19380ec149536f7572636550726f74656374696f6e50726f7669646572575757c8000000ffffffff14008254416c6c6f7743726561
+Context (ascii): Format_ComponentL5X.........8..ISourceProtectionProviderWWW...........TAllowCrea
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\Sequence.dll
+Offset: 674721
+Context (hex): 7849536f7572636550726f74656374656448656c706572732e68005278476574536f7572636550726f74656374696f6e50726976696c656765730000000000d0751610a0dd0010f67d0210f07d021086
+Context (ascii): xISourceProtectedHelpers.h.RxGetSourceProtectionPrivileges......u.......}...}...
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\SFCEditor.dll
+Offset: 1702712
+Context (hex): 494469616c6f6744617461404000000018981410000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404000001898141000000000
+Context (ascii): IDialogData@@............?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\stx.dll
+Offset: 843852
+Context (hex): 6c656d656e7442617365446c67404000fc9a0910000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000fc9a091000000000
+Context (ascii): lementBaseDlg@@..........?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v29\Bin\UDI.dll
+Offset: 574568
+Context (hex): 494469616c6f67446174614040000000146b0610000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000146b061000000000
+Context (ascii): IDialogData@@....k.......?AVAF_CSourceProtectionNotificationListener@@...k......
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\afutil.dll
+Offset: 1758792
+Context (hex): 63654b65794040407374644040000000944a1410000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000944a141000000000
+Context (ascii): ceKey@@@std@@....J.......?AVAF_CSourceProtectionNotificationListener@@...J......
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\dsi.dll
+Offset: 1418290
+Context (hex): 67404040003f3f5f3744455f437265617465546167446c674040364241465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404040003f3f5f3744455f43
+Context (ascii): g@@@.??_7DE_CreateTagDlg@@6BAF_CSourceProtectionNotificationListener@@@.??_7DE_C
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\FBD.dll
+Offset: 1926452
+Context (hex): 6c656d656e7442617365446c674040006c411710000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404000006c41171000000000
+Context (ascii): lementBaseDlg@@.lA.......?AVAF_CSourceProtectionNotificationListener@@..lA......
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\gle.dll
+Offset: 1206864
+Context (hex): 6c656d656e7442617365446c67404000108f0d10000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000108f0d1000000000
+Context (ascii): lementBaseDlg@@..........?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\Logix5000.AFLib.dll
+Offset: 135720
+Context (hex): 72656374696f6e00736f7274446972656374696f6e00646972656374696f6e00536f7572636550726f74656374696f6e0049416f69446566696e6974696f6e00616f69446566696e6974696f6e00436f
+Context (ascii): rection.sortDirection.direction.SourceProtection.IAoiDefinition.aoiDefinition.Co
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\Logix5000.ManagedBridge.dll
+Offset: 23065
+Context (hex): 7849536f7572636550726f74656374656448656c706572732e68005278476574536f7572636550726f74656374696f6e50726976696c65676573004800000002000500207700005cd400001800000040
+Context (ascii): xISourceProtectedHelpers.h.RxGetSourceProtectionPrivileges.H....... w..\.......@
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\Logix5000.SequenceEditor.dll
+Offset: 1668954
+Context (hex): 6f7200557064617465536563757269747953657474696e677300557064617465536f7572636550726f74656374696f6e00486173416e79496e6c696e654564697441637469766500486173416e79496e
+Context (ascii): or.UpdateSecuritySettings.UpdateSourceProtection.HasAnyInlineEditActive.HasAnyIn
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\Logix5000.ServicesInterop.Services.dll
+Offset: 426073
+Context (hex): 7849536f7572636550726f74656374656448656c706572732e68005278476574536f7572636550726f74656374696f6e50726976696c656765730000000000443a5c5353766965775f445c503130385f
+Context (ascii): xISourceProtectedHelpers.h.RxGetSourceProtectionPrivileges.....D:\SSview_D\P108_
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\LogixServices.dll
+Offset: 1042528
+Context (hex): 40404b50415041554944697370617463684040405a003f437265617465414f5f536f7572636550726f74656374696f6e496e7374616e6365404059414a50415041554944697370617463684040405a00
+Context (ascii): @@KPAPAUIDispatch@@@Z.?CreateAO_SourceProtectionInstance@@YAJPAPAUIDispatch@@@Z.
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\motion.dll
+Offset: 2340440
+Context (hex): 494469616c6f67446174614040000000ec771e10000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000ec771e1000000000
+Context (ascii): IDialogData@@....w.......?AVAF_CSourceProtectionNotificationListener@@...w......
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\rll.dll
+Offset: 1600876
+Context (hex): 476f546f4469616c6f6740400000000000641410000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404000000064141000000000
+Context (ascii): GoToDialog@@.....d.......?AVAF_CSourceProtectionNotificationListener@@...d......
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\RSLogix5000Services.exe
+Offset: 1829669
+Context (hex): 466f726d61745f436f6d706f6e656e744c3558c8000000ffffffff19380ec149536f7572636550726f74656374696f6e50726f7669646572575757c8000000ffffffff14008254416c6c6f7743726561
+Context (ascii): Format_ComponentL5X.........8..ISourceProtectionProviderWWW...........TAllowCrea
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\Sequence.dll
+Offset: 747089
+Context (hex): 7849536f7572636550726f74656374656448656c706572732e68005278476574536f7572636550726f74656374696f6e50726976696c65676573000000000060af171070f40310649705102897051022
+Context (ascii): xISourceProtectedHelpers.h.RxGetSourceProtectionPrivileges.....`...p...d...(..."
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\SFCEditor.dll
+Offset: 1723024
+Context (hex): 494469616c6f67446174614040000000a8d91410000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000a8d9141000000000
+Context (ascii): IDialogData@@............?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\stx.dll
+Offset: 858444
+Context (hex): 6c656d656e7442617365446c6740400084cb0910000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e65724040000084cb091000000000
+Context (ascii): lementBaseDlg@@..........?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v30\Bin\UDI.dll
+Offset: 598508
+Context (hex): 494469616c6f67446174614040000000c8bc0610000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e65724040000000000000c8bc0610
+Context (ascii): IDialogData@@............?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\afutil.dll
+Offset: 1777384
+Context (hex): 63654b65794040407374644040000000c02e1410000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000c02e141000000000
+Context (ascii): ceKey@@@std@@............?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\dsi.dll
+Offset: 1619861
+Context (hex): 67404040003f3f5f3744455f437265617465546167446c674040364241465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404040003f3f5f3744455f43
+Context (ascii): g@@@.??_7DE_CreateTagDlg@@6BAF_CSourceProtectionNotificationListener@@@.??_7DE_C
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\FBD.dll
+Offset: 2259796
+Context (hex): 6c656d656e7442617365446c67404000ccf51b10000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000ccf51b1000000000
+Context (ascii): lementBaseDlg@@..........?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\gle.dll
+Offset: 1379272
+Context (hex): 6c656d656e7442617365446c67404000d8dc0f10000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240400000d8dc0f1000000000
+Context (ascii): lementBaseDlg@@..........?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\Logix5000.AFLib.dll
+Offset: 135719
+Context (hex): 72656374696f6e00736f7274446972656374696f6e00646972656374696f6e00536f7572636550726f74656374696f6e0049416f69446566696e6974696f6e00616f69446566696e6974696f6e00436f
+Context (ascii): rection.sortDirection.direction.SourceProtection.IAoiDefinition.aoiDefinition.Co
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\Logix5000.ManagedBridge.dll
+Offset: 24473
+Context (hex): 49536f7572636550726f74656374656448656c706572732e6800005278476574536f7572636550726f74656374696f6e50726976696c65676573004800000002000500a0760000f4e1000018000000c1
+Context (ascii): ISourceProtectedHelpers.h..RxGetSourceProtectionPrivileges.H........v...........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\Logix5000.SequenceEditor.dll
+Offset: 1669514
+Context (hex): 6f7200557064617465536563757269747953657474696e677300557064617465536f7572636550726f74656374696f6e00486173416e79496e6c696e654564697441637469766500486173416e79496e
+Context (ascii): or.UpdateSecuritySettings.UpdateSourceProtection.HasAnyInlineEditActive.HasAnyIn
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\Logix5000.ServicesInterop.Interfaces.dll
+Offset: 58749
+Context (hex): 726779436f6c6c656374696f6e00436f6e6e656374696f6e004c6963656e7365536f7572636550726f74656374696f6e0046756e6374696f6e00556e7265636f676e697a6564496e737472756374696f
+Context (ascii): rgyCollection.Connection.LicenseSourceProtection.Function.UnrecognizedInstructio
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\Logix5000.ServicesInterop.Services.dll
+Offset: 579017
+Context (hex): 49536f7572636550726f74656374656448656c706572732e6800005278476574536f7572636550726f74656374696f6e50726976696c656765730000000000443a5c5353766965775f445c503130325f
+Context (ascii): ISourceProtectedHelpers.h..RxGetSourceProtectionPrivileges.....D:\SSview_D\P102_
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\LogixServices.dll
+Offset: 1097806
+Context (hex): 40404b50415041554944697370617463684040405a003f437265617465414f5f536f7572636550726f74656374696f6e496e7374616e6365404059414a50415041554944697370617463684040405a00
+Context (ascii): @@KPAPAUIDispatch@@@Z.?CreateAO_SourceProtectionInstance@@YAJPAPAUIDispatch@@@Z.
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\motion.dll
+Offset: 2483800
+Context (hex): 494469616c6f6744617461404000000064a32010000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e65724040000064a3201000000000
+Context (ascii): IDialogData@@...d. ......?AVAF_CSourceProtectionNotificationListener@@..d. .....
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\rll.dll
+Offset: 1791736
+Context (hex): 476f546f4469616c6f6740400000000054031710000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404000005403171000000000
+Context (ascii): GoToDialog@@....T........?AVAF_CSourceProtectionNotificationListener@@..T.......
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\RSLogix5000Services.exe
+Offset: 73509
+Context (hex): 466f726d61745f436f6d706f6e656e744c3558c8000000ffffffff19380ec149536f7572636550726f74656374696f6e50726f7669646572575757c8000000ffffffff14008254416c6c6f7743726561
+Context (ascii): Format_ComponentL5X.........8..ISourceProtectionProviderWWW...........TAllowCrea
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\Sequence.dll
+Offset: 1183256
+Context (hex): 7465004553515f4353657175656e6365456469746f72576e642e557064617465536f7572636550726f74656374696f6e537461746500624973536f757263654564697461626c6500624973536f757263
+Context (ascii): te.ESQ_CSequenceEditorWnd.UpdateSourceProtectionState.bIsSourceEditable.bIsSourc
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\SFCEditor.dll
+Offset: 1969872
+Context (hex): 494469616c6f6744617461404000000050621810000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404000005062181000000000
+Context (ascii): IDialogData@@...Pb.......?AVAF_CSourceProtectionNotificationListener@@..Pb......
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\stx.dll
+Offset: 925185
+Context (hex): 49536f7572636550726f74656374656448656c706572732e6800005278476574536f7572636550726f74656374696f6e50726976696c656765730000000000443a5c5353766965775f445c503130325f
+Context (ascii): ISourceProtectedHelpers.h..RxGetSourceProtectionPrivileges.....D:\SSview_D\P102_
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v31\Bin\UDI.dll
+Offset: 659468
+Context (hex): 494469616c6f6744617461404000000008940710000000002e3f415641465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404000000000000008940710
+Context (ascii): IDialogData@@............?AVAF_CSourceProtectionNotificationListener@@..........
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\AFLib.dll
+Offset: 3771190
+Context (hex): 565278536f757263654b65794040405a003f3f3041465f4350617373776f7264536f7572636550726f74656374696f6e4d616e61676572404051414540585a003f3f3041465f43506173746557697468
+Context (ascii): VRxSourceKey@@@Z.??0AF_CPasswordSourceProtectionManager@@QAE@XZ.??0AF_CPasteWith
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\afutil.dll
+Offset: 1739851
+Context (hex): 726b73746174696f6e507265666572656e6365734040405a003f3f3041465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404051414540585a003f3f30
+Context (ascii): rkstationPreferences@@@Z.??0AF_CSourceProtectionNotificationListener@@QAE@XZ.??0
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\dataedit.dll
+Offset: 1388377
+Context (hex): 5541455f4e50415644455f546167456c656d656e745265664040405a003f4973536f7572636550726f74656374696f6e4c6f636b65644044455f4342617365446f6340405541455f4e50415644455f54
+Context (ascii): UAE_NPAVDE_TagElementRef@@@Z.?IsSourceProtectionLocked@DE_CBaseDoc@@UAE_NPAVDE_T
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\dsi.dll
+Offset: 1642299
+Context (hex): 67404040003f3f5f3744455f437265617465546167446c674040364241465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404040003f3f5f3744455f43
+Context (ascii): g@@@.??_7DE_CreateTagDlg@@6BAF_CSourceProtectionNotificationListener@@@.??_7DE_C
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\ESQLang.dll
+Offset: 885394
+Context (hex): 78436f6d706f6e656e74404055424548585a000051303f43616e4368616e6765536f7572636550726f74656374696f6e405278526f7574696e6540404d42454a585a000096303f43616e5265706f7274
+Context (ascii): xComponent@@UBEHXZ..Q0?CanChangeSourceProtection@RxRoutine@@MBEJXZ...0?CanReport
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\FBD.dll
+Offset: 2314645
+Context (hex): 7274795368656574404055414558585a00060b3f47657448574e444041465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240404d414550415548574e44
+Context (ascii): rtySheet@@UAEXXZ...?GetHWND@AF_CSourceProtectionNotificationListener@@MAEPAUHWND
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\FBDLang.dll
+Offset: 4153250
+Context (hex): 6775616765456c656d656e744040405a003f49734c6963656e73654261736564536f7572636550726f74656374696f6e537570706f727465644052784642445f526f7574696e6540405542455f4e585a
+Context (ascii): guageElement@@@Z.?IsLicenseBasedSourceProtectionSupported@RxFBD_Routine@@UBE_NXZ
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\gle.dll
+Offset: 1342412
+Context (hex): 537562726f7574696e65456c656d656e7442617365446c674040364241465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404040003f3f5f37474c455f
+Context (ascii): SubroutineElementBaseDlg@@6BAF_CSourceProtectionNotificationListener@@@.??_7GLE_
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\Logix5000.AFLib.dll
+Offset: 377807
+Context (hex): 72656374696f6e00466c6f77446972656374696f6e00646972656374696f6e00536f7572636550726f74656374696f6e006f705f4164646974696f6e0049416c61726d436f6e646974696f6e0049416f
+Context (ascii): rection.FlowDirection.direction.SourceProtection.op_Addition.IAlarmCondition.IAo
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\Logix5000.ManagedBridge.dll
+Offset: 48698
+Context (hex): 6e67696e6554687265616453616665403140585a40594d58585a005278476574536f7572636550726f74656374696f6e50726976696c656765730070436f6d706f6e656e7400636865636b416e636573
+Context (ascii): ngineThreadSafe@1@XZ@YMXXZ.RxGetSourceProtectionPrivileges.pComponent.checkAnces
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\Logix5000.SequenceEditor.dll
+Offset: 1671005
+Context (hex): 6f7200557064617465536563757269747953657474696e677300557064617465536f7572636550726f74656374696f6e00486173416e79496e6c696e654564697441637469766500486173416e79496e
+Context (ascii): or.UpdateSecuritySettings.UpdateSourceProtection.HasAnyInlineEditActive.HasAnyIn
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\Logix5000.ServicesInterop.Interfaces.dll
+Offset: 62858
+Context (hex): 726779436f6c6c656374696f6e00436f6e6e656374696f6e004c6963656e7365536f7572636550726f74656374696f6e0046756e6374696f6e00556e7265636f676e697a6564496e737472756374696f
+Context (ascii): rgyCollection.Connection.LicenseSourceProtection.Function.UnrecognizedInstructio
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\Logix5000.ServicesInterop.Services.dll
+Offset: 652892
+Context (hex): 636550726f7465637465643e00527849536f7572636550726f74656374656400536f7572636550726f74656374696f6e5479706500436f6e74656e7448617368547970650052784175746f434f4d3c52
+Context (ascii): ceProtected>.RxISourceProtected.SourceProtectionType.ContentHashType.RxAutoCOM<R
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\LogixAC.dll
+Offset: 3451308
+Context (hex): 3f24756e697175655f7074724056527845787465726e616c50617373776f7264536f7572636550726f74656374696f6e50726f76696465724040553f2464656661756c745f64656c6574654056527845
+Context (ascii): ?$unique_ptr@VRxExternalPasswordSourceProtectionProvider@@U?$default_delete@VRxE
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\LogixServices.dll
+Offset: 1106238
+Context (hex): 40404b50415041554944697370617463684040405a003f437265617465414f5f536f7572636550726f74656374696f6e496e7374616e6365404059414a50415041554944697370617463684040405a00
+Context (ascii): @@KPAPAUIDispatch@@@Z.?CreateAO_SourceProtectionInstance@@YAJPAPAUIDispatch@@@Z.
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\motion.dll
+Offset: 2503629
+Context (hex): 5f4350726f706572747950616765404051414548585a0017023f3f3041465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404051414540585a005d033f
+Context (ascii): _CPropertyPage@@QAEHXZ...??0AF_CSourceProtectionNotificationListener@@QAE@XZ.].?
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\PropertySrv.dll
+Offset: 3748053
+Context (hex): 74794040504156527850726f70657274794275666665724040405a003f476574536f7572636550726f74656374696f6e4c6f636b65644050726f7065727479537276404059414a504256527856697369
+Context (ascii): ty@@PAVRxPropertyBuffer@@@Z.?GetSourceProtectionLocked@PropertySrv@@YAJPBVRxVisi
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\RA.Logix.L5xModel.dll
+Offset: 307951
+Context (hex): 6e707574436f6e6e656374696f6e54797065537065636966696564006765745f536f7572636550726f74656374696f6e54797065537065636966696564007365745f536f7572636550726f7465637469
+Context (ascii): nputConnectionTypeSpecified.get_SourceProtectionTypeSpecified.set_SourceProtecti
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\reports.dll
+Offset: 507717
+Context (hex): 656374696f6e496e666f726d6174696f6e466f725265706f7274734041465f43536f7572636550726f74656374696f6e5574696c734040534158563f2452784175746f434f4d40565278436f6d706f6e
+Context (ascii): ectionInformationForReports@AF_CSourceProtectionUtils@@SAXV?$RxAutoCOM@VRxCompon
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\rll.dll
+Offset: 1786025
+Context (hex): 48475041557461675354474d454449554d404030405a0018023f3f3041465f43536f7572636550726f74656374696f6e526f7574696e65436c6f7365446566657272616c404051414540585a005e033f
+Context (ascii): HGPAUtagSTGMEDIUM@@0@Z...??0AF_CSourceProtectionRoutineCloseDeferral@@QAE@XZ.^.?
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\RSLogix5000Services.exe
+Offset: 73517
+Context (hex): 466f726d61745f436f6d706f6e656e744c3558c8000000ffffffff19380ec149536f7572636550726f74656374696f6e50726f7669646572575757c8000000ffffffff14008254416c6c6f7743726561
+Context (ascii): Format_ComponentL5X.........8..ISourceProtectionProviderWWW...........TAllowCrea
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\Sequence.dll
+Offset: 1189777
+Context (hex): 7465004553515f4353657175656e6365456469746f72576e642e557064617465536f7572636550726f74656374696f6e537461746500624973536f757263654564697461626c6500624973536f757263
+Context (ascii): te.ESQ_CSequenceEditorWnd.UpdateSourceProtectionState.bIsSourceEditable.bIsSourc
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\Services.DLL
+Offset: 24953396
+Context (hex): 41646170746f724040405a003f3f30527844656661756c7450617373776f7264536f7572636550726f74656374696f6e50726f7669646572404049414540585a003f3f30527844656661756c74506173
+Context (ascii): Adaptor@@@Z.??0RxDefaultPasswordSourceProtectionProvider@@IAE@XZ.??0RxDefaultPas
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\SFCEditor.dll
+Offset: 1949013
+Context (hex): 7274795368656574404055414558585a00060b3f47657448574e444041465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240404d414550415548574e44
+Context (ascii): rtySheet@@UAEXXZ...?GetHWND@AF_CSourceProtectionNotificationListener@@MAEPAUHWND
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\SFCLang.dll
+Offset: 1588107
+Context (hex): 456c656d656e7440405142455f4e585a003f49734c6963656e73654261736564536f7572636550726f74656374696f6e537570706f727465644052785346435f526f7574696e6540405542455f4e585a
+Context (ascii): Element@@QBE_NXZ.?IsLicenseBasedSourceProtectionSupported@RxSFC_Routine@@UBE_NXZ
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\stx.dll
+Offset: 1233907
+Context (hex): 696e6572005354585f414c616e6775616765436f6e7461696e65720041465f43536f7572636550726f74656374696f6e526f7574696e65436c6f7365446566657272616c0044455f54616742726f7773
+Context (ascii): iner.STX_ALanguageContainer.AF_CSourceProtectionRoutineCloseDeferral.DE_TagBrows
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\STXLang.DLL
+Offset: 1066534
+Context (hex): 78436f6d706f6e656e74404055424548585a000051303f43616e4368616e6765536f7572636550726f74656374696f6e405278526f7574696e6540404d42454a585a0000a4303f43616e5365744d6574
+Context (ascii): xComponent@@UBEHXZ..Q0?CanChangeSourceProtection@RxRoutine@@MBEJXZ...0?CanSetMet
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\UDI.dll
+Offset: 628983
+Context (hex): 656374696f6e496e666f726d6174696f6e466f725265706f7274734041465f43536f7572636550726f74656374696f6e5574696c734040534158563f2452784175746f434f4d40565278436f6d706f6e
+Context (ascii): ectionInformationForReports@AF_CSourceProtectionUtils@@SAXV?$RxAutoCOM@VRxCompon
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\Umbrella.dll
+Offset: 4631651
+Context (hex): 4e585a003f53697a65403f245278427566666572404540405142454b585a003f536f7572636550726f74656374696f6e50726f7669646572496e55736540496d706f727446696c654164617074657246
+Context (ascii): NXZ.?Size@?$RxBuffer@E@@QBEKXZ.?SourceProtectionProviderInUse@ImportFileAdapterF
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v32\Bin\XmlServices.dll
+Offset: 5599789
+Context (hex): 6f6d70617269736f6e496e666f40405142455f4e585a003f4973546172676574536f7572636550726f74656374696f6e4564697461626c654052785061727469616c496d706f727453657373696f6e40
+Context (ascii): omparisonInfo@@QBE_NXZ.?IsTargetSourceProtectionEditable@RxPartialImportSession@
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\AFLib.dll
+Offset: 3517645
+Context (hex): 565278536f757263654b65794040405a003f3f3041465f4350617373776f7264536f7572636550726f74656374696f6e4d616e61676572404051414540585a003f3f3041465f43506173746557697468
+Context (ascii): VRxSourceKey@@@Z.??0AF_CPasswordSourceProtectionManager@@QAE@XZ.??0AF_CPasteWith
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\afutil.dll
+Offset: 1663098
+Context (hex): 726b73746174696f6e507265666572656e6365734040405a003f3f3041465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404051414540585a003f3f30
+Context (ascii): rkstationPreferences@@@Z.??0AF_CSourceProtectionNotificationListener@@QAE@XZ.??0
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\dataedit.dll
+Offset: 1339908
+Context (hex): 5141455f4e50415644455f546167456c656d656e745265664040405a003f4973536f7572636550726f74656374696f6e4c6f636b65644044455f4342617365446f6340405541455f4e50415644455f54
+Context (ascii): QAE_NPAVDE_TagElementRef@@@Z.?IsSourceProtectionLocked@DE_CBaseDoc@@UAE_NPAVDE_T
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\dsi.dll
+Offset: 1584935
+Context (hex): 67404040003f3f5f3744455f437265617465546167446c674040364241465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404040003f3f5f3744455f43
+Context (ascii): g@@@.??_7DE_CreateTagDlg@@6BAF_CSourceProtectionNotificationListener@@@.??_7DE_C
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\ESQLang.dll
+Offset: 889802
+Context (hex): 78436f6d706f6e656e74404055424548585a00005b323f43616e4368616e6765536f7572636550726f74656374696f6e405278526f7574696e6540404d42454a585a0000a4323f43616e5265706f7274
+Context (ascii): xComponent@@UBEHXZ..[2?CanChangeSourceProtection@RxRoutine@@MBEJXZ...2?CanReport
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\FBD.dll
+Offset: 2294993
+Context (hex): 7274795368656574404055414558585a00230b3f47657448574e444041465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240404d414550415548574e44
+Context (ascii): rtySheet@@UAEXXZ.#.?GetHWND@AF_CSourceProtectionNotificationListener@@MAEPAUHWND
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\FBDLang.dll
+Offset: 5948207
+Context (hex): 6775616765456c656d656e744040405a003f49734c6963656e73654261736564536f7572636550726f74656374696f6e537570706f727465644052784642445f526f7574696e6540405542455f4e585a
+Context (ascii): guageElement@@@Z.?IsLicenseBasedSourceProtectionSupported@RxFBD_Routine@@UBE_NXZ
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\gle.dll
+Offset: 1264195
+Context (hex): 537562726f7574696e65456c656d656e7442617365446c674040364241465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404040003f3f5f37474c455f
+Context (ascii): SubroutineElementBaseDlg@@6BAF_CSourceProtectionNotificationListener@@@.??_7GLE_
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\Logix5000.AFLib.dll
+Offset: 1118946
+Context (hex): 696f6e006765745f466c6f77446972656374696f6e00646972656374696f6e00536f7572636550726f74656374696f6e006765745f5374735f4476634d616c66756e6374696f6e007365745f5374735f
+Context (ascii): ion.get_FlowDirection.direction.SourceProtection.get_Sts_DvcMalfunction.set_Sts_
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\Logix5000.ManagedBridge.dll
+Offset: 41220
+Context (hex): 6e67696e6554687265616453616665403140585a40594d58585a005278476574536f7572636550726f74656374696f6e50726976696c656765730070436f6d706f6e656e7400636865636b416e636573
+Context (ascii): ngineThreadSafe@1@XZ@YMXXZ.RxGetSourceProtectionPrivileges.pComponent.checkAnces
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\Logix5000.SequenceEditor.dll
+Offset: 1686618
+Context (hex): 6f7200557064617465536563757269747953657474696e677300557064617465536f7572636550726f74656374696f6e00486173416e79496e6c696e654564697441637469766500486173416e79496e
+Context (ascii): or.UpdateSecuritySettings.UpdateSourceProtection.HasAnyInlineEditActive.HasAnyIn
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\Logix5000.ServicesInterop.Interfaces.dll
+Offset: 64956
+Context (hex): 726779436f6c6c656374696f6e00436f6e6e656374696f6e004c6963656e7365536f7572636550726f74656374696f6e0046756e6374696f6e0044656649445f496e737472756374696f6e00556e7265
+Context (ascii): rgyCollection.Connection.LicenseSourceProtection.Function.DefID_Instruction.Unre
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\Logix5000.ServicesInterop.Services.dll
+Offset: 714475
+Context (hex): 7456696577436f6e74656e7441636365737300704f626a65637400636865636b536f7572636550726f74656374696f6e0052784175746f434f4d3c52785461673e2e7b64746f727d0052784175746f43
+Context (ascii): tViewContentAccess.pObject.checkSourceProtection.RxAutoCOM<RxTag>.{dtor}.RxAutoC
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\LogixAC.dll
+Offset: 3307045
+Context (hex): 3f24756e697175655f7074724056527845787465726e616c50617373776f7264536f7572636550726f74656374696f6e50726f76696465724040553f2464656661756c745f64656c6574654056527845
+Context (ascii): ?$unique_ptr@VRxExternalPasswordSourceProtectionProvider@@U?$default_delete@VRxE
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\LogixServices.dll
+Offset: 1107021
+Context (hex): 40404b50415041554944697370617463684040405a003f437265617465414f5f536f7572636550726f74656374696f6e496e7374616e6365404059414a50415041554944697370617463684040405a00
+Context (ascii): @@KPAPAUIDispatch@@@Z.?CreateAO_SourceProtectionInstance@@YAJPAPAUIDispatch@@@Z.
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\motion.dll
+Offset: 2490933
+Context (hex): 475041554352756e74696d65436c6173734040585a00001c023f3f3041465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e6572404051414540585a0064033f
+Context (ascii): GPAUCRuntimeClass@@XZ....??0AF_CSourceProtectionNotificationListener@@QAE@XZ.d.?
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\PropertySrv.dll
+Offset: 3623405
+Context (hex): 74794040504156527850726f70657274794275666665724040405a003f476574536f7572636550726f74656374696f6e4c6f636b65644050726f7065727479537276404059414a504256527856697369
+Context (ascii): ty@@PAVRxPropertyBuffer@@@Z.?GetSourceProtectionLocked@PropertySrv@@YAJPBVRxVisi
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\RA.Logix.L5xModel.dll
+Offset: 307959
+Context (hex): 6e707574436f6e6e656374696f6e54797065537065636966696564006765745f536f7572636550726f74656374696f6e54797065537065636966696564007365745f536f7572636550726f7465637469
+Context (ascii): nputConnectionTypeSpecified.get_SourceProtectionTypeSpecified.set_SourceProtecti
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\reports.dll
+Offset: 446283
+Context (hex): 656374696f6e496e666f726d6174696f6e466f725265706f7274734041465f43536f7572636550726f74656374696f6e5574696c734040534158563f2452784175746f434f4d40565278436f6d706f6e
+Context (ascii): ectionInformationForReports@AF_CSourceProtectionUtils@@SAXV?$RxAutoCOM@VRxCompon
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\rll.dll
+Offset: 1583367
+Context (hex): 48475041557461675354474d454449554d404030405a001d023f3f3041465f43536f7572636550726f74656374696f6e526f7574696e65436c6f7365446566657272616c404051414540585a0065033f
+Context (ascii): HGPAUtagSTGMEDIUM@@0@Z...??0AF_CSourceProtectionRoutineCloseDeferral@@QAE@XZ.e.?
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\RSLogix5000Services.exe
+Offset: 77885
+Context (hex): 466f726d61745f436f6d706f6e656e744c3558c8000000ffffffff19380ec149536f7572636550726f74656374696f6e50726f7669646572575757c8000000ffffffff14008254416c6c6f7743726561
+Context (ascii): Format_ComponentL5X.........8..ISourceProtectionProviderWWW...........TAllowCrea
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\Sequence.dll
+Offset: 417674
+Context (hex): 7465004553515f4353657175656e6365456469746f72576e642e557064617465536f7572636550726f74656374696f6e537461746500624973536f757263654564697461626c6500624973536f757263
+Context (ascii): te.ESQ_CSequenceEditorWnd.UpdateSourceProtectionState.bIsSourceEditable.bIsSourc
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\Services.DLL
+Offset: 25580486
+Context (hex): 41646170746f724040405a003f3f30527844656661756c7450617373776f7264536f7572636550726f74656374696f6e50726f7669646572404049414540585a003f3f30527844656661756c74506173
+Context (ascii): Adaptor@@@Z.??0RxDefaultPasswordSourceProtectionProvider@@IAE@XZ.??0RxDefaultPas
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\SFCEditor.dll
+Offset: 1896887
+Context (hex): 7274795368656574404055414558585a00230b3f47657448574e444041465f43536f7572636550726f74656374696f6e4e6f74696669636174696f6e4c697374656e657240404d414550415548574e44
+Context (ascii): rtySheet@@UAEXXZ.#.?GetHWND@AF_CSourceProtectionNotificationListener@@MAEPAUHWND
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\SFCLang.dll
+Offset: 1605585
+Context (hex): 456c656d656e7440405142455f4e585a003f49734c6963656e73654261736564536f7572636550726f74656374696f6e537570706f727465644052785346435f526f7574696e6540405542455f4e585a
+Context (ascii): Element@@QBE_NXZ.?IsLicenseBasedSourceProtectionSupported@RxSFC_Routine@@UBE_NXZ
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\stx.dll
+Offset: 748073
+Context (hex): 696e6572005354585f414c616e6775616765436f6e7461696e65720041465f43536f7572636550726f74656374696f6e526f7574696e65436c6f7365446566657272616c00474c455f4142617369634c
+Context (ascii): iner.STX_ALanguageContainer.AF_CSourceProtectionRoutineCloseDeferral.GLE_ABasicL
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\STXLang.DLL
+Offset: 1095374
+Context (hex): 78436f6d706f6e656e74404055424548585a00005b323f43616e4368616e6765536f7572636550726f74656374696f6e405278526f7574696e6540404d42454a585a0000b4323f43616e5365744d6574
+Context (ascii): xComponent@@UBEHXZ..[2?CanChangeSourceProtection@RxRoutine@@MBEJXZ...2?CanSetMet
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\UDI.dll
+Offset: 560129
+Context (hex): 656374696f6e496e666f726d6174696f6e466f725265706f7274734041465f43536f7572636550726f74656374696f6e5574696c734040534158563f2452784175746f434f4d40565278436f6d706f6e
+Context (ascii): ectionInformationForReports@AF_CSourceProtectionUtils@@SAXV?$RxAutoCOM@VRxCompon
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\Umbrella.dll
+Offset: 4143488
+Context (hex): 4e585a003f53697a65403f245278427566666572404540405142454b585a003f536f7572636550726f74656374696f6e50726f7669646572496e55736540496d706f727446696c654164617074657246
+Context (ascii): NXZ.?Size@?$RxBuffer@E@@QBEKXZ.?SourceProtectionProviderInUse@ImportFileAdapterF
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\XmlServices.dll
+Offset: 5158140
+Context (hex): 6f6d70617269736f6e496e666f40405142455f4e585a003f4973546172676574536f7572636550726f74656374696f6e4564697461626c654052785061727469616c496d706f727453657373696f6e40
+Context (ascii): omparisonInfo@@QBE_NXZ.?IsTargetSourceProtectionEditable@RxPartialImportSession@
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\Help\ENU\rs5000\20072.htm
+Offset: 5098
+Context (hex): 70656369667920746865203c656d20636c6173733d22656d706861736973223e536f7572636550726f74656374696f6e547970653c2f656d3e206174747269627574652e3c2f6c693e0d0a3c2f756c3e
+Context (ascii): pecify the <em class="emphasis">SourceProtectionType</em> attribute.</li>..</ul>
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\Help\ENU\rs5000\search.json
+Offset: 4560516
+Context (hex): 6520736f7572636520636f64652c20616c736f20737065636966792074686520536f7572636550726f74656374696f6e54797065206174747269627574652e2020526f7574696e657320617265207573
+Context (ascii): e source code, also specify the SourceProtectionType attribute.  Routines are us
+--------------------------------------------------------------------------------
+File: E:\Dynamic\Source\DecryptSourceProtection\sW\v33\Bin\Help\ENU\rs5000\search_db.js
+Offset: 4571588
+Context (hex): 6520736f7572636520636f64652c20616c736f20737065636966792074686520536f7572636550726f74656374696f6e54797065206174747269627574652e2020526f7574696e657320617265207573
+Context (ascii): e source code, also specify the SourceProtectionType attribute.  Routines are us
+--------------------------------------------------------------------------------

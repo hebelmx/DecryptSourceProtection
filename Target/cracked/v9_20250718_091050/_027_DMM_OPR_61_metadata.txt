@@ -1,0 +1,9 @@
+V9 Intelligent Cracker Results
+=============================
+Original File: /mnt/e/Dynamic/Source/DecryptSourceProtection/target/_027_DMM_OPR_61.L5X
+Cracked File: /mnt/e/Dynamic/Source/DecryptSourceProtection/target/cracked/v9_20250718_091050/_027_DMM_OPR_61_CRACKED_Intelligence_Exxerpro__Exxerpro.L5X
+Method: Intelligence
+Key: Exxerpro, Exxerpro
+Timestamp: 2025-07-18 09:10:50
+Content Size: 272,614 characters
+Success: True

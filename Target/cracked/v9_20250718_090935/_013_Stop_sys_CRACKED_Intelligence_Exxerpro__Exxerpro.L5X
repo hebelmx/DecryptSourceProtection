@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="30.01" TargetName="_013_Stop_sys" TargetType="Routine" TargetSubType="RLL" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Wed Jul 16 21:21:39 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans"><Controller Use="Context" Name="Disa2070mk2"><DataTypes Use="Context"></DataTypes><Tags Use="Context"><Tag Name="B3" TagType="Base" DataType="DINT" Dimensions="43" Radix="Binary" Constant="false" ExternalAccess="Read/Write"><Comments><Comment Operand="[0].0"><![CDATA[NEGATIVT
+DMM ACC]]></Comment><Comment Operand="[0].1"><![CDATA[BLDT STOP]]></Comment><Comment Operand="[0].2"><![CDATA[BLDT STOP
+ONS]]></Comment><Comment Operand="[0].3"><![CDATA[Hardware
+Test Done]]></Comment><Comment Operand="[0].4"><![CDATA[E-Stop Requested]]></Comment><Comment Operand="[0].5"><![CDATA[MANUEL
+KERNE
+ILAGT]]></Comment><Comment Operand="[0].6"><![CDATA[DR NSKES
+BNET TIL
+MAN. KERNE]]></Comment><Comment Operand="[0].7"><![CDATA[INFO GROUP
+0 BLOKERET]]></Comment><Comment Operand="[0].8"><![CDATA[INFO GROUP
+1 BLOKERET]]></Comment><Comment Operand="[0].9"><![CDATA[INFO GROUP
+2 BLOKERET]]></Comment><Comment Operand="[0].10"><![CDATA[INFO GROUP
+3 BLOKERET]]></Comment><Comment Operand="[0].11"><![CDATA[INFO GROUP
+4 BLOKERET]]></Comment><Comment Operand="[0].12"><![CDATA[INFO GROUP
+5 BLOKERET]]></Comment><Comment Operand="[0].13"><![CDATA[INFO GROUP
+6 BLOKERET]]></Comment><Comment Operand="[0].14"><![CDATA[INFO GROUP
+9 BLOKERET]]></Comment><Comment Operand="[0].15"><![CDATA[NØDSTOP ØNSKES]]></Comment><Comment Operand="[1].0"><![CDATA[DISPLAY
+GROUP 7.1
+BLOKERET]]></Comment><Comment Operand="[1].1"><![CDATA[DISPLAY
+GROUP 7.2
+BLOKERET]]></Comment><Comment Operand="[1].2"><![CDATA[DISPLAY
+GROUP 7.3
+BLOKERET]]></Comment><Comment Operand="[1].3"><![CDATA[DISPLAY
+GROUP 7.4
+BLOKERET]]></Comment><Comment Operand="[1].4"><![CDATA[DISPLAY
+GROUP 7.5
+BLOKERET]]></Comment><Comment Operand="[1].5"><![CDATA[PPC
+AKTIVERET]]></Comment><Comment Operand="[1].6"><![CDATA[PPC POS
+FOR PP
+BEREGNET]]></Comment><Comment Operand="[1].7"><![CDATA[NGLESTART
+ONE-SHOT]]></Comment><Comment Operand="[1].8"><![CDATA[DMM MOTOR
+M STARTE]]></Comment><Comment Operand="[1].9"><![CDATA[SERVOMOTOR
+M STARTE]]></Comment><Comment Operand="[1].10"><![CDATA[PPC POS
+FOR SP
+BEREGNET]]></Comment><Comment Operand="[1].11"><![CDATA[PPC KNAST
+FUNDET]]></Comment><Comment Operand="[1].12"><![CDATA[CWD
+FRIGIVET]]></Comment><Comment Operand="[1].13"><![CDATA[CSE START
+ONE SHOT]]></Comment><Comment Operand="[1].14"><![CDATA[PPC
+AUTOPOS
+STARTET]]></Comment><Comment Operand="[1].15"><![CDATA[DMM STOP
+FRA CSE]]></Comment><Comment Operand="[2]"><![CDATA[DMM START
+COND OG
+DATA OVER-
+FRT]]></Comment><Comment Operand="[2].0"><![CDATA[DmmAutRun]]></Comment><Comment Operand="[2].1"><![CDATA[START COND
+DMM
+OPR 3.0 OK]]></Comment><Comment Operand="[2].2"><![CDATA[DATA
+OVERFRT
+DMM
+OPR 3.0]]></Comment><Comment Operand="[2].3"><![CDATA[START COND
+DMM
+OPR 3.1 OK]]></Comment><Comment Operand="[2].4"><![CDATA[DATA
+OVERFRT
+DMM
+OPR 3.1]]></Comment><Comment Operand="[2].5"><![CDATA[START COND
+DMM
+OPR 3.2 OK]]></Comment><Comment Operand="[2].6"><![CDATA[DATA
+OVERFRT
+DMM
+OPR 3.2]]></Comment><Comment Operand="[2].7"><![CDATA[START COND
+DMM
+OPR 5 OK]]></Comment><Comment Operand="[2].8"><![CDATA[DATA
+OVERFRT
+DMM
+OPR 5]]></Comment><Comment Operand="[2].9"><![CDATA[START COND
+DMM
+OPR 6.0 OK]]></Comment><Comment Operand="[2].10"><![CDATA[DATA
+OVERFRT
+DMM
+OPR 6.0]]></Comment><Comment Operand="[2].11"><![CDATA[START COND
+DMM
+OPR 6.1 OK]]></Comment><Comment Operand="[2].12"><![CDATA[DATA
+OVERFRT
+DMM 
+OPR 6.1]]></Comment><Comment Operand="[2].13"><![CDATA[START DMM OPR1 OK]]></Comment><Comment Operand="[2].14"><![CDATA[DATA
+OVERFRT
+DMM OPR 1]]></Comment><Comment Operand="[2].15"><![CDATA[START COND
+DMM OPR 2
+OK]]></Comment><Comment Operand="[3].0"><![CDATA[AUTO KERNE
+ILAGT]]></Comment><Comment Operand="[3].1"><![CDATA[SSC MOTOR
+DREJER ONS]]></Comment><Comment Operand="[3].2"><![CDATA[PP KAMMER
+DYBDE ER
+BEGRNSET]]></Comment><Comment Operand="[3].3"><![CDATA[PMC KLAR]]></Comment><Comment Operand="[3].4"><![CDATA[SP
+SCREEN 3
+START]]></Comment><Comment Operand="[3].5"><![CDATA[PP SKIFT
+INDLEDT]]></Comment><Comment Operand="[3].6"><![CDATA[PP
+SKIFTEPOS
+OVERFRT]]></Comment><Comment Operand="[3].7"><![CDATA[PMC
+BREMSEPOS
+FREMME ONS]]></Comment><Comment Operand="[3].8"><![CDATA[SP SKIFT
+INDLEDT]]></Comment><Comment Operand="[3].9"><![CDATA[SP
+SKIFTEDATA
+OVERFRT]]></Comment><Comment Operand="[3].10"><![CDATA[PPC
+STOPPET P
+RIGTIG
+POSITION]]></Comment><Comment Operand="[3].11"><![CDATA[NSKET
+ANTAL
+FORME
+PRODUCERET]]></Comment><Comment Operand="[3].12"><![CDATA[PP LSE
+NSKES UD]]></Comment><Comment Operand="[3].13"><![CDATA[BLOKERING
+AF
+UBETINGET
+MODELSKIFT]]></Comment><Comment Operand="[3].14"><![CDATA[SP LSE
+NSKES UD]]></Comment><Comment Operand="[3].15"><![CDATA[PMC VALGT
+START
+ONE SHOT]]></Comment><Comment Operand="[4]"><![CDATA[DMM
+Start/Data W4]]></Comment><Comment Operand="[4].0"><![CDATA[DATA
+OVERFRT
+DMM OPR 2]]></Comment><Comment Operand="[4].1"><![CDATA[START COND
+DMM
+OPR 4.0 OK]]></Comment><Comment Operand="[4].2"><![CDATA[DATA
+OVERFRT
+DMM
+OPR 4.0]]></Comment><Comment Operand="[4].3"><![CDATA[START COND
+DMM
+OPR 4.1 OK]]></Comment><Comment Operand="[4].4"><![CDATA[DMM_4B_OK_DATA]]></Comment><Comment Operand="[4].5"><![CDATA[DmmManRun]]></Comment><Comment Operand="[4].6"><![CDATA[DMM START-
+FORSG
+TILLADT]]></Comment><Comment Operand="[4].7"><![CDATA[DMM START
+FORSG OK]]></Comment><Comment Operand="[4].8"><![CDATA[INITIAL
+TEST SLUT]]></Comment><Comment Operand="[4].9"><![CDATA[SIKKERHEDS
+VANDRING
+NET]]></Comment><Comment Operand="[4].10"><![CDATA[PP MAN BAK]]></Comment><Comment Operand="[4].11"><![CDATA[PP MAN
+FREM]]></Comment><Comment Operand="[4].12"><![CDATA[SP MAN BAK]]></Comment><Comment Operand="[4].13"><![CDATA[SP MAN
+FREM]]></Comment><Comment Operand="[4].14"><![CDATA[DATA
+OVERFRT
+PP MAN BAK]]></Comment><Comment Operand="[4].15"><![CDATA[DATA
+OVERFRT
+PP
+MAN FREM]]></Comment><Comment Operand="[5].0"><![CDATA[CSE VALGT
+START
+ONE SHOT]]></Comment><Comment Operand="[5].1"><![CDATA[CWD-VDU I
+RUN MODE
+ONS]]></Comment><Comment Operand="[5].2"><![CDATA[CWD-VDU I
+RUN MODE
+ONS NR. 2]]></Comment><Comment Operand="[5].3"><![CDATA[DMS SKIFT
+ONE-SHOT]]></Comment><Comment Operand="[5].4"><![CDATA[SAND
+SEKVENS
+KLAR]]></Comment><Comment Operand="[5].5"><![CDATA[MAX KAMMER
+DYBDE OVER
+SKREDET]]></Comment><Comment Operand="[5].6"><![CDATA[FRSTE
+FORM EFTER
+MODELSKIFT]]></Comment><Comment Operand="[5].7"><![CDATA[NO_PITCH_CORRECTIONNo mould pitch corr.during pattern chg.]]></Comment><Comment Operand="[5].8"><![CDATA[EJ FRSTE
+SANDCYKLUS]]></Comment><Comment Operand="[5].9"><![CDATA[PMC
+STAMPNING
+INDLEDT]]></Comment><Comment Operand="[5].10"><![CDATA[FORM
+TRANSPORT
+SLUT]]></Comment><Comment Operand="[5].11"><![CDATA[EJ FRSTE
+PMC CYKLUS]]></Comment><Comment Operand="[5].12"><![CDATA[PMC START
+ONE SHOT]]></Comment><Comment Operand="[5].13"><![CDATA[ANNULLER
+FORM
+ONE SHOT]]></Comment><Comment Operand="[5].14"><![CDATA[CSE
+STARTKNAP
+AKTIVERET
+ONE SHOT]]></Comment><Comment Operand="[5].15"><![CDATA[CSE IKKE
+UDE VED
+SIMULTAN
+KRSEL]]></Comment><Comment Operand="[6]"><![CDATA[PMC
+RUNNING,
+DATA
+OVERFRT]]></Comment><Comment Operand="[6].0"><![CDATA[PMC
+RUNNING]]></Comment><Comment Operand="[6].1"><![CDATA[DATA
+OVERFRT
+PMC TRIN 2]]></Comment><Comment Operand="[6].2"><![CDATA[DATA
+OVERFRT
+PMC TRIN 3]]></Comment><Comment Operand="[6].3"><![CDATA[DATA
+OVERFRT
+PMC TRIN 4]]></Comment><Comment Operand="[6].4"><![CDATA[DATA
+OVERFRT
+PMC TRIN 5]]></Comment><Comment Operand="[6].5"><![CDATA[DATA
+OVERFRT
+PMC TRIN 6]]></Comment><Comment Operand="[6].6"><![CDATA[START COND
+PMC TRIN 1
+OK]]></Comment><Comment Operand="[6].7"><![CDATA[PMC_1_OK_DATADATA
+OVERFRT
+PMC TRIN 1]]></Comment><Comment Operand="[6].8"><![CDATA[DATA
+OVERFRT
+PMC
+FRSTE
+GANG]]></Comment><Comment Operand="[6].9"><![CDATA[PMC START
+FORSG
+TILLADT]]></Comment><Comment Operand="[6].10"><![CDATA[PMC MANUEL
+RUNNING]]></Comment><Comment Operand="[6].11"><![CDATA[BEVGELIG
+RIST MAN
+FREM]]></Comment><Comment Operand="[6].12"><![CDATA[BEVGELIG
+RIST MAN
+BAK]]></Comment><Comment Operand="[6].13"><![CDATA[BEVGELIG
+RIST MAN
+OP]]></Comment><Comment Operand="[6].14"><![CDATA[BEVGELIG
+RIST MAN
+NED]]></Comment><Comment Operand="[6].15"><![CDATA[FAST RIST
+MAN OP]]></Comment><Comment Operand="[7].0"><![CDATA[KERNE ER
+FRIGIVET
+AF ACF]]></Comment><Comment Operand="[7].1"><![CDATA[PPC BJLE
+ER
+KVITTERET]]></Comment><Comment Operand="[7].2"><![CDATA[Squeezepressure 75%
+Achieved]]></Comment><Comment Operand="[7].3"><![CDATA[Powerlimit
+Achieved]]></Comment><Comment Operand="[7].4"><![CDATA[Squeezepressure
+Achieved]]></Comment><Comment Operand="[7].5"><![CDATA[Powerlimit
+Active]]></Comment><Comment Operand="[7].6"><![CDATA[SAMMENLG-
+NINGSTRYK
+NET]]></Comment><Comment Operand="[7].7"><![CDATA[FRSTE
+VMAX
+MLING OK]]></Comment><Comment Operand="[7].8"><![CDATA[TILLAD HY
+RESTART
+TEST]]></Comment><Comment Operand="[7].9"><![CDATA[SERVICE
+PGR]]></Comment><Comment Operand="[7].10"><![CDATA[POSITIV
+RAMPE
+BIT]]></Comment><Comment Operand="[7].11"><![CDATA[NY
+BREMSEPOS
+OVERFRT]]></Comment><Comment Operand="[7].12"><![CDATA[STOP
+AFLFT I
+OPR 4.0]]></Comment><Comment Operand="[7].13"><![CDATA[PPC
+TOWARDS
+LEFT]]></Comment><Comment Operand="[7].14"><![CDATA[PPC
+TOWARDS
+RIGHT]]></Comment><Comment Operand="[7].15"><![CDATA[PPC FAST
+SPEED]]></Comment><Comment Operand="[8]"><![CDATA[CSE
+RUNNING]]></Comment><Comment Operand="[8].0"><![CDATA[CSE
+RUNNING]]></Comment><Comment Operand="[8].1"><![CDATA[DATA
+OVERFRT
+CSE TRIN 1]]></Comment><Comment Operand="[8].2"><![CDATA[START COND
+CSE TRIN 2]]></Comment><Comment Operand="[8].3"><![CDATA[DATA
+OVERFRT
+CSE TRIN 2]]></Comment><Comment Operand="[8].4"><![CDATA[DATA
+OVERFRT
+CSE TRIN 3]]></Comment><Comment Operand="[8].5"><![CDATA[DATA
+OVERFRT
+CSE TRIN 4]]></Comment><Comment Operand="[8].6"><![CDATA[DATA
+OVERFRT
+CSE TRIN 5]]></Comment><Comment Operand="[8].7"><![CDATA[DATA
+OVERFRT
+CSE TRIN 6]]></Comment><Comment Operand="[8].8"><![CDATA[DATA
+OVERFRT
+CSE TRIN 7]]></Comment><Comment Operand="[8].9"><![CDATA[START COND
+CSE TRIN 8]]></Comment><Comment Operand="[8].10"><![CDATA[DATA
+OVERFRT
+CSE TRIN 8]]></Comment><Comment Operand="[8].11"><![CDATA[CSE MAN
+IND]]></Comment><Comment Operand="[8].12"><![CDATA[CSE MAN
+UD]]></Comment><Comment Operand="[8].13"><![CDATA[CSE MAN
+BAK]]></Comment><Comment Operand="[8].14"><![CDATA[CSE MAN
+FREM]]></Comment><Comment Operand="[8].15"><![CDATA[CSE START
+FORSG
+TILLADT]]></Comment><Comment Operand="[9].0"><![CDATA[HNDKODE
+LSER ONS]]></Comment><Comment Operand="[9].1"><![CDATA[BIT FOR PP
+KODE
+FUNDET]]></Comment><Comment Operand="[9].2"><![CDATA[BIT FOR SP
+KODE
+FUNDET]]></Comment><Comment Operand="[9].3"><![CDATA[BIT FOR CM
+KODE
+FUNDET]]></Comment><Comment Operand="[9].4"><![CDATA[BIT FOR
+EXT KODE
+FUNDET]]></Comment><Comment Operand="[9].5"><![CDATA[CSE M
+IKKE KRE]]></Comment><Comment Operand="[9].6"><![CDATA[KERNE ØNSKES ILAGT]]></Comment><Comment Operand="[9].7"><![CDATA[LYSGITTER
+ER BLEVET
+TESTET]]></Comment><Comment Operand="[9].8"><![CDATA[INGEN
+KERNE I
+FORM]]></Comment><Comment Operand="[9].9"><![CDATA[CSE START KNAP
+HAR VÆRET AKTIVERET]]></Comment><Comment Operand="[9].10"><![CDATA[DISPLAY
+CONVER-
+TERET]]></Comment><Comment Operand="[9].11"><![CDATA[CIFFER
+SENDT]]></Comment><Comment Operand="[9].12"><![CDATA[LYSGITTER
+FRIT 
+ONE SHOT]]></Comment><Comment Operand="[9].13"><![CDATA[PMC STOP
+MONITOR
+ONE SHOT]]></Comment><Comment Operand="[9].14"><![CDATA[VENSTRE
+SKYDEDR
+ONE SHOT]]></Comment><Comment Operand="[9].15"><![CDATA[HJRE
+SKYDEDR
+ONE SHOT]]></Comment><Comment Operand="[10].0"><![CDATA[VENT FAST]]></Comment><Comment Operand="[10].1"><![CDATA[FORM
+MODHOLD
+START
+ONE-SHOT]]></Comment><Comment Operand="[10].2"><![CDATA[SANDSPJLD
+MANUEL 
+START
+ONE-SHOT]]></Comment><Comment Operand="[10].3"><![CDATA[CSE MANUEL
+START
+ONE-SHOT]]></Comment><Comment Operand="[10].4"><![CDATA[DMM-PMC-
+CSE- STOP
+ONE-SHOT]]></Comment><Comment Operand="[10].5"><![CDATA[STOP
+MONITOR
+ONE-SHOT]]></Comment><Comment Operand="[10].6"><![CDATA[PMC MAN
+START
+ONE-SHOT]]></Comment><Comment Operand="[10].7"><![CDATA[DMM MAN
+START
+ONE SHOT]]></Comment><Comment Operand="[10].8"><![CDATA[DMM START
+ONE SHOT]]></Comment><Comment Operand="[10].9"><![CDATA[SCREEN 3
+START]]></Comment><Comment Operand="[10].10"><![CDATA[PRODUKTION
+STARTET]]></Comment><Comment Operand="[10].11"><![CDATA[UBETINGET
+MODELSKIFT
+INDLEDT]]></Comment><Comment Operand="[10].12"><![CDATA[LANGSOM
+KRSEL VED
+KAMMER
+LUKNING]]></Comment><Comment Operand="[10].13"><![CDATA[EN FORM
+ER
+ANNULLERET]]></Comment><Comment Operand="[10].14"><![CDATA[INPUT TEST
+'1' SLUT]]></Comment><Comment Operand="[10].15"><![CDATA[INPUT TEST
+'0' SLUT]]></Comment><Comment Operand="[11].0"><![CDATA[INPUTTEST
+SLUT]]></Comment><Comment Operand="[11].1"><![CDATA[FEJL
+KVITTERING
+ONS]]></Comment><Comment Operand="[11].2"><![CDATA[OUTPUT
+TEST '0'
+SLUT]]></Comment><Comment Operand="[11].3"><![CDATA[OUTPUT
+TEST '1'
+SLUT]]></Comment><Comment Operand="[11].4"><![CDATA[110V
+OUTPUTTEST
+SLUT]]></Comment><Comment Operand="[11].5"><![CDATA[BLOKERING.
+UDGANG 
+SKAL IKKE
+TESTES]]></Comment><Comment Operand="[11].6"><![CDATA[BLOKERING.
+DC UDGANG
+SKAL IKKE
+TESTES]]></Comment><Comment Operand="[11].7"><![CDATA[FEJL
+KVITTERING
+I/O]]></Comment><Comment Operand="[11].8"><![CDATA[SPRAY
+TIMER
+SLUT ONS]]></Comment><Comment Operand="[11].9"><![CDATA[KODELSER
+INSTAL-
+LERET ONS]]></Comment><Comment Operand="[11].10"><![CDATA[KODELSER
+IKKE
+INSTAL-
+LERET ONS]]></Comment><Comment Operand="[11].11"><![CDATA[NEGATIV
+HASTIGHED
+ONS]]></Comment><Comment Operand="[11].12"><![CDATA[FORM TIL
+SPECIFIC
+DATA]]></Comment><Comment Operand="[11].13"><![CDATA[PUMPE NUL
+FUNKTIONS
+CHECK]]></Comment><Comment Operand="[11].14"><![CDATA[LOOP DEV
+FUNKTIONS
+CHECK]]></Comment><Comment Operand="[11].15"><![CDATA[PMC
+STAMPNING
+STARTET]]></Comment><Comment Operand="[12]"><![CDATA[DATA
+OVERFRT]]></Comment><Comment Operand="[12].0"><![CDATA[DATA
+OVERFRT
+SP MAN BAK]]></Comment><Comment Operand="[12].1"><![CDATA[DATA
+OVERFRT
+SP
+MAN FREM]]></Comment><Comment Operand="[12].2"><![CDATA[DMM NSKER
+FORM
+TRANSPORT]]></Comment><Comment Operand="[12].3"><![CDATA[DMM KLAR
+TIL FORM
+TRANSPORT]]></Comment><Comment Operand="[12].4"><![CDATA[SANDSPJLD
+MANUEL
+FLAG]]></Comment><Comment Operand="[12].5"><![CDATA[FORM
+MODHOLDS
+POSITION
+OK]]></Comment><Comment Operand="[12].6"><![CDATA[FORM
+MODHOLD
+START
+FORSG
+TILLADT]]></Comment><Comment Operand="[12].7"><![CDATA[FORM
+MODHOLD
+MANUEL
+BNE]]></Comment><Comment Operand="[12].8"><![CDATA[FORM
+MODHOLD
+MANUEL
+KLEMME]]></Comment><Comment Operand="[12].9"><![CDATA[FORM
+MODHOLD
+MANUEL
+BAK]]></Comment><Comment Operand="[12].10"><![CDATA[FORM
+MODHOLD
+MANUEL
+FREM]]></Comment><Comment Operand="[12].11"><![CDATA[MAX SP/PP
+Velocity
+Achieved]]></Comment><Comment Operand="[12].12"><![CDATA[HY RESTART
+TEST START]]></Comment><Comment Operand="[12].13"><![CDATA[HY RESTART
+TEST SLUT]]></Comment><Comment Operand="[12].14"><![CDATA[TIDSSTYRET
+NED
+BREMSNING
+OPR 4B]]></Comment><Comment Operand="[12].15"><![CDATA[DMM STEP
+STOP]]></Comment><Comment Operand="[13]"><![CDATA[PMC DATA
+OVERFRT]]></Comment><Comment Operand="[13].0"><![CDATA[FAST RIST
+MAN NED]]></Comment><Comment Operand="[13].1"><![CDATA[DATA
+OVERFRT
+BEVGELIG
+RIST MAN.
+FREM]]></Comment><Comment Operand="[13].2"><![CDATA[DATA
+OVERFRT
+BEVGELIG
+RIST MAN.
+BAK]]></Comment><Comment Operand="[13].3"><![CDATA[DATA
+OVERFRT
+BEVGELIG
+RIST MAN.
+OP]]></Comment><Comment Operand="[13].4"><![CDATA[DATA
+OVERFRT
+BEVGELIG
+RIST MAN.
+NED]]></Comment><Comment Operand="[13].5"><![CDATA[DATA
+OVERFRT
+FAST RIST
+MAN. OP]]></Comment><Comment Operand="[13].6"><![CDATA[DATA
+OVERFRT
+FAST RIST
+MAN NED]]></Comment><Comment Operand="[13].7"><![CDATA[START COND
+PMC TRIN 4
+OK]]></Comment><Comment Operand="[13].8"><![CDATA[START COND
+PMC
+TMNING OK]]></Comment><Comment Operand="[13].9"><![CDATA[DATA
+OVERFRT
+PMC
+TMNING]]></Comment><Comment Operand="[13].10"><![CDATA[SBC MANUEL
+ON/OFF]]></Comment><Comment Operand="[13].11"><![CDATA[PMC
+FORWARD
+WITHOUT
+SBO ASS.]]></Comment><Comment Operand="[13].12"><![CDATA[PMC
+REVERSE
+WITHOUT
+SBO ASS.]]></Comment><Comment Operand="[13].13"><![CDATA[DECELERA
+TION
+DISCHARGE]]></Comment><Comment Operand="[14]"><![CDATA[CSE Word]]></Comment><Comment Operand="[14].0"><![CDATA[CSE MANUEL
+RUNNING]]></Comment><Comment Operand="[14].1"><![CDATA[DATA
+OVERFRT
+CSE MANUEL
+IND]]></Comment><Comment Operand="[14].2"><![CDATA[DATA
+OVERFRT
+CSE MANUEL
+UD]]></Comment><Comment Operand="[14].3"><![CDATA[DATA
+OVERFRT
+CSE MANUEL
+BAK]]></Comment><Comment Operand="[14].4"><![CDATA[DATA
+OVERFRT
+CSE MANUEL
+FREM INDE]]></Comment><Comment Operand="[14].5"><![CDATA[DATA
+OVERFRT
+CSE MANUEL
+FREM UDE]]></Comment><Comment Operand="[14].6"><![CDATA[CSE
+Stage 6&7
+overlap ok
+ ]]></Comment><Comment Operand="[14].7"><![CDATA[CSE_AUTO_START]]></Comment><Comment Operand="[17].8"><![CDATA[HASTIGHED
+På MAX]]></Comment><Comment Operand="[32]"><![CDATA[HARDWARE
+TEST ORD]]></Comment><Comment Operand="[36].1"><![CDATA[TCU_INST]]></Comment><Comment Operand="[36].4"><![CDATA[SBO HIGH
+PRESSURE
+REQUEST]]></Comment><Comment Operand="[36].5"><![CDATA[SBO
+Assist
+Required
+Syncron]]></Comment><Comment Operand="[36].6"><![CDATA[SBO
+Acc.
+Syncron]]></Comment><Comment Operand="[36].7"><![CDATA[SBO
+Const. Vel.
+Syncron]]></Comment><Comment Operand="[36].8"><![CDATA[SBO
+Decc.
+Syncron]]></Comment><Comment Operand="[36].11"><![CDATA[SEQUENCE
+CODES
+SBO #1
+ENABLED]]></Comment><Comment Operand="[36].12"><![CDATA[SEQUENCE
+CODES
+SBO #2
+ENABLED]]></Comment><Comment Operand="[37].6"><![CDATA[DMM CHANGE FROM
+OP 4.1 TO OP 4.0]]></Comment><Comment Operand="[37].7"><![CDATA[Poured
+since last
+mould transport]]></Comment><Comment Operand="[38].0"><![CDATA[OP_1_PRE_ON]]></Comment><Comment Operand="[38].1"><![CDATA[BIP]]></Comment><Comment Operand="[38].2"><![CDATA[PP_ACC
+FEED-BACK
+READY]]></Comment><Comment Operand="[38].3"><![CDATA[SP_ACC FEED-BACK
+READY]]></Comment><Comment Operand="[38].4"><![CDATA[PP_Acc
+Feed-Back
+PMC & SBC
+Enabled]]></Comment><Comment Operand="[38].5"><![CDATA[SP_Acc Feed-Back
+Enabled]]></Comment><Comment Operand="[38].6"><![CDATA[SHOTVALVE_TOGGLE_B_C]]></Comment><Comment Operand="[38].7"><![CDATA[TEST_SPRAYFLOW_ONS]]></Comment><Comment Operand="[38].8"><![CDATA[TEST_SPRAYFLOW_ON]]></Comment><Comment Operand="[38].9"><![CDATA[TEST_SPRAYFLOW_FAULT]]></Comment><Comment Operand="[38].10"><![CDATA[SP_LIFTED_LATE]]></Comment><Comment Operand="[38].11"><![CDATA[SP Warning
+Late Lift
+F-mode:
+x 2/3 speed]]></Comment><Comment Operand="[38].12"><![CDATA[SP Warning
+Late Lift
+F-mode:
+x 0.5 speed]]></Comment><Comment Operand="[39].0"><![CDATA[TWO_AIR_INST]]></Comment><Comment Operand="[39].1"><![CDATA[HEATING_CUT_INST]]></Comment><Comment Operand="[39].2"><![CDATA[STD_CAM_INST1: DMM Std.
+0: DMM 3065 only]]></Comment><Comment Operand="[39].3"><![CDATA[ACF_GATE_INST]]></Comment><Comment Operand="[39].4"><![CDATA[SSC_ENABLE_INST]]></Comment><Comment Operand="[39].5"><![CDATA[24VDC_CNTRL_INST]]></Comment><Comment Operand="[39].10"><![CDATA[ONS_NOT_EMPTY]]></Comment><Comment Operand="[39].11"><![CDATA[Sample SP-cam-pos
+Fwd]]></Comment><Comment Operand="[39].12"><![CDATA[Sample SP-cam-pos
+Rev]]></Comment><Comment Operand="[39].13"><![CDATA[Mould
+squeezed
+AFB_Enabled]]></Comment><Comment Operand="[39].14"><![CDATA[HEAT_REQUESTED]]></Comment><Comment Operand="[39].15"><![CDATA[ONS_MOULD_TRANS_OK]]></Comment><Comment Operand="[40].0"><![CDATA[LEFT_GATE_HIGH_OK]]></Comment><Comment Operand="[40].1"><![CDATA[RIGHT_GATE_HIGH_OK]]></Comment><Comment Operand="[40].2"><![CDATA[PPC_GATE_HIGH_OK]]></Comment><Comment Operand="[41]"><![CDATA[PRESTRIP_CONTROL]]></Comment><Comment Operand="[41].0"><![CDATA[PRESTRIP_SP_FWD_SET]]></Comment><Comment Operand="[41].1"><![CDATA[PRESTRIP_SP_FWD_DONE]]></Comment><Comment Operand="[41].2"><![CDATA[PRESTRIP_SP_RET_SET]]></Comment><Comment Operand="[41].3"><![CDATA[PRESTRIP_SP_RET_DONE]]></Comment><Comment Operand="[41].4"><![CDATA[PRESTRIP_SP_DONE]]></Comment><Comment Operand="[41].5"><![CDATA[PRESTRIP_SP_P_DIF_OK]]></Comment><Comment Operand="[41].8"><![CDATA[PRESTRIP_PP_FWD_SET]]></Comment><Comment Operand="[41].9"><![CDATA[PRESTRIP_PP_FWD_DONE]]></Comment><Comment Operand="[41].10"><![CDATA[PRESTRIP_PP_RET_SET]]></Comment><Comment Operand="[41].11"><![CDATA[PRESTRIP_PP_RET_DONE]]></Comment><Comment Operand="[41].12"><![CDATA[PRESTRIP_PP_DONE]]></Comment><Comment Operand="[41].13"><![CDATA[PRESTRIP_PP_P_DIF_OK]]></Comment><Comment Operand="[42].0"><![CDATA[SIZE_A_S]]></Comment><Comment Operand="[42].1"><![CDATA[SIZE_B_C]]></Comment></Comments><Data Format="L5K"><![CDATA[[8,4867,32769,32768,385,7426,1,4394,0,3329,50432,17937,14368,0,0,63479,65471,65535,65535,65535,65535,65525
+					,65534,65535,16383,0,0,65024,63975,65533,65535,53635,0,2239,55535,65507,2,16301,9288,39973,7,0,2]]]></Data><Data Format="Decorated"><Array DataType="DINT" Dimensions="43" Radix="Binary"><Element Index="[0]" Value="2#0000_0000_0000_0000_0000_0000_0000_1000" /><Element Index="[1]" Value="2#0000_0000_0000_0000_0001_0011_0000_0011" /><Element Index="[2]" Value="2#0000_0000_0000_0000_1000_0000_0000_0001" /><Element Index="[3]" Value="2#0000_0000_0000_0000_1000_0000_0000_0000" /><Element Index="[4]" Value="2#0000_0000_0000_0000_0000_0001_1000_0001" /><Element Index="[5]" Value="2#0000_0000_0000_0000_0001_1101_0000_0010" /><Element Index="[6]" Value="2#0000_0000_0000_0000_0000_0000_0000_0001" /><Element Index="[7]" Value="2#0000_0000_0000_0000_0001_0001_0010_1010" /><Element Index="[8]" Value="2#0000_0000_0000_0000_0000_0000_0000_0000" /><Element Index="[9]" Value="2#0000_0000_0000_0000_0000_1101_0000_0001" /><Element Index="[10]" Value="2#0000_0000_0000_0000_1100_0101_0000_0000" /><Element Index="[11]" Value="2#0000_0000_0000_0000_0100_0110_0001_0001" /><Element Index="[12]" Value="2#0000_0000_0000_0000_0011_1000_0010_0000" /><Element Index="[13]" Value="2#0000_0000_0000_0000_0000_0000_0000_0000" /><Element Index="[14]" Value="2#0000_0000_0000_0000_0000_0000_0000_0000" /><Element Index="[15]" Value="2#0000_0000_0000_0000_1111_0111_1111_0111" /><Element Index="[16]" Value="2#0000_0000_0000_0000_1111_1111_1011_1111" /><Element Index="[17]" Value="2#0000_0000_0000_0000_1111_1111_1111_1111" /><Element Index="[18]" Value="2#0000_0000_0000_0000_1111_1111_1111_1111" /><Element Index="[19]" Value="2#0000_0000_0000_0000_1111_1111_1111_1111" /><Element Index="[20]" Value="2#0000_0000_0000_0000_1111_1111_1111_1111" /><Element Index="[21]" Value="2#0000_0000_0000_0000_1111_1111_1111_0101" /><Element Index="[22]" Value="2#0000_0000_0000_0000_1111_1111_1111_1110" /><Element Index="[23]" Value="2#0000_0000_0000_0000_1111_1111_1111_1111" /><Element Index="[24]" Value="2#0000_0000_0000_0000_0011_1111_1111_1111" /><Element Index="[25]" Value="2#0000_0000_0000_0000_0000_0000_0000_0000" /><Element Index="[26]" Value="2#0000_0000_0000_0000_0000_0000_0000_0000" /><Element Index="[27]" Value="2#0000_0000_0000_0000_1111_1110_0000_0000" /><Element Index="[28]" Value="2#0000_0000_0000_0000_1111_1001_1110_0111" /><Element Index="[29]" Value="2#0000_0000_0000_0000_1111_1111_1111_1101" /><Element Index="[30]" Value="2#0000_0000_0000_0000_1111_1111_1111_1111" /><Element Index="[31]" Value="2#0000_0000_0000_0000_1101_0001_1000_0011" /><Element Index="[32]" Value="2#0000_0000_0000_0000_0000_0000_0000_0000" /><Element Index="[33]" Value="2#0000_0000_0000_0000_0000_1000_1011_1111" /><Element Index="[34]" Value="2#0000_0000_0000_0000_1101_1000_1110_1111" /><Element Index="[35]" Value="2#0000_0000_0000_0000_1111_1111_1110_0011" /><Element Index="[36]" Value="2#0000_0000_0000_0000_0000_0000_0000_0010" /><Element Index="[37]" Value="2#0000_0000_0000_0000_0011_1111_1010_1101" /><Element Index="[38]" Value="2#0000_0000_0000_0000_0010_0100_0100_1000" /><Element Index="[39]" Value="2#0000_0000_0000_0000_1001_1100_0010_0101" /><Element Index="[40]" Value="2#0000_0000_0000_0000_0000_0000_0000_0111" /><Element Index="[41]" Value="2#0000_0000_0000_0000_0000_0000_0000_0000" /><Element Index="[42]" Value="2#0000_0000_0000_0000_0000_0000_0000_0010" /></Array></Data></Tag><Tag Name="I" TagType="Produced" DataType="INT" Dimensions="48" Radix="Binary" Constant="false" ExternalAccess="Read/Write"><ProduceInfo PLCMappingFile="1" /><Comments><Comment Operand="[6].0"><![CDATA[PP POS
+BIT 0]]></Comment><Comment Operand="[6].1"><![CDATA[PP POS
+BIT 1]]></Comment><Comment Operand="[6].2"><![CDATA[PP POS
+BIT 2]]></Comment><Comment Operand="[6].3"><![CDATA[PP POS
+BIT 3]]></Comment><Comment Operand="[6].4"><![CDATA[PP POS
+BIT 4]]></Comment><Comment Operand="[6].5"><![CDATA[PP POS
+BIT 5]]></Comment><Comment Operand="[6].6"><![CDATA[PP POS
+BIT 6]]></Comment><Comment Operand="[6].7"><![CDATA[PP POS
+BIT 7]]></Comment><Comment Operand="[6].8"><![CDATA[PP POS
+BIT 8]]></Comment><Comment Operand="[6].9"><![CDATA[PP POS
+BIT 9]]></Comment><Comment Operand="[6].10"><![CDATA[PP POS
+BIT 10]]></Comment><Comment Operand="[6].11"><![CDATA[PP POS
+BIT 11]]></Comment><Comment Operand="[6].12"><![CDATA[PP POS
+BIT 12]]></Comment><Comment Operand="[6].13"><![CDATA[PP POS
+BIT 13]]></Comment><Comment Operand="[6].14"><![CDATA[PP POS
+BIT 14]]></Comment><Comment Operand="[6].15"><![CDATA[PP POS
+BIT 15]]></Comment><Comment Operand="[7].0"><![CDATA[SP POS
+BIT 0]]></Comment><Comment Operand="[7].1"><![CDATA[SP POS
+BIT 1]]></Comment><Comment Operand="[7].2"><![CDATA[SP POS
+BIT 2]]></Comment><Comment Operand="[7].3"><![CDATA[SP POS
+BIT 3]]></Comment><Comment Operand="[7].4"><![CDATA[SP POS
+BIT 4]]></Comment><Comment Operand="[7].5"><![CDATA[SP POS
+BIT 5]]></Comment><Comment Operand="[7].6"><![CDATA[SP POS
+BIT 6]]></Comment><Comment Operand="[7].7"><![CDATA[SP POS
+BIT 7]]></Comment><Comment Operand="[7].8"><![CDATA[SP POS
+BIT 8]]></Comment><Comment Operand="[7].9"><![CDATA[SP POS
+BIT 9]]></Comment><Comment Operand="[7].10"><![CDATA[SP POS
+BIT 10]]></Comment><Comment Operand="[7].11"><![CDATA[SP POS
+BIT 11]]></Comment><Comment Operand="[7].12"><![CDATA[SP POS
+BIT 12]]></Comment><Comment Operand="[7].13"><![CDATA[SP POS
+BIT 13]]></Comment><Comment Operand="[7].14"><![CDATA[SP POS
+BIT 14]]></Comment><Comment Operand="[7].15"><![CDATA[SP POS
+BIT 15]]></Comment><Comment Operand="[8].0"><![CDATA[C9_K2_14Key Switch
+Not in
+pos. Zero]]></Comment><Comment Operand="[8].1"><![CDATA[C5_19110 V AC
+OUTPUT
+TEST]]></Comment><Comment Operand="[8].2"><![CDATA[C9_01624 V DC
+OUTPUT
+TEST]]></Comment><Comment Operand="[8].3"><![CDATA[C9_018SHIFT
+NUMBER]]></Comment><Comment Operand="[8].4"><![CDATA[C6_006CWD IKKE
+INDKOBLET]]></Comment><Comment Operand="[8].5"><![CDATA[C10 level
+PWR ON]]></Comment><Comment Operand="[8].6"><![CDATA[OIL_AIR_COOL_FAULTOil air cool fault:
+C1-Q42 or -Q46 or
+C1-Q50 or -Q54 OFF]]></Comment><Comment Operand="[8].7"><![CDATA[KI_CAST_SORTING_OK#1Di05L07
+C6-K84]]></Comment><Comment Operand="[8].8"><![CDATA[PCB310_F10CTR-OUT
+BIT 0]]></Comment><Comment Operand="[8].9"><![CDATA[PCB310_D10CTR-OUT
+BIT 1]]></Comment><Comment Operand="[8].10"><![CDATA[PCB310_B10CTR-OUT
+BIT 2]]></Comment><Comment Operand="[8].11"><![CDATA[PCB310_Z10CTR-OUT
+BIT 3]]></Comment><Comment Operand="[8].12"><![CDATA[PCB310_F28CWD ERROR
+ON PP/SP
+POS. BOARD
+UDM]]></Comment><Comment Operand="[8].13"><![CDATA[C9_356TILT
+FEEDBACK
+ZERO PCU2.
+RESPONSE
+OK TCU.]]></Comment><Comment Operand="[8].14"><![CDATA[C9_357FEEDBACK
+OK PCU2.
+TILT OK
+TCU KORT.]]></Comment><Comment Operand="[8].15"><![CDATA[C9_358LOOP
+DEVIATION
+(PCU2)]]></Comment><Comment Operand="[9].0"><![CDATA[C6_K62POURING
+COMPLEETED]]></Comment><Comment Operand="[9].1"><![CDATA[C6_065SHAKE-OUT
+OK]]></Comment><Comment Operand="[9].2"><![CDATA[C6_K662070
+EXTERNALLY
+STOPPED]]></Comment><Comment Operand="[9].3"><![CDATA[C6_K68TEST
+SIGNAL
+FROM ACE]]></Comment><Comment Operand="[9].4"><![CDATA[C6_K70SIGNAL FRA
+ACE]]></Comment><Comment Operand="[9].5"><![CDATA[C6_073ENABLE SSU
+REVERSE]]></Comment><Comment Operand="[9].6"><![CDATA[C6_K74CORE
+SETTER:
+CORES SET
+IN MASK]]></Comment><Comment Operand="[9].7"><![CDATA[C6_K76ACF:
+CLEAR OF
+CSE]]></Comment><Comment Operand="[9].8"><![CDATA[C9_327PP/SP
+POWER OK]]></Comment><Comment Operand="[9].9"><![CDATA[C9_337TRANSDUCER
+POWER OK]]></Comment><Comment Operand="[9].11"><![CDATA[C9_447]]></Comment><Comment Operand="[9].12"><![CDATA[PP_Acc.
+Feed-Back
+board: OK]]></Comment><Comment Operand="[9].13"><![CDATA[SP_Acc.
+Feed-Back
+Board: OK]]></Comment><Comment Operand="[10].0"><![CDATA[C5_006C7 TEST
+POWER OK]]></Comment><Comment Operand="[10].1"><![CDATA[C5_010C81 TEST
+POWER OK]]></Comment><Comment Operand="[10].2"><![CDATA[C5_014C82 TEST
+POWER OK]]></Comment><Comment Operand="[10].3"><![CDATA[C5_018C83 TEST
+POWER OK]]></Comment><Comment Operand="[10].4"><![CDATA[C7_005DMM HOVED
+MOTOR I
+DELTA]]></Comment><Comment Operand="[10].5"><![CDATA[C7_015SERVOMOTOR
+I DELTA]]></Comment><Comment Operand="[10].6"><![CDATA[C7_032A THERMAL
+RELAY IS
+CUT OUT]]></Comment><Comment Operand="[10].7"><![CDATA[C6_K82POURING
+ONE MOLD]]></Comment><Comment Operand="[10].8"><![CDATA[C9_075E-Stop
+Ext. Panel]]></Comment><Comment Operand="[10].9"><![CDATA[Disa E-stop relay OFF, C9-K72 OFF]]></Comment><Comment Operand="[10].10"><![CDATA[C9_094DMM Left Guard-gate
+Closed & Reset]]></Comment><Comment Operand="[10].11"><![CDATA[C9_114DMM Right Guard-gateClosed & Reset]]></Comment><Comment Operand="[10].12"><![CDATA[C9_125HY VALVE
+TEST 1]]></Comment><Comment Operand="[10].13"><![CDATA[C9_127HY-VALVE
+TEST 2]]></Comment><Comment Operand="[10].14"><![CDATA[C9_129HY-VALVE
+TEST 3]]></Comment><Comment Operand="[10].15"><![CDATA[C9_131HY-VALVE
+TEST 4]]></Comment><Comment Operand="[11].0"><![CDATA[C9_139HY VALVE
+TEST OK]]></Comment><Comment Operand="[11].1"><![CDATA[C9_145HY VALVE
+LOCK 1]]></Comment><Comment Operand="[11].2"><![CDATA[C9_147HY-VALVE
+LOCK 2]]></Comment><Comment Operand="[11].3"><![CDATA[C9_159HY VALVE
+LOCK OK]]></Comment><Comment Operand="[11].4"><![CDATA[C9_169CSE at Light Curtain]]></Comment><Comment Operand="[11].5"><![CDATA[C10_S238TRYK I
+HY221 OK]]></Comment><Comment Operand="[11].6"><![CDATA[C9_209PPC
+Guard-buf.
+In pos. &
+Reset]]></Comment><Comment Operand="[11].7"><![CDATA[Disa Door-stop relay ON, C9-K212 ON]]></Comment><Comment Operand="[11].8"><![CDATA[C9_289REMOTE
+DISPLAY 2
+BCD 1]]></Comment><Comment Operand="[11].9"><![CDATA[C9_291REMOTE
+DISPLAY 2
+BCD 2]]></Comment><Comment Operand="[11].10"><![CDATA[C9_293REMOTE
+DISPLAY 2
+BCD 4]]></Comment><Comment Operand="[11].11"><![CDATA[C9_295REMOTE
+DISPLAY 2
+BCD 8]]></Comment><Comment Operand="[11].12"><![CDATA[C9_S650_24CSE MASK
+SETTING
+GATE
+ACKNOW
+LEDGEMENT]]></Comment><Comment Operand="[11].13"><![CDATA[C9_K642_58CMC
+Guard-gate
+Closed &
+Reset]]></Comment><Comment Operand="[11].14"><![CDATA[C9_S670_24ACF GATE
+ACKNOW
+LEDGEMENT]]></Comment><Comment Operand="[11].15"><![CDATA[C9_K662_58ACF
+Guard-gate
+Closed &
+Reset]]></Comment><Comment Operand="[12].0"><![CDATA[C10_S4_4SPRAY
+P01]]></Comment><Comment Operand="[12].1"><![CDATA[C10_S6_4CORE MASK
+BLOW OFF
+P01]]></Comment><Comment Operand="[12].2"><![CDATA[C10_S8_1BLOW OFF
+IN FRONT
+OF SP
+POS.1 P01]]></Comment><Comment Operand="[12].3"><![CDATA[C10_S8_3BLOW OFF
+UNDER SP
+POS.2 P01]]></Comment><Comment Operand="[12].4"><![CDATA[C10_S10_1MANUAL
+MOVEMENT
+POS.1 P01]]></Comment><Comment Operand="[12].5"><![CDATA[C10_S10_3MANUAL
+MOVEMENT
+POS.2 P01]]></Comment><Comment Operand="[12].6"><![CDATA[C10_S28_1MANUEL
+MODE
+SELECTED
+POS.1 P01]]></Comment><Comment Operand="[12].7"><![CDATA[C10_S28_5AUTO MODE
+SELECTED
+POS.3 P01]]></Comment><Comment Operand="[12].8"><![CDATA[C10_S22_7SPEED 8
+BCD
+SELECTED
+P01]]></Comment><Comment Operand="[12].9"><![CDATA[C10_S22_5SPEED 4
+BCD
+SELECTED
+P01]]></Comment><Comment Operand="[12].10"><![CDATA[C10_S22_3SPEED 2
+BCD
+SELECTED
+P01]]></Comment><Comment Operand="[12].11"><![CDATA[C10_S22_1SPEED 1
+BCD
+SELECTED
+P01]]></Comment><Comment Operand="[12].12"><![CDATA[C10_S42_1SP PATTERN
+CHANGE
+SELECTED
+POS.1 P01]]></Comment><Comment Operand="[12].13"><![CDATA[C10_S42_3PP PATTERN
+CHANGE
+SELECTED
+POS.2 P01]]></Comment><Comment Operand="[12].14"><![CDATA[C10_S42_7MOLD COUNT
+PATTERN
+CHANGE SEL
+POS.3 P01]]></Comment><Comment Operand="[12].15"><![CDATA[C10_S42_9IMMEDIATE
+PATTERN
+CHANGE SEL
+POS.4 P01]]></Comment><Comment Operand="[13].0"><![CDATA[C10_S48_1SAND BELT 
+RETURN
+SELECTED
+POS.1 P01]]></Comment><Comment Operand="[13].1"><![CDATA[C10_S48_3EMPTYING
+OF SAND
+HOPPER SEL
+POS.2 P01]]></Comment><Comment Operand="[13].2"><![CDATA[C10_S48_7Normal Op with sand
+Pos.3, +P1]]></Comment><Comment Operand="[13].3"><![CDATA[C10_S54_1EMPTY SBC
+SELECTED
+POS.1 P01]]></Comment><Comment Operand="[13].4"><![CDATA[C10_S54_3EMPTY SBC & PMC
+SELECTED
+POS.2 P01]]></Comment><Comment Operand="[13].5"><![CDATA[C10_S54_7DMM & PMC SEL.
+SBC NOT SEL.
+POS.3 P01]]></Comment><Comment Operand="[13].6"><![CDATA[C10_S54_9NORMAL DMS
+OPERATION
+SELECTED
+POS.4 P01]]></Comment><Comment Operand="[13].7"><![CDATA[C10_S2_4CANCEL
+PATTERN
+CHANGE
+COUNTER
+P01]]></Comment><Comment Operand="[13].8"><![CDATA[C10_S62_1CORE
+SETTING
+SELECTED
+POS 1. PO1]]></Comment><Comment Operand="[13].10"><![CDATA[C10_S66_1OPERATION
+ON PAN-GL
+(P02) SEL.
+POS.1 P01]]></Comment><Comment Operand="[13].11"><![CDATA[C10_S66_5OPERATION
+ON PAN-GR
+(P03) SEL.
+POS.3 P01]]></Comment><Comment Operand="[13].12"><![CDATA[C10_S70_3No stop on PAN-OP
+Pos.1 P01]]></Comment><Comment Operand="[13].13"><![CDATA[C10_S70_1DMS START
+ON PAN-OP
+POS.2 P01]]></Comment><Comment Operand="[13].14"><![CDATA[C9_S62_14E-Stop, P1
+Opr. Panel]]></Comment><Comment Operand="[13].15"><![CDATA[C9_S77_24EMERGENCY
+STOP ACK-
+NOWLEDGE-
+MENT
+PAN-OP P01]]></Comment><Comment Operand="[14].0"><![CDATA[C9_S63_14E-Stop, P2
+Left Panel]]></Comment><Comment Operand="[14].1"><![CDATA[C9_S90_24VENSTRE
+GITTER
+KVITTERING]]></Comment><Comment Operand="[14].2"><![CDATA[C10_S82_1SP PATTERN
+PLATE
+LOCKS OUT,
+PAN-GL]]></Comment><Comment Operand="[14].3"><![CDATA[C10_S82_3SP PATTERN
+PLATE
+LOCKS IN,
+PAN-GL]]></Comment><Comment Operand="[14].4"><![CDATA[C10_S85_1PP PATTERN
+PLATE
+LOCKS OUT,
+PAN-GL]]></Comment><Comment Operand="[14].5"><![CDATA[C10_S85_3PP PATTERN
+PLATE
+LOCKS IN,
+PAN-GL]]></Comment><Comment Operand="[14].6"><![CDATA[C10_S88_3No stop on PAN-GL]]></Comment><Comment Operand="[14].7"><![CDATA[C10_S88_1DMS START
+ON PAN-GL]]></Comment><Comment Operand="[14].8"><![CDATA[C10_S67_14E-Stop, P3
+RightPanel]]></Comment><Comment Operand="[14].9"><![CDATA[C9_S110_24HJRE
+GITTER
+KVITTERING]]></Comment><Comment Operand="[14].10"><![CDATA[C10_S92_1SP PATTERN
+PLATE
+LOCKS OUT,
+PAN-GR]]></Comment><Comment Operand="[14].11"><![CDATA[C10_S92_3SP PATTERN
+PLATE
+LOCKS IN,
+PAN-GR]]></Comment><Comment Operand="[14].12"><![CDATA[C10_S95_1PP PATTERN
+PLATE
+LOCKS OUT,
+PAN-GR]]></Comment><Comment Operand="[14].13"><![CDATA[C10_S95_3PP PATTERN
+PLATE
+LOCKS IN,
+PAN-GR]]></Comment><Comment Operand="[14].14"><![CDATA[C10_S98_3No stop on PAN-GR]]></Comment><Comment Operand="[14].15"><![CDATA[C10_S98_1DMS START
+ON PAN-GR]]></Comment><Comment Operand="[15].0"><![CDATA[C9_S2_3KEY SWITCH
+IN POS.
+2 OR 3.]]></Comment><Comment Operand="[15].1"><![CDATA[C9_S2_5NGLE I
+STILLING 3]]></Comment><Comment Operand="[15].2"><![CDATA[C10_S112_1PPC SLOW
+TOWARDS
+LEFT]]></Comment><Comment Operand="[15].3"><![CDATA[C10_S112_3PPC SLOW
+TOWARDS
+RIGHT]]></Comment><Comment Operand="[15].4"><![CDATA[C10_S115_1PPC FAST
+TOWARDS
+LEFT]]></Comment><Comment Operand="[15].5"><![CDATA[C10_S115_3PPC FAST
+TOWARDS
+RIGHT]]></Comment><Comment Operand="[15].6"><![CDATA[C10_S118_1PPC FAST
+TOWARDS
+NEXT LEFT
+STOP
+POSITION]]></Comment><Comment Operand="[15].7"><![CDATA[C10_S118_3PPC FAST
+TOWARDS
+NEXT RIGHT
+STOP
+POSITION]]></Comment><Comment Operand="[15].8"><![CDATA[C9_S68PMC
+OVERTRAVEL]]></Comment><Comment Operand="[15].9"><![CDATA[FIND EXT
+KODE.
+HNDKODE
+LSER]]></Comment><Comment Operand="[15].10"><![CDATA[Heating
+Relays OFF
+C6-Q22
+C6-Q26,Q28
+C22-Q2,Q4]]></Comment><Comment Operand="[15].11"><![CDATA[Heating
+Cut-Out
+Relays OFF
+C6-Q38,Q39]]></Comment><Comment Operand="[15].12"><![CDATA[SSC Enable
+SSC Fwd OK
+C6-K84]]></Comment><Comment Operand="[16].0"><![CDATA[C10_B142SP
+VERTICAL]]></Comment><Comment Operand="[16].1"><![CDATA[C10_B144PP BEHIND
+SAND GATE]]></Comment><Comment Operand="[16].2"><![CDATA[C10_B146SP IN CHAMBER]]></Comment><Comment Operand="[16].3"><![CDATA[C10_B148SP FULLY
+OUT AND
+HORISONTAL]]></Comment><Comment Operand="[16].4"><![CDATA[C10_B150SAND GATE
+OPEN]]></Comment><Comment Operand="[16].5"><![CDATA[C10_B152SAND GATE
+CLOSED]]></Comment><Comment Operand="[16].6"><![CDATA[C10_S154PN
+PRESSURE
+OK]]></Comment><Comment Operand="[16].7"><![CDATA[C10_S156_2BOTTOM 
+PLATE
+VACUUM OK]]></Comment><Comment Operand="[16].8"><![CDATA[C10_B162HY 10 OPEN]]></Comment><Comment Operand="[16].9"><![CDATA[C10_B164HY 11 OPEN]]></Comment><Comment Operand="[16].10"><![CDATA[C10_B166HY 16 BEN]]></Comment><Comment Operand="[16].11"><![CDATA[C10_B168HY 17 BEN]]></Comment><Comment Operand="[16].12"><![CDATA[C10_S170_ADMM
+Oil level 
+OK]]></Comment><Comment Operand="[16].13"><![CDATA[C10_S172HY 120 DMM
+OIL FILTER
+NOT
+CLOGGED]]></Comment><Comment Operand="[16].14"><![CDATA[C10_S174Spray flow detected]]></Comment><Comment Operand="[16].15"><![CDATA[C10_S176LUBRICA-
+TION OIL/
+GREASE
+TANK OK]]></Comment><Comment Operand="[17].0"><![CDATA[C10_S182HY DMM OIL
+TEMPERA-
+TURE OK]]></Comment><Comment Operand="[17].4"><![CDATA[C10_B190PPC IN
+LEFT END
+POSITION]]></Comment><Comment Operand="[17].5"><![CDATA[C10_B192PPC IN
+RIGHT END
+POSITION]]></Comment><Comment Operand="[17].6"><![CDATA[C10_B194PPC IN SP
+PATTERN
+CHANGE
+POSITION]]></Comment><Comment Operand="[17].7"><![CDATA[C10_B196PPC IN PP
+PATTERN
+CHANGE
+POSITION]]></Comment><Comment Operand="[17].8"><![CDATA[C10_B202PMC
+MOVABLE
+GRATES
+RAISED]]></Comment><Comment Operand="[17].9"><![CDATA[C10_B204PMC
+MOVABLE
+GRATES
+LOWERED]]></Comment><Comment Operand="[17].10"><![CDATA[C10_B206PMC FIXED
+GRATES
+RAISED]]></Comment><Comment Operand="[17].11"><![CDATA[C10_B208PMC FIXED
+GRATES
+LOWERED]]></Comment><Comment Operand="[17].12"><![CDATA[C10_B210PMC
+MOVABLE
+GRATES
+FORWARD,
+BRAKE POS.]]></Comment><Comment Operand="[17].13"><![CDATA[C10_B212PMC
+MOVABLE
+GRATES
+RETURNED,
+BRAKE POS.]]></Comment><Comment Operand="[17].14"><![CDATA[C10_B214PMC
+MOVABLE
+GRATES
+RETURNED
+END POS.]]></Comment><Comment Operand="[17].15"><![CDATA[C10_B216AUTOMATIC
+MOLD
+RETAINER
+POSITION
+OK]]></Comment><Comment Operand="[18].0"><![CDATA[C10_B222CSE BUFFER
+STOP
+CYLINDER
+READY]]></Comment><Comment Operand="[18].1"><![CDATA[C10_B224CSE INSIDE
+DMM]]></Comment><Comment Operand="[18].2"><![CDATA[C10_B226CSE INSIDE
+DMM AND
+FORWARD]]></Comment><Comment Operand="[18].3"><![CDATA[C10_B228CSE CLEAR
+OF SUSPEN-
+SION FRAME]]></Comment><Comment Operand="[18].4"><![CDATA[C10_B230CSE IN
+OUTSIDE
+STOP
+POSITION]]></Comment><Comment Operand="[18].5"><![CDATA[C10_B232CSE IN
+RETURNED
+POSITION]]></Comment><Comment Operand="[18].6"><![CDATA[C10_S234CSE CORE
+SETTING
+PRESSURE
+REACHED]]></Comment><Comment Operand="[18].7"><![CDATA[C10_S236CSE VACUUM
+RELEASED]]></Comment><Comment Operand="[18].8"><![CDATA[C9_S72_14E-Stop, P4
+CSE  Panel]]></Comment><Comment Operand="[18].9"><![CDATA[C9_S186ACKNOWLED
+GEMENT OF
+CSE LIGHT
+CURTAIN]]></Comment><Comment Operand="[18].10"><![CDATA[C9_S188ACKNOWLEDGEMENT
+OF CORE SETTING P04]]></Comment><Comment Operand="[18].11"><![CDATA[C9_K1821 LightCurtainDirty
+2 CSE AutoStartKey]]></Comment><Comment Operand="[18].12"><![CDATA[C10_S102CORE
+HOLDER
+DEACTIVATE
+PO4]]></Comment><Comment Operand="[18].13"><![CDATA[C10_S104CORE
+HOLDER
+ACTIVATE
+P04]]></Comment><Comment Operand="[18].14"><![CDATA[C10S106_12No stop on PAN-CSE]]></Comment><Comment Operand="[18].15"><![CDATA[C9_K182_11CSE LightCurtain
+Not Ready]]></Comment><Comment Operand="[19]"><![CDATA[#1Di10]]></Comment><Comment Operand="[19].0"><![CDATA[C10_B242SSC1 BELT
+IS RUNNING]]></Comment><Comment Operand="[19].1"><![CDATA[C10_S244SBC PN
+PRESSURE
+OK
+PN405]]></Comment><Comment Operand="[19].2"><![CDATA[C10_S246SBC PN
+PRESSURE
+RELEASED
+PN406]]></Comment><Comment Operand="[19].3"><![CDATA[C10_S248SBC PN
+BRAKE
+PRESSURE
+RELEASED
+PN416]]></Comment><Comment Operand="[19].5"><![CDATA[C10_B252MOLD
+PRESENT AT
+PMC OUTLET]]></Comment><Comment Operand="[19].6"><![CDATA[C10_B254SSC2 BELT
+IS RUNNING]]></Comment><Comment Operand="[46].0"><![CDATA[C23_005SBO1
+MOTOR I
+DELTA]]></Comment><Comment Operand="[46].1"><![CDATA[C23_008SBO1
+TERMO
+UDLST]]></Comment><Comment Operand="[46].2"><![CDATA[C23_015SBO2
+MOTOR I
+DELTA]]></Comment><Comment Operand="[46].3"><![CDATA[C23_018SBO2
+TERMO
+UDLST]]></Comment><Comment Operand="[46].4"><![CDATA[C26_S2_ASBO1 OIL
+LEVEL OK]]></Comment><Comment Operand="[46].5"><![CDATA[C26_S4_1SBO1 OIL
+FILTER OK]]></Comment><Comment Operand="[46].6"><![CDATA[C26_S6_1SBO1 OIL
+TEMPERATUR
+OK]]></Comment><Comment Operand="[46].7"><![CDATA[HY1931
+CLOSED]]></Comment><Comment Operand="[46].8"><![CDATA[HY1932
+CLOSED]]></Comment><Comment Operand="[46].10"><![CDATA[C26_S22_ASBO2 OIL
+LEVEL OK]]></Comment><Comment Operand="[46].11"><![CDATA[C26_S24_1SBO2 OIL
+FILTER OK]]></Comment><Comment Operand="[46].12"><![CDATA[C26_S26_1SBO2 OIL
+TEMPERATUR
+OK]]></Comment></Comments><Data Format="L5K"><![CDATA[[0,0,0,0,0,0,5764,8898,24621,8978,3135,217,2432,4164,16448,1,-17209,-7711,-16232,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+					,0,0,0,0,496,0,0,0,0,0]]]></Data><Data Format="Decorated"><Array DataType="INT" Dimensions="48" Radix="Binary"><Element Index="[0]" Value="2#0000_0000_0000_0000" /><Element Index="[1]" Value="2#0000_0000_0000_0000" /><Element Index="[2]" Value="2#0000_0000_0000_0000" /><Element Index="[3]" Value="2#0000_0000_0000_0000" /><Element Index="[4]" Value="2#0000_0000_0000_0000" /><Element Index="[5]" Value="2#0000_0000_0000_0000" /><Element Index="[6]" Value="2#0001_0110_1000_0100" /><Element Index="[7]" Value="2#0010_0010_1100_0010" /><Element Index="[8]" Value="2#0110_0000_0010_1101" /><Element Index="[9]" Value="2#0010_0011_0001_0010" /><Element Index="[10]" Value="2#0000_1100_0011_1111" /><Element Index="[11]" Value="2#0000_0000_1101_1001" /><Element Index="[12]" Value="2#0000_1001_1000_0000" /><Element Index="[13]" Value="2#0001_0000_0100_0100" /><Element Index="[14]" Value="2#0100_0000_0100_0000" /><Element Index="[15]" Value="2#0000_0000_0000_0001" /><Element Index="[16]" Value="2#1011_1100_1100_0111" /><Element Index="[17]" Value="2#1110_0001_1110_0001" /><Element Index="[18]" Value="2#1100_0000_1001_1000" /><Element Index="[19]" Value="2#0000_0000_0000_1010" /><Element Index="[20]" Value="2#0000_0000_0000_0000" /><Element Index="[21]" Value="2#0000_0000_0000_0000" /><Element Index="[22]" Value="2#0000_0000_0000_0000" /><Element Index="[23]" Value="2#0000_0000_0000_0000" /><Element Index="[24]" Value="2#0000_0000_0000_0000" /><Element Index="[25]" Value="2#0000_0000_0000_0000" /><Element Index="[26]" Value="2#0000_0000_0000_0000" /><Element Index="[27]" Value="2#0000_0000_0000_0000" /><Element Index="[28]" Value="2#0000_0000_0000_0000" /><Element Index="[29]" Value="2#0000_0000_0000_0000" /><Element Index="[30]" Value="2#0000_0000_0000_0000" /><Element Index="[31]" Value="2#0000_0000_0000_0000" /><Element Index="[32]" Value="2#0000_0000_0000_0000" /><Element Index="[33]" Value="2#0000_0000_0000_0000" /><Element Index="[34]" Value="2#0000_0000_0000_0000" /><Element Index="[35]" Value="2#0000_0000_0000_0000" /><Element Index="[36]" Value="2#0000_0000_0000_0000" /><Element Index="[37]" Value="2#0000_0000_0000_0000" /><Element Index="[38]" Value="2#0000_0000_0000_0000" /><Element Index="[39]" Value="2#0000_0000_0000_0000" /><Element Index="[40]" Value="2#0000_0000_0000_0000" /><Element Index="[41]" Value="2#0000_0000_0000_0000" /><Element Index="[42]" Value="2#0000_0001_1111_0000" /><Element Index="[43]" Value="2#0000_0000_0000_0000" /><Element Index="[44]" Value="2#0000_0000_0000_0000" /><Element Index="[45]" Value="2#0000_0000_0000_0000" /><Element Index="[46]" Value="2#0000_0000_0000_0000" /><Element Index="[47]" Value="2#0000_0000_0000_0000" /></Array></Data></Tag><Tag Name="O" TagType="Produced" DataType="INT" Dimensions="48" Radix="Binary" Constant="false" ExternalAccess="Read/Write"><ProduceInfo PLCMappingFile="0" /><Comments><Comment Operand="[24]"><![CDATA[#1 DO 13 L]]></Comment><Comment Operand="[24].0"><![CDATA[C9_H262_1DISPLAY 1
+BCD DATA
+B0]]></Comment><Comment Operand="[24].1"><![CDATA[C9_H262_2DISPLAY 1
+BCD DATA
+B1]]></Comment><Comment Operand="[24].2"><![CDATA[C9_H262_3DISPLAY 1
+BCD DATA
+B2]]></Comment><Comment Operand="[24].3"><![CDATA[C9_H262_4DISPLAY 1
+BCD DATA
+B3]]></Comment><Comment Operand="[24].4"><![CDATA[C9_H262_5DISPLAY
+1+2
+DIGIT
+SELECT D1]]></Comment><Comment Operand="[24].5"><![CDATA[C9_H262_6DISPLAY
+1+2
+DIGIT
+SELECT D2]]></Comment><Comment Operand="[24].6"><![CDATA[C9_H262_7DISPLAY
+1+2
+DIGIT
+SELECT D3]]></Comment><Comment Operand="[24].7"><![CDATA[C9_H262_8DISPLAY
+1+2
+DIGIT
+SELECT D4]]></Comment><Comment Operand="[24].8"><![CDATA[C9_H282_1DISPLAY 2
+BCD DATA
+B0]]></Comment><Comment Operand="[24].9"><![CDATA[C9_H282_2DISPLAY 2
+BCD DATA
+B1]]></Comment><Comment Operand="[24].10"><![CDATA[C9_H282_3DISPLAY 2
+BCD DATA
+B2]]></Comment><Comment Operand="[24].11"><![CDATA[C9_H282_4DISPLAY 2
+BCD DATA
+B3]]></Comment><Comment Operand="[24].12"><![CDATA[KO_DMS_PRE_POUR_SIGN#1Do13L14
+C9-K612]]></Comment><Comment Operand="[24].13"><![CDATA[KO_DMS_45_MM_TRANSP#1Do13L15
+C9-K614]]></Comment><Comment Operand="[24].14"><![CDATA[KO_CAST_SORTING_NOW#1Do13L16
+C9-K616]]></Comment><Comment Operand="[24].15"><![CDATA[#1Do13L17
+C9-_618
+Spare]]></Comment><Comment Operand="[25]"><![CDATA[#1 DO 13 R]]></Comment><Comment Operand="[25].0"><![CDATA[C9_024MOTORS
+RUNNING]]></Comment><Comment Operand="[25].1"><![CDATA[C9_026WAITING
+FOR
+POURING]]></Comment><Comment Operand="[25].2"><![CDATA[C9_028WAITING
+FOR SAND]]></Comment><Comment Operand="[25].3"><![CDATA[C9_030WAITING
+FOR CORES]]></Comment><Comment Operand="[25].4"><![CDATA[C9_034ET GITTER Er ÅBENT]]></Comment><Comment Operand="[25].5"><![CDATA[C9_036DMS
+STOPPED]]></Comment><Comment Operand="[25].6"><![CDATA[C9_038NDSTOP]]></Comment><Comment Operand="[25].7"><![CDATA[EXT MODEL
+KODE
+FUNDET.
+HNDKODE
+LSER.]]></Comment><Comment Operand="[25].8"><![CDATA[C9_042VENSTRE GITTER ÅBENT]]></Comment><Comment Operand="[25].9"><![CDATA[C9_044LEFT GUARD
+GATE PANEL
+SELECTED]]></Comment><Comment Operand="[25].10"><![CDATA[C9_046HØJRE GITTER ÅBENT]]></Comment><Comment Operand="[25].11"><![CDATA[C9_048RIGHT
+GUARD GATE
+PANEL
+SELECTED]]></Comment><Comment Operand="[25].12"><![CDATA[C9_050CSE GUARD
+GATE OPEN,
+LIGHT
+CURTAIN]]></Comment><Comment Operand="[25].13"><![CDATA[C9_052CSE GUARD
+GATE ENTRY
+ALLOWED]]></Comment><Comment Operand="[25].14"><![CDATA[C5_019110 V AC
+DO OUTPUT
+TEST]]></Comment><Comment Operand="[25].15"><![CDATA[C9_K56WATCH DOG]]></Comment><Comment Operand="[26]"><![CDATA[#1 DO 14 L]]></Comment><Comment Operand="[26].0"><![CDATA[C9_K222DMM OPR. 1]]></Comment><Comment Operand="[26].1"><![CDATA[C9_K224DMM OPR. 2]]></Comment><Comment Operand="[26].2"><![CDATA[C9_K226DMM OPR.3A]]></Comment><Comment Operand="[26].3"><![CDATA[C9_K228DMM OPR.3B]]></Comment><Comment Operand="[26].4"><![CDATA[C9_K230DMM OPR.4A]]></Comment><Comment Operand="[26].5"><![CDATA[C9_K232DMM OPR.4B]]></Comment><Comment Operand="[26].6"><![CDATA[C9_K234DMM OPR. 5]]></Comment><Comment Operand="[26].7"><![CDATA[C9_K236DMM OPR. 6]]></Comment><Comment Operand="[26].8"><![CDATA[C9_K242POURING
+ALLOWED]]></Comment><Comment Operand="[26].9"><![CDATA[C9_K244SSU CLUTCH]]></Comment><Comment Operand="[26].10"><![CDATA[C9_K246DMS
+RUNNING]]></Comment><Comment Operand="[26].11"><![CDATA[C9_K248TEST
+SIGNAL
+FOR ACE]]></Comment><Comment Operand="[26].12"><![CDATA[C9_K250SIGNAL
+FOR ACE]]></Comment><Comment Operand="[26].13"><![CDATA[C9_K252CSE:
+SET NEW CORES IN CSE]]></Comment><Comment Operand="[26].14"><![CDATA[C9_K254CSE:
+NEW CORES SET IN CSE]]></Comment><Comment Operand="[26].15"><![CDATA[C9_K256FRSTE
+FORM EFTER
+MODELSKIFT]]></Comment><Comment Operand="[27]"><![CDATA[#1 DO 14 R]]></Comment><Comment Operand="[27].0"><![CDATA[PCB310_F8CTR-IN
+BIT 0]]></Comment><Comment Operand="[27].1"><![CDATA[PCB310_D8CTR-IN
+BIT 1]]></Comment><Comment Operand="[27].2"><![CDATA[PCB310_B8CTR-IN
+BIT 2]]></Comment><Comment Operand="[27].3"><![CDATA[PCB310_Z8CTR-IN
+BIT 3]]></Comment><Comment Operand="[27].4"><![CDATA[Acc.
+Feed-Back
+AFB_SEL]]></Comment><Comment Operand="[27].5"><![CDATA[Acc.
+Feed-Back
+SP_SEL]]></Comment><Comment Operand="[27].6"><![CDATA[Acc.
+Feed-Back
+PP_SEL]]></Comment><Comment Operand="[27].7"><![CDATA[Pressure
+Feed-back
+PMC_SEL]]></Comment><Comment Operand="[27].8"><![CDATA[C9_602MOVE PPC
+TOWARDS
+RIGHT FOR
+CORRECT
+POSITION]]></Comment><Comment Operand="[27].9"><![CDATA[C9_604PPC IN
+SP/PP
+PATTERN 
+CHANGE
+POSITION]]></Comment><Comment Operand="[27].10"><![CDATA[C9_606MOVE PPC
+TOWARDS
+LEFT FOR
+CORRECT
+POSITION]]></Comment><Comment Operand="[27].11"><![CDATA[C9_608PPC NOT
+READY]]></Comment><Comment Operand="[27].12"><![CDATA[C9_K302MOULD
+DEFECTIVE]]></Comment><Comment Operand="[27].13"><![CDATA[C9_K304DMS
+FAULTED]]></Comment><Comment Operand="[27].14"><![CDATA[C9_K306SBC moving
+forward in
+automatic]]></Comment><Comment Operand="[28]"><![CDATA[#1 DO 15 L - Gray-out PP]]></Comment><Comment Operand="[29]"><![CDATA[#1 DO 15 R - Gray-out SP]]></Comment><Comment Operand="[32]"><![CDATA[#2 DO 01]]></Comment><Comment Operand="[32].0"><![CDATA[C6_Q22DMM FLUID
+HEATING #1]]></Comment><Comment Operand="[32].1"><![CDATA[C6_Q24DMM FLUID
+HEATING #2
+or
+Cut-Out
+Relays]]></Comment><Comment Operand="[32].2"><![CDATA[C6_Q26PP VARME]]></Comment><Comment Operand="[32].3"><![CDATA[C6_Q28SP VARME]]></Comment><Comment Operand="[32].4"><![CDATA[C6_Q30CSE VACUUM]]></Comment><Comment Operand="[32].5"><![CDATA[C6_Q32DMM
+FLUID
+FILTERING]]></Comment><Comment Operand="[32].6"><![CDATA[C6_Y34OPEN RIGHT
+GATE
+PN356]]></Comment><Comment Operand="[32].7"><![CDATA[C6_Y36CLOSE
+RIGHT GATE
+PN357]]></Comment><Comment Operand="[32].8"><![CDATA[C6_K42DI TEST 0]]></Comment><Comment Operand="[32].9"><![CDATA[C6_K44DI TEST 1]]></Comment><Comment Operand="[32].10"><![CDATA[C6_K46110 V DO
+TEST]]></Comment><Comment Operand="[32].11"><![CDATA[C6_K48110 V DO
+TEST END]]></Comment><Comment Operand="[32].12"><![CDATA[C6_K50HY-RESTART]]></Comment><Comment Operand="[32].13"><![CDATA[C6_K52HY TEST
+ENABLE]]></Comment><Comment Operand="[32].14"><![CDATA[C6_Y54OPEN LEFT
+GATE
+PN354]]></Comment><Comment Operand="[32].15"><![CDATA[C6_Y56CLOSE LEFT
+GATE
+PN355]]></Comment><Comment Operand="[33]"><![CDATA[#2 DO 02]]></Comment><Comment Operand="[33].0"><![CDATA[C7_2DMM MOTOR]]></Comment><Comment Operand="[33].1"><![CDATA[C7_12SERVOMOTOR]]></Comment><Comment Operand="[33].2"><![CDATA[C7_22SSC MOTOR]]></Comment><Comment Operand="[33].3"><![CDATA[C7_24SSU MOTOR
+FORWARD]]></Comment><Comment Operand="[33].4"><![CDATA[C7_26SSU MOTOR
+REVERSE]]></Comment><Comment Operand="[33].5"><![CDATA[PPC
+AKTIVERET]]></Comment><Comment Operand="[33].6"><![CDATA[C7_K36SSC
+FAULTED]]></Comment><Comment Operand="[33].7"><![CDATA[C7_38SSC2 MOTOR]]></Comment><Comment Operand="[33].8"><![CDATA[C7_Y42RELIEF OF
+CORE MASK
+VACUUM
+PN211]]></Comment><Comment Operand="[33].9"><![CDATA[C7_Y44_SPRAY_REAR#2Do02-11]]></Comment><Comment Operand="[33].10"><![CDATA[C7_Y46_SPRAY_FRONT#2Do02-12]]></Comment><Comment Operand="[33].11"><![CDATA[C7_Y48SBC,PN407
+CONTROL,
+JAW CLUTCH
+ACTIVATED
+PN404]]></Comment><Comment Operand="[33].12"><![CDATA[C7_Y50SBC, BRAKE
+PN414]]></Comment><Comment Operand="[33].13"><![CDATA[C7_52CORE MASK
+FORWARD
+C83-Y24
+PN220]]></Comment><Comment Operand="[33].14"><![CDATA[C7_K54DMM MOLD
+COUNTER]]></Comment><Comment Operand="[33].15"><![CDATA[C7_K56CSE MOLD
+COUNTER]]></Comment><Comment Operand="[34]"><![CDATA[#2 DO 03]]></Comment><Comment Operand="[34].0"><![CDATA[C7_Y62MOLD
+BLOW-OFF
+PP
+IMPRESSION
+PN14]]></Comment><Comment Operand="[34].1"><![CDATA[C7_Y64PRESSURE
+PAD
+BLOW-OFF
+PN15]]></Comment><Comment Operand="[34].2"><![CDATA[C7_Y66PP
+VIBRATOR
+PN 17]]></Comment><Comment Operand="[34].3"><![CDATA[C7_Y68SP
+VIBRATOR
+PN 18]]></Comment><Comment Operand="[34].4"><![CDATA[C7_Y70CLOSE SAND
+HOPPER
+EXHAUST
+VALVE
+PN19 ]]></Comment><Comment Operand="[34].5"><![CDATA[C7_Y72SAND GATE
+CLOSE
+PN27]]></Comment><Comment Operand="[34].6"><![CDATA[C7_Y74SAND GATE
+OPEN
+PN28]]></Comment><Comment Operand="[34].7"><![CDATA[C7_Y76MOLD SIDE
+SUPPORT
+PN358]]></Comment><Comment Operand="[34].8"><![CDATA[C7_Y82OPEN PP
+PATTERN
+PLATE
+LOCKS
+PN98]]></Comment><Comment Operand="[34].9"><![CDATA[C7_Y84OPEN SP
+PATTERN
+PLATE
+LOCKS
+PN57]]></Comment><Comment Operand="[34].10"><![CDATA[C7_Y86PP CHAMBER
+SEALING
+PN84]]></Comment><Comment Operand="[34].11"><![CDATA[C7_Y88SP CHAMBER
+SEALING
+PN307]]></Comment><Comment Operand="[34].12"><![CDATA[C7_Y90ALL MOLD
+RETAINERS
+UP
+PN90]]></Comment><Comment Operand="[34].13"><![CDATA[C7_Y92LEFT MOLD
+RETAINER
+DOWN
+PN361]]></Comment><Comment Operand="[34].14"><![CDATA[C7_Y94CENTER
+MOLD
+RETAINER
+DOWN
+PN362]]></Comment><Comment Operand="[34].15"><![CDATA[C7_Y96RIGHT MOLD
+RETAINER
+DOWN
+PN363]]></Comment><Comment Operand="[35]"><![CDATA[#2 DO 04]]></Comment><Comment Operand="[35].0"><![CDATA[C7_Y102SAND VALVE
+SEALING
+PN86]]></Comment><Comment Operand="[35].1"><![CDATA[C7_Y104SPRAY PUMP
+PN308]]></Comment><Comment Operand="[35].2"><![CDATA[C7_Y106MOLD
+BLOW-OFF
+SP
+IMPRESSION
+PN324]]></Comment><Comment Operand="[35].3"><![CDATA[C7_Y108SPRAY AIR
+PN 340]]></Comment><Comment Operand="[35].4"><![CDATA[C7_Y110PMC FIXED
+GRATES UP
+PN101]]></Comment><Comment Operand="[35].5"><![CDATA[C7_Y112PMC FIXED
+GRATES
+DOWN
+PN102]]></Comment><Comment Operand="[35].6"><![CDATA[C7_Y114PMC
+MOVABLE
+GRATES UP
+PN103]]></Comment><Comment Operand="[35].7"><![CDATA[C7_Y116PMC
+MOVABLE
+GRATES
+DOWN
+PN104]]></Comment><Comment Operand="[35].8"><![CDATA[C7_Y122AIR SUPPLY
+DMM
+PN29]]></Comment><Comment Operand="[35].9"><![CDATA[C7_Y124AIR SUPPLY
+SANDSHOT
+AIR
+RECIEVER
+PN366]]></Comment><Comment Operand="[35].10"><![CDATA[C7_Y126PN381
+Opr.- 2/3A/3B
+SP top blow-off]]></Comment><Comment Operand="[35].11"><![CDATA[C7_Y128PN383
+Opr.- 3/6
+PP mould blow-off]]></Comment><Comment Operand="[35].12"><![CDATA[C7_Y130PN382
+Opr.- 4A
+SP mould blow-off]]></Comment><Comment Operand="[35].13"><![CDATA[C7_K132Oil air cool relays:C7-K132,-K133,
+C7-K138,-K139]]></Comment><Comment Operand="[35].14"><![CDATA[C7_Y134WATER
+SUPPLY DMM
+HY29]]></Comment><Comment Operand="[35].15"><![CDATA[C7_Y136SERVO
+PRESSURE
+HY42]]></Comment><Comment Operand="[36]"><![CDATA[#2 DO 05]]></Comment><Comment Operand="[37]"><![CDATA[#2 DO 06]]></Comment><Comment Operand="[38]"><![CDATA[#2 DO 07]]></Comment><Comment Operand="[38].0"><![CDATA[C81_Y2DMM OPR
+2-3A
+HY1]]></Comment><Comment Operand="[38].1"><![CDATA[C81_Y4DMM Op. 2-3B-6
+HY2]]></Comment><Comment Operand="[38].2"><![CDATA[C81_Y6DMM OPR
+2
+HY3]]></Comment><Comment Operand="[38].3"><![CDATA[C81_Y8DMM Op. 2-3A-3B-6
+HY4]]></Comment><Comment Operand="[38].4"><![CDATA[C81_Y10DMM OPR
+2-4A-5
+HY5]]></Comment><Comment Operand="[38].5"><![CDATA[C81_Y12DMM OPR 2
+HY6]]></Comment><Comment Operand="[38].6"><![CDATA[C81_Y14DMM OPR
+2-4A-4B-5
+HY7]]></Comment><Comment Operand="[38].7"><![CDATA[C81_Y16DMM OPR
+3A
+HY 8]]></Comment><Comment Operand="[38].8"><![CDATA[C81_Y22CONTROL OF
+HY10
+HY12]]></Comment><Comment Operand="[38].9"><![CDATA[C81_Y24CONTROL OF
+HY11
+HY44]]></Comment><Comment Operand="[38].10"><![CDATA[C81_Y26]]></Comment><Comment Operand="[38].11"><![CDATA[C81_Y28PMC 4B
+HY73C]]></Comment><Comment Operand="[38].12"><![CDATA[C81_Y30PMC 4B
+HY73D]]></Comment><Comment Operand="[38].13"><![CDATA[C81_Y32PMC 4B
+HY73E]]></Comment><Comment Operand="[38].14"><![CDATA[C81_Y34PMC
+FORWARD
+HY70]]></Comment><Comment Operand="[38].15"><![CDATA[C81_Y36PMC
+FORWARD
+HY72]]></Comment><Comment Operand="[39]"><![CDATA[#2 DO 08]]></Comment><Comment Operand="[39].0"><![CDATA[C82_Y2CONTROL OF
+HY22
+HYDRAULIC
+LOCK
+HY77]]></Comment><Comment Operand="[39].1"><![CDATA[C82_Y4CONTROL OF
+HY22
+HYDRAULIC
+LOCK
+HY137]]></Comment><Comment Operand="[39].3"><![CDATA[C82_Y8PMC RETURN
+EMPTYING
+PRESSURE
+HY76]]></Comment><Comment Operand="[39].4"><![CDATA[C82_Y10BOOSTER
+PRESSURE
+HY121]]></Comment><Comment Operand="[39].5"><![CDATA[C82_Y12CONTROL OF
+DMM FLOW
+CUT-OFF
+VALVES
+HY130]]></Comment><Comment Operand="[39].6"><![CDATA[C82_Y14CONTROL OF
+DMM PRESS.
+RELIEF
+VALVES
+HY131]]></Comment><Comment Operand="[39].7"><![CDATA[C82_Y16PRESSURE
+RELIEF
+END OPR 2
+HY132]]></Comment><Comment Operand="[39].8"><![CDATA[C82_Y22SHOT VALVE
+#1 PN7A]]></Comment><Comment Operand="[39].9"><![CDATA[C82_Y24SHOT VALVE
+#2 PN 7B]]></Comment><Comment Operand="[39].10"><![CDATA[C82_Y26SHOT VALVE
+#3 PN 7C]]></Comment><Comment Operand="[39].11"><![CDATA[C82_Y28SHOT VALVE
+#4 PN 7D]]></Comment><Comment Operand="[39].13"><![CDATA[C82_Y32]]></Comment><Comment Operand="[39].14"><![CDATA[C82_Y34CLOSE SP
+PATTERN
+PLATE
+LOCKS
+PN56]]></Comment><Comment Operand="[39].15"><![CDATA[C82_Y36CLOSE PP
+PATTERN
+PLATE
+LOCKS
+PN97]]></Comment><Comment Operand="[40]"><![CDATA[#2 DO 09]]></Comment><Comment Operand="[40].0"><![CDATA[C83_Y2PRESSURE
+FOR ROTARY
+ACTUATOR
+HY201]]></Comment><Comment Operand="[40].1"><![CDATA[C83_Y4HOLDING
+PRESSURE
+CROSS
+SLIDE
+HY202]]></Comment><Comment Operand="[40].2"><![CDATA[C83_Y6CROSS
+SLIDE OUT
+HY203A]]></Comment><Comment Operand="[40].3"><![CDATA[C83_Y8CROSS
+SLIDE IN
+HY203B]]></Comment><Comment Operand="[40].4"><![CDATA[C83_Y10SAFETY
+VALVE
+CROSS
+SLIDE OUT
+HY216 A1]]></Comment><Comment Operand="[40].5"><![CDATA[C83_Y12SAFETY
+VALVE
+CROSS
+SLIDE OUT
+HY216 A2]]></Comment><Comment Operand="[40].6"><![CDATA[C83_Y14CROSS
+SLIDE IN
+AND OUT
+HY218]]></Comment><Comment Operand="[40].7"><![CDATA[C83_Y16SHOCK
+ABSORBER
+RELEASED
+HY212]]></Comment><Comment Operand="[40].8"><![CDATA[C83_Y22CORE BLOW
+OFF
+PN218]]></Comment><Comment Operand="[40].9"><![CDATA[C83_Y24CORE MASK
+FORWARD
+PN220]]></Comment><Comment Operand="[40].10"><![CDATA[C83_Y26CORE MASK
+BACKWARD
+PN221]]></Comment><Comment Operand="[40].11"><![CDATA[C83_Y28DEACTIVATE
+CORE
+RETENTION
+PN224A]]></Comment><Comment Operand="[40].12"><![CDATA[C83_Y30DEACTIVATE
+CORE
+RETENTION
+PN224B]]></Comment><Comment Operand="[40].13"><![CDATA[C83_Q42AUTOMATIC
+MOLD
+RETAINER
+FORWARD]]></Comment><Comment Operand="[40].14"><![CDATA[C83_Q44AUTOMATIC
+MOLD
+RETAINER
+REVERSE]]></Comment><Comment Operand="[40].15"><![CDATA[C83_Y32PRESSURE
+FOR CSE
+INNER
+BUFFER
+PN 251]]></Comment><Comment Operand="[41]"><![CDATA[#2 DO 10 SBO]]></Comment><Comment Operand="[41].0"><![CDATA[C22_002SBO1 VARME]]></Comment><Comment Operand="[41].1"><![CDATA[C22_004SBO2 VARME]]></Comment><Comment Operand="[41].4"><![CDATA[C23_002SBO1 MOTOR]]></Comment><Comment Operand="[41].5"><![CDATA[C23_012SBO2 MOTOR]]></Comment><Comment Operand="[41].8"><![CDATA[C24_Y2SBO1
+VENTIL 1
+HY-1931]]></Comment><Comment Operand="[41].9"><![CDATA[C24_Y4SBO1
+VENTIL 2
+HY-1932]]></Comment><Comment Operand="[41].12"><![CDATA[C24_Y12SBO2
+VENTIL 1
+HY-2931]]></Comment><Comment Operand="[41].13"><![CDATA[C24_Y14SBO2
+VENTIL 2
+HY-2932]]></Comment></Comments><Data Format="L5K"><![CDATA[[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4848,12289,5378,256,0,0,0,0,-26568,10383,-24542,-6296,0,0,895,-16269,566,0
+					,0,0,0,0,0,0]]]></Data><Data Format="Decorated"><Array DataType="INT" Dimensions="48" Radix="Binary"><Element Index="[0]" Value="2#0000_0000_0000_0000" /><Element Index="[1]" Value="2#0000_0000_0000_0000" /><Element Index="[2]" Value="2#0000_0000_0000_0000" /><Element Index="[3]" Value="2#0000_0000_0000_0000" /><Element Index="[4]" Value="2#0000_0000_0000_0000" /><Element Index="[5]" Value="2#0000_0000_0000_0000" /><Element Index="[6]" Value="2#0000_0000_0000_0000" /><Element Index="[7]" Value="2#0000_0000_0000_0000" /><Element Index="[8]" Value="2#0000_0000_0000_0000" /><Element Index="[9]" Value="2#0000_0000_0000_0000" /><Element Index="[10]" Value="2#0000_0000_0000_0000" /><Element Index="[11]" Value="2#0000_0000_0000_0000" /><Element Index="[12]" Value="2#0000_0000_0000_0000" /><Element Index="[13]" Value="2#0000_0000_0000_0000" /><Element Index="[14]" Value="2#0000_0000_0000_0000" /><Element Index="[15]" Value="2#0000_0000_0000_0000" /><Element Index="[16]" Value="2#0000_0000_0000_0000" /><Element Index="[17]" Value="2#0000_0000_0000_0000" /><Element Index="[18]" Value="2#0000_0000_0000_0000" /><Element Index="[19]" Value="2#0000_0000_0000_0000" /><Element Index="[20]" Value="2#0000_0000_0000_0000" /><Element Index="[21]" Value="2#0000_0000_0000_0000" /><Element Index="[22]" Value="2#0000_0000_0000_0000" /><Element Index="[23]" Value="2#0000_0000_0000_0000" /><Element Index="[24]" Value="2#0001_0010_1111_0000" /><Element Index="[25]" Value="2#0011_0000_0000_0001" /><Element Index="[26]" Value="2#0001_0101_0000_0010" /><Element Index="[27]" Value="2#0000_0001_0000_0000" /><Element Index="[28]" Value="2#0000_0000_0000_0000" /><Element Index="[29]" Value="2#0000_0000_0000_0000" /><Element Index="[30]" Value="2#0000_0000_0000_0000" /><Element Index="[31]" Value="2#0000_0000_0000_0000" /><Element Index="[32]" Value="2#1001_1000_0011_1000" /><Element Index="[33]" Value="2#0010_1000_1000_1111" /><Element Index="[34]" Value="2#1010_0000_0010_0010" /><Element Index="[35]" Value="2#1110_0111_0110_1000" /><Element Index="[36]" Value="2#0000_0000_0000_0000" /><Element Index="[37]" Value="2#0000_0000_0000_0000" /><Element Index="[38]" Value="2#0000_0011_0111_1111" /><Element Index="[39]" Value="2#1100_0000_0111_0011" /><Element Index="[40]" Value="2#0000_0010_0011_0110" /><Element Index="[41]" Value="2#0000_0000_0000_0000" /><Element Index="[42]" Value="2#0000_0000_0000_0000" /><Element Index="[43]" Value="2#0000_0000_0000_0000" /><Element Index="[44]" Value="2#0000_0000_0000_0000" /><Element Index="[45]" Value="2#0000_0000_0000_0000" /><Element Index="[46]" Value="2#0000_0000_0000_0000" /><Element Index="[47]" Value="2#0000_0000_0000_0000" /></Array></Data></Tag></Tags><Programs Use="Context"><Program Use="Context" Name="_2_Main"><Routines Use="Context"><Routine Use="Reference" Name="_012_Stop_E"></Routine><Routine Use="Target" Name="_013_Stop_sys" Type="RLL"><Description><![CDATA[<@TYPE EMPTY>]]></Description><RLLContent><Rung Number="0" Type="N"><Comment><![CDATA[<@VER 1.263> <@EDITS ALLOWED>
+<@INFO>
+################################################################
+# Decrypted routine: _013_Stop_sys
+################################################################]]></Comment><Text><![CDATA[OTE(RungComment);]]></Text></Rung><Rung Number="1" Type="N"><Text><![CDATA[XIC(InputBit)OTE(OutputBit);]]></Text></Rung></RLLContent></Routine><Routine Use="Reference" Name="_084_DISPLAY_9"></Routine></Routines></Program></Programs></Controller></RSLogix5000Content>

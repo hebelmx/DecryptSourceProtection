@@ -1,0 +1,13 @@
+PLAN A: Structured EncodedData Decryption Results
+=====================================================
+Timestamp: 2025-07-18 09:34:31
+Success: False
+Total Candidates: 0
+Best Score: 0
+Intelligence Results: 0
+OEM Results: 0
+Dictionary Results: 0
+Known Key Results: 0
+
+TOP CANDIDATES:
+===============

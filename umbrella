@@ -1,0 +1,93 @@
+
+void FUN_105cb550(BYTE *param_1,DWORD param_2)
+
+{
+  BOOL BVar1;
+  int iVar2;
+  HCRYPTPROV HStack_8;
+  uint uStack_4;
+  
+  uStack_4 = DAT_10676cc0 ^ (uint)&HStack_8;
+  HStack_8 = 0;
+  BVar1 = CryptAcquireContextA(&HStack_8,(LPCSTR)0x0,(LPCSTR)0x0,1,0xf0000000);
+  if (BVar1 == 0) {
+    iVar2 = FUN_10632ee1();
+    FUN_10633e55(s_CryptAcquireContext_failed._1054d2c8,iVar2 + 0x40);
+    FUN_1062f664();
+    return;
+  }
+  BVar1 = CryptGenRandom(HStack_8,param_2,param_1);
+  if (BVar1 == 0) {
+    iVar2 = FUN_10632ee1();
+    FUN_10633e55(s_CryptGenRandom_failed._1054d2e8,iVar2 + 0x40);
+    FUN_1062f664();
+    return;
+  }
+  CryptReleaseContext(HStack_8,0);
+  FUN_1062f664();
+  return;
+}
+
+/**
+ *                              **************************************************************
+                             *                POINTER to EXTERNAL FUNCTION                *
+                             **************************************************************
+                             BOOL __stdcall CryptGenRandom(HCRYPTPROV hProv, DWORD dw
+             BOOL              EAX:4          <RETURN>
+             HCRYPTPROV        Stack[0x4]:4   hProv
+             DWORD             Stack[0x8]:4   dwLen
+             BYTE *            Stack[0xc]:4   pbBuffer
+                             209  CryptGenRandom  <<not bound>>
+                             PTR_CryptGenRandom_1066f5e8                     XREF[1]:     FUN_105cb550:105cb5b9(R)  
+        1066f5e8 38 01 67 00     addr       ADVAPI32.DLL::CryptGenRandom
+                             **************************************************************
+                             *                POINTER to EXTERNAL FUNCTION                *
+                             **************************************************************
+                             BOOL __stdcall CryptReleaseContext(HCRYPTPROV hProv, ULO
+             BOOL              EAX:4          <RETURN>
+             HCRYPTPROV        Stack[0x4]:4   hProv
+             ULONG_PTR         Stack[0x8]:4   dwFlags
+                             219  CryptReleaseContext  <<not bound>>
+                             PTR_CryptReleaseContext_1066f5ec                XREF[1]:     FUN_105cb550:105cb5f4(R)  
+        1066f5ec 22 01 67 00     addr       ADVAPI32.DLL::CryptReleaseContext
+                             **************************************************************
+                             *                POINTER to EXTERNAL FUNCTION                *
+                             **************************************************************
+                             BOOL __stdcall CryptAcquireContextA(HCRYPTPROV * phProv,
+             BOOL              EAX:4          <RETURN>
+             HCRYPTPROV *      Stack[0x4]:4   phProv
+             LPCSTR            Stack[0x8]:4   szContainer
+             LPCSTR            Stack[0xc]:4   szProvider
+             DWORD             Stack[0x10]:4  dwProvType
+             DWORD             Stack[0x14]:4  dwFlags
+                             192  CryptAcquireContextA  <<not bound>>
+                             PTR_CryptAcquireContextA_1066f5f0               XREF[1]:     FUN_105cb550:105cb57b(R)  
+        1066f5f0 0a 01 67 00     addr       ADVAPI32.DLL::CryptAcquireContextA
+
+
+                                     **************************************************************
+                             * IMAGE_IMPORT_BY_NAME                                       *
+                             **************************************************************
+        1075c376 c0 00           dw         C0h
+        1075c378 43 72 79        ds         "CryptAcquireContextA"
+                 70 74 41 
+                 63 71 75 
+        1075c38d 00              ??         00h
+                             **************************************************************
+                             * IMAGE_IMPORT_BY_NAME                                       *
+                             **************************************************************
+        1075c38e db 00           dw         DBh
+        1075c390 43 72 79        ds         "CryptReleaseContext"
+                 70 74 52 
+                 65 6c 65 
+                             **************************************************************
+                             * IMAGE_IMPORT_BY_NAME                                       *
+                             **************************************************************
+        1075c3a4 d1 00           dw         D1h
+        1075c3a6 43 72 79        ds         "CryptGenRandom"
+                 70 74 47 
+                 65 6e 52 
+        1075c3b5 00              ??         00h
+
+ * 
+ */

@@ -1,0 +1,1118 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="30.01" TargetName="Input_Sbo_Digital" TargetType="Routine" TargetSubType="RLL" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Wed Jul 16 18:20:36 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="Disa2070mk2">
+<DataTypes Use="Context">
+</DataTypes>
+<Modules Use="Context">
+<Module Use="Reference" Name="x2Di11_Sbo">
+</Module>
+<Module Use="Reference" Name="x2EN2T00">
+</Module>
+</Modules>
+<Tags Use="Context">
+<Tag Name="I" TagType="Produced" DataType="INT" Dimensions="48" Radix="Binary" Constant="false" ExternalAccess="Read/Write">
+<ProduceInfo PLCMappingFile="1"/>
+<Comments>
+<Comment Operand="[6].0">
+<![CDATA[PP POS
+BIT 0]]>
+</Comment>
+<Comment Operand="[6].1">
+<![CDATA[PP POS
+BIT 1]]>
+</Comment>
+<Comment Operand="[6].2">
+<![CDATA[PP POS
+BIT 2]]>
+</Comment>
+<Comment Operand="[6].3">
+<![CDATA[PP POS
+BIT 3]]>
+</Comment>
+<Comment Operand="[6].4">
+<![CDATA[PP POS
+BIT 4]]>
+</Comment>
+<Comment Operand="[6].5">
+<![CDATA[PP POS
+BIT 5]]>
+</Comment>
+<Comment Operand="[6].6">
+<![CDATA[PP POS
+BIT 6]]>
+</Comment>
+<Comment Operand="[6].7">
+<![CDATA[PP POS
+BIT 7]]>
+</Comment>
+<Comment Operand="[6].8">
+<![CDATA[PP POS
+BIT 8]]>
+</Comment>
+<Comment Operand="[6].9">
+<![CDATA[PP POS
+BIT 9]]>
+</Comment>
+<Comment Operand="[6].10">
+<![CDATA[PP POS
+BIT 10]]>
+</Comment>
+<Comment Operand="[6].11">
+<![CDATA[PP POS
+BIT 11]]>
+</Comment>
+<Comment Operand="[6].12">
+<![CDATA[PP POS
+BIT 12]]>
+</Comment>
+<Comment Operand="[6].13">
+<![CDATA[PP POS
+BIT 13]]>
+</Comment>
+<Comment Operand="[6].14">
+<![CDATA[PP POS
+BIT 14]]>
+</Comment>
+<Comment Operand="[6].15">
+<![CDATA[PP POS
+BIT 15]]>
+</Comment>
+<Comment Operand="[7].0">
+<![CDATA[SP POS
+BIT 0]]>
+</Comment>
+<Comment Operand="[7].1">
+<![CDATA[SP POS
+BIT 1]]>
+</Comment>
+<Comment Operand="[7].2">
+<![CDATA[SP POS
+BIT 2]]>
+</Comment>
+<Comment Operand="[7].3">
+<![CDATA[SP POS
+BIT 3]]>
+</Comment>
+<Comment Operand="[7].4">
+<![CDATA[SP POS
+BIT 4]]>
+</Comment>
+<Comment Operand="[7].5">
+<![CDATA[SP POS
+BIT 5]]>
+</Comment>
+<Comment Operand="[7].6">
+<![CDATA[SP POS
+BIT 6]]>
+</Comment>
+<Comment Operand="[7].7">
+<![CDATA[SP POS
+BIT 7]]>
+</Comment>
+<Comment Operand="[7].8">
+<![CDATA[SP POS
+BIT 8]]>
+</Comment>
+<Comment Operand="[7].9">
+<![CDATA[SP POS
+BIT 9]]>
+</Comment>
+<Comment Operand="[7].10">
+<![CDATA[SP POS
+BIT 10]]>
+</Comment>
+<Comment Operand="[7].11">
+<![CDATA[SP POS
+BIT 11]]>
+</Comment>
+<Comment Operand="[7].12">
+<![CDATA[SP POS
+BIT 12]]>
+</Comment>
+<Comment Operand="[7].13">
+<![CDATA[SP POS
+BIT 13]]>
+</Comment>
+<Comment Operand="[7].14">
+<![CDATA[SP POS
+BIT 14]]>
+</Comment>
+<Comment Operand="[7].15">
+<![CDATA[SP POS
+BIT 15]]>
+</Comment>
+<Comment Operand="[8].0">
+<![CDATA[C9_K2_14Key Switch
+Not in
+pos. Zero]]>
+</Comment>
+<Comment Operand="[8].1">
+<![CDATA[C5_19110 V AC
+OUTPUT
+TEST]]>
+</Comment>
+<Comment Operand="[8].2">
+<![CDATA[C9_01624 V DC
+OUTPUT
+TEST]]>
+</Comment>
+<Comment Operand="[8].3">
+<![CDATA[C9_018SHIFT
+NUMBER]]>
+</Comment>
+<Comment Operand="[8].4">
+<![CDATA[C6_006CWD IKKE
+INDKOBLET]]>
+</Comment>
+<Comment Operand="[8].5">
+<![CDATA[C10 level
+PWR ON]]>
+</Comment>
+<Comment Operand="[8].6">
+<![CDATA[OIL_AIR_COOL_FAULTOil air cool fault:
+C1-Q42 or -Q46 or
+C1-Q50 or -Q54 OFF]]>
+</Comment>
+<Comment Operand="[8].7">
+<![CDATA[KI_CAST_SORTING_OK#1Di05L07
+C6-K84]]>
+</Comment>
+<Comment Operand="[8].8">
+<![CDATA[PCB310_F10CTR-OUT
+BIT 0]]>
+</Comment>
+<Comment Operand="[8].9">
+<![CDATA[PCB310_D10CTR-OUT
+BIT 1]]>
+</Comment>
+<Comment Operand="[8].10">
+<![CDATA[PCB310_B10CTR-OUT
+BIT 2]]>
+</Comment>
+<Comment Operand="[8].11">
+<![CDATA[PCB310_Z10CTR-OUT
+BIT 3]]>
+</Comment>
+<Comment Operand="[8].12">
+<![CDATA[PCB310_F28CWD ERROR
+ON PP/SP
+POS. BOARD
+UDM]]>
+</Comment>
+<Comment Operand="[8].13">
+<![CDATA[C9_356TILT
+FEEDBACK
+ZERO PCU2.
+RESPONSE
+OK TCU.]]>
+</Comment>
+<Comment Operand="[8].14">
+<![CDATA[C9_357FEEDBACK
+OK PCU2.
+TILT OK
+TCU KORT.]]>
+</Comment>
+<Comment Operand="[8].15">
+<![CDATA[C9_358LOOP
+DEVIATION
+(PCU2)]]>
+</Comment>
+<Comment Operand="[9].0">
+<![CDATA[C6_K62POURING
+COMPLEETED]]>
+</Comment>
+<Comment Operand="[9].1">
+<![CDATA[C6_065SHAKE-OUT
+OK]]>
+</Comment>
+<Comment Operand="[9].2">
+<![CDATA[C6_K662070
+EXTERNALLY
+STOPPED]]>
+</Comment>
+<Comment Operand="[9].3">
+<![CDATA[C6_K68TEST
+SIGNAL
+FROM ACE]]>
+</Comment>
+<Comment Operand="[9].4">
+<![CDATA[C6_K70SIGNAL FRA
+ACE]]>
+</Comment>
+<Comment Operand="[9].5">
+<![CDATA[C6_073ENABLE SSU
+REVERSE]]>
+</Comment>
+<Comment Operand="[9].6">
+<![CDATA[C6_K74CORE
+SETTER:
+CORES SET
+IN MASK]]>
+</Comment>
+<Comment Operand="[9].7">
+<![CDATA[C6_K76ACF:
+CLEAR OF
+CSE]]>
+</Comment>
+<Comment Operand="[9].8">
+<![CDATA[C9_327PP/SP
+POWER OK]]>
+</Comment>
+<Comment Operand="[9].9">
+<![CDATA[C9_337TRANSDUCER
+POWER OK]]>
+</Comment>
+<Comment Operand="[9].11">
+<![CDATA[C9_447]]>
+</Comment>
+<Comment Operand="[9].12">
+<![CDATA[PP_Acc.
+Feed-Back
+board: OK]]>
+</Comment>
+<Comment Operand="[9].13">
+<![CDATA[SP_Acc.
+Feed-Back
+Board: OK]]>
+</Comment>
+<Comment Operand="[10].0">
+<![CDATA[C5_006C7 TEST
+POWER OK]]>
+</Comment>
+<Comment Operand="[10].1">
+<![CDATA[C5_010C81 TEST
+POWER OK]]>
+</Comment>
+<Comment Operand="[10].2">
+<![CDATA[C5_014C82 TEST
+POWER OK]]>
+</Comment>
+<Comment Operand="[10].3">
+<![CDATA[C5_018C83 TEST
+POWER OK]]>
+</Comment>
+<Comment Operand="[10].4">
+<![CDATA[C7_005DMM HOVED
+MOTOR I
+DELTA]]>
+</Comment>
+<Comment Operand="[10].5">
+<![CDATA[C7_015SERVOMOTOR
+I DELTA]]>
+</Comment>
+<Comment Operand="[10].6">
+<![CDATA[C7_032A THERMAL
+RELAY IS
+CUT OUT]]>
+</Comment>
+<Comment Operand="[10].7">
+<![CDATA[C6_K82POURING
+ONE MOLD]]>
+</Comment>
+<Comment Operand="[10].8">
+<![CDATA[C9_075E-Stop
+Ext. Panel]]>
+</Comment>
+<Comment Operand="[10].9">
+<![CDATA[Disa E-stop relay OFF, C9-K72 OFF]]>
+</Comment>
+<Comment Operand="[10].10">
+<![CDATA[C9_094DMM Left Guard-gate
+Closed & Reset]]>
+</Comment>
+<Comment Operand="[10].11">
+<![CDATA[C9_114DMM Right Guard-gateClosed & Reset]]>
+</Comment>
+<Comment Operand="[10].12">
+<![CDATA[C9_125HY VALVE
+TEST 1]]>
+</Comment>
+<Comment Operand="[10].13">
+<![CDATA[C9_127HY-VALVE
+TEST 2]]>
+</Comment>
+<Comment Operand="[10].14">
+<![CDATA[C9_129HY-VALVE
+TEST 3]]>
+</Comment>
+<Comment Operand="[10].15">
+<![CDATA[C9_131HY-VALVE
+TEST 4]]>
+</Comment>
+<Comment Operand="[11].0">
+<![CDATA[C9_139HY VALVE
+TEST OK]]>
+</Comment>
+<Comment Operand="[11].1">
+<![CDATA[C9_145HY VALVE
+LOCK 1]]>
+</Comment>
+<Comment Operand="[11].2">
+<![CDATA[C9_147HY-VALVE
+LOCK 2]]>
+</Comment>
+<Comment Operand="[11].3">
+<![CDATA[C9_159HY VALVE
+LOCK OK]]>
+</Comment>
+<Comment Operand="[11].4">
+<![CDATA[C9_169CSE at Light Curtain]]>
+</Comment>
+<Comment Operand="[11].5">
+<![CDATA[C10_S238TRYK I
+HY221 OK]]>
+</Comment>
+<Comment Operand="[11].6">
+<![CDATA[C9_209PPC
+Guard-buf.
+In pos. &
+Reset]]>
+</Comment>
+<Comment Operand="[11].7">
+<![CDATA[Disa Door-stop relay ON, C9-K212 ON]]>
+</Comment>
+<Comment Operand="[11].8">
+<![CDATA[C9_289REMOTE
+DISPLAY 2
+BCD 1]]>
+</Comment>
+<Comment Operand="[11].9">
+<![CDATA[C9_291REMOTE
+DISPLAY 2
+BCD 2]]>
+</Comment>
+<Comment Operand="[11].10">
+<![CDATA[C9_293REMOTE
+DISPLAY 2
+BCD 4]]>
+</Comment>
+<Comment Operand="[11].11">
+<![CDATA[C9_295REMOTE
+DISPLAY 2
+BCD 8]]>
+</Comment>
+<Comment Operand="[11].12">
+<![CDATA[C9_S650_24CSE MASK
+SETTING
+GATE
+ACKNOW
+LEDGEMENT]]>
+</Comment>
+<Comment Operand="[11].13">
+<![CDATA[C9_K642_58CMC
+Guard-gate
+Closed &
+Reset]]>
+</Comment>
+<Comment Operand="[11].14">
+<![CDATA[C9_S670_24ACF GATE
+ACKNOW
+LEDGEMENT]]>
+</Comment>
+<Comment Operand="[11].15">
+<![CDATA[C9_K662_58ACF
+Guard-gate
+Closed &
+Reset]]>
+</Comment>
+<Comment Operand="[12].0">
+<![CDATA[C10_S4_4SPRAY
+P01]]>
+</Comment>
+<Comment Operand="[12].1">
+<![CDATA[C10_S6_4CORE MASK
+BLOW OFF
+P01]]>
+</Comment>
+<Comment Operand="[12].2">
+<![CDATA[C10_S8_1BLOW OFF
+IN FRONT
+OF SP
+POS.1 P01]]>
+</Comment>
+<Comment Operand="[12].3">
+<![CDATA[C10_S8_3BLOW OFF
+UNDER SP
+POS.2 P01]]>
+</Comment>
+<Comment Operand="[12].4">
+<![CDATA[C10_S10_1MANUAL
+MOVEMENT
+POS.1 P01]]>
+</Comment>
+<Comment Operand="[12].5">
+<![CDATA[C10_S10_3MANUAL
+MOVEMENT
+POS.2 P01]]>
+</Comment>
+<Comment Operand="[12].6">
+<![CDATA[C10_S28_1MANUEL
+MODE
+SELECTED
+POS.1 P01]]>
+</Comment>
+<Comment Operand="[12].7">
+<![CDATA[C10_S28_5AUTO MODE
+SELECTED
+POS.3 P01]]>
+</Comment>
+<Comment Operand="[12].8">
+<![CDATA[C10_S22_7SPEED 8
+BCD
+SELECTED
+P01]]>
+</Comment>
+<Comment Operand="[12].9">
+<![CDATA[C10_S22_5SPEED 4
+BCD
+SELECTED
+P01]]>
+</Comment>
+<Comment Operand="[12].10">
+<![CDATA[C10_S22_3SPEED 2
+BCD
+SELECTED
+P01]]>
+</Comment>
+<Comment Operand="[12].11">
+<![CDATA[C10_S22_1SPEED 1
+BCD
+SELECTED
+P01]]>
+</Comment>
+<Comment Operand="[12].12">
+<![CDATA[C10_S42_1SP PATTERN
+CHANGE
+SELECTED
+POS.1 P01]]>
+</Comment>
+<Comment Operand="[12].13">
+<![CDATA[C10_S42_3PP PATTERN
+CHANGE
+SELECTED
+POS.2 P01]]>
+</Comment>
+<Comment Operand="[12].14">
+<![CDATA[C10_S42_7MOLD COUNT
+PATTERN
+CHANGE SEL
+POS.3 P01]]>
+</Comment>
+<Comment Operand="[12].15">
+<![CDATA[C10_S42_9IMMEDIATE
+PATTERN
+CHANGE SEL
+POS.4 P01]]>
+</Comment>
+<Comment Operand="[13].0">
+<![CDATA[C10_S48_1SAND BELT 
+RETURN
+SELECTED
+POS.1 P01]]>
+</Comment>
+<Comment Operand="[13].1">
+<![CDATA[C10_S48_3EMPTYING
+OF SAND
+HOPPER SEL
+POS.2 P01]]>
+</Comment>
+<Comment Operand="[13].2">
+<![CDATA[C10_S48_7Normal Op with sand
+Pos.3, +P1]]>
+</Comment>
+<Comment Operand="[13].3">
+<![CDATA[C10_S54_1EMPTY SBC
+SELECTED
+POS.1 P01]]>
+</Comment>
+<Comment Operand="[13].4">
+<![CDATA[C10_S54_3EMPTY SBC & PMC
+SELECTED
+POS.2 P01]]>
+</Comment>
+<Comment Operand="[13].5">
+<![CDATA[C10_S54_7DMM & PMC SEL.
+SBC NOT SEL.
+POS.3 P01]]>
+</Comment>
+<Comment Operand="[13].6">
+<![CDATA[C10_S54_9NORMAL DMS
+OPERATION
+SELECTED
+POS.4 P01]]>
+</Comment>
+<Comment Operand="[13].7">
+<![CDATA[C10_S2_4CANCEL
+PATTERN
+CHANGE
+COUNTER
+P01]]>
+</Comment>
+<Comment Operand="[13].8">
+<![CDATA[C10_S62_1CORE
+SETTING
+SELECTED
+POS 1. PO1]]>
+</Comment>
+<Comment Operand="[13].10">
+<![CDATA[C10_S66_1OPERATION
+ON PAN-GL
+(P02) SEL.
+POS.1 P01]]>
+</Comment>
+<Comment Operand="[13].11">
+<![CDATA[C10_S66_5OPERATION
+ON PAN-GR
+(P03) SEL.
+POS.3 P01]]>
+</Comment>
+<Comment Operand="[13].12">
+<![CDATA[C10_S70_3No stop on PAN-OP
+Pos.1 P01]]>
+</Comment>
+<Comment Operand="[13].13">
+<![CDATA[C10_S70_1DMS START
+ON PAN-OP
+POS.2 P01]]>
+</Comment>
+<Comment Operand="[13].14">
+<![CDATA[C9_S62_14E-Stop, P1
+Opr. Panel]]>
+</Comment>
+<Comment Operand="[13].15">
+<![CDATA[C9_S77_24EMERGENCY
+STOP ACK-
+NOWLEDGE-
+MENT
+PAN-OP P01]]>
+</Comment>
+<Comment Operand="[14].0">
+<![CDATA[C9_S63_14E-Stop, P2
+Left Panel]]>
+</Comment>
+<Comment Operand="[14].1">
+<![CDATA[C9_S90_24VENSTRE
+GITTER
+KVITTERING]]>
+</Comment>
+<Comment Operand="[14].2">
+<![CDATA[C10_S82_1SP PATTERN
+PLATE
+LOCKS OUT,
+PAN-GL]]>
+</Comment>
+<Comment Operand="[14].3">
+<![CDATA[C10_S82_3SP PATTERN
+PLATE
+LOCKS IN,
+PAN-GL]]>
+</Comment>
+<Comment Operand="[14].4">
+<![CDATA[C10_S85_1PP PATTERN
+PLATE
+LOCKS OUT,
+PAN-GL]]>
+</Comment>
+<Comment Operand="[14].5">
+<![CDATA[C10_S85_3PP PATTERN
+PLATE
+LOCKS IN,
+PAN-GL]]>
+</Comment>
+<Comment Operand="[14].6">
+<![CDATA[C10_S88_3No stop on PAN-GL]]>
+</Comment>
+<Comment Operand="[14].7">
+<![CDATA[C10_S88_1DMS START
+ON PAN-GL]]>
+</Comment>
+<Comment Operand="[14].8">
+<![CDATA[C10_S67_14E-Stop, P3
+RightPanel]]>
+</Comment>
+<Comment Operand="[14].9">
+<![CDATA[C9_S110_24HJRE
+GITTER
+KVITTERING]]>
+</Comment>
+<Comment Operand="[14].10">
+<![CDATA[C10_S92_1SP PATTERN
+PLATE
+LOCKS OUT,
+PAN-GR]]>
+</Comment>
+<Comment Operand="[14].11">
+<![CDATA[C10_S92_3SP PATTERN
+PLATE
+LOCKS IN,
+PAN-GR]]>
+</Comment>
+<Comment Operand="[14].12">
+<![CDATA[C10_S95_1PP PATTERN
+PLATE
+LOCKS OUT,
+PAN-GR]]>
+</Comment>
+<Comment Operand="[14].13">
+<![CDATA[C10_S95_3PP PATTERN
+PLATE
+LOCKS IN,
+PAN-GR]]>
+</Comment>
+<Comment Operand="[14].14">
+<![CDATA[C10_S98_3No stop on PAN-GR]]>
+</Comment>
+<Comment Operand="[14].15">
+<![CDATA[C10_S98_1DMS START
+ON PAN-GR]]>
+</Comment>
+<Comment Operand="[15].0">
+<![CDATA[C9_S2_3KEY SWITCH
+IN POS.
+2 OR 3.]]>
+</Comment>
+<Comment Operand="[15].1">
+<![CDATA[C9_S2_5NGLE I
+STILLING 3]]>
+</Comment>
+<Comment Operand="[15].2">
+<![CDATA[C10_S112_1PPC SLOW
+TOWARDS
+LEFT]]>
+</Comment>
+<Comment Operand="[15].3">
+<![CDATA[C10_S112_3PPC SLOW
+TOWARDS
+RIGHT]]>
+</Comment>
+<Comment Operand="[15].4">
+<![CDATA[C10_S115_1PPC FAST
+TOWARDS
+LEFT]]>
+</Comment>
+<Comment Operand="[15].5">
+<![CDATA[C10_S115_3PPC FAST
+TOWARDS
+RIGHT]]>
+</Comment>
+<Comment Operand="[15].6">
+<![CDATA[C10_S118_1PPC FAST
+TOWARDS
+NEXT LEFT
+STOP
+POSITION]]>
+</Comment>
+<Comment Operand="[15].7">
+<![CDATA[C10_S118_3PPC FAST
+TOWARDS
+NEXT RIGHT
+STOP
+POSITION]]>
+</Comment>
+<Comment Operand="[15].8">
+<![CDATA[C9_S68PMC
+OVERTRAVEL]]>
+</Comment>
+<Comment Operand="[15].9">
+<![CDATA[FIND EXT
+KODE.
+HNDKODE
+LSER]]>
+</Comment>
+<Comment Operand="[15].10">
+<![CDATA[Heating
+Relays OFF
+C6-Q22
+C6-Q26,Q28
+C22-Q2,Q4]]>
+</Comment>
+<Comment Operand="[15].11">
+<![CDATA[Heating
+Cut-Out
+Relays OFF
+C6-Q38,Q39]]>
+</Comment>
+<Comment Operand="[15].12">
+<![CDATA[SSC Enable
+SSC Fwd OK
+C6-K84]]>
+</Comment>
+<Comment Operand="[16].0">
+<![CDATA[C10_B142SP
+VERTICAL]]>
+</Comment>
+<Comment Operand="[16].1">
+<![CDATA[C10_B144PP BEHIND
+SAND GATE]]>
+</Comment>
+<Comment Operand="[16].2">
+<![CDATA[C10_B146SP IN CHAMBER]]>
+</Comment>
+<Comment Operand="[16].3">
+<![CDATA[C10_B148SP FULLY
+OUT AND
+HORISONTAL]]>
+</Comment>
+<Comment Operand="[16].4">
+<![CDATA[C10_B150SAND GATE
+OPEN]]>
+</Comment>
+<Comment Operand="[16].5">
+<![CDATA[C10_B152SAND GATE
+CLOSED]]>
+</Comment>
+<Comment Operand="[16].6">
+<![CDATA[C10_S154PN
+PRESSURE
+OK]]>
+</Comment>
+<Comment Operand="[16].7">
+<![CDATA[C10_S156_2BOTTOM 
+PLATE
+VACUUM OK]]>
+</Comment>
+<Comment Operand="[16].8">
+<![CDATA[C10_B162HY 10 OPEN]]>
+</Comment>
+<Comment Operand="[16].9">
+<![CDATA[C10_B164HY 11 OPEN]]>
+</Comment>
+<Comment Operand="[16].10">
+<![CDATA[C10_B166HY 16 BEN]]>
+</Comment>
+<Comment Operand="[16].11">
+<![CDATA[C10_B168HY 17 BEN]]>
+</Comment>
+<Comment Operand="[16].12">
+<![CDATA[C10_S170_ADMM
+Oil level 
+OK]]>
+</Comment>
+<Comment Operand="[16].13">
+<![CDATA[C10_S172HY 120 DMM
+OIL FILTER
+NOT
+CLOGGED]]>
+</Comment>
+<Comment Operand="[16].14">
+<![CDATA[C10_S174Spray flow detected]]>
+</Comment>
+<Comment Operand="[16].15">
+<![CDATA[C10_S176LUBRICA-
+TION OIL/
+GREASE
+TANK OK]]>
+</Comment>
+<Comment Operand="[17].0">
+<![CDATA[C10_S182HY DMM OIL
+TEMPERA-
+TURE OK]]>
+</Comment>
+<Comment Operand="[17].4">
+<![CDATA[C10_B190PPC IN
+LEFT END
+POSITION]]>
+</Comment>
+<Comment Operand="[17].5">
+<![CDATA[C10_B192PPC IN
+RIGHT END
+POSITION]]>
+</Comment>
+<Comment Operand="[17].6">
+<![CDATA[C10_B194PPC IN SP
+PATTERN
+CHANGE
+POSITION]]>
+</Comment>
+<Comment Operand="[17].7">
+<![CDATA[C10_B196PPC IN PP
+PATTERN
+CHANGE
+POSITION]]>
+</Comment>
+<Comment Operand="[17].8">
+<![CDATA[C10_B202PMC
+MOVABLE
+GRATES
+RAISED]]>
+</Comment>
+<Comment Operand="[17].9">
+<![CDATA[C10_B204PMC
+MOVABLE
+GRATES
+LOWERED]]>
+</Comment>
+<Comment Operand="[17].10">
+<![CDATA[C10_B206PMC FIXED
+GRATES
+RAISED]]>
+</Comment>
+<Comment Operand="[17].11">
+<![CDATA[C10_B208PMC FIXED
+GRATES
+LOWERED]]>
+</Comment>
+<Comment Operand="[17].12">
+<![CDATA[C10_B210PMC
+MOVABLE
+GRATES
+FORWARD,
+BRAKE POS.]]>
+</Comment>
+<Comment Operand="[17].13">
+<![CDATA[C10_B212PMC
+MOVABLE
+GRATES
+RETURNED,
+BRAKE POS.]]>
+</Comment>
+<Comment Operand="[17].14">
+<![CDATA[C10_B214PMC
+MOVABLE
+GRATES
+RETURNED
+END POS.]]>
+</Comment>
+<Comment Operand="[17].15">
+<![CDATA[C10_B216AUTOMATIC
+MOLD
+RETAINER
+POSITION
+OK]]>
+</Comment>
+<Comment Operand="[18].0">
+<![CDATA[C10_B222CSE BUFFER
+STOP
+CYLINDER
+READY]]>
+</Comment>
+<Comment Operand="[18].1">
+<![CDATA[C10_B224CSE INSIDE
+DMM]]>
+</Comment>
+<Comment Operand="[18].2">
+<![CDATA[C10_B226CSE INSIDE
+DMM AND
+FORWARD]]>
+</Comment>
+<Comment Operand="[18].3">
+<![CDATA[C10_B228CSE CLEAR
+OF SUSPEN-
+SION FRAME]]>
+</Comment>
+<Comment Operand="[18].4">
+<![CDATA[C10_B230CSE IN
+OUTSIDE
+STOP
+POSITION]]>
+</Comment>
+<Comment Operand="[18].5">
+<![CDATA[C10_B232CSE IN
+RETURNED
+POSITION]]>
+</Comment>
+<Comment Operand="[18].6">
+<![CDATA[C10_S234CSE CORE
+SETTING
+PRESSURE
+REACHED]]>
+</Comment>
+<Comment Operand="[18].7">
+<![CDATA[C10_S236CSE VACUUM
+RELEASED]]>
+</Comment>
+<Comment Operand="[18].8">
+<![CDATA[C9_S72_14E-Stop, P4
+CSE  Panel]]>
+</Comment>
+<Comment Operand="[18].9">
+<![CDATA[C9_S186ACKNOWLED
+GEMENT OF
+CSE LIGHT
+CURTAIN]]>
+</Comment>
+<Comment Operand="[18].10">
+<![CDATA[C9_S188ACKNOWLEDGEMENT
+OF CORE SETTING P04]]>
+</Comment>
+<Comment Operand="[18].11">
+<![CDATA[C9_K1821 LightCurtainDirty
+2 CSE AutoStartKey]]>
+</Comment>
+<Comment Operand="[18].12">
+<![CDATA[C10_S102CORE
+HOLDER
+DEACTIVATE
+PO4]]>
+</Comment>
+<Comment Operand="[18].13">
+<![CDATA[C10_S104CORE
+HOLDER
+ACTIVATE
+P04]]>
+</Comment>
+<Comment Operand="[18].14">
+<![CDATA[C10S106_12No stop on PAN-CSE]]>
+</Comment>
+<Comment Operand="[18].15">
+<![CDATA[C9_K182_11CSE LightCurtain
+Not Ready]]>
+</Comment>
+<Comment Operand="[19]">
+<![CDATA[#1Di10]]>
+</Comment>
+<Comment Operand="[19].0">
+<![CDATA[C10_B242SSC1 BELT
+IS RUNNING]]>
+</Comment>
+<Comment Operand="[19].1">
+<![CDATA[C10_S244SBC PN
+PRESSURE
+OK
+PN405]]>
+</Comment>
+<Comment Operand="[19].2">
+<![CDATA[C10_S246SBC PN
+PRESSURE
+RELEASED
+PN406]]>
+</Comment>
+<Comment Operand="[19].3">
+<![CDATA[C10_S248SBC PN
+BRAKE
+PRESSURE
+RELEASED
+PN416]]>
+</Comment>
+<Comment Operand="[19].5">
+<![CDATA[C10_B252MOLD
+PRESENT AT
+PMC OUTLET]]>
+</Comment>
+<Comment Operand="[19].6">
+<![CDATA[C10_B254SSC2 BELT
+IS RUNNING]]>
+</Comment>
+<Comment Operand="[46].0">
+<![CDATA[C23_005SBO1
+MOTOR I
+DELTA]]>
+</Comment>
+<Comment Operand="[46].1">
+<![CDATA[C23_008SBO1
+TERMO
+UDLST]]>
+</Comment>
+<Comment Operand="[46].2">
+<![CDATA[C23_015SBO2
+MOTOR I
+DELTA]]>
+</Comment>
+<Comment Operand="[46].3">
+<![CDATA[C23_018SBO2
+TERMO
+UDLST]]>
+</Comment>
+<Comment Operand="[46].4">
+<![CDATA[C26_S2_ASBO1 OIL
+LEVEL OK]]>
+</Comment>
+<Comment Operand="[46].5">
+<![CDATA[C26_S4_1SBO1 OIL
+FILTER OK]]>
+</Comment>
+<Comment Operand="[46].6">
+<![CDATA[C26_S6_1SBO1 OIL
+TEMPERATUR
+OK]]>
+</Comment>
+<Comment Operand="[46].7">
+<![CDATA[HY1931
+CLOSED]]>
+</Comment>
+<Comment Operand="[46].8">
+<![CDATA[HY1932
+CLOSED]]>
+</Comment>
+<Comment Operand="[46].10">
+<![CDATA[C26_S22_ASBO2 OIL
+LEVEL OK]]>
+</Comment>
+<Comment Operand="[46].11">
+<![CDATA[C26_S24_1SBO2 OIL
+FILTER OK]]>
+</Comment>
+<Comment Operand="[46].12">
+<![CDATA[C26_S26_1SBO2 OIL
+TEMPERATUR
+OK]]>
+</Comment>
+</Comments>
+<Data Format="L5K">
+<![CDATA[[0,0,0,0,0,0,5764,8898,24621,8978,3135,217,2432,4164,16448,1,-17209,-7711,-16232,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+					,0,0,0,0,496,0,0,0,0,0]]]>
+</Data>
+<Data Format="Decorated">
+<Array DataType="INT" Dimensions="48" Radix="Binary">
+<Element Index="[0]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[1]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[2]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[3]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[4]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[5]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[6]" Value="2#0001_0110_1000_0100"/>
+<Element Index="[7]" Value="2#0010_0010_1100_0010"/>
+<Element Index="[8]" Value="2#0110_0000_0010_1101"/>
+<Element Index="[9]" Value="2#0010_0011_0001_0010"/>
+<Element Index="[10]" Value="2#0000_1100_0011_1111"/>
+<Element Index="[11]" Value="2#0000_0000_1101_1001"/>
+<Element Index="[12]" Value="2#0000_1001_1000_0000"/>
+<Element Index="[13]" Value="2#0001_0000_0100_0100"/>
+<Element Index="[14]" Value="2#0100_0000_0100_0000"/>
+<Element Index="[15]" Value="2#0000_0000_0000_0001"/>
+<Element Index="[16]" Value="2#1011_1100_1100_0111"/>
+<Element Index="[17]" Value="2#1110_0001_1110_0001"/>
+<Element Index="[18]" Value="2#1100_0000_1001_1000"/>
+<Element Index="[19]" Value="2#0000_0000_0000_1010"/>
+<Element Index="[20]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[21]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[22]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[23]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[24]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[25]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[26]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[27]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[28]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[29]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[30]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[31]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[32]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[33]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[34]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[35]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[36]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[37]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[38]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[39]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[40]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[41]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[42]" Value="2#0000_0001_1111_0000"/>
+<Element Index="[43]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[44]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[45]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[46]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[47]" Value="2#0000_0000_0000_0000"/>
+</Array>
+</Data>
+</Tag>
+</Tags>
+<Programs Use="Context">
+<Program Use="Context" Name="Top">
+<Routines Use="Context">
+<EncodedData EncodedType="Routine" Name="Input_Sbo_Digital" Type="RLL" EncryptionConfig="9">
+AAl4ItvfzKm3LmKAoGdxcM7EyyhK5JgXziLJsAgfRX5kAIuuYw7eaPCgoziKPwO7oNKaB0/N5Rb1RzytAraGZoDQ9xiprVXJOPV8CUrJO+h/9+ljH3FfMivUwAgZ3IIulHe1lrld/iMG+3B7BWa34DkRoN91yIUrn8CqItPvMu1UlSacrc8L7XWlr/Gs5G704wc3y9ucCS6LeKVT3Z+xZZ8qI8lUUtCxSUm2W1pLPN6uY3GwLIyHrUkBH4PBRidcPphGg/uPPSX5VrcIbClt90p4P3jN7FmAUF52iHdaK5jBKJzM7yiZLVP0ZQdJnJoP7Z5e0Vm4kY0Bu2f3MOXwSLoCMEJHaJ9E46g6fUjKxoyoG+MzcRaNSh8ma1MN8/npq7r6i3liWZC38jtU8ZoNlA8JkVDnYfYPNNwyTc4+T8e+G+QGoQTjvd8BUkTfccfXNRKZ/bmu8po0EGjcNAQmr5sQ68+n6hjOC0LwrWnmTaeqTqb5jmQgjJt/C7gSqAg1leKIhtKjKsMzoK5Sj0Nb5nU4Hf9SY+wB4xMbpGyc08VCbcxWCJTZ9X+w6vs28MmEjFGFP2tCIiXQugtmmvlVNny5KD5lyrObeWGfz372qJe2L6dZ4LK6rfQsSM5yFgIuAQlMYWka8pn3wKL2</EncodedData>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>

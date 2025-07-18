@@ -1,0 +1,861 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="30.01" TargetName="Input_Sbo_Analog" TargetType="Routine" TargetSubType="RLL" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Wed Jul 16 18:20:34 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="Disa2070mk2">
+<DataTypes Use="Context">
+</DataTypes>
+<Modules Use="Context">
+<Module Use="Reference" Name="Local">
+</Module>
+<Module Use="Reference" Name="x1Ai11_Sbo">
+</Module>
+</Modules>
+<Tags Use="Context">
+<Tag Name="N26" TagType="Produced" DataType="INT" Dimensions="150" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<ProduceInfo PLCMappingFile="26"/>
+<Description>
+<![CDATA[PLC>VDU]]>
+</Description>
+<Comments>
+<Comment Operand="[0]">
+<![CDATA[INFO GROUP
+0 DMM]]>
+</Comment>
+<Comment Operand="[1]">
+<![CDATA[INFO GROUP
+1 SSU]]>
+</Comment>
+<Comment Operand="[2]">
+<![CDATA[INFO GROUP
+2 PMC]]>
+</Comment>
+<Comment Operand="[3]">
+<![CDATA[INFO GROUP
+3 CSE]]>
+</Comment>
+<Comment Operand="[4]">
+<![CDATA[INFO GROUP
+4 GITTER]]>
+</Comment>
+<Comment Operand="[5]">
+<![CDATA[INFO GROUP
+5 ND]]>
+</Comment>
+<Comment Operand="[6]">
+<![CDATA[INFO GROUP
+6 POWER]]>
+</Comment>
+<Comment Operand="[7]">
+<![CDATA[INFO GROUP
+9 HW]]>
+</Comment>
+<Comment Operand="[8]">
+<![CDATA[CODE_SEQ_DMM]]>
+</Comment>
+<Comment Operand="[9]">
+<![CDATA[SEQUENCE
+GROUP 1
+SSU]]>
+</Comment>
+<Comment Operand="[10]">
+<![CDATA[SEQUENCE
+GROUP 2
+PMC]]>
+</Comment>
+<Comment Operand="[11]">
+<![CDATA[CODE_SEQ_CSE]]>
+</Comment>
+<Comment Operand="[12]">
+<![CDATA[DISPLAY
+GROUP 7.1
+ADVARSEL]]>
+</Comment>
+<Comment Operand="[13]">
+<![CDATA[DISPLAY
+GROUP 7.2
+ADVARSEL]]>
+</Comment>
+<Comment Operand="[14]">
+<![CDATA[DISPLAY
+GROUP 7.3
+ADVARSEL]]>
+</Comment>
+<Comment Operand="[15]">
+<![CDATA[DISPLAY
+GROUP 7.4
+ADVARSEL]]>
+</Comment>
+<Comment Operand="[16]">
+<![CDATA[DISPLAY
+GROUP 7.5
+ADVARSEL]]>
+</Comment>
+<Comment Operand="[17]">
+<![CDATA[SEQ TID
+DMM OPR 1]]>
+</Comment>
+<Comment Operand="[18]">
+<![CDATA[SEQ TID
+DMM OPR 2]]>
+</Comment>
+<Comment Operand="[19]">
+<![CDATA[SEQ TID
+DMM OPR 3A]]>
+</Comment>
+<Comment Operand="[20]">
+<![CDATA[SEQ TID
+DMM
+OPR 4B]]>
+</Comment>
+<Comment Operand="[21]">
+<![CDATA[SEQ TID
+DMM OPR 4A]]>
+</Comment>
+<Comment Operand="[22]">
+<![CDATA[SEQ TID
+DMM
+OPR 4B]]>
+</Comment>
+<Comment Operand="[23]">
+<![CDATA[SEQ TID
+DMM
+OPR 5]]>
+</Comment>
+<Comment Operand="[24]">
+<![CDATA[SEQ TID
+DMM
+OPR 6]]>
+</Comment>
+<Comment Operand="[25]">
+<![CDATA[SEQ TID
+PMC TRIN 1]]>
+</Comment>
+<Comment Operand="[26]">
+<![CDATA[SEQ TID
+PMC TRIN 2]]>
+</Comment>
+<Comment Operand="[27]">
+<![CDATA[SEQ TID
+PMC TRIN 3]]>
+</Comment>
+<Comment Operand="[28]">
+<![CDATA[SEQ TID
+PMC TRIN 4]]>
+</Comment>
+<Comment Operand="[29]">
+<![CDATA[SEQ TID
+PMC TRIN 5]]>
+</Comment>
+<Comment Operand="[30]">
+<![CDATA[SEQ TID
+PMC TRIN 6]]>
+</Comment>
+<Comment Operand="[31]">
+<![CDATA[SEQ TID
+CSE TRIN 1]]>
+</Comment>
+<Comment Operand="[32]">
+<![CDATA[SEQ TID
+CSE TRIN 2]]>
+</Comment>
+<Comment Operand="[33]">
+<![CDATA[SEQ TID
+CSE TRIN 3]]>
+</Comment>
+<Comment Operand="[34]">
+<![CDATA[SEQ TID
+CSE TRIN 4]]>
+</Comment>
+<Comment Operand="[35]">
+<![CDATA[SEQ TID
+CSE TRIN 5]]>
+</Comment>
+<Comment Operand="[36]">
+<![CDATA[SEQ TID
+CSE TRIN 6]]>
+</Comment>
+<Comment Operand="[37]">
+<![CDATA[SEQ TID
+SSU TRIN 1]]>
+</Comment>
+<Comment Operand="[38]">
+<![CDATA[SEQ TID
+SSU TRIN 2]]>
+</Comment>
+<Comment Operand="[39]">
+<![CDATA[SEQ TID
+SSU TRIN 3]]>
+</Comment>
+<Comment Operand="[40]">
+<![CDATA[SEQ TID
+SSU TRIN 4]]>
+</Comment>
+<Comment Operand="[41]">
+<![CDATA[DELAY
+SKUDLUFT]]>
+</Comment>
+<Comment Operand="[42]">
+<![CDATA[DELAY
+SAND]]>
+</Comment>
+<Comment Operand="[43]">
+<![CDATA[DELAY
+KERNER]]>
+</Comment>
+<Comment Operand="[44]">
+<![CDATA[DELAY
+JERN]]>
+</Comment>
+<Comment Operand="[45]">
+<![CDATA[DELAY
+SHAKE OUT]]>
+</Comment>
+<Comment Operand="[46]">
+<![CDATA[DELAY ACE.
+DATA TIL
+VDU]]>
+</Comment>
+<Comment Operand="[47]">
+<![CDATA[DELAY
+PATTERN
+DATA TIL
+VDU]]>
+</Comment>
+<Comment Operand="[48]">
+<![CDATA[TOTAL
+CYKLUSTID]]>
+</Comment>
+<Comment Operand="[49]">
+<![CDATA[CUKLUSTID
+UDEN
+DELAY]]>
+</Comment>
+<Comment Operand="[50]">
+<![CDATA[TOTAL
+TLLER
+0-9999 *1]]>
+</Comment>
+<Comment Operand="[51]">
+<![CDATA[TOTAL
+TLLER
+0-9999 *
+10000]]>
+</Comment>
+<Comment Operand="[52]">
+<![CDATA[FORMTLLER
+NR 1]]>
+</Comment>
+<Comment Operand="[53]">
+<![CDATA[FORMTLLER
+NR 2]]>
+</Comment>
+<Comment Operand="[54]">
+<![CDATA[FORMTLLER
+NR 3]]>
+</Comment>
+<Comment Operand="[55]">
+<![CDATA[DMM_SIZEDMM TYPE
+0=A 1=B 2=C 3=S]]>
+</Comment>
+<Comment Operand="[56]">
+<![CDATA[CURRENT_MOULD_SIZESqueezed Mould
+Size 1/10 mm]]>
+</Comment>
+<Comment Operand="[57]">
+<![CDATA[KOMPRESSI-
+BILITET
+0/00]]>
+</Comment>
+<Comment Operand="[58]">
+<![CDATA[FORME /
+TIME]]>
+</Comment>
+<Comment Operand="[59]">
+<![CDATA[MAX SP
+HASTIGHED
+MLT]]>
+</Comment>
+<Comment Operand="[60].0">
+<![CDATA[MAN BEVGELSE ØNSKES]]>
+</Comment>
+<Comment Operand="[60].1">
+<![CDATA[PP
+MODELSKIFT
+PGR]]>
+</Comment>
+<Comment Operand="[60].2">
+<![CDATA[SP
+MODELSKIFT
+PGR]]>
+</Comment>
+<Comment Operand="[60].3">
+<![CDATA[VIS INFO
+KODER]]>
+</Comment>
+<Comment Operand="[60].4">
+<![CDATA[VIS
+SEKVENS
+KODER]]>
+</Comment>
+<Comment Operand="[60].5">
+<![CDATA[DMS
+RUNNING]]>
+</Comment>
+<Comment Operand="[60].6">
+<![CDATA[FJERN PMC
+POSITION
+FRA VDU]]>
+</Comment>
+<Comment Operand="[60].7">
+<![CDATA[MANUEL
+VALGT]]>
+</Comment>
+<Comment Operand="[60].8">
+<![CDATA[Key-Switch
+Not in pos
+Zero]]>
+</Comment>
+<Comment Operand="[60].9">
+<![CDATA[CWD-PLC in
+Run-mode]]>
+</Comment>
+<Comment Operand="[60].10">
+<![CDATA[HARDWARETEST
+UDFØRES]]>
+</Comment>
+<Comment Operand="[60].11">
+<![CDATA[SG EFTER
+EXT. KODE
+DATA]]>
+</Comment>
+<Comment Operand="[60].12">
+<![CDATA[F_MODE_INSTF-Mode Inst.]]>
+</Comment>
+<Comment Operand="[60].13">
+<![CDATA[DMM
+RUNNING
+BIT TIL
+VDU]]>
+</Comment>
+<Comment Operand="[60].14">
+<![CDATA[PP_AFB_INSTPP acc f.b. inst.]]>
+</Comment>
+<Comment Operand="[60].15">
+<![CDATA[SP_AFB_INSTSP acc f.b. inst.]]>
+</Comment>
+<Comment Operand="[61]">
+<![CDATA[R]]>
+</Comment>
+<Comment Operand="[64]">
+<![CDATA[TIMER]]>
+</Comment>
+<Comment Operand="[66]">
+<![CDATA[DMM OPERATION VDU]]>
+</Comment>
+<Comment Operand="[67]">
+<![CDATA[OPERATION
+PMC]]>
+</Comment>
+<Comment Operand="[68]">
+<![CDATA[OPERATION
+CSE]]>
+</Comment>
+<Comment Operand="[69]">
+<![CDATA[SEQ TID
+CSE TRIN 0]]>
+</Comment>
+<Comment Operand="[70]">
+<![CDATA[SEQ TID
+CSE TRIN 7]]>
+</Comment>
+<Comment Operand="[71]">
+<![CDATA[SEQ TID
+CSE TRIN 8]]>
+</Comment>
+<Comment Operand="[72]">
+<![CDATA[HARDWARE
+TEST
+ADRESSE
+MODUL TIL
+VDU]]>
+</Comment>
+<Comment Operand="[73]">
+<![CDATA[HARDWARE
+TEST
+ADRESSE
+BIT TIL 
+VDU]]>
+</Comment>
+<Comment Operand="[74]">
+<![CDATA[PP POS 1/10 MM. VDU]]>
+</Comment>
+<Comment Operand="[75]">
+<![CDATA[SP POS 1/10 MM. VDU]]>
+</Comment>
+<Comment Operand="[76]">
+<![CDATA[PMC POS 1/10 MM. VDU]]>
+</Comment>
+<Comment Operand="[77]">
+<![CDATA[P1_DMM CH1]]>
+</Comment>
+<Comment Operand="[78]">
+<![CDATA[P2_DMM CH2]]>
+</Comment>
+<Comment Operand="[79]">
+<![CDATA[Pmax_DMM CH3]]>
+</Comment>
+<Comment Operand="[80]">
+<![CDATA[PSERVO CH4]]>
+</Comment>
+<Comment Operand="[81]">
+<![CDATA[PSHOT UP
+TANK CH5]]>
+</Comment>
+<Comment Operand="[82]">
+<![CDATA[PSHOT CH6]]>
+</Comment>
+<Comment Operand="[83]">
+<![CDATA[R_OIL CH7]]>
+</Comment>
+<Comment Operand="[84]">
+<![CDATA[R_PP CH8]]>
+</Comment>
+<Comment Operand="[85]">
+<![CDATA[R_SP CH9]]>
+</Comment>
+<Comment Operand="[86]">
+<![CDATA[SAND LEVEL
+CH10]]>
+</Comment>
+<Comment Operand="[87]">
+<![CDATA[PUMP TILT FB]]>
+</Comment>
+<Comment Operand="[88]">
+<![CDATA[FORM
+MODHOLD
+CH12]]>
+</Comment>
+<Comment Operand="[89]">
+<![CDATA[PPC
+POSITION
+CH13]]>
+</Comment>
+<Comment Operand="[90]">
+<![CDATA[Ai
+CH14]]>
+</Comment>
+<Comment Operand="[91]">
+<![CDATA[Ai
+CH15]]>
+</Comment>
+<Comment Operand="[92]">
+<![CDATA[Ai
+CH16]]>
+</Comment>
+<Comment Operand="[93]">
+<![CDATA[CSE TLLER
+0-9999 *1
+DATA TIL
+VDU]]>
+</Comment>
+<Comment Operand="[94]">
+<![CDATA[CSE TLLER
+0-9999 *
+10000
+DATA TIL 
+VDU]]>
+</Comment>
+<Comment Operand="[95].0">
+<![CDATA[PP fwd Arrow]]>
+</Comment>
+<Comment Operand="[95].1">
+<![CDATA[PP rev Arrow]]>
+</Comment>
+<Comment Operand="[95].2">
+<![CDATA[SP fwd Arrow]]>
+</Comment>
+<Comment Operand="[95].3">
+<![CDATA[SP back Arrow]]>
+</Comment>
+<Comment Operand="[95].4">
+<![CDATA[PIL
+PMC FREM]]>
+</Comment>
+<Comment Operand="[95].5">
+<![CDATA[PIL PMC
+TILBAGE]]>
+</Comment>
+<Comment Operand="[95].6">
+<![CDATA[PIL PMC
+FASTE
+RISTE OP]]>
+</Comment>
+<Comment Operand="[95].7">
+<![CDATA[PIL PMC
+FASTE
+RISTE NED]]>
+</Comment>
+<Comment Operand="[95].8">
+<![CDATA[PIL PMC
+BEVGELIGE
+RISTE OP]]>
+</Comment>
+<Comment Operand="[95].9">
+<![CDATA[PIL PMC
+BEVGELIGE
+RISTE NED]]>
+</Comment>
+<Comment Operand="[95].10">
+<![CDATA[PIL CSE
+INDE FREM]]>
+</Comment>
+<Comment Operand="[95].11">
+<![CDATA[PIL CSE
+INDE
+TILBAGE]]>
+</Comment>
+<Comment Operand="[95].12">
+<![CDATA[PIL CSE
+UDE FREM]]>
+</Comment>
+<Comment Operand="[95].13">
+<![CDATA[PIL CSE
+UDE
+TILBAGE]]>
+</Comment>
+<Comment Operand="[95].14">
+<![CDATA[PIL CSE
+IND
+BEVGELSE]]>
+</Comment>
+<Comment Operand="[95].15">
+<![CDATA[PIL CSE
+UD
+BEVGELSE]]>
+</Comment>
+<Comment Operand="[96]">
+<![CDATA[DMM TRYK]]>
+</Comment>
+<Comment Operand="[97]">
+<![CDATA[DMM TILT]]>
+</Comment>
+<Comment Operand="[98]">
+<![CDATA[PMC PROP
+SIGNAL]]>
+</Comment>
+<Comment Operand="[99]">
+<![CDATA[CSE
+FREM/BAK
+SIGNAL]]>
+</Comment>
+<Comment Operand="[100]">
+<![CDATA[FORME
+PRODUCERET]]>
+</Comment>
+<Comment Operand="[101]">
+<![CDATA[FORME
+MANGLER]]>
+</Comment>
+<Comment Operand="[102]">
+<![CDATA[MAX PP
+HASTIGHED
+MLT]]>
+</Comment>
+<Comment Operand="[103]">
+<![CDATA[PP WAFER
+KODE
+AKTUEL]]>
+</Comment>
+<Comment Operand="[105]">
+<![CDATA[SP WAFER
+KODE
+AKTUEL]]>
+</Comment>
+<Comment Operand="[107]">
+<![CDATA[CM WAFER
+KODE
+AKTUEL]]>
+</Comment>
+<Comment Operand="[109]">
+<![CDATA[EXT WAFER
+KODE
+AKTUEL]]>
+</Comment>
+<Comment Operand="[111]">
+<![CDATA[P_D_SBO1
+CH1]]>
+</Comment>
+<Comment Operand="[112]">
+<![CDATA[P_B_SBO1
+CH2]]>
+</Comment>
+<Comment Operand="[113]">
+<![CDATA[P_D_SBO2
+HY 2936
+CH3]]>
+</Comment>
+<Comment Operand="[114]">
+<![CDATA[P_B_SBO2
+HY 2935
+CH4]]>
+</Comment>
+<Comment Operand="[115]">
+<![CDATA[R_OIL_SBO1
+CH 5]]>
+</Comment>
+<Comment Operand="[117]">
+<![CDATA[R_OIL_SBO2
+CH7]]>
+</Comment>
+<Comment Operand="[127]">
+<![CDATA[SBO1 BRAKE
+PRESSURE
+CH 1]]>
+</Comment>
+<Comment Operand="[128]">
+<![CDATA[SBO1 DRIVE
+PRESSURE
+CH 2]]>
+</Comment>
+<Comment Operand="[129]">
+<![CDATA[SBO2 BRAKE
+PRESSURE
+CH 3]]>
+</Comment>
+<Comment Operand="[130]">
+<![CDATA[SBO2 DRIVE
+PRESSURE
+CH 4]]>
+</Comment>
+<Comment Operand="[131]">
+<![CDATA[PPC SIGNAL]]>
+</Comment>
+<Comment Operand="[132]">
+<![CDATA[AUTO TILT
+ZERO]]>
+</Comment>
+<Comment Operand="[133]">
+<![CDATA[PMC/SBC
+Awerage
+transport
+pressure]]>
+</Comment>
+<Comment Operand="[134]">
+<![CDATA[SP-Forward
+Cam-lift
+position]]>
+</Comment>
+<Comment Operand="[135]">
+<![CDATA[SP-Backwrd
+Cam-lift
+position]]>
+</Comment>
+<Comment Operand="[136]">
+<![CDATA[MISC_CONFIG_BITS]]>
+</Comment>
+<Comment Operand="[136].0">
+<![CDATA[SW_CSE_6_7_OLAP_INSTCSE 6-7 overlap inst]]>
+</Comment>
+<Comment Operand="[136].1">
+<![CDATA[SW_EXTRA_BLOW_F5New Blow-off system
+F5 control (3072+)]]>
+</Comment>
+<Comment Operand="[136].2">
+<![CDATA[SW_2_4_SHOT_VAL_INSTShotValveControlInstA&S: 2 or 3
+B&C: 2 or 4]]>
+</Comment>
+<Comment Operand="[136].3">
+<![CDATA[SW_EXTRA_BLOW_F3New Blow-off system
+F3 control (3072+)]]>
+</Comment>
+<Comment Operand="[136].4">
+<![CDATA[SW_CIM_DATA_EXTENDED]]>
+</Comment>
+<Comment Operand="[136].5">
+<![CDATA[SW_OIL_AIR_COOL_INST]]>
+</Comment>
+<Comment Operand="[136].6">
+<![CDATA[CSE_AUTO_RESET_INST]]>
+</Comment>
+<Comment Operand="[136].7">
+<![CDATA[SPRAY_REAR_FRONT_F5]]>
+</Comment>
+<Comment Operand="[136].8">
+<![CDATA[PRESTRIP_PP_INST]]>
+</Comment>
+<Comment Operand="[137]">
+<![CDATA[VDU6_TW_DMM_1_IMCT]]>
+</Comment>
+</Comments>
+<Data Format="L5K">
+<![CDATA[[0,0,0,0,0,0,0,0,47,107,223,312,703,762,0,0,0,155,255,80,254,163,246,212,212,842,136,101,249,148,89,0,0,0,0,0,0,764,132,522
+					,15900,0,0,0,0,0,0,0,1576,1576,6327,10,-24745,-24745,-24745,1,2921,297,228,1060,-19616,2025,4,10,7,25,20,260,300
+					,4118,177,82,7,17,4234,8497,1358,740,21,547,547,17,0,491,531,173,61,2998,22869,-250,-12,-11,-12,360,6,137,3386
+					,1010,1247,2457,1909,0,966,0,0,0,0,0,0,0,0,1,-3,-626,-628,305,-25,-250,-25,-250,-497,-502,0,-250,3,2,2,0,0,0,0,2047,2129
+					,577,14488,14319,60,0,0,0,0,0,0,0,0,0,0,0,0,0]]]>
+</Data>
+<Data Format="Decorated">
+<Array DataType="INT" Dimensions="150" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="0"/>
+<Element Index="[2]" Value="0"/>
+<Element Index="[3]" Value="0"/>
+<Element Index="[4]" Value="0"/>
+<Element Index="[5]" Value="0"/>
+<Element Index="[6]" Value="0"/>
+<Element Index="[7]" Value="0"/>
+<Element Index="[8]" Value="47"/>
+<Element Index="[9]" Value="107"/>
+<Element Index="[10]" Value="223"/>
+<Element Index="[11]" Value="312"/>
+<Element Index="[12]" Value="703"/>
+<Element Index="[13]" Value="762"/>
+<Element Index="[14]" Value="0"/>
+<Element Index="[15]" Value="0"/>
+<Element Index="[16]" Value="0"/>
+<Element Index="[17]" Value="155"/>
+<Element Index="[18]" Value="255"/>
+<Element Index="[19]" Value="80"/>
+<Element Index="[20]" Value="254"/>
+<Element Index="[21]" Value="163"/>
+<Element Index="[22]" Value="246"/>
+<Element Index="[23]" Value="212"/>
+<Element Index="[24]" Value="212"/>
+<Element Index="[25]" Value="842"/>
+<Element Index="[26]" Value="136"/>
+<Element Index="[27]" Value="101"/>
+<Element Index="[28]" Value="249"/>
+<Element Index="[29]" Value="148"/>
+<Element Index="[30]" Value="89"/>
+<Element Index="[31]" Value="0"/>
+<Element Index="[32]" Value="0"/>
+<Element Index="[33]" Value="0"/>
+<Element Index="[34]" Value="0"/>
+<Element Index="[35]" Value="0"/>
+<Element Index="[36]" Value="0"/>
+<Element Index="[37]" Value="764"/>
+<Element Index="[38]" Value="132"/>
+<Element Index="[39]" Value="522"/>
+<Element Index="[40]" Value="15900"/>
+<Element Index="[41]" Value="0"/>
+<Element Index="[42]" Value="0"/>
+<Element Index="[43]" Value="0"/>
+<Element Index="[44]" Value="0"/>
+<Element Index="[45]" Value="0"/>
+<Element Index="[46]" Value="0"/>
+<Element Index="[47]" Value="0"/>
+<Element Index="[48]" Value="1576"/>
+<Element Index="[49]" Value="1576"/>
+<Element Index="[50]" Value="6327"/>
+<Element Index="[51]" Value="10"/>
+<Element Index="[52]" Value="-24745"/>
+<Element Index="[53]" Value="-24745"/>
+<Element Index="[54]" Value="-24745"/>
+<Element Index="[55]" Value="1"/>
+<Element Index="[56]" Value="2921"/>
+<Element Index="[57]" Value="297"/>
+<Element Index="[58]" Value="228"/>
+<Element Index="[59]" Value="1060"/>
+<Element Index="[60]" Value="-19616"/>
+<Element Index="[61]" Value="2025"/>
+<Element Index="[62]" Value="4"/>
+<Element Index="[63]" Value="10"/>
+<Element Index="[64]" Value="7"/>
+<Element Index="[65]" Value="25"/>
+<Element Index="[66]" Value="20"/>
+<Element Index="[67]" Value="260"/>
+<Element Index="[68]" Value="300"/>
+<Element Index="[69]" Value="4118"/>
+<Element Index="[70]" Value="177"/>
+<Element Index="[71]" Value="82"/>
+<Element Index="[72]" Value="7"/>
+<Element Index="[73]" Value="17"/>
+<Element Index="[74]" Value="4234"/>
+<Element Index="[75]" Value="8497"/>
+<Element Index="[76]" Value="1358"/>
+<Element Index="[77]" Value="740"/>
+<Element Index="[78]" Value="21"/>
+<Element Index="[79]" Value="547"/>
+<Element Index="[80]" Value="547"/>
+<Element Index="[81]" Value="17"/>
+<Element Index="[82]" Value="0"/>
+<Element Index="[83]" Value="491"/>
+<Element Index="[84]" Value="531"/>
+<Element Index="[85]" Value="173"/>
+<Element Index="[86]" Value="61"/>
+<Element Index="[87]" Value="2998"/>
+<Element Index="[88]" Value="22869"/>
+<Element Index="[89]" Value="-250"/>
+<Element Index="[90]" Value="-12"/>
+<Element Index="[91]" Value="-11"/>
+<Element Index="[92]" Value="-12"/>
+<Element Index="[93]" Value="360"/>
+<Element Index="[94]" Value="6"/>
+<Element Index="[95]" Value="137"/>
+<Element Index="[96]" Value="3386"/>
+<Element Index="[97]" Value="1010"/>
+<Element Index="[98]" Value="1247"/>
+<Element Index="[99]" Value="2457"/>
+<Element Index="[100]" Value="1909"/>
+<Element Index="[101]" Value="0"/>
+<Element Index="[102]" Value="966"/>
+<Element Index="[103]" Value="0"/>
+<Element Index="[104]" Value="0"/>
+<Element Index="[105]" Value="0"/>
+<Element Index="[106]" Value="0"/>
+<Element Index="[107]" Value="0"/>
+<Element Index="[108]" Value="0"/>
+<Element Index="[109]" Value="0"/>
+<Element Index="[110]" Value="0"/>
+<Element Index="[111]" Value="1"/>
+<Element Index="[112]" Value="-3"/>
+<Element Index="[113]" Value="-626"/>
+<Element Index="[114]" Value="-628"/>
+<Element Index="[115]" Value="305"/>
+<Element Index="[116]" Value="-25"/>
+<Element Index="[117]" Value="-250"/>
+<Element Index="[118]" Value="-25"/>
+<Element Index="[119]" Value="-250"/>
+<Element Index="[120]" Value="-497"/>
+<Element Index="[121]" Value="-502"/>
+<Element Index="[122]" Value="0"/>
+<Element Index="[123]" Value="-250"/>
+<Element Index="[124]" Value="3"/>
+<Element Index="[125]" Value="2"/>
+<Element Index="[126]" Value="2"/>
+<Element Index="[127]" Value="0"/>
+<Element Index="[128]" Value="0"/>
+<Element Index="[129]" Value="0"/>
+<Element Index="[130]" Value="0"/>
+<Element Index="[131]" Value="2047"/>
+<Element Index="[132]" Value="2129"/>
+<Element Index="[133]" Value="577"/>
+<Element Index="[134]" Value="14488"/>
+<Element Index="[135]" Value="14319"/>
+<Element Index="[136]" Value="60"/>
+<Element Index="[137]" Value="0"/>
+<Element Index="[138]" Value="0"/>
+<Element Index="[139]" Value="0"/>
+<Element Index="[140]" Value="0"/>
+<Element Index="[141]" Value="0"/>
+<Element Index="[142]" Value="0"/>
+<Element Index="[143]" Value="0"/>
+<Element Index="[144]" Value="0"/>
+<Element Index="[145]" Value="0"/>
+<Element Index="[146]" Value="0"/>
+<Element Index="[147]" Value="0"/>
+<Element Index="[148]" Value="0"/>
+<Element Index="[149]" Value="0"/>
+</Array>
+</Data>
+</Tag>
+</Tags>
+<Programs Use="Context">
+<Program Use="Context" Name="Top">
+<Routines Use="Context">
+<EncodedData EncodedType="Routine" Name="Input_Sbo_Analog" Type="RLL" EncryptionConfig="9">
+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</EncodedData>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>

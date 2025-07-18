@@ -1,0 +1,3037 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="30.01" TargetName="_015_Stop_Dms" TargetType="Routine" TargetSubType="RLL" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Wed Jul 16 21:21:47 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="Disa2070mk2">
+<DataTypes Use="Context">
+</DataTypes>
+<Tags Use="Context">
+<Tag Name="B3" TagType="Base" DataType="DINT" Dimensions="43" Radix="Binary" Constant="false" ExternalAccess="Read/Write">
+<Comments>
+<Comment Operand="[0].0">
+<![CDATA[NEGATIVT
+DMM ACC]]>
+</Comment>
+<Comment Operand="[0].1">
+<![CDATA[BLDT STOP]]>
+</Comment>
+<Comment Operand="[0].2">
+<![CDATA[BLDT STOP
+ONS]]>
+</Comment>
+<Comment Operand="[0].3">
+<![CDATA[Hardware
+Test Done]]>
+</Comment>
+<Comment Operand="[0].4">
+<![CDATA[E-Stop Requested]]>
+</Comment>
+<Comment Operand="[0].5">
+<![CDATA[MANUEL
+KERNE
+ILAGT]]>
+</Comment>
+<Comment Operand="[0].6">
+<![CDATA[DR NSKES
+BNET TIL
+MAN. KERNE]]>
+</Comment>
+<Comment Operand="[0].7">
+<![CDATA[INFO GROUP
+0 BLOKERET]]>
+</Comment>
+<Comment Operand="[0].8">
+<![CDATA[INFO GROUP
+1 BLOKERET]]>
+</Comment>
+<Comment Operand="[0].9">
+<![CDATA[INFO GROUP
+2 BLOKERET]]>
+</Comment>
+<Comment Operand="[0].10">
+<![CDATA[INFO GROUP
+3 BLOKERET]]>
+</Comment>
+<Comment Operand="[0].11">
+<![CDATA[INFO GROUP
+4 BLOKERET]]>
+</Comment>
+<Comment Operand="[0].12">
+<![CDATA[INFO GROUP
+5 BLOKERET]]>
+</Comment>
+<Comment Operand="[0].13">
+<![CDATA[INFO GROUP
+6 BLOKERET]]>
+</Comment>
+<Comment Operand="[0].14">
+<![CDATA[INFO GROUP
+9 BLOKERET]]>
+</Comment>
+<Comment Operand="[0].15">
+<![CDATA[NØDSTOP ØNSKES]]>
+</Comment>
+<Comment Operand="[1].0">
+<![CDATA[DISPLAY
+GROUP 7.1
+BLOKERET]]>
+</Comment>
+<Comment Operand="[1].1">
+<![CDATA[DISPLAY
+GROUP 7.2
+BLOKERET]]>
+</Comment>
+<Comment Operand="[1].2">
+<![CDATA[DISPLAY
+GROUP 7.3
+BLOKERET]]>
+</Comment>
+<Comment Operand="[1].3">
+<![CDATA[DISPLAY
+GROUP 7.4
+BLOKERET]]>
+</Comment>
+<Comment Operand="[1].4">
+<![CDATA[DISPLAY
+GROUP 7.5
+BLOKERET]]>
+</Comment>
+<Comment Operand="[1].5">
+<![CDATA[PPC
+AKTIVERET]]>
+</Comment>
+<Comment Operand="[1].6">
+<![CDATA[PPC POS
+FOR PP
+BEREGNET]]>
+</Comment>
+<Comment Operand="[1].7">
+<![CDATA[NGLESTART
+ONE-SHOT]]>
+</Comment>
+<Comment Operand="[1].8">
+<![CDATA[DMM MOTOR
+M STARTE]]>
+</Comment>
+<Comment Operand="[1].9">
+<![CDATA[SERVOMOTOR
+M STARTE]]>
+</Comment>
+<Comment Operand="[1].10">
+<![CDATA[PPC POS
+FOR SP
+BEREGNET]]>
+</Comment>
+<Comment Operand="[1].11">
+<![CDATA[PPC KNAST
+FUNDET]]>
+</Comment>
+<Comment Operand="[1].12">
+<![CDATA[CWD
+FRIGIVET]]>
+</Comment>
+<Comment Operand="[1].13">
+<![CDATA[CSE START
+ONE SHOT]]>
+</Comment>
+<Comment Operand="[1].14">
+<![CDATA[PPC
+AUTOPOS
+STARTET]]>
+</Comment>
+<Comment Operand="[1].15">
+<![CDATA[DMM STOP
+FRA CSE]]>
+</Comment>
+<Comment Operand="[2]">
+<![CDATA[DMM START
+COND OG
+DATA OVER-
+FRT]]>
+</Comment>
+<Comment Operand="[2].0">
+<![CDATA[DmmAutRun]]>
+</Comment>
+<Comment Operand="[2].1">
+<![CDATA[START COND
+DMM
+OPR 3.0 OK]]>
+</Comment>
+<Comment Operand="[2].2">
+<![CDATA[DATA
+OVERFRT
+DMM
+OPR 3.0]]>
+</Comment>
+<Comment Operand="[2].3">
+<![CDATA[START COND
+DMM
+OPR 3.1 OK]]>
+</Comment>
+<Comment Operand="[2].4">
+<![CDATA[DATA
+OVERFRT
+DMM
+OPR 3.1]]>
+</Comment>
+<Comment Operand="[2].5">
+<![CDATA[START COND
+DMM
+OPR 3.2 OK]]>
+</Comment>
+<Comment Operand="[2].6">
+<![CDATA[DATA
+OVERFRT
+DMM
+OPR 3.2]]>
+</Comment>
+<Comment Operand="[2].7">
+<![CDATA[START COND
+DMM
+OPR 5 OK]]>
+</Comment>
+<Comment Operand="[2].8">
+<![CDATA[DATA
+OVERFRT
+DMM
+OPR 5]]>
+</Comment>
+<Comment Operand="[2].9">
+<![CDATA[START COND
+DMM
+OPR 6.0 OK]]>
+</Comment>
+<Comment Operand="[2].10">
+<![CDATA[DATA
+OVERFRT
+DMM
+OPR 6.0]]>
+</Comment>
+<Comment Operand="[2].11">
+<![CDATA[START COND
+DMM
+OPR 6.1 OK]]>
+</Comment>
+<Comment Operand="[2].12">
+<![CDATA[DATA
+OVERFRT
+DMM 
+OPR 6.1]]>
+</Comment>
+<Comment Operand="[2].13">
+<![CDATA[START DMM OPR1 OK]]>
+</Comment>
+<Comment Operand="[2].14">
+<![CDATA[DATA
+OVERFRT
+DMM OPR 1]]>
+</Comment>
+<Comment Operand="[2].15">
+<![CDATA[START COND
+DMM OPR 2
+OK]]>
+</Comment>
+<Comment Operand="[3].0">
+<![CDATA[AUTO KERNE
+ILAGT]]>
+</Comment>
+<Comment Operand="[3].1">
+<![CDATA[SSC MOTOR
+DREJER ONS]]>
+</Comment>
+<Comment Operand="[3].2">
+<![CDATA[PP KAMMER
+DYBDE ER
+BEGRNSET]]>
+</Comment>
+<Comment Operand="[3].3">
+<![CDATA[PMC KLAR]]>
+</Comment>
+<Comment Operand="[3].4">
+<![CDATA[SP
+SCREEN 3
+START]]>
+</Comment>
+<Comment Operand="[3].5">
+<![CDATA[PP SKIFT
+INDLEDT]]>
+</Comment>
+<Comment Operand="[3].6">
+<![CDATA[PP
+SKIFTEPOS
+OVERFRT]]>
+</Comment>
+<Comment Operand="[3].7">
+<![CDATA[PMC
+BREMSEPOS
+FREMME ONS]]>
+</Comment>
+<Comment Operand="[3].8">
+<![CDATA[SP SKIFT
+INDLEDT]]>
+</Comment>
+<Comment Operand="[3].9">
+<![CDATA[SP
+SKIFTEDATA
+OVERFRT]]>
+</Comment>
+<Comment Operand="[3].10">
+<![CDATA[PPC
+STOPPET P
+RIGTIG
+POSITION]]>
+</Comment>
+<Comment Operand="[3].11">
+<![CDATA[NSKET
+ANTAL
+FORME
+PRODUCERET]]>
+</Comment>
+<Comment Operand="[3].12">
+<![CDATA[PP LSE
+NSKES UD]]>
+</Comment>
+<Comment Operand="[3].13">
+<![CDATA[BLOKERING
+AF
+UBETINGET
+MODELSKIFT]]>
+</Comment>
+<Comment Operand="[3].14">
+<![CDATA[SP LSE
+NSKES UD]]>
+</Comment>
+<Comment Operand="[3].15">
+<![CDATA[PMC VALGT
+START
+ONE SHOT]]>
+</Comment>
+<Comment Operand="[4]">
+<![CDATA[DMM
+Start/Data W4]]>
+</Comment>
+<Comment Operand="[4].0">
+<![CDATA[DATA
+OVERFRT
+DMM OPR 2]]>
+</Comment>
+<Comment Operand="[4].1">
+<![CDATA[START COND
+DMM
+OPR 4.0 OK]]>
+</Comment>
+<Comment Operand="[4].2">
+<![CDATA[DATA
+OVERFRT
+DMM
+OPR 4.0]]>
+</Comment>
+<Comment Operand="[4].3">
+<![CDATA[START COND
+DMM
+OPR 4.1 OK]]>
+</Comment>
+<Comment Operand="[4].4">
+<![CDATA[DMM_4B_OK_DATA]]>
+</Comment>
+<Comment Operand="[4].5">
+<![CDATA[DmmManRun]]>
+</Comment>
+<Comment Operand="[4].6">
+<![CDATA[DMM START-
+FORSG
+TILLADT]]>
+</Comment>
+<Comment Operand="[4].7">
+<![CDATA[DMM START
+FORSG OK]]>
+</Comment>
+<Comment Operand="[4].8">
+<![CDATA[INITIAL
+TEST SLUT]]>
+</Comment>
+<Comment Operand="[4].9">
+<![CDATA[SIKKERHEDS
+VANDRING
+NET]]>
+</Comment>
+<Comment Operand="[4].10">
+<![CDATA[PP MAN BAK]]>
+</Comment>
+<Comment Operand="[4].11">
+<![CDATA[PP MAN
+FREM]]>
+</Comment>
+<Comment Operand="[4].12">
+<![CDATA[SP MAN BAK]]>
+</Comment>
+<Comment Operand="[4].13">
+<![CDATA[SP MAN
+FREM]]>
+</Comment>
+<Comment Operand="[4].14">
+<![CDATA[DATA
+OVERFRT
+PP MAN BAK]]>
+</Comment>
+<Comment Operand="[4].15">
+<![CDATA[DATA
+OVERFRT
+PP
+MAN FREM]]>
+</Comment>
+<Comment Operand="[5].0">
+<![CDATA[CSE VALGT
+START
+ONE SHOT]]>
+</Comment>
+<Comment Operand="[5].1">
+<![CDATA[CWD-VDU I
+RUN MODE
+ONS]]>
+</Comment>
+<Comment Operand="[5].2">
+<![CDATA[CWD-VDU I
+RUN MODE
+ONS NR. 2]]>
+</Comment>
+<Comment Operand="[5].3">
+<![CDATA[DMS SKIFT
+ONE-SHOT]]>
+</Comment>
+<Comment Operand="[5].4">
+<![CDATA[SAND
+SEKVENS
+KLAR]]>
+</Comment>
+<Comment Operand="[5].5">
+<![CDATA[MAX KAMMER
+DYBDE OVER
+SKREDET]]>
+</Comment>
+<Comment Operand="[5].6">
+<![CDATA[FRSTE
+FORM EFTER
+MODELSKIFT]]>
+</Comment>
+<Comment Operand="[5].7">
+<![CDATA[NO_PITCH_CORRECTIONNo mould pitch corr.during pattern chg.]]>
+</Comment>
+<Comment Operand="[5].8">
+<![CDATA[EJ FRSTE
+SANDCYKLUS]]>
+</Comment>
+<Comment Operand="[5].9">
+<![CDATA[PMC
+STAMPNING
+INDLEDT]]>
+</Comment>
+<Comment Operand="[5].10">
+<![CDATA[FORM
+TRANSPORT
+SLUT]]>
+</Comment>
+<Comment Operand="[5].11">
+<![CDATA[EJ FRSTE
+PMC CYKLUS]]>
+</Comment>
+<Comment Operand="[5].12">
+<![CDATA[PMC START
+ONE SHOT]]>
+</Comment>
+<Comment Operand="[5].13">
+<![CDATA[ANNULLER
+FORM
+ONE SHOT]]>
+</Comment>
+<Comment Operand="[5].14">
+<![CDATA[CSE
+STARTKNAP
+AKTIVERET
+ONE SHOT]]>
+</Comment>
+<Comment Operand="[5].15">
+<![CDATA[CSE IKKE
+UDE VED
+SIMULTAN
+KRSEL]]>
+</Comment>
+<Comment Operand="[6]">
+<![CDATA[PMC
+RUNNING,
+DATA
+OVERFRT]]>
+</Comment>
+<Comment Operand="[6].0">
+<![CDATA[PMC
+RUNNING]]>
+</Comment>
+<Comment Operand="[6].1">
+<![CDATA[DATA
+OVERFRT
+PMC TRIN 2]]>
+</Comment>
+<Comment Operand="[6].2">
+<![CDATA[DATA
+OVERFRT
+PMC TRIN 3]]>
+</Comment>
+<Comment Operand="[6].3">
+<![CDATA[DATA
+OVERFRT
+PMC TRIN 4]]>
+</Comment>
+<Comment Operand="[6].4">
+<![CDATA[DATA
+OVERFRT
+PMC TRIN 5]]>
+</Comment>
+<Comment Operand="[6].5">
+<![CDATA[DATA
+OVERFRT
+PMC TRIN 6]]>
+</Comment>
+<Comment Operand="[6].6">
+<![CDATA[START COND
+PMC TRIN 1
+OK]]>
+</Comment>
+<Comment Operand="[6].7">
+<![CDATA[PMC_1_OK_DATADATA
+OVERFRT
+PMC TRIN 1]]>
+</Comment>
+<Comment Operand="[6].8">
+<![CDATA[DATA
+OVERFRT
+PMC
+FRSTE
+GANG]]>
+</Comment>
+<Comment Operand="[6].9">
+<![CDATA[PMC START
+FORSG
+TILLADT]]>
+</Comment>
+<Comment Operand="[6].10">
+<![CDATA[PMC MANUEL
+RUNNING]]>
+</Comment>
+<Comment Operand="[6].11">
+<![CDATA[BEVGELIG
+RIST MAN
+FREM]]>
+</Comment>
+<Comment Operand="[6].12">
+<![CDATA[BEVGELIG
+RIST MAN
+BAK]]>
+</Comment>
+<Comment Operand="[6].13">
+<![CDATA[BEVGELIG
+RIST MAN
+OP]]>
+</Comment>
+<Comment Operand="[6].14">
+<![CDATA[BEVGELIG
+RIST MAN
+NED]]>
+</Comment>
+<Comment Operand="[6].15">
+<![CDATA[FAST RIST
+MAN OP]]>
+</Comment>
+<Comment Operand="[7].0">
+<![CDATA[KERNE ER
+FRIGIVET
+AF ACF]]>
+</Comment>
+<Comment Operand="[7].1">
+<![CDATA[PPC BJLE
+ER
+KVITTERET]]>
+</Comment>
+<Comment Operand="[7].2">
+<![CDATA[Squeezepressure 75%
+Achieved]]>
+</Comment>
+<Comment Operand="[7].3">
+<![CDATA[Powerlimit
+Achieved]]>
+</Comment>
+<Comment Operand="[7].4">
+<![CDATA[Squeezepressure
+Achieved]]>
+</Comment>
+<Comment Operand="[7].5">
+<![CDATA[Powerlimit
+Active]]>
+</Comment>
+<Comment Operand="[7].6">
+<![CDATA[SAMMENLG-
+NINGSTRYK
+NET]]>
+</Comment>
+<Comment Operand="[7].7">
+<![CDATA[FRSTE
+VMAX
+MLING OK]]>
+</Comment>
+<Comment Operand="[7].8">
+<![CDATA[TILLAD HY
+RESTART
+TEST]]>
+</Comment>
+<Comment Operand="[7].9">
+<![CDATA[SERVICE
+PGR]]>
+</Comment>
+<Comment Operand="[7].10">
+<![CDATA[POSITIV
+RAMPE
+BIT]]>
+</Comment>
+<Comment Operand="[7].11">
+<![CDATA[NY
+BREMSEPOS
+OVERFRT]]>
+</Comment>
+<Comment Operand="[7].12">
+<![CDATA[STOP
+AFLFT I
+OPR 4.0]]>
+</Comment>
+<Comment Operand="[7].13">
+<![CDATA[PPC
+TOWARDS
+LEFT]]>
+</Comment>
+<Comment Operand="[7].14">
+<![CDATA[PPC
+TOWARDS
+RIGHT]]>
+</Comment>
+<Comment Operand="[7].15">
+<![CDATA[PPC FAST
+SPEED]]>
+</Comment>
+<Comment Operand="[8]">
+<![CDATA[CSE
+RUNNING]]>
+</Comment>
+<Comment Operand="[8].0">
+<![CDATA[CSE
+RUNNING]]>
+</Comment>
+<Comment Operand="[8].1">
+<![CDATA[DATA
+OVERFRT
+CSE TRIN 1]]>
+</Comment>
+<Comment Operand="[8].2">
+<![CDATA[START COND
+CSE TRIN 2]]>
+</Comment>
+<Comment Operand="[8].3">
+<![CDATA[DATA
+OVERFRT
+CSE TRIN 2]]>
+</Comment>
+<Comment Operand="[8].4">
+<![CDATA[DATA
+OVERFRT
+CSE TRIN 3]]>
+</Comment>
+<Comment Operand="[8].5">
+<![CDATA[DATA
+OVERFRT
+CSE TRIN 4]]>
+</Comment>
+<Comment Operand="[8].6">
+<![CDATA[DATA
+OVERFRT
+CSE TRIN 5]]>
+</Comment>
+<Comment Operand="[8].7">
+<![CDATA[DATA
+OVERFRT
+CSE TRIN 6]]>
+</Comment>
+<Comment Operand="[8].8">
+<![CDATA[DATA
+OVERFRT
+CSE TRIN 7]]>
+</Comment>
+<Comment Operand="[8].9">
+<![CDATA[START COND
+CSE TRIN 8]]>
+</Comment>
+<Comment Operand="[8].10">
+<![CDATA[DATA
+OVERFRT
+CSE TRIN 8]]>
+</Comment>
+<Comment Operand="[8].11">
+<![CDATA[CSE MAN
+IND]]>
+</Comment>
+<Comment Operand="[8].12">
+<![CDATA[CSE MAN
+UD]]>
+</Comment>
+<Comment Operand="[8].13">
+<![CDATA[CSE MAN
+BAK]]>
+</Comment>
+<Comment Operand="[8].14">
+<![CDATA[CSE MAN
+FREM]]>
+</Comment>
+<Comment Operand="[8].15">
+<![CDATA[CSE START
+FORSG
+TILLADT]]>
+</Comment>
+<Comment Operand="[9].0">
+<![CDATA[HNDKODE
+LSER ONS]]>
+</Comment>
+<Comment Operand="[9].1">
+<![CDATA[BIT FOR PP
+KODE
+FUNDET]]>
+</Comment>
+<Comment Operand="[9].2">
+<![CDATA[BIT FOR SP
+KODE
+FUNDET]]>
+</Comment>
+<Comment Operand="[9].3">
+<![CDATA[BIT FOR CM
+KODE
+FUNDET]]>
+</Comment>
+<Comment Operand="[9].4">
+<![CDATA[BIT FOR
+EXT KODE
+FUNDET]]>
+</Comment>
+<Comment Operand="[9].5">
+<![CDATA[CSE M
+IKKE KRE]]>
+</Comment>
+<Comment Operand="[9].6">
+<![CDATA[KERNE ØNSKES ILAGT]]>
+</Comment>
+<Comment Operand="[9].7">
+<![CDATA[LYSGITTER
+ER BLEVET
+TESTET]]>
+</Comment>
+<Comment Operand="[9].8">
+<![CDATA[INGEN
+KERNE I
+FORM]]>
+</Comment>
+<Comment Operand="[9].9">
+<![CDATA[CSE START KNAP
+HAR VÆRET AKTIVERET]]>
+</Comment>
+<Comment Operand="[9].10">
+<![CDATA[DISPLAY
+CONVER-
+TERET]]>
+</Comment>
+<Comment Operand="[9].11">
+<![CDATA[CIFFER
+SENDT]]>
+</Comment>
+<Comment Operand="[9].12">
+<![CDATA[LYSGITTER
+FRIT 
+ONE SHOT]]>
+</Comment>
+<Comment Operand="[9].13">
+<![CDATA[PMC STOP
+MONITOR
+ONE SHOT]]>
+</Comment>
+<Comment Operand="[9].14">
+<![CDATA[VENSTRE
+SKYDEDR
+ONE SHOT]]>
+</Comment>
+<Comment Operand="[9].15">
+<![CDATA[HJRE
+SKYDEDR
+ONE SHOT]]>
+</Comment>
+<Comment Operand="[10].0">
+<![CDATA[VENT FAST]]>
+</Comment>
+<Comment Operand="[10].1">
+<![CDATA[FORM
+MODHOLD
+START
+ONE-SHOT]]>
+</Comment>
+<Comment Operand="[10].2">
+<![CDATA[SANDSPJLD
+MANUEL 
+START
+ONE-SHOT]]>
+</Comment>
+<Comment Operand="[10].3">
+<![CDATA[CSE MANUEL
+START
+ONE-SHOT]]>
+</Comment>
+<Comment Operand="[10].4">
+<![CDATA[DMM-PMC-
+CSE- STOP
+ONE-SHOT]]>
+</Comment>
+<Comment Operand="[10].5">
+<![CDATA[STOP
+MONITOR
+ONE-SHOT]]>
+</Comment>
+<Comment Operand="[10].6">
+<![CDATA[PMC MAN
+START
+ONE-SHOT]]>
+</Comment>
+<Comment Operand="[10].7">
+<![CDATA[DMM MAN
+START
+ONE SHOT]]>
+</Comment>
+<Comment Operand="[10].8">
+<![CDATA[DMM START
+ONE SHOT]]>
+</Comment>
+<Comment Operand="[10].9">
+<![CDATA[SCREEN 3
+START]]>
+</Comment>
+<Comment Operand="[10].10">
+<![CDATA[PRODUKTION
+STARTET]]>
+</Comment>
+<Comment Operand="[10].11">
+<![CDATA[UBETINGET
+MODELSKIFT
+INDLEDT]]>
+</Comment>
+<Comment Operand="[10].12">
+<![CDATA[LANGSOM
+KRSEL VED
+KAMMER
+LUKNING]]>
+</Comment>
+<Comment Operand="[10].13">
+<![CDATA[EN FORM
+ER
+ANNULLERET]]>
+</Comment>
+<Comment Operand="[10].14">
+<![CDATA[INPUT TEST
+'1' SLUT]]>
+</Comment>
+<Comment Operand="[10].15">
+<![CDATA[INPUT TEST
+'0' SLUT]]>
+</Comment>
+<Comment Operand="[11].0">
+<![CDATA[INPUTTEST
+SLUT]]>
+</Comment>
+<Comment Operand="[11].1">
+<![CDATA[FEJL
+KVITTERING
+ONS]]>
+</Comment>
+<Comment Operand="[11].2">
+<![CDATA[OUTPUT
+TEST '0'
+SLUT]]>
+</Comment>
+<Comment Operand="[11].3">
+<![CDATA[OUTPUT
+TEST '1'
+SLUT]]>
+</Comment>
+<Comment Operand="[11].4">
+<![CDATA[110V
+OUTPUTTEST
+SLUT]]>
+</Comment>
+<Comment Operand="[11].5">
+<![CDATA[BLOKERING.
+UDGANG 
+SKAL IKKE
+TESTES]]>
+</Comment>
+<Comment Operand="[11].6">
+<![CDATA[BLOKERING.
+DC UDGANG
+SKAL IKKE
+TESTES]]>
+</Comment>
+<Comment Operand="[11].7">
+<![CDATA[FEJL
+KVITTERING
+I/O]]>
+</Comment>
+<Comment Operand="[11].8">
+<![CDATA[SPRAY
+TIMER
+SLUT ONS]]>
+</Comment>
+<Comment Operand="[11].9">
+<![CDATA[KODELSER
+INSTAL-
+LERET ONS]]>
+</Comment>
+<Comment Operand="[11].10">
+<![CDATA[KODELSER
+IKKE
+INSTAL-
+LERET ONS]]>
+</Comment>
+<Comment Operand="[11].11">
+<![CDATA[NEGATIV
+HASTIGHED
+ONS]]>
+</Comment>
+<Comment Operand="[11].12">
+<![CDATA[FORM TIL
+SPECIFIC
+DATA]]>
+</Comment>
+<Comment Operand="[11].13">
+<![CDATA[PUMPE NUL
+FUNKTIONS
+CHECK]]>
+</Comment>
+<Comment Operand="[11].14">
+<![CDATA[LOOP DEV
+FUNKTIONS
+CHECK]]>
+</Comment>
+<Comment Operand="[11].15">
+<![CDATA[PMC
+STAMPNING
+STARTET]]>
+</Comment>
+<Comment Operand="[12]">
+<![CDATA[DATA
+OVERFRT]]>
+</Comment>
+<Comment Operand="[12].0">
+<![CDATA[DATA
+OVERFRT
+SP MAN BAK]]>
+</Comment>
+<Comment Operand="[12].1">
+<![CDATA[DATA
+OVERFRT
+SP
+MAN FREM]]>
+</Comment>
+<Comment Operand="[12].2">
+<![CDATA[DMM NSKER
+FORM
+TRANSPORT]]>
+</Comment>
+<Comment Operand="[12].3">
+<![CDATA[DMM KLAR
+TIL FORM
+TRANSPORT]]>
+</Comment>
+<Comment Operand="[12].4">
+<![CDATA[SANDSPJLD
+MANUEL
+FLAG]]>
+</Comment>
+<Comment Operand="[12].5">
+<![CDATA[FORM
+MODHOLDS
+POSITION
+OK]]>
+</Comment>
+<Comment Operand="[12].6">
+<![CDATA[FORM
+MODHOLD
+START
+FORSG
+TILLADT]]>
+</Comment>
+<Comment Operand="[12].7">
+<![CDATA[FORM
+MODHOLD
+MANUEL
+BNE]]>
+</Comment>
+<Comment Operand="[12].8">
+<![CDATA[FORM
+MODHOLD
+MANUEL
+KLEMME]]>
+</Comment>
+<Comment Operand="[12].9">
+<![CDATA[FORM
+MODHOLD
+MANUEL
+BAK]]>
+</Comment>
+<Comment Operand="[12].10">
+<![CDATA[FORM
+MODHOLD
+MANUEL
+FREM]]>
+</Comment>
+<Comment Operand="[12].11">
+<![CDATA[MAX SP/PP
+Velocity
+Achieved]]>
+</Comment>
+<Comment Operand="[12].12">
+<![CDATA[HY RESTART
+TEST START]]>
+</Comment>
+<Comment Operand="[12].13">
+<![CDATA[HY RESTART
+TEST SLUT]]>
+</Comment>
+<Comment Operand="[12].14">
+<![CDATA[TIDSSTYRET
+NED
+BREMSNING
+OPR 4B]]>
+</Comment>
+<Comment Operand="[12].15">
+<![CDATA[DMM STEP
+STOP]]>
+</Comment>
+<Comment Operand="[13]">
+<![CDATA[PMC DATA
+OVERFRT]]>
+</Comment>
+<Comment Operand="[13].0">
+<![CDATA[FAST RIST
+MAN NED]]>
+</Comment>
+<Comment Operand="[13].1">
+<![CDATA[DATA
+OVERFRT
+BEVGELIG
+RIST MAN.
+FREM]]>
+</Comment>
+<Comment Operand="[13].2">
+<![CDATA[DATA
+OVERFRT
+BEVGELIG
+RIST MAN.
+BAK]]>
+</Comment>
+<Comment Operand="[13].3">
+<![CDATA[DATA
+OVERFRT
+BEVGELIG
+RIST MAN.
+OP]]>
+</Comment>
+<Comment Operand="[13].4">
+<![CDATA[DATA
+OVERFRT
+BEVGELIG
+RIST MAN.
+NED]]>
+</Comment>
+<Comment Operand="[13].5">
+<![CDATA[DATA
+OVERFRT
+FAST RIST
+MAN. OP]]>
+</Comment>
+<Comment Operand="[13].6">
+<![CDATA[DATA
+OVERFRT
+FAST RIST
+MAN NED]]>
+</Comment>
+<Comment Operand="[13].7">
+<![CDATA[START COND
+PMC TRIN 4
+OK]]>
+</Comment>
+<Comment Operand="[13].8">
+<![CDATA[START COND
+PMC
+TMNING OK]]>
+</Comment>
+<Comment Operand="[13].9">
+<![CDATA[DATA
+OVERFRT
+PMC
+TMNING]]>
+</Comment>
+<Comment Operand="[13].10">
+<![CDATA[SBC MANUEL
+ON/OFF]]>
+</Comment>
+<Comment Operand="[13].11">
+<![CDATA[PMC
+FORWARD
+WITHOUT
+SBO ASS.]]>
+</Comment>
+<Comment Operand="[13].12">
+<![CDATA[PMC
+REVERSE
+WITHOUT
+SBO ASS.]]>
+</Comment>
+<Comment Operand="[13].13">
+<![CDATA[DECELERA
+TION
+DISCHARGE]]>
+</Comment>
+<Comment Operand="[14]">
+<![CDATA[CSE Word]]>
+</Comment>
+<Comment Operand="[14].0">
+<![CDATA[CSE MANUEL
+RUNNING]]>
+</Comment>
+<Comment Operand="[14].1">
+<![CDATA[DATA
+OVERFRT
+CSE MANUEL
+IND]]>
+</Comment>
+<Comment Operand="[14].2">
+<![CDATA[DATA
+OVERFRT
+CSE MANUEL
+UD]]>
+</Comment>
+<Comment Operand="[14].3">
+<![CDATA[DATA
+OVERFRT
+CSE MANUEL
+BAK]]>
+</Comment>
+<Comment Operand="[14].4">
+<![CDATA[DATA
+OVERFRT
+CSE MANUEL
+FREM INDE]]>
+</Comment>
+<Comment Operand="[14].5">
+<![CDATA[DATA
+OVERFRT
+CSE MANUEL
+FREM UDE]]>
+</Comment>
+<Comment Operand="[14].6">
+<![CDATA[CSE
+Stage 6&7
+overlap ok
+ ]]>
+</Comment>
+<Comment Operand="[14].7">
+<![CDATA[CSE_AUTO_START]]>
+</Comment>
+<Comment Operand="[17].8">
+<![CDATA[HASTIGHED
+På MAX]]>
+</Comment>
+<Comment Operand="[32]">
+<![CDATA[HARDWARE
+TEST ORD]]>
+</Comment>
+<Comment Operand="[36].1">
+<![CDATA[TCU_INST]]>
+</Comment>
+<Comment Operand="[36].4">
+<![CDATA[SBO HIGH
+PRESSURE
+REQUEST]]>
+</Comment>
+<Comment Operand="[36].5">
+<![CDATA[SBO
+Assist
+Required
+Syncron]]>
+</Comment>
+<Comment Operand="[36].6">
+<![CDATA[SBO
+Acc.
+Syncron]]>
+</Comment>
+<Comment Operand="[36].7">
+<![CDATA[SBO
+Const. Vel.
+Syncron]]>
+</Comment>
+<Comment Operand="[36].8">
+<![CDATA[SBO
+Decc.
+Syncron]]>
+</Comment>
+<Comment Operand="[36].11">
+<![CDATA[SEQUENCE
+CODES
+SBO #1
+ENABLED]]>
+</Comment>
+<Comment Operand="[36].12">
+<![CDATA[SEQUENCE
+CODES
+SBO #2
+ENABLED]]>
+</Comment>
+<Comment Operand="[37].6">
+<![CDATA[DMM CHANGE FROM
+OP 4.1 TO OP 4.0]]>
+</Comment>
+<Comment Operand="[37].7">
+<![CDATA[Poured
+since last
+mould transport]]>
+</Comment>
+<Comment Operand="[38].0">
+<![CDATA[OP_1_PRE_ON]]>
+</Comment>
+<Comment Operand="[38].1">
+<![CDATA[BIP]]>
+</Comment>
+<Comment Operand="[38].2">
+<![CDATA[PP_ACC
+FEED-BACK
+READY]]>
+</Comment>
+<Comment Operand="[38].3">
+<![CDATA[SP_ACC FEED-BACK
+READY]]>
+</Comment>
+<Comment Operand="[38].4">
+<![CDATA[PP_Acc
+Feed-Back
+PMC & SBC
+Enabled]]>
+</Comment>
+<Comment Operand="[38].5">
+<![CDATA[SP_Acc Feed-Back
+Enabled]]>
+</Comment>
+<Comment Operand="[38].6">
+<![CDATA[SHOTVALVE_TOGGLE_B_C]]>
+</Comment>
+<Comment Operand="[38].7">
+<![CDATA[TEST_SPRAYFLOW_ONS]]>
+</Comment>
+<Comment Operand="[38].8">
+<![CDATA[TEST_SPRAYFLOW_ON]]>
+</Comment>
+<Comment Operand="[38].9">
+<![CDATA[TEST_SPRAYFLOW_FAULT]]>
+</Comment>
+<Comment Operand="[38].10">
+<![CDATA[SP_LIFTED_LATE]]>
+</Comment>
+<Comment Operand="[38].11">
+<![CDATA[SP Warning
+Late Lift
+F-mode:
+x 2/3 speed]]>
+</Comment>
+<Comment Operand="[38].12">
+<![CDATA[SP Warning
+Late Lift
+F-mode:
+x 0.5 speed]]>
+</Comment>
+<Comment Operand="[39].0">
+<![CDATA[TWO_AIR_INST]]>
+</Comment>
+<Comment Operand="[39].1">
+<![CDATA[HEATING_CUT_INST]]>
+</Comment>
+<Comment Operand="[39].2">
+<![CDATA[STD_CAM_INST1: DMM Std.
+0: DMM 3065 only]]>
+</Comment>
+<Comment Operand="[39].3">
+<![CDATA[ACF_GATE_INST]]>
+</Comment>
+<Comment Operand="[39].4">
+<![CDATA[SSC_ENABLE_INST]]>
+</Comment>
+<Comment Operand="[39].5">
+<![CDATA[24VDC_CNTRL_INST]]>
+</Comment>
+<Comment Operand="[39].10">
+<![CDATA[ONS_NOT_EMPTY]]>
+</Comment>
+<Comment Operand="[39].11">
+<![CDATA[Sample SP-cam-pos
+Fwd]]>
+</Comment>
+<Comment Operand="[39].12">
+<![CDATA[Sample SP-cam-pos
+Rev]]>
+</Comment>
+<Comment Operand="[39].13">
+<![CDATA[Mould
+squeezed
+AFB_Enabled]]>
+</Comment>
+<Comment Operand="[39].14">
+<![CDATA[HEAT_REQUESTED]]>
+</Comment>
+<Comment Operand="[39].15">
+<![CDATA[ONS_MOULD_TRANS_OK]]>
+</Comment>
+<Comment Operand="[40].0">
+<![CDATA[LEFT_GATE_HIGH_OK]]>
+</Comment>
+<Comment Operand="[40].1">
+<![CDATA[RIGHT_GATE_HIGH_OK]]>
+</Comment>
+<Comment Operand="[40].2">
+<![CDATA[PPC_GATE_HIGH_OK]]>
+</Comment>
+<Comment Operand="[41]">
+<![CDATA[PRESTRIP_CONTROL]]>
+</Comment>
+<Comment Operand="[41].0">
+<![CDATA[PRESTRIP_SP_FWD_SET]]>
+</Comment>
+<Comment Operand="[41].1">
+<![CDATA[PRESTRIP_SP_FWD_DONE]]>
+</Comment>
+<Comment Operand="[41].2">
+<![CDATA[PRESTRIP_SP_RET_SET]]>
+</Comment>
+<Comment Operand="[41].3">
+<![CDATA[PRESTRIP_SP_RET_DONE]]>
+</Comment>
+<Comment Operand="[41].4">
+<![CDATA[PRESTRIP_SP_DONE]]>
+</Comment>
+<Comment Operand="[41].5">
+<![CDATA[PRESTRIP_SP_P_DIF_OK]]>
+</Comment>
+<Comment Operand="[41].8">
+<![CDATA[PRESTRIP_PP_FWD_SET]]>
+</Comment>
+<Comment Operand="[41].9">
+<![CDATA[PRESTRIP_PP_FWD_DONE]]>
+</Comment>
+<Comment Operand="[41].10">
+<![CDATA[PRESTRIP_PP_RET_SET]]>
+</Comment>
+<Comment Operand="[41].11">
+<![CDATA[PRESTRIP_PP_RET_DONE]]>
+</Comment>
+<Comment Operand="[41].12">
+<![CDATA[PRESTRIP_PP_DONE]]>
+</Comment>
+<Comment Operand="[41].13">
+<![CDATA[PRESTRIP_PP_P_DIF_OK]]>
+</Comment>
+<Comment Operand="[42].0">
+<![CDATA[SIZE_A_S]]>
+</Comment>
+<Comment Operand="[42].1">
+<![CDATA[SIZE_B_C]]>
+</Comment>
+</Comments>
+<Data Format="L5K">
+<![CDATA[[8,4867,32769,32768,385,7426,1,4394,0,3329,50432,17937,14368,0,0,63479,65471,65535,65535,65535,65535,65525
+					,65534,65535,16383,0,0,65024,63975,65533,65535,53635,0,2239,55535,65507,2,16301,9288,39973,7,0,2]]]>
+</Data>
+<Data Format="Decorated">
+<Array DataType="DINT" Dimensions="43" Radix="Binary">
+<Element Index="[0]" Value="2#0000_0000_0000_0000_0000_0000_0000_1000"/>
+<Element Index="[1]" Value="2#0000_0000_0000_0000_0001_0011_0000_0011"/>
+<Element Index="[2]" Value="2#0000_0000_0000_0000_1000_0000_0000_0001"/>
+<Element Index="[3]" Value="2#0000_0000_0000_0000_1000_0000_0000_0000"/>
+<Element Index="[4]" Value="2#0000_0000_0000_0000_0000_0001_1000_0001"/>
+<Element Index="[5]" Value="2#0000_0000_0000_0000_0001_1101_0000_0010"/>
+<Element Index="[6]" Value="2#0000_0000_0000_0000_0000_0000_0000_0001"/>
+<Element Index="[7]" Value="2#0000_0000_0000_0000_0001_0001_0010_1010"/>
+<Element Index="[8]" Value="2#0000_0000_0000_0000_0000_0000_0000_0000"/>
+<Element Index="[9]" Value="2#0000_0000_0000_0000_0000_1101_0000_0001"/>
+<Element Index="[10]" Value="2#0000_0000_0000_0000_1100_0101_0000_0000"/>
+<Element Index="[11]" Value="2#0000_0000_0000_0000_0100_0110_0001_0001"/>
+<Element Index="[12]" Value="2#0000_0000_0000_0000_0011_1000_0010_0000"/>
+<Element Index="[13]" Value="2#0000_0000_0000_0000_0000_0000_0000_0000"/>
+<Element Index="[14]" Value="2#0000_0000_0000_0000_0000_0000_0000_0000"/>
+<Element Index="[15]" Value="2#0000_0000_0000_0000_1111_0111_1111_0111"/>
+<Element Index="[16]" Value="2#0000_0000_0000_0000_1111_1111_1011_1111"/>
+<Element Index="[17]" Value="2#0000_0000_0000_0000_1111_1111_1111_1111"/>
+<Element Index="[18]" Value="2#0000_0000_0000_0000_1111_1111_1111_1111"/>
+<Element Index="[19]" Value="2#0000_0000_0000_0000_1111_1111_1111_1111"/>
+<Element Index="[20]" Value="2#0000_0000_0000_0000_1111_1111_1111_1111"/>
+<Element Index="[21]" Value="2#0000_0000_0000_0000_1111_1111_1111_0101"/>
+<Element Index="[22]" Value="2#0000_0000_0000_0000_1111_1111_1111_1110"/>
+<Element Index="[23]" Value="2#0000_0000_0000_0000_1111_1111_1111_1111"/>
+<Element Index="[24]" Value="2#0000_0000_0000_0000_0011_1111_1111_1111"/>
+<Element Index="[25]" Value="2#0000_0000_0000_0000_0000_0000_0000_0000"/>
+<Element Index="[26]" Value="2#0000_0000_0000_0000_0000_0000_0000_0000"/>
+<Element Index="[27]" Value="2#0000_0000_0000_0000_1111_1110_0000_0000"/>
+<Element Index="[28]" Value="2#0000_0000_0000_0000_1111_1001_1110_0111"/>
+<Element Index="[29]" Value="2#0000_0000_0000_0000_1111_1111_1111_1101"/>
+<Element Index="[30]" Value="2#0000_0000_0000_0000_1111_1111_1111_1111"/>
+<Element Index="[31]" Value="2#0000_0000_0000_0000_1101_0001_1000_0011"/>
+<Element Index="[32]" Value="2#0000_0000_0000_0000_0000_0000_0000_0000"/>
+<Element Index="[33]" Value="2#0000_0000_0000_0000_0000_1000_1011_1111"/>
+<Element Index="[34]" Value="2#0000_0000_0000_0000_1101_1000_1110_1111"/>
+<Element Index="[35]" Value="2#0000_0000_0000_0000_1111_1111_1110_0011"/>
+<Element Index="[36]" Value="2#0000_0000_0000_0000_0000_0000_0000_0010"/>
+<Element Index="[37]" Value="2#0000_0000_0000_0000_0011_1111_1010_1101"/>
+<Element Index="[38]" Value="2#0000_0000_0000_0000_0010_0100_0100_1000"/>
+<Element Index="[39]" Value="2#0000_0000_0000_0000_1001_1100_0010_0101"/>
+<Element Index="[40]" Value="2#0000_0000_0000_0000_0000_0000_0000_0111"/>
+<Element Index="[41]" Value="2#0000_0000_0000_0000_0000_0000_0000_0000"/>
+<Element Index="[42]" Value="2#0000_0000_0000_0000_0000_0000_0000_0010"/>
+</Array>
+</Data>
+</Tag>
+<Tag Name="N29" TagType="Produced" DataType="INT" Dimensions="70" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<ProduceInfo PLCMappingFile="29"/>
+<Description>
+<![CDATA[VDU>PLC F5]]>
+</Description>
+<Comments>
+<Comment Operand="[0]">
+<![CDATA[VDU5_PMC_EMPTY_TIME]]>
+</Comment>
+<Comment Operand="[1]">
+<![CDATA[VDU5_PMC_EMPTY_STROK]]>
+</Comment>
+<Comment Operand="[2]">
+<![CDATA[VDU5_CONTROL_3]]>
+</Comment>
+<Comment Operand="[2].0">
+<![CDATA[VDU7_PARAL_TESTPARALLEL-
+LITETS
+TEST]]>
+</Comment>
+<Comment Operand="[2].1">
+<![CDATA[VDU7_DISP_NO_2]]>
+</Comment>
+<Comment Operand="[2].2">
+<![CDATA[VDU7_PP_SEAL_ONAKTIVER
+PP
+KAMMER
+TTNING]]>
+</Comment>
+<Comment Operand="[2].3">
+<![CDATA[VDU7_SP_SEAL_ONAKTIVER
+SP
+KAMMER
+TTNING]]>
+</Comment>
+<Comment Operand="[2].4">
+<![CDATA[VDU7_CSE_IDLE_ALONETOMGANGS
+KRSEL MED
+CSE
+ALENE]]>
+</Comment>
+<Comment Operand="[2].5">
+<![CDATA[VDU7_CSE_IDLE_DMMCSE MED I
+TOMGANG]]>
+</Comment>
+<Comment Operand="[2].6">
+<![CDATA[VDU7_MOVE_TO_END_POSTILLAD SP
+PP OG PMC
+FULD
+STEMPEL
+BEVGELSE]]>
+</Comment>
+<Comment Operand="[2].7">
+<![CDATA[VDU7_PPD_BOARD_ADJADJUSTMENT
+OF PPD
+BOARD]]>
+</Comment>
+<Comment Operand="[2].8">
+<![CDATA[VDU7_HY13_ZERO_ADJHY 13
+ZERO
+ADJUSTMENT]]>
+</Comment>
+<Comment Operand="[2].9">
+<![CDATA[VDU7_OVERRIDE_THERMOOVERRIDE
+UDLSNING
+AF ET
+TERMOREL]]>
+</Comment>
+<Comment Operand="[2].10">
+<![CDATA[VDU7_DISP_10Disponibel
+Service
+Funktion]]>
+</Comment>
+<Comment Operand="[2].11">
+<![CDATA[VDU7_HY24_RESPONSPUMP HY24
+TILT
+Response
+F7:p13]]>
+</Comment>
+<Comment Operand="[2].12">
+<![CDATA[VDU7_DISP_12Disponibel
+Service
+Funktion]]>
+</Comment>
+<Comment Operand="[2].13">
+<![CDATA[VDU7_DISP_13]]>
+</Comment>
+<Comment Operand="[2].14">
+<![CDATA[VDU7_SBO1_TESTSBO1 SERV.
+FUNCTION
+SELECTED]]>
+</Comment>
+<Comment Operand="[2].15">
+<![CDATA[VDU7_SBO2_TESTSBO2 SERV.
+FUNCTION
+SELECTED]]>
+</Comment>
+<Comment Operand="[3]">
+<![CDATA[VDU5_OPR_COUNTER_1]]>
+</Comment>
+<Comment Operand="[4]">
+<![CDATA[VDU5_OPR_COUNTER_2]]>
+</Comment>
+<Comment Operand="[5]">
+<![CDATA[VDU5_OPR_COUNTER_3]]>
+</Comment>
+<Comment Operand="[6]">
+<![CDATA[VDU5_DMM_COUNT_1]]>
+</Comment>
+<Comment Operand="[7]">
+<![CDATA[VDU5_DMM_COUNT_2]]>
+</Comment>
+<Comment Operand="[8]">
+<![CDATA[VDU5_CSE_COUNT_1]]>
+</Comment>
+<Comment Operand="[9]">
+<![CDATA[VDU5_CSE_COUNT_2]]>
+</Comment>
+<Comment Operand="[10]">
+<![CDATA[VDU5_CONTROL_1]]>
+</Comment>
+<Comment Operand="[10].0">
+<![CDATA[VDU5_SSU_START_WHILESTART SSU
+NR SPJLD
+BNES]]>
+</Comment>
+<Comment Operand="[10].1">
+<![CDATA[VDU5_SSU_WITH_CLUTCHSSU MED
+KOBLING]]>
+</Comment>
+<Comment Operand="[10].2">
+<![CDATA[VDU5_VDU_RUNNINGCWD-VDU I
+RUN MODE]]>
+</Comment>
+<Comment Operand="[10].3">
+<![CDATA[VDU5_DISP_10_03]]>
+</Comment>
+<Comment Operand="[10].4">
+<![CDATA[VDU5_DATA_PCF5-271
+CIM PC com selected
+0: No
+1: Yes]]>
+</Comment>
+<Comment Operand="[10].5">
+<![CDATA[VDU5_MOULD_RET_AUTOAUTOMATISK
+POSITIONE
+RING AF
+FORM-
+MODHOLD]]>
+</Comment>
+<Comment Operand="[10].6">
+<![CDATA[VDU5_ADAPT_MOULD_PITADAPTIV
+FORM
+TYKKELSE]]>
+</Comment>
+<Comment Operand="[10].7">
+<![CDATA[VDU7_OVERRIDE_HW_ERROVERRIDE
+HARDWARE
+TEST I/O
+ERROR]]>
+</Comment>
+<Comment Operand="[10].8">
+<![CDATA[VDU5_PATT_CHG_SEENMODELSKIFT
+ER SET]]>
+</Comment>
+<Comment Operand="[10].9">
+<![CDATA[VDU5_NEW_COUNTERNYE FORM-
+TLLERE
+NSKES]]>
+</Comment>
+<Comment Operand="[10].10">
+<![CDATA[VDU5_NEW_CNT_DMM_CSENY DMM/CSE
+TOTAL
+TLLER
+NSKES]]>
+</Comment>
+<Comment Operand="[10].11">
+<![CDATA[VDU5_F3_START_REQSCREEN 3
+START
+NSKES]]>
+</Comment>
+<Comment Operand="[10].12">
+<![CDATA[VDU5_F3_SELECTEDSCREEN 3
+VALGT]]>
+</Comment>
+<Comment Operand="[10].13">
+<![CDATA[VDU5_REQ_NEW_DATENY DATO
+NSKES]]>
+</Comment>
+<Comment Operand="[10].14">
+<![CDATA[VDU5_REQ_NEW_TIMENY TID
+NSKES]]>
+</Comment>
+<Comment Operand="[10].15">
+<![CDATA[VDU5_REQ_NEW_OPRNY
+OPERATION
+NSKES]]>
+</Comment>
+<Comment Operand="[11]">
+<![CDATA[VDU5_SSU_VALVE_DELAY]]>
+</Comment>
+<Comment Operand="[12]">
+<![CDATA[VDU5_CONTROL_4]]>
+</Comment>
+<Comment Operand="[12].0">
+<![CDATA[VDU7_DISP_12_00]]>
+</Comment>
+<Comment Operand="[12].1">
+<![CDATA[VDU5_NEXT_ACCEPTEDNEXT
+PATTERN
+DATA
+GODKENDT]]>
+</Comment>
+<Comment Operand="[12].2">
+<![CDATA[VDU6_WAIT_ON_SANDFAST VENTE
+P SAND]]>
+</Comment>
+<Comment Operand="[12].3">
+<![CDATA[VDU6_WAIT_ON_AIRFAST VENTE
+P LUFT]]>
+</Comment>
+<Comment Operand="[12].4">
+<![CDATA[VDU6_WAIT_ON_CORESFAST VENTE
+P
+KERNER]]>
+</Comment>
+<Comment Operand="[12].5">
+<![CDATA[VDU6_WAIT_ON_METALFAST VENTE
+P JERN]]>
+</Comment>
+<Comment Operand="[12].6">
+<![CDATA[VDU6_WAIT_ON_SHK_OUTFAST VENTE
+P
+SHAKE OUT]]>
+</Comment>
+<Comment Operand="[12].7">
+<![CDATA[VDU6_WAIT_ON_ACEFAST VENTE
+P ACE]]>
+</Comment>
+<Comment Operand="[12].8">
+<![CDATA[VDU6_WAIT_ON_PATTERNFAST VENTE
+P
+MODELLER]]>
+</Comment>
+<Comment Operand="[12].9">
+<![CDATA[VDU5_CIM_8_1_INSTCode-Reader inst.]]>
+</Comment>
+<Comment Operand="[12].10">
+<![CDATA[VDU4_EXT_CODE_REQEXT KODE
+DATA SGES]]>
+</Comment>
+<Comment Operand="[12].11">
+<![CDATA[VDU5_DISP_12_11]]>
+</Comment>
+<Comment Operand="[12].12">
+<![CDATA[VDU5_MOULD_POUR_INSTOneMouldPoured inst.]]>
+</Comment>
+<Comment Operand="[12].13">
+<![CDATA[VDU5_ACF_GATE_INSTOnly 3062]]>
+</Comment>
+<Comment Operand="[12].14">
+<![CDATA[F5-273
+CIM 2.6
+installed IMCT
+module 0: No 1: Yes]]>
+</Comment>
+<Comment Operand="[12].15">
+<![CDATA[F5-274
+CIM 2.7
+installed casting
+sorting 0: No 1: Yes]]>
+</Comment>
+<Comment Operand="[13]">
+<![CDATA[VDU5_SSU_EXHST_DELAY]]>
+</Comment>
+<Comment Operand="[14]">
+<![CDATA[VDU5_CH_SEAL_DLY_ON]]>
+</Comment>
+<Comment Operand="[15]">
+<![CDATA[VDU5_CH_SEAL_DLY_OFF]]>
+</Comment>
+<Comment Operand="[16]">
+<![CDATA[VDU5_DMS_NO]]>
+</Comment>
+<Comment Operand="[17]">
+<![CDATA[VDU5_SBO_ACTIVE]]>
+</Comment>
+<Comment Operand="[17].0">
+<![CDATA[BOOSTER
+KRSELS
+MDE
+AKTIV
+MODE ]]>
+</Comment>
+<Comment Operand="[18]">
+<![CDATA[VDU5_OIL_TMP_COOL_ON]]>
+</Comment>
+<Comment Operand="[19]">
+<![CDATA[VDU5_OIL_TMP_HEAT_ONOLIE
+TEMPERATUR]]>
+</Comment>
+<Comment Operand="[20]">
+<![CDATA[VDU5_SBO_INSTSBO Inst.]]>
+</Comment>
+<Comment Operand="[20].0">
+<![CDATA[SBO1 IN-
+STALLERET]]>
+</Comment>
+<Comment Operand="[20].1">
+<![CDATA[SBO2 IN-
+STALLERET]]>
+</Comment>
+<Comment Operand="[21]">
+<![CDATA[VDU5_REQ_YEAR]]>
+</Comment>
+<Comment Operand="[22]">
+<![CDATA[VDU5_REQ_MONTH]]>
+</Comment>
+<Comment Operand="[23]">
+<![CDATA[VDU5_REQ_DAY]]>
+</Comment>
+<Comment Operand="[24]">
+<![CDATA[VDU5_REQ_HOUR]]>
+</Comment>
+<Comment Operand="[25]">
+<![CDATA[VDU5_REQ_MINUTES]]>
+</Comment>
+<Comment Operand="[26]">
+<![CDATA[VDU5_REQ_LANGUAGE]]>
+</Comment>
+<Comment Operand="[27]">
+<![CDATA[VDU5_REQ_PIN_F7]]>
+</Comment>
+<Comment Operand="[28]">
+<![CDATA[VDU5_PPC_MIN_SPEED]]>
+</Comment>
+<Comment Operand="[29]">
+<![CDATA[VDU5_PPC_INSTALLED]]>
+</Comment>
+<Comment Operand="[30]">
+<![CDATA[VDU5_PMC_SBC_INSTPMC & SBC Inst
+0: No
+1: PMC
+2: PMC+SBC]]>
+</Comment>
+<Comment Operand="[31]">
+<![CDATA[VDU5_CSE_INST]]>
+</Comment>
+<Comment Operand="[32]">
+<![CDATA[VDU5_RDU1_SELECTIONREMOTE
+DISPLAY 1
+VALG]]>
+</Comment>
+<Comment Operand="[33]">
+<![CDATA[VDU5_PLC_PRG_VR_HIGH]]>
+</Comment>
+<Comment Operand="[34]">
+<![CDATA[VDU5_PLC_PRG_VR_MID]]>
+</Comment>
+<Comment Operand="[35]">
+<![CDATA[VDU5_PLC_PRG_VR_LOW]]>
+</Comment>
+<Comment Operand="[36]">
+<![CDATA[VDU5_CONTROL_2]]>
+</Comment>
+<Comment Operand="[36].0">
+<![CDATA[VDU9_MAN_MOVE_OKMAN
+BEVGELSE
+MULIG]]>
+</Comment>
+<Comment Operand="[36].1">
+<![CDATA[VDU9_MAN_MOVE_PPMANUEL
+KRSEL MED
+PP VALGT]]>
+</Comment>
+<Comment Operand="[36].2">
+<![CDATA[VDU9_MAN_MOVE_SPMANUEL
+KRSEL MED
+SP VALGT]]>
+</Comment>
+<Comment Operand="[36].3">
+<![CDATA[VDU9_MOVEABLE_HORIZBEVGELIGE
+RISTE MAN
+FREM/BAK]]>
+</Comment>
+<Comment Operand="[36].4">
+<![CDATA[VDU9_MOVEABLE_UPDOWNBEVGELIGE
+RISTE MAN
+OP/NED]]>
+</Comment>
+<Comment Operand="[36].5">
+<![CDATA[VDU9_FIXED_UPDOWNFASTE
+RISTE MAN
+OP/NED]]>
+</Comment>
+<Comment Operand="[36].6">
+<![CDATA[VDU9_CSE_IN_OUTCSE MANUEL
+IND/UD]]>
+</Comment>
+<Comment Operand="[36].7">
+<![CDATA[VDU9_CSE_REV_FWDCSE MANUEL
+BAK/FREM]]>
+</Comment>
+<Comment Operand="[36].8">
+<![CDATA[VDU9_SBC_CLUTCHSBC KLEMME
+OG BNE]]>
+</Comment>
+<Comment Operand="[36].9">
+<![CDATA[VDU9_SSU_VALVE_OPENSANDSPJLD
+BNE OG
+LUKKE]]>
+</Comment>
+<Comment Operand="[36].10">
+<![CDATA[VDU9_MOULD_RET_UPDOWFORM
+MODHOLD
+KLEMME OG
+BNE]]>
+</Comment>
+<Comment Operand="[36].11">
+<![CDATA[VDU9_MOULD_RET_MOVEFORM
+MODHOLD
+FREM OG
+TILBAGE]]>
+</Comment>
+<Comment Operand="[36].12">
+<![CDATA[VDU9_MSS_SELECTEDMMS
+AKTIVERES]]>
+</Comment>
+<Comment Operand="[36].13">
+<![CDATA[VDU9_PMC_ALTERNATINGPMC
+STAMPNING
+VALGT P
+VDU]]>
+</Comment>
+<Comment Operand="[36].14">
+<![CDATA[VDU9_PMC_AND_IDELINGPMC MED I
+TOMGANG]]>
+</Comment>
+<Comment Operand="[36].15">
+<![CDATA[VDU9_LAMP_TESTLAMPETEST]]>
+</Comment>
+<Comment Operand="[37]">
+<![CDATA[VDU5_REQ_OPR_DMM]]>
+</Comment>
+<Comment Operand="[38]">
+<![CDATA[VDU5_REQ_OPR_PMC]]>
+</Comment>
+<Comment Operand="[39]">
+<![CDATA[VDU5_REQ_OPR_CSE]]>
+</Comment>
+<Comment Operand="[40]">
+<![CDATA[VDU5_PLC_CPU_VERSION]]>
+</Comment>
+<Comment Operand="[41]">
+<![CDATA[VDU7_ADJ_PPD_BOARDJUSTERING
+AF PPD
+KORT
+SET PUNKT]]>
+</Comment>
+<Comment Operand="[42]">
+<![CDATA[VDU7_ADJ_HY13_ZERO]]>
+</Comment>
+<Comment Operand="[43]">
+<![CDATA[VDU5_SBO1_TMPHEAT_ONSBO1
+OLIE
+TEMPERATUR]]>
+</Comment>
+<Comment Operand="[44]">
+<![CDATA[VDU5_SBO2_TMPHEAT_ONSBO2
+OLIE
+TEMPERATUR]]>
+</Comment>
+<Comment Operand="[45]">
+<![CDATA[VDU5_PMC_WARN_PRESS]]>
+</Comment>
+<Comment Operand="[46]">
+<![CDATA[VDU5_SSC_INSTALLED]]>
+</Comment>
+<Comment Operand="[46].0">
+<![CDATA[SSC1 IN-
+STALLERET]]>
+</Comment>
+<Comment Operand="[46].1">
+<![CDATA[SSC2 IN-
+STALLERET]]>
+</Comment>
+<Comment Operand="[47]">
+<![CDATA[VDU7_SBO1_HY1924_TSTHY 1924
+SETP.
+SERVICE
+FCT 16]]>
+</Comment>
+<Comment Operand="[48]">
+<![CDATA[VDU7_SBO1_HY1922_TST]]>
+</Comment>
+<Comment Operand="[49]">
+<![CDATA[VDU7_SBO2_HY2924_TSTHY2924
+SETP.
+SERVICE
+FCT 17]]>
+</Comment>
+<Comment Operand="[50]">
+<![CDATA[VDU7_SBO2_HY2922_TST]]>
+</Comment>
+<Comment Operand="[51]">
+<![CDATA[VDU5_AFB_SEL_4BPP_Acc.
+Feed-Back
+0: Off
+1: 4B
+2: Auto]]>
+</Comment>
+<Comment Operand="[52]">
+<![CDATA[VDU5_AFB_SEL_SPSP_Acc.
+Feed-Back
+VDU_Select]]>
+</Comment>
+<Comment Operand="[53]">
+<![CDATA[VDU7_ADJ_HY24_ZEROPUMP HY24
+ZERO Adj.
+0=OFF
+1=Auto/Man
+2=Reset]]>
+</Comment>
+<Comment Operand="[54]">
+<![CDATA[VDU5_CSE6_MAX_TIME]]>
+</Comment>
+<Comment Operand="[55]">
+<![CDATA[VDU5_BLOW_SP_TOPVDU F5 Parm 311
+SP top Blow-off
+1: Selected]]>
+</Comment>
+<Comment Operand="[56]">
+<![CDATA[VDU5_BLOW_PP_IMPRESSVDU F5 Parm 312
+PP impress Blow-off
+1: Opr 3B
+2: Opr 6
+3: Opr 3B & 6]]>
+</Comment>
+<Comment Operand="[57]">
+<![CDATA[VDU5_BLOW_SP_IMPRESSVDU F5 Parm 313
+SP impress Blow-off
+1: Opr 4A]]>
+</Comment>
+<Comment Operand="[58]">
+<![CDATA[VDU5_SEL_SHOT_VALVDU F5 Parm xx
+Sel. of shot valves
+A&S=0: PN7AB/BC/CA
+B&C=0: PN7AC/CD
+All   =1: PN7ABCD]]>
+</Comment>
+<Comment Operand="[59]">
+<![CDATA[VDU5_SPRAY_REARFRONT0=No
+1=Rear, 2=Front
+3=Rear+Front]]>
+</Comment>
+</Comments>
+<Data Format="L5K">
+<![CDATA[[0,4500,0,0,0,0,0,0,0,0,87,0,0,0,0,0,3081,0,480,300,0,2025,2,28,21,10,2,0,7,2,2,1,-1,4,2,2,2,41,220,300,0,0,0,0,0,1500,0,0,0,0,0,0,0,0,200
+					,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0]]]>
+</Data>
+<Data Format="Decorated">
+<Array DataType="INT" Dimensions="70" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="4500"/>
+<Element Index="[2]" Value="0"/>
+<Element Index="[3]" Value="0"/>
+<Element Index="[4]" Value="0"/>
+<Element Index="[5]" Value="0"/>
+<Element Index="[6]" Value="0"/>
+<Element Index="[7]" Value="0"/>
+<Element Index="[8]" Value="0"/>
+<Element Index="[9]" Value="0"/>
+<Element Index="[10]" Value="87"/>
+<Element Index="[11]" Value="0"/>
+<Element Index="[12]" Value="0"/>
+<Element Index="[13]" Value="0"/>
+<Element Index="[14]" Value="0"/>
+<Element Index="[15]" Value="0"/>
+<Element Index="[16]" Value="3081"/>
+<Element Index="[17]" Value="0"/>
+<Element Index="[18]" Value="480"/>
+<Element Index="[19]" Value="300"/>
+<Element Index="[20]" Value="0"/>
+<Element Index="[21]" Value="2025"/>
+<Element Index="[22]" Value="2"/>
+<Element Index="[23]" Value="28"/>
+<Element Index="[24]" Value="21"/>
+<Element Index="[25]" Value="10"/>
+<Element Index="[26]" Value="2"/>
+<Element Index="[27]" Value="0"/>
+<Element Index="[28]" Value="7"/>
+<Element Index="[29]" Value="2"/>
+<Element Index="[30]" Value="2"/>
+<Element Index="[31]" Value="1"/>
+<Element Index="[32]" Value="-1"/>
+<Element Index="[33]" Value="4"/>
+<Element Index="[34]" Value="2"/>
+<Element Index="[35]" Value="2"/>
+<Element Index="[36]" Value="2"/>
+<Element Index="[37]" Value="41"/>
+<Element Index="[38]" Value="220"/>
+<Element Index="[39]" Value="300"/>
+<Element Index="[40]" Value="0"/>
+<Element Index="[41]" Value="0"/>
+<Element Index="[42]" Value="0"/>
+<Element Index="[43]" Value="0"/>
+<Element Index="[44]" Value="0"/>
+<Element Index="[45]" Value="1500"/>
+<Element Index="[46]" Value="0"/>
+<Element Index="[47]" Value="0"/>
+<Element Index="[48]" Value="0"/>
+<Element Index="[49]" Value="0"/>
+<Element Index="[50]" Value="0"/>
+<Element Index="[51]" Value="0"/>
+<Element Index="[52]" Value="0"/>
+<Element Index="[53]" Value="0"/>
+<Element Index="[54]" Value="200"/>
+<Element Index="[55]" Value="0"/>
+<Element Index="[56]" Value="0"/>
+<Element Index="[57]" Value="0"/>
+<Element Index="[58]" Value="1"/>
+<Element Index="[59]" Value="0"/>
+<Element Index="[60]" Value="0"/>
+<Element Index="[61]" Value="0"/>
+<Element Index="[62]" Value="0"/>
+<Element Index="[63]" Value="0"/>
+<Element Index="[64]" Value="0"/>
+<Element Index="[65]" Value="0"/>
+<Element Index="[66]" Value="0"/>
+<Element Index="[67]" Value="0"/>
+<Element Index="[68]" Value="0"/>
+<Element Index="[69]" Value="0"/>
+</Array>
+</Data>
+</Tag>
+<Tag Name="O" TagType="Produced" DataType="INT" Dimensions="48" Radix="Binary" Constant="false" ExternalAccess="Read/Write">
+<ProduceInfo PLCMappingFile="0"/>
+<Comments>
+<Comment Operand="[24]">
+<![CDATA[#1 DO 13 L]]>
+</Comment>
+<Comment Operand="[24].0">
+<![CDATA[C9_H262_1DISPLAY 1
+BCD DATA
+B0]]>
+</Comment>
+<Comment Operand="[24].1">
+<![CDATA[C9_H262_2DISPLAY 1
+BCD DATA
+B1]]>
+</Comment>
+<Comment Operand="[24].2">
+<![CDATA[C9_H262_3DISPLAY 1
+BCD DATA
+B2]]>
+</Comment>
+<Comment Operand="[24].3">
+<![CDATA[C9_H262_4DISPLAY 1
+BCD DATA
+B3]]>
+</Comment>
+<Comment Operand="[24].4">
+<![CDATA[C9_H262_5DISPLAY
+1+2
+DIGIT
+SELECT D1]]>
+</Comment>
+<Comment Operand="[24].5">
+<![CDATA[C9_H262_6DISPLAY
+1+2
+DIGIT
+SELECT D2]]>
+</Comment>
+<Comment Operand="[24].6">
+<![CDATA[C9_H262_7DISPLAY
+1+2
+DIGIT
+SELECT D3]]>
+</Comment>
+<Comment Operand="[24].7">
+<![CDATA[C9_H262_8DISPLAY
+1+2
+DIGIT
+SELECT D4]]>
+</Comment>
+<Comment Operand="[24].8">
+<![CDATA[C9_H282_1DISPLAY 2
+BCD DATA
+B0]]>
+</Comment>
+<Comment Operand="[24].9">
+<![CDATA[C9_H282_2DISPLAY 2
+BCD DATA
+B1]]>
+</Comment>
+<Comment Operand="[24].10">
+<![CDATA[C9_H282_3DISPLAY 2
+BCD DATA
+B2]]>
+</Comment>
+<Comment Operand="[24].11">
+<![CDATA[C9_H282_4DISPLAY 2
+BCD DATA
+B3]]>
+</Comment>
+<Comment Operand="[24].12">
+<![CDATA[KO_DMS_PRE_POUR_SIGN#1Do13L14
+C9-K612]]>
+</Comment>
+<Comment Operand="[24].13">
+<![CDATA[KO_DMS_45_MM_TRANSP#1Do13L15
+C9-K614]]>
+</Comment>
+<Comment Operand="[24].14">
+<![CDATA[KO_CAST_SORTING_NOW#1Do13L16
+C9-K616]]>
+</Comment>
+<Comment Operand="[24].15">
+<![CDATA[#1Do13L17
+C9-_618
+Spare]]>
+</Comment>
+<Comment Operand="[25]">
+<![CDATA[#1 DO 13 R]]>
+</Comment>
+<Comment Operand="[25].0">
+<![CDATA[C9_024MOTORS
+RUNNING]]>
+</Comment>
+<Comment Operand="[25].1">
+<![CDATA[C9_026WAITING
+FOR
+POURING]]>
+</Comment>
+<Comment Operand="[25].2">
+<![CDATA[C9_028WAITING
+FOR SAND]]>
+</Comment>
+<Comment Operand="[25].3">
+<![CDATA[C9_030WAITING
+FOR CORES]]>
+</Comment>
+<Comment Operand="[25].4">
+<![CDATA[C9_034ET GITTER Er ÅBENT]]>
+</Comment>
+<Comment Operand="[25].5">
+<![CDATA[C9_036DMS
+STOPPED]]>
+</Comment>
+<Comment Operand="[25].6">
+<![CDATA[C9_038NDSTOP]]>
+</Comment>
+<Comment Operand="[25].7">
+<![CDATA[EXT MODEL
+KODE
+FUNDET.
+HNDKODE
+LSER.]]>
+</Comment>
+<Comment Operand="[25].8">
+<![CDATA[C9_042VENSTRE GITTER ÅBENT]]>
+</Comment>
+<Comment Operand="[25].9">
+<![CDATA[C9_044LEFT GUARD
+GATE PANEL
+SELECTED]]>
+</Comment>
+<Comment Operand="[25].10">
+<![CDATA[C9_046HØJRE GITTER ÅBENT]]>
+</Comment>
+<Comment Operand="[25].11">
+<![CDATA[C9_048RIGHT
+GUARD GATE
+PANEL
+SELECTED]]>
+</Comment>
+<Comment Operand="[25].12">
+<![CDATA[C9_050CSE GUARD
+GATE OPEN,
+LIGHT
+CURTAIN]]>
+</Comment>
+<Comment Operand="[25].13">
+<![CDATA[C9_052CSE GUARD
+GATE ENTRY
+ALLOWED]]>
+</Comment>
+<Comment Operand="[25].14">
+<![CDATA[C5_019110 V AC
+DO OUTPUT
+TEST]]>
+</Comment>
+<Comment Operand="[25].15">
+<![CDATA[C9_K56WATCH DOG]]>
+</Comment>
+<Comment Operand="[26]">
+<![CDATA[#1 DO 14 L]]>
+</Comment>
+<Comment Operand="[26].0">
+<![CDATA[C9_K222DMM OPR. 1]]>
+</Comment>
+<Comment Operand="[26].1">
+<![CDATA[C9_K224DMM OPR. 2]]>
+</Comment>
+<Comment Operand="[26].2">
+<![CDATA[C9_K226DMM OPR.3A]]>
+</Comment>
+<Comment Operand="[26].3">
+<![CDATA[C9_K228DMM OPR.3B]]>
+</Comment>
+<Comment Operand="[26].4">
+<![CDATA[C9_K230DMM OPR.4A]]>
+</Comment>
+<Comment Operand="[26].5">
+<![CDATA[C9_K232DMM OPR.4B]]>
+</Comment>
+<Comment Operand="[26].6">
+<![CDATA[C9_K234DMM OPR. 5]]>
+</Comment>
+<Comment Operand="[26].7">
+<![CDATA[C9_K236DMM OPR. 6]]>
+</Comment>
+<Comment Operand="[26].8">
+<![CDATA[C9_K242POURING
+ALLOWED]]>
+</Comment>
+<Comment Operand="[26].9">
+<![CDATA[C9_K244SSU CLUTCH]]>
+</Comment>
+<Comment Operand="[26].10">
+<![CDATA[C9_K246DMS
+RUNNING]]>
+</Comment>
+<Comment Operand="[26].11">
+<![CDATA[C9_K248TEST
+SIGNAL
+FOR ACE]]>
+</Comment>
+<Comment Operand="[26].12">
+<![CDATA[C9_K250SIGNAL
+FOR ACE]]>
+</Comment>
+<Comment Operand="[26].13">
+<![CDATA[C9_K252CSE:
+SET NEW CORES IN CSE]]>
+</Comment>
+<Comment Operand="[26].14">
+<![CDATA[C9_K254CSE:
+NEW CORES SET IN CSE]]>
+</Comment>
+<Comment Operand="[26].15">
+<![CDATA[C9_K256FRSTE
+FORM EFTER
+MODELSKIFT]]>
+</Comment>
+<Comment Operand="[27]">
+<![CDATA[#1 DO 14 R]]>
+</Comment>
+<Comment Operand="[27].0">
+<![CDATA[PCB310_F8CTR-IN
+BIT 0]]>
+</Comment>
+<Comment Operand="[27].1">
+<![CDATA[PCB310_D8CTR-IN
+BIT 1]]>
+</Comment>
+<Comment Operand="[27].2">
+<![CDATA[PCB310_B8CTR-IN
+BIT 2]]>
+</Comment>
+<Comment Operand="[27].3">
+<![CDATA[PCB310_Z8CTR-IN
+BIT 3]]>
+</Comment>
+<Comment Operand="[27].4">
+<![CDATA[Acc.
+Feed-Back
+AFB_SEL]]>
+</Comment>
+<Comment Operand="[27].5">
+<![CDATA[Acc.
+Feed-Back
+SP_SEL]]>
+</Comment>
+<Comment Operand="[27].6">
+<![CDATA[Acc.
+Feed-Back
+PP_SEL]]>
+</Comment>
+<Comment Operand="[27].7">
+<![CDATA[Pressure
+Feed-back
+PMC_SEL]]>
+</Comment>
+<Comment Operand="[27].8">
+<![CDATA[C9_602MOVE PPC
+TOWARDS
+RIGHT FOR
+CORRECT
+POSITION]]>
+</Comment>
+<Comment Operand="[27].9">
+<![CDATA[C9_604PPC IN
+SP/PP
+PATTERN 
+CHANGE
+POSITION]]>
+</Comment>
+<Comment Operand="[27].10">
+<![CDATA[C9_606MOVE PPC
+TOWARDS
+LEFT FOR
+CORRECT
+POSITION]]>
+</Comment>
+<Comment Operand="[27].11">
+<![CDATA[C9_608PPC NOT
+READY]]>
+</Comment>
+<Comment Operand="[27].12">
+<![CDATA[C9_K302MOULD
+DEFECTIVE]]>
+</Comment>
+<Comment Operand="[27].13">
+<![CDATA[C9_K304DMS
+FAULTED]]>
+</Comment>
+<Comment Operand="[27].14">
+<![CDATA[C9_K306SBC moving
+forward in
+automatic]]>
+</Comment>
+<Comment Operand="[28]">
+<![CDATA[#1 DO 15 L - Gray-out PP]]>
+</Comment>
+<Comment Operand="[29]">
+<![CDATA[#1 DO 15 R - Gray-out SP]]>
+</Comment>
+<Comment Operand="[32]">
+<![CDATA[#2 DO 01]]>
+</Comment>
+<Comment Operand="[32].0">
+<![CDATA[C6_Q22DMM FLUID
+HEATING #1]]>
+</Comment>
+<Comment Operand="[32].1">
+<![CDATA[C6_Q24DMM FLUID
+HEATING #2
+or
+Cut-Out
+Relays]]>
+</Comment>
+<Comment Operand="[32].2">
+<![CDATA[C6_Q26PP VARME]]>
+</Comment>
+<Comment Operand="[32].3">
+<![CDATA[C6_Q28SP VARME]]>
+</Comment>
+<Comment Operand="[32].4">
+<![CDATA[C6_Q30CSE VACUUM]]>
+</Comment>
+<Comment Operand="[32].5">
+<![CDATA[C6_Q32DMM
+FLUID
+FILTERING]]>
+</Comment>
+<Comment Operand="[32].6">
+<![CDATA[C6_Y34OPEN RIGHT
+GATE
+PN356]]>
+</Comment>
+<Comment Operand="[32].7">
+<![CDATA[C6_Y36CLOSE
+RIGHT GATE
+PN357]]>
+</Comment>
+<Comment Operand="[32].8">
+<![CDATA[C6_K42DI TEST 0]]>
+</Comment>
+<Comment Operand="[32].9">
+<![CDATA[C6_K44DI TEST 1]]>
+</Comment>
+<Comment Operand="[32].10">
+<![CDATA[C6_K46110 V DO
+TEST]]>
+</Comment>
+<Comment Operand="[32].11">
+<![CDATA[C6_K48110 V DO
+TEST END]]>
+</Comment>
+<Comment Operand="[32].12">
+<![CDATA[C6_K50HY-RESTART]]>
+</Comment>
+<Comment Operand="[32].13">
+<![CDATA[C6_K52HY TEST
+ENABLE]]>
+</Comment>
+<Comment Operand="[32].14">
+<![CDATA[C6_Y54OPEN LEFT
+GATE
+PN354]]>
+</Comment>
+<Comment Operand="[32].15">
+<![CDATA[C6_Y56CLOSE LEFT
+GATE
+PN355]]>
+</Comment>
+<Comment Operand="[33]">
+<![CDATA[#2 DO 02]]>
+</Comment>
+<Comment Operand="[33].0">
+<![CDATA[C7_2DMM MOTOR]]>
+</Comment>
+<Comment Operand="[33].1">
+<![CDATA[C7_12SERVOMOTOR]]>
+</Comment>
+<Comment Operand="[33].2">
+<![CDATA[C7_22SSC MOTOR]]>
+</Comment>
+<Comment Operand="[33].3">
+<![CDATA[C7_24SSU MOTOR
+FORWARD]]>
+</Comment>
+<Comment Operand="[33].4">
+<![CDATA[C7_26SSU MOTOR
+REVERSE]]>
+</Comment>
+<Comment Operand="[33].5">
+<![CDATA[PPC
+AKTIVERET]]>
+</Comment>
+<Comment Operand="[33].6">
+<![CDATA[C7_K36SSC
+FAULTED]]>
+</Comment>
+<Comment Operand="[33].7">
+<![CDATA[C7_38SSC2 MOTOR]]>
+</Comment>
+<Comment Operand="[33].8">
+<![CDATA[C7_Y42RELIEF OF
+CORE MASK
+VACUUM
+PN211]]>
+</Comment>
+<Comment Operand="[33].9">
+<![CDATA[C7_Y44_SPRAY_REAR#2Do02-11]]>
+</Comment>
+<Comment Operand="[33].10">
+<![CDATA[C7_Y46_SPRAY_FRONT#2Do02-12]]>
+</Comment>
+<Comment Operand="[33].11">
+<![CDATA[C7_Y48SBC,PN407
+CONTROL,
+JAW CLUTCH
+ACTIVATED
+PN404]]>
+</Comment>
+<Comment Operand="[33].12">
+<![CDATA[C7_Y50SBC, BRAKE
+PN414]]>
+</Comment>
+<Comment Operand="[33].13">
+<![CDATA[C7_52CORE MASK
+FORWARD
+C83-Y24
+PN220]]>
+</Comment>
+<Comment Operand="[33].14">
+<![CDATA[C7_K54DMM MOLD
+COUNTER]]>
+</Comment>
+<Comment Operand="[33].15">
+<![CDATA[C7_K56CSE MOLD
+COUNTER]]>
+</Comment>
+<Comment Operand="[34]">
+<![CDATA[#2 DO 03]]>
+</Comment>
+<Comment Operand="[34].0">
+<![CDATA[C7_Y62MOLD
+BLOW-OFF
+PP
+IMPRESSION
+PN14]]>
+</Comment>
+<Comment Operand="[34].1">
+<![CDATA[C7_Y64PRESSURE
+PAD
+BLOW-OFF
+PN15]]>
+</Comment>
+<Comment Operand="[34].2">
+<![CDATA[C7_Y66PP
+VIBRATOR
+PN 17]]>
+</Comment>
+<Comment Operand="[34].3">
+<![CDATA[C7_Y68SP
+VIBRATOR
+PN 18]]>
+</Comment>
+<Comment Operand="[34].4">
+<![CDATA[C7_Y70CLOSE SAND
+HOPPER
+EXHAUST
+VALVE
+PN19 ]]>
+</Comment>
+<Comment Operand="[34].5">
+<![CDATA[C7_Y72SAND GATE
+CLOSE
+PN27]]>
+</Comment>
+<Comment Operand="[34].6">
+<![CDATA[C7_Y74SAND GATE
+OPEN
+PN28]]>
+</Comment>
+<Comment Operand="[34].7">
+<![CDATA[C7_Y76MOLD SIDE
+SUPPORT
+PN358]]>
+</Comment>
+<Comment Operand="[34].8">
+<![CDATA[C7_Y82OPEN PP
+PATTERN
+PLATE
+LOCKS
+PN98]]>
+</Comment>
+<Comment Operand="[34].9">
+<![CDATA[C7_Y84OPEN SP
+PATTERN
+PLATE
+LOCKS
+PN57]]>
+</Comment>
+<Comment Operand="[34].10">
+<![CDATA[C7_Y86PP CHAMBER
+SEALING
+PN84]]>
+</Comment>
+<Comment Operand="[34].11">
+<![CDATA[C7_Y88SP CHAMBER
+SEALING
+PN307]]>
+</Comment>
+<Comment Operand="[34].12">
+<![CDATA[C7_Y90ALL MOLD
+RETAINERS
+UP
+PN90]]>
+</Comment>
+<Comment Operand="[34].13">
+<![CDATA[C7_Y92LEFT MOLD
+RETAINER
+DOWN
+PN361]]>
+</Comment>
+<Comment Operand="[34].14">
+<![CDATA[C7_Y94CENTER
+MOLD
+RETAINER
+DOWN
+PN362]]>
+</Comment>
+<Comment Operand="[34].15">
+<![CDATA[C7_Y96RIGHT MOLD
+RETAINER
+DOWN
+PN363]]>
+</Comment>
+<Comment Operand="[35]">
+<![CDATA[#2 DO 04]]>
+</Comment>
+<Comment Operand="[35].0">
+<![CDATA[C7_Y102SAND VALVE
+SEALING
+PN86]]>
+</Comment>
+<Comment Operand="[35].1">
+<![CDATA[C7_Y104SPRAY PUMP
+PN308]]>
+</Comment>
+<Comment Operand="[35].2">
+<![CDATA[C7_Y106MOLD
+BLOW-OFF
+SP
+IMPRESSION
+PN324]]>
+</Comment>
+<Comment Operand="[35].3">
+<![CDATA[C7_Y108SPRAY AIR
+PN 340]]>
+</Comment>
+<Comment Operand="[35].4">
+<![CDATA[C7_Y110PMC FIXED
+GRATES UP
+PN101]]>
+</Comment>
+<Comment Operand="[35].5">
+<![CDATA[C7_Y112PMC FIXED
+GRATES
+DOWN
+PN102]]>
+</Comment>
+<Comment Operand="[35].6">
+<![CDATA[C7_Y114PMC
+MOVABLE
+GRATES UP
+PN103]]>
+</Comment>
+<Comment Operand="[35].7">
+<![CDATA[C7_Y116PMC
+MOVABLE
+GRATES
+DOWN
+PN104]]>
+</Comment>
+<Comment Operand="[35].8">
+<![CDATA[C7_Y122AIR SUPPLY
+DMM
+PN29]]>
+</Comment>
+<Comment Operand="[35].9">
+<![CDATA[C7_Y124AIR SUPPLY
+SANDSHOT
+AIR
+RECIEVER
+PN366]]>
+</Comment>
+<Comment Operand="[35].10">
+<![CDATA[C7_Y126PN381
+Opr.- 2/3A/3B
+SP top blow-off]]>
+</Comment>
+<Comment Operand="[35].11">
+<![CDATA[C7_Y128PN383
+Opr.- 3/6
+PP mould blow-off]]>
+</Comment>
+<Comment Operand="[35].12">
+<![CDATA[C7_Y130PN382
+Opr.- 4A
+SP mould blow-off]]>
+</Comment>
+<Comment Operand="[35].13">
+<![CDATA[C7_K132Oil air cool relays:C7-K132,-K133,
+C7-K138,-K139]]>
+</Comment>
+<Comment Operand="[35].14">
+<![CDATA[C7_Y134WATER
+SUPPLY DMM
+HY29]]>
+</Comment>
+<Comment Operand="[35].15">
+<![CDATA[C7_Y136SERVO
+PRESSURE
+HY42]]>
+</Comment>
+<Comment Operand="[36]">
+<![CDATA[#2 DO 05]]>
+</Comment>
+<Comment Operand="[37]">
+<![CDATA[#2 DO 06]]>
+</Comment>
+<Comment Operand="[38]">
+<![CDATA[#2 DO 07]]>
+</Comment>
+<Comment Operand="[38].0">
+<![CDATA[C81_Y2DMM OPR
+2-3A
+HY1]]>
+</Comment>
+<Comment Operand="[38].1">
+<![CDATA[C81_Y4DMM Op. 2-3B-6
+HY2]]>
+</Comment>
+<Comment Operand="[38].2">
+<![CDATA[C81_Y6DMM OPR
+2
+HY3]]>
+</Comment>
+<Comment Operand="[38].3">
+<![CDATA[C81_Y8DMM Op. 2-3A-3B-6
+HY4]]>
+</Comment>
+<Comment Operand="[38].4">
+<![CDATA[C81_Y10DMM OPR
+2-4A-5
+HY5]]>
+</Comment>
+<Comment Operand="[38].5">
+<![CDATA[C81_Y12DMM OPR 2
+HY6]]>
+</Comment>
+<Comment Operand="[38].6">
+<![CDATA[C81_Y14DMM OPR
+2-4A-4B-5
+HY7]]>
+</Comment>
+<Comment Operand="[38].7">
+<![CDATA[C81_Y16DMM OPR
+3A
+HY 8]]>
+</Comment>
+<Comment Operand="[38].8">
+<![CDATA[C81_Y22CONTROL OF
+HY10
+HY12]]>
+</Comment>
+<Comment Operand="[38].9">
+<![CDATA[C81_Y24CONTROL OF
+HY11
+HY44]]>
+</Comment>
+<Comment Operand="[38].10">
+<![CDATA[C81_Y26]]>
+</Comment>
+<Comment Operand="[38].11">
+<![CDATA[C81_Y28PMC 4B
+HY73C]]>
+</Comment>
+<Comment Operand="[38].12">
+<![CDATA[C81_Y30PMC 4B
+HY73D]]>
+</Comment>
+<Comment Operand="[38].13">
+<![CDATA[C81_Y32PMC 4B
+HY73E]]>
+</Comment>
+<Comment Operand="[38].14">
+<![CDATA[C81_Y34PMC
+FORWARD
+HY70]]>
+</Comment>
+<Comment Operand="[38].15">
+<![CDATA[C81_Y36PMC
+FORWARD
+HY72]]>
+</Comment>
+<Comment Operand="[39]">
+<![CDATA[#2 DO 08]]>
+</Comment>
+<Comment Operand="[39].0">
+<![CDATA[C82_Y2CONTROL OF
+HY22
+HYDRAULIC
+LOCK
+HY77]]>
+</Comment>
+<Comment Operand="[39].1">
+<![CDATA[C82_Y4CONTROL OF
+HY22
+HYDRAULIC
+LOCK
+HY137]]>
+</Comment>
+<Comment Operand="[39].3">
+<![CDATA[C82_Y8PMC RETURN
+EMPTYING
+PRESSURE
+HY76]]>
+</Comment>
+<Comment Operand="[39].4">
+<![CDATA[C82_Y10BOOSTER
+PRESSURE
+HY121]]>
+</Comment>
+<Comment Operand="[39].5">
+<![CDATA[C82_Y12CONTROL OF
+DMM FLOW
+CUT-OFF
+VALVES
+HY130]]>
+</Comment>
+<Comment Operand="[39].6">
+<![CDATA[C82_Y14CONTROL OF
+DMM PRESS.
+RELIEF
+VALVES
+HY131]]>
+</Comment>
+<Comment Operand="[39].7">
+<![CDATA[C82_Y16PRESSURE
+RELIEF
+END OPR 2
+HY132]]>
+</Comment>
+<Comment Operand="[39].8">
+<![CDATA[C82_Y22SHOT VALVE
+#1 PN7A]]>
+</Comment>
+<Comment Operand="[39].9">
+<![CDATA[C82_Y24SHOT VALVE
+#2 PN 7B]]>
+</Comment>
+<Comment Operand="[39].10">
+<![CDATA[C82_Y26SHOT VALVE
+#3 PN 7C]]>
+</Comment>
+<Comment Operand="[39].11">
+<![CDATA[C82_Y28SHOT VALVE
+#4 PN 7D]]>
+</Comment>
+<Comment Operand="[39].13">
+<![CDATA[C82_Y32]]>
+</Comment>
+<Comment Operand="[39].14">
+<![CDATA[C82_Y34CLOSE SP
+PATTERN
+PLATE
+LOCKS
+PN56]]>
+</Comment>
+<Comment Operand="[39].15">
+<![CDATA[C82_Y36CLOSE PP
+PATTERN
+PLATE
+LOCKS
+PN97]]>
+</Comment>
+<Comment Operand="[40]">
+<![CDATA[#2 DO 09]]>
+</Comment>
+<Comment Operand="[40].0">
+<![CDATA[C83_Y2PRESSURE
+FOR ROTARY
+ACTUATOR
+HY201]]>
+</Comment>
+<Comment Operand="[40].1">
+<![CDATA[C83_Y4HOLDING
+PRESSURE
+CROSS
+SLIDE
+HY202]]>
+</Comment>
+<Comment Operand="[40].2">
+<![CDATA[C83_Y6CROSS
+SLIDE OUT
+HY203A]]>
+</Comment>
+<Comment Operand="[40].3">
+<![CDATA[C83_Y8CROSS
+SLIDE IN
+HY203B]]>
+</Comment>
+<Comment Operand="[40].4">
+<![CDATA[C83_Y10SAFETY
+VALVE
+CROSS
+SLIDE OUT
+HY216 A1]]>
+</Comment>
+<Comment Operand="[40].5">
+<![CDATA[C83_Y12SAFETY
+VALVE
+CROSS
+SLIDE OUT
+HY216 A2]]>
+</Comment>
+<Comment Operand="[40].6">
+<![CDATA[C83_Y14CROSS
+SLIDE IN
+AND OUT
+HY218]]>
+</Comment>
+<Comment Operand="[40].7">
+<![CDATA[C83_Y16SHOCK
+ABSORBER
+RELEASED
+HY212]]>
+</Comment>
+<Comment Operand="[40].8">
+<![CDATA[C83_Y22CORE BLOW
+OFF
+PN218]]>
+</Comment>
+<Comment Operand="[40].9">
+<![CDATA[C83_Y24CORE MASK
+FORWARD
+PN220]]>
+</Comment>
+<Comment Operand="[40].10">
+<![CDATA[C83_Y26CORE MASK
+BACKWARD
+PN221]]>
+</Comment>
+<Comment Operand="[40].11">
+<![CDATA[C83_Y28DEACTIVATE
+CORE
+RETENTION
+PN224A]]>
+</Comment>
+<Comment Operand="[40].12">
+<![CDATA[C83_Y30DEACTIVATE
+CORE
+RETENTION
+PN224B]]>
+</Comment>
+<Comment Operand="[40].13">
+<![CDATA[C83_Q42AUTOMATIC
+MOLD
+RETAINER
+FORWARD]]>
+</Comment>
+<Comment Operand="[40].14">
+<![CDATA[C83_Q44AUTOMATIC
+MOLD
+RETAINER
+REVERSE]]>
+</Comment>
+<Comment Operand="[40].15">
+<![CDATA[C83_Y32PRESSURE
+FOR CSE
+INNER
+BUFFER
+PN 251]]>
+</Comment>
+<Comment Operand="[41]">
+<![CDATA[#2 DO 10 SBO]]>
+</Comment>
+<Comment Operand="[41].0">
+<![CDATA[C22_002SBO1 VARME]]>
+</Comment>
+<Comment Operand="[41].1">
+<![CDATA[C22_004SBO2 VARME]]>
+</Comment>
+<Comment Operand="[41].4">
+<![CDATA[C23_002SBO1 MOTOR]]>
+</Comment>
+<Comment Operand="[41].5">
+<![CDATA[C23_012SBO2 MOTOR]]>
+</Comment>
+<Comment Operand="[41].8">
+<![CDATA[C24_Y2SBO1
+VENTIL 1
+HY-1931]]>
+</Comment>
+<Comment Operand="[41].9">
+<![CDATA[C24_Y4SBO1
+VENTIL 2
+HY-1932]]>
+</Comment>
+<Comment Operand="[41].12">
+<![CDATA[C24_Y12SBO2
+VENTIL 1
+HY-2931]]>
+</Comment>
+<Comment Operand="[41].13">
+<![CDATA[C24_Y14SBO2
+VENTIL 2
+HY-2932]]>
+</Comment>
+</Comments>
+<Data Format="L5K">
+<![CDATA[[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4848,12289,5378,256,0,0,0,0,-26568,10383,-24542,-6296,0,0,895,-16269,566,0
+					,0,0,0,0,0,0]]]>
+</Data>
+<Data Format="Decorated">
+<Array DataType="INT" Dimensions="48" Radix="Binary">
+<Element Index="[0]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[1]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[2]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[3]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[4]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[5]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[6]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[7]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[8]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[9]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[10]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[11]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[12]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[13]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[14]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[15]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[16]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[17]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[18]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[19]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[20]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[21]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[22]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[23]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[24]" Value="2#0001_0010_1111_0000"/>
+<Element Index="[25]" Value="2#0011_0000_0000_0001"/>
+<Element Index="[26]" Value="2#0001_0101_0000_0010"/>
+<Element Index="[27]" Value="2#0000_0001_0000_0000"/>
+<Element Index="[28]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[29]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[30]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[31]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[32]" Value="2#1001_1000_0011_1000"/>
+<Element Index="[33]" Value="2#0010_1000_1000_1111"/>
+<Element Index="[34]" Value="2#1010_0000_0010_0010"/>
+<Element Index="[35]" Value="2#1110_0111_0110_1000"/>
+<Element Index="[36]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[37]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[38]" Value="2#0000_0011_0111_1111"/>
+<Element Index="[39]" Value="2#1100_0000_0111_0011"/>
+<Element Index="[40]" Value="2#0000_0010_0011_0110"/>
+<Element Index="[41]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[42]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[43]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[44]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[45]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[46]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[47]" Value="2#0000_0000_0000_0000"/>
+</Array>
+</Data>
+</Tag>
+</Tags>
+<Programs Use="Context">
+<Program Use="Context" Name="_2_Main">
+<Routines Use="Context">
+<EncodedData EncodedType="Routine" Name="_015_Stop_Dms" Type="RLL" EncryptionConfig="9">
+AAmLSi7VObKOdWJcY2GyuznwH35V9z+R2szPeZvDGN/o1Lho7aAL58kQuR/Z1CE5Ie0Gj/piJqfU+ZCecFkKq+BSmGeVUKO1qHj5uHzBnoJXrMQnJSRz2Imtxeh9u5RXzT4J0hQy3jgD5Me3sC3T1nUj4bVJmbMAbpZBWhNpV7WV9OQwKLM78MyyMV59Hd4AiLbzZRl0nhTISTdKwMfxO9qjN5FGl8KzCBLsZqVdhy95zfFWiXydH9aSHajc7r+iO+m9tVgq2LbQSn6wFmk5vMSFjEkJiOp1wkMCCZWHkRP1HjBv16S0+1G0tejFXfnJMrPsFrq+opUxPN+nYRj8mtw2rK6whfrTFA+DewglyCDHjaMXOBgEN4hOZ7sUv3g0LXKoEqEH1+g4tEJd4to2lz5hrsWhRdL9o+hdPnriBOHR2DOAAFEJsAed7JrcvgGSwcAbLOkmZD2ofCTAcTnZ99wboulb3HyH7gvks3RhfvHNSC8HzpWJzgm0xwrfkPNS9hFMO0fHP193eCn6mRl7jXm3yQcdj8qfJcLpjhtexl72l8J9AEzXkr7C+Xa46gHySdU3tn2WHYWmUH/1oKz1YkfEKDGbsFOaT5v7B+RktlDt+al3YI/PaR4B8+EUuLl1+MFbgSe0k/G2QqgXzEjNHbYpjd6f1KbZ4/zI8irDagXMlnaW5IZP6AqecZPKkR6yyqBplHbSMRy3D12ia6AuSl+9zsTM4lkkGYApM1zYwITQen1NCsW5tUMYg9nd/WH+TWmfx0+X0l8BXXQHxSwUpu80exyB+UcahvbBw3BOIa832SrYnJ5KWMh6E4Njx9S0gvn2zVtHviZMv5uyKPfgtxF0JYY7pcMrScM2f9FrhQ4RP+dElMSD+RjGq5MlKyMD9EDqHu4vHjkET39txN0Z3AV0i3z9hUX9T6Wtv/HNx+N+IPY6xY/0aiuX9MzLHOtZRVglPeILjuk8AucYGsrKV4Qi46RZsw0n3arMQLw5A/kNcEcSKepPuiD5nb3xik4ADN+bUvbiL/uo3egfWrvfx3+Du2G0wf4SOjkFDJTbkvQjYnkJjGBAxMvzVFzYYq6gG5ETw0VsHzXdyxpLjDcxkWbDUuFTKjaW514zSpPCsA4BPUna0VaE3x2M79nLClUz2xBhrPwFtRpsqnjPUvGTNhtXxlPoYmAJ/8g5sLBH+jko9iSQW5GfUp3Ic/L7tlLZkMDuJN/+qfw41Gb8BLn8guA4ywu4p0II+bWI2mDkK3IkQ5h2wl1Q2/T9vdE+ri8RlL77PSeWFZo8IDf+8oSdrZ8qsLATk68K489QuRPX40CcOH4XkE+Hqk2b2Y/k3tuYpf+Yp+sDh/gjOO7s3xi+N2bH000JAv7bGjyb91rWbWoNuC1ygxvEJk3MarplKikg5/8QVmt7MszDVB1ZyB5Fd1pcmMLfu+HxhRq4HIFFrUkgmPSUTvuoMu7tj5rgqmzBuQFD80h2Pydgnnx5hM8BFU+DPI/9fuwl9hNdnryeOrMbGYzpFDsgqArJokQGdg0XUue5TfEO42+zPH/XsPK9oAcdNXcQdjOXsBKaWXxX6IcD/WKaE2P3prwX0V53m7QQ0g1hmtZtjQ</EncodedData>
+<Routine Use="Reference" Name="_016_Stop_DmmOp">
+</Routine>
+<Routine Use="Reference" Name="_017_Stop_PmcOp">
+</Routine>
+<Routine Use="Reference" Name="_018_Stop_CseOp">
+</Routine>
+<Routine Use="Reference" Name="_132_SBO1OPSTOP">
+</Routine>
+<Routine Use="Reference" Name="_133_SBO2OPSTOP">
+</Routine>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>

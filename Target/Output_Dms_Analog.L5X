@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="30.01" TargetName="Output_Dms_Analog" TargetType="Routine" TargetSubType="RLL" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Wed Jul 16 18:20:39 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="Disa2070mk2">
+<DataTypes Use="Context">
+</DataTypes>
+<Programs Use="Context">
+<Program Use="Context" Name="Top">
+<Tags Use="Context">
+<Tag Name="Bip" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[1]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+</Tags>
+<Routines Use="Context">
+<EncodedData EncodedType="Routine" Name="Output_Dms_Analog" Type="RLL" EncryptionConfig="9">
+AAmv8EKnmctEoW+GRAPUobO6CsBbuUTdaZXY2qXFLLczbhgeTY2PSq//tDabqOJ7DK7UufYcXu58fTMZ4hPy+YFbcg2sQ3oZBt1FCG4mEJhcwvzZABHUQNVGoiE8cYi/+xOYQWiEFE+KCVmkDIVJHdlcpc1YyrbCLBALGWhy9gOXMiH0ENjRoC72w5Y2GHh4/o/RwTA3tXmp32PGlTGuy+oKGCPfUVrY93d3xRsXMTS8HTvgpzkbtVkrWDlNrRdAURot6rFVxwK5+TI2KeuVdnnNXsmIRKKjU3vB6vL64S1a8Ug7YS4p8gQYQF00zTJhRrKh1eafcHXfLYc2dHJz2cM75gcI2LKKdSVjRIACzJQP+PCTGg5Onyw+mXzLrjKTzcTCCJB+tivYC9vijYwJTlSp+KHJkPhK9f5w/hm8cH1y4Evy3vhKiBX9wrOJPTRgliGd+tIGyrIN01JuGtlZaWPcAj6q/5CkrPncKYnPbWM/GfAAt9VuWgXYz0mtqZ4KPfzEpPAV4JLT/AXzmhhPDzfPAEIq9JFF3AHSzFEHpwS7OhU+AYFEjUSB</EncodedData>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>

@@ -10,120 +10,140 @@ class V9TestProgram
 {
     static async Task Main(string[] args)
     {
-        Console.WriteLine("🎯 V9 INTELLIGENT DICTIONARY CRACKER");
+        Console.WriteLine("🚀 PLAN A: STRUCTURED ENCODEDDATA DECRYPTION");
         Console.WriteLine("=" + new string('=', 80));
-        Console.WriteLine("🔍 Intelligence-based + OEM patterns + Standard dictionary attack");
-        Console.WriteLine("💡 Based on real-world OEM password usage patterns");
+        Console.WriteLine("🔍 Extracts EncodedData content + Multi-algorithm testing");
+        Console.WriteLine("💡 Dual validation: RSLogix keywords + Repeated tokens");
+        Console.WriteLine("🎯 Focus on actual encrypted content, not XML structure");
         Console.WriteLine();
         
         // Setup logging
         using var loggerFactory = LoggerFactory.Create(builder =>
             builder.AddConsole().SetMinimumLevel(LogLevel.Information));
-        var logger = loggerFactory.CreateLogger<V9IntelligentCracker>();
-        var decryptorLogger = loggerFactory.CreateLogger<L5XDecryptor>();
         
-        // Initialize components for intelligent cracking
-        var emptyKeyStore = new KeyStore(); // Start with empty keystore
-        var decryptor = new L5XDecryptor(emptyKeyStore, decryptorLogger);
-        var cracker = new V9IntelligentCracker(decryptor, logger);
+        var extractorLogger = loggerFactory.CreateLogger<EncodedDataExtractor>();
+        var decryptorLogger = loggerFactory.CreateLogger<EncodedDataDecryptor>();
+        var validatorLogger = loggerFactory.CreateLogger<RSLogixValidator>();
+        var orchestratorLogger = loggerFactory.CreateLogger<PlanAOrchestrator>();
+        var crackerLogger = loggerFactory.CreateLogger<V9IntelligentCracker>();
+        var l5xDecryptorLogger = loggerFactory.CreateLogger<L5XDecryptor>();
         
-        // Test files - focus on unknown V30 files
-        var testFiles = new[]
+        // Initialize PLAN A components
+        var extractor = new EncodedDataExtractor(extractorLogger);
+        var validator = new RSLogixValidator(validatorLogger);
+        var encodedDecryptor = new EncodedDataDecryptor(decryptorLogger, validator);
+        
+        // Initialize legacy components for key generation
+        var emptyKeyStore = new KeyStore();
+        var l5xDecryptor = new L5XDecryptor(emptyKeyStore, l5xDecryptorLogger);
+        var cracker = new V9IntelligentCracker(l5xDecryptor, crackerLogger);
+        
+        // Initialize orchestrator
+        var orchestrator = new PlanAOrchestrator(
+            orchestratorLogger,
+            extractor,
+            encodedDecryptor,
+            validator,
+            cracker);
+        
+        // Get all target files
+        var targetDirectory = "/mnt/e/Dynamic/Source/DecryptSourceProtection/target";
+        var targetFiles = Directory.GetFiles(targetDirectory, "*.L5X");
+        
+        Console.WriteLine($"📂 Target Directory: {targetDirectory}");
+        Console.WriteLine($"📊 Found {targetFiles.Length} L5X files");
+        Console.WriteLine();
+        
+        try
         {
-            // V30 Unknown files (our target)
-            ("/mnt/e/Dynamic/Source/DecryptSourceProtection/UnknowFixture V30/", "_050_SP_MANFREM.L5X", "V30 Unknown"),
-            ("/mnt/e/Dynamic/Source/DecryptSourceProtection/UnknowFixture V30/", "_051_PPLAASEUD.L5X", "V30 Unknown"),
-            ("/mnt/e/Dynamic/Source/DecryptSourceProtection/UnknowFixture V30/", "_052_PPLAASEIND.L5X", "V30 Unknown"),
-            ("/mnt/e/Dynamic/Source/DecryptSourceProtection/UnknowFixture V30/", "_053_SPLAASEUD.L5X", "V30 Unknown"),
+            var startTime = DateTime.Now;
             
-            // V33 Known files (for validation - should find "Stana7")
-            ("/mnt/e/Dynamic/Source/DecryptSourceProtection/Know Fixture V33/", "S025_SkidIndexInVDL.L5X", "V33 Known (Validation)"),
-        };
-        
-        var totalSuccesses = 0;
-        var totalFiles = 0;
-        
-        foreach (var (basePath, fileName, category) in testFiles)
+            // Execute PLAN A
+            var results = await orchestrator.ExecutePlanAAsync(targetFiles);
+            
+            var elapsed = DateTime.Now - startTime;
+            
+            // Display results
+            DisplayResults(results, elapsed);
+            
+            // Save results to organized folder structure
+            await orchestrator.SaveResultsAsync(results, targetDirectory);
+            
+        }
+        catch (Exception ex)
         {
-            Console.WriteLine($"\n🎯 CRACKING: {fileName} ({category})");
-            Console.WriteLine("=" + new string('=', 80));
-            
-            try
-            {
-                var filePath = Path.Combine(basePath, fileName);
-                if (!File.Exists(filePath))
-                {
-                    Console.WriteLine($"❌ File not found: {fileName}");
-                    continue;
-                }
-                
-                totalFiles++;
-                Console.WriteLine($"📂 Target: {filePath}");
-                
-                var startTime = DateTime.Now;
-                
-                // Attempt intelligent crack
-                var result = await cracker.CrackV9FileAsync(filePath);
-                
-                var elapsed = DateTime.Now - startTime;
-                
-                if (result.Success)
-                {
-                    totalSuccesses++;
-                    Console.WriteLine($"\n🎉 SUCCESS! File cracked in {elapsed.TotalSeconds:F1} seconds");
-                    Console.WriteLine($"🔑 Key found: '{result.Key}'");
-                    Console.WriteLine($"📝 Decrypted content length: {result.DecryptedContent.Length:N0} chars");
-                    
-                    // Save decrypted content
-                    var outputPath = Path.Combine("/tmp", $"{fileName}.CRACKED.xml");
-                    await File.WriteAllTextAsync(outputPath, result.DecryptedContent);
-                    Console.WriteLine($"💾 Saved to: {outputPath}");
-                    
-                    // Show sample
-                    var sample = result.DecryptedContent.Length > 300 
-                        ? result.DecryptedContent.Substring(0, 300) + "..."
-                        : result.DecryptedContent;
-                    Console.WriteLine($"📋 Sample: {sample.Replace('\n', ' ').Replace('\r', ' ')}");
-                }
-                else
-                {
-                    Console.WriteLine($"\n❌ FAILED: Could not crack {fileName} in {elapsed.TotalSeconds:F1} seconds");
-                    Console.WriteLine("🔍 Key not found in any attack phase");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"💥 EXCEPTION: {fileName} - {ex.Message}");
-            }
+            Console.WriteLine($"💥 PLAN A FAILED: {ex.Message}");
+            Console.WriteLine($"🔍 Stack Trace: {ex.StackTrace}");
         }
         
-        // Summary
-        Console.WriteLine("\n🏆 V9 INTELLIGENT CRACKER RESULTS");
+        Console.WriteLine("\n🎯 PLAN A Complete!");
+    }
+    
+    private static void DisplayResults(PlanAResults results, TimeSpan elapsed)
+    {
+        Console.WriteLine("\n🏆 PLAN A RESULTS");
         Console.WriteLine("=" + new string('=', 80));
-        Console.WriteLine($"📊 Success Rate: {totalSuccesses}/{totalFiles} ({(100.0 * totalSuccesses / totalFiles):F1}%)");
+        Console.WriteLine($"⏱️ Total Time: {elapsed.TotalSeconds:F1} seconds");
+        Console.WriteLine($"✅ Success: {results.Success}");
+        Console.WriteLine($"📊 Total Candidates: {results.TotalCandidates}");
+        Console.WriteLine($"🎯 Best Score: {results.BestScore}");
+        Console.WriteLine();
         
-        if (totalSuccesses == totalFiles)
+        // Phase results
+        Console.WriteLine("📋 PHASE RESULTS:");
+        Console.WriteLine($"🧠 Intelligence Results: {results.IntelligenceResults.Count}");
+        Console.WriteLine($"🏭 OEM Results: {results.OEMResults.Count}");
+        Console.WriteLine($"📖 Dictionary Results: {results.DictionaryResults.Count}");
+        Console.WriteLine($"🔑 Known Key Results: {results.KnownKeyResults.Count}");
+        Console.WriteLine();
+        
+        // Top candidates
+        if (results.TopCandidates.Any())
         {
-            Console.WriteLine("🎉 COMPLETE SUCCESS! All files cracked!");
-        }
-        else if (totalSuccesses > 0)
-        {
-            Console.WriteLine($"✅ PARTIAL SUCCESS! {totalSuccesses} files cracked!");
+            Console.WriteLine("🏆 TOP CANDIDATES:");
+            var top10 = results.TopCandidates.Take(10).ToList();
+            for (int i = 0; i < top10.Count; i++)
+            {
+                var candidate = top10[i];
+                Console.WriteLine($"#{i+1:D2}: {candidate}");
+                Console.WriteLine($"       Instructions: {candidate.ValidationResult.InstructionMatches}");
+                Console.WriteLine($"       Structures: {candidate.ValidationResult.StructureMatches}");
+                Console.WriteLine($"       Tokens: {string.Join(", ", candidate.ValidationResult.RepeatedTokens)}");
+                
+                var preview = candidate.DecryptedContent.Length > 100 
+                    ? candidate.DecryptedContent.Substring(0, 100).Replace('\n', ' ').Replace('\r', ' ') + "..."
+                    : candidate.DecryptedContent.Replace('\n', ' ').Replace('\r', ' ');
+                Console.WriteLine($"       Preview: {preview}");
+                Console.WriteLine();
+            }
         }
         else
         {
-            Console.WriteLine("❌ NO SUCCESS - May need additional keywords or patterns");
+            Console.WriteLine("❌ No promising candidates found");
         }
         
-        Console.WriteLine("\n💡 RECOMMENDATIONS:");
-        if (totalSuccesses < totalFiles)
+        // Recommendations
+        Console.WriteLine("💡 RECOMMENDATIONS:");
+        if (results.Success && results.BestScore > 50)
         {
-            Console.WriteLine("- Add more company/project specific keywords");
-            Console.WriteLine("- Check for additional password patterns in documentation");
-            Console.WriteLine("- Consider extending dictionary with domain-specific terms");
-            Console.WriteLine("- Analyze any successful patterns for insights");
+            Console.WriteLine("🎉 Strong candidates found! Check the saved samples for manual verification.");
+        }
+        else if (results.Success && results.BestScore > 20)
+        {
+            Console.WriteLine("🔍 Moderate candidates found. May need additional validation or key variants.");
+        }
+        else
+        {
+            Console.WriteLine("⚠️ Low scores suggest:");
+            Console.WriteLine("  - Encryption algorithm may be different than expected");
+            Console.WriteLine("  - Key derivation method may be more complex");
+            Console.WriteLine("  - Additional layers of encryption/compression");
+            Console.WriteLine("  - Need domain-specific password patterns");
         }
         
-        Console.WriteLine("\n🎯 V9 Intelligent Cracker Complete!");
+        if (!string.IsNullOrEmpty(results.Error))
+        {
+            Console.WriteLine($"❌ Error: {results.Error}");
+        }
     }
 }

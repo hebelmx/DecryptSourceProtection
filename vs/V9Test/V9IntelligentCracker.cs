@@ -23,7 +23,7 @@ public class V9IntelligentCracker
         _logger = logger;
     }
 
-    public async Task<(bool Success, string Key, string DecryptedContent)> CrackV9FileAsync(string filePath)
+    public async Task<(bool Success, string Key, string DecryptedContent, string SavedPath)> CrackV9FileAsync(string filePath)
     {
         _logger.LogInformation("🎯 V9 INTELLIGENT CRACKER: Starting attack on {FilePath}", filePath);
         
@@ -33,7 +33,8 @@ public class V9IntelligentCracker
         if (intelligenceResult.Success)
         {
             _logger.LogInformation("✅ SUCCESS: Intelligence attack cracked the key: {Key}", intelligenceResult.Key);
-            return intelligenceResult;
+            var savedPath = await SaveCrackedFile(filePath, intelligenceResult.DecryptedContent, intelligenceResult.Key, "Intelligence");
+            return (true, intelligenceResult.Key, intelligenceResult.DecryptedContent, savedPath);
         }
         
         // Phase 2: Common OEM password patterns
@@ -42,7 +43,8 @@ public class V9IntelligentCracker
         if (oemResult.Success)
         {
             _logger.LogInformation("✅ SUCCESS: OEM pattern attack cracked the key: {Key}", oemResult.Key);
-            return oemResult;
+            var savedPath = await SaveCrackedFile(filePath, oemResult.DecryptedContent, oemResult.Key, "OEM");
+            return (true, oemResult.Key, oemResult.DecryptedContent, savedPath);
         }
         
         // Phase 3: Standard dictionary attack
@@ -51,11 +53,12 @@ public class V9IntelligentCracker
         if (dictionaryResult.Success)
         {
             _logger.LogInformation("✅ SUCCESS: Dictionary attack cracked the key: {Key}", dictionaryResult.Key);
-            return dictionaryResult;
+            var savedPath = await SaveCrackedFile(filePath, dictionaryResult.DecryptedContent, dictionaryResult.Key, "Dictionary");
+            return (true, dictionaryResult.Key, dictionaryResult.DecryptedContent, savedPath);
         }
         
         _logger.LogWarning("❌ All attack phases failed - key not found");
-        return (false, "", "");
+        return (false, "", "", "");
     }
 
     private async Task<(bool Success, string Key, string DecryptedContent)> TryIntelligenceBasedAttack(string filePath)
@@ -488,5 +491,148 @@ public class V9IntelligentCracker
     {
         if (string.IsNullOrEmpty(input)) return input;
         return char.ToUpper(input[0]) + input.Substring(1).ToLower();
+    }
+
+    private async Task<string> SaveCrackedFile(string originalFilePath, string decryptedContent, string key, string method)
+    {
+        try
+        {
+            // Create organized folder structure
+            var originalDir = Path.GetDirectoryName(originalFilePath);
+            var originalFileName = Path.GetFileNameWithoutExtension(originalFilePath);
+            var originalExtension = Path.GetExtension(originalFilePath);
+            
+            // Create cracked folder with timestamp
+            var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+            var crackedDir = Path.Combine(originalDir, "cracked", $"v9_{timestamp}");
+            Directory.CreateDirectory(crackedDir);
+            
+            // Create filename with method and key info
+            var sanitizedKey = key.Replace(",", "_").Replace(" ", "_").Replace("\"", "").Replace("'", "");
+            var crackedFileName = $"{originalFileName}_CRACKED_{method}_{sanitizedKey}{originalExtension}";
+            var crackedFilePath = Path.Combine(crackedDir, crackedFileName);
+            
+            // Save the decrypted content
+            await File.WriteAllTextAsync(crackedFilePath, decryptedContent);
+            
+            // Create metadata file
+            var metadataPath = Path.Combine(crackedDir, $"{originalFileName}_metadata.txt");
+            var metadata = $"V9 Intelligent Cracker Results\n" +
+                          $"=============================\n" +
+                          $"Original File: {originalFilePath}\n" +
+                          $"Cracked File: {crackedFilePath}\n" +
+                          $"Method: {method}\n" +
+                          $"Key: {key}\n" +
+                          $"Timestamp: {DateTime.Now:yyyy-MM-dd HH:mm:ss}\n" +
+                          $"Content Size: {decryptedContent.Length:N0} characters\n" +
+                          $"Success: True\n";
+            
+            await File.WriteAllTextAsync(metadataPath, metadata);
+            
+            _logger.LogInformation("💾 Saved cracked file: {FilePath}", crackedFilePath);
+            _logger.LogInformation("📋 Saved metadata: {MetadataPath}", metadataPath);
+            
+            return crackedFilePath;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "❌ Failed to save cracked file for {FilePath}", originalFilePath);
+            return "";
+        }
+    }
+
+    /// <summary>
+    /// Generate intelligence-based keys for PLAN A
+    /// </summary>
+    public async Task<List<string>> GenerateIntelligenceKeys(string filePath)
+    {
+        var keys = new List<string>();
+        
+        // Extract intelligence from file path
+        var fileName = Path.GetFileNameWithoutExtension(filePath);
+        var directoryName = Path.GetFileName(Path.GetDirectoryName(filePath) ?? "");
+        
+        // Basic intelligence extraction from path
+        var companies = new[] { "Exxerpro", "Rockwell", "Allen", "Bradley", "Siemens", "Schneider" };
+        var projects = new[] { fileName, directoryName, "Main", "Project", "Demo", "Test" };
+        var years = new[] { "2020", "2021", "2022", "2023", "2024", "2025" };
+        
+        // Generate keys based on intelligence
+        foreach (var company in companies)
+        {
+            foreach (var project in projects)
+            {
+                foreach (var year in years)
+                {
+                    keys.Add($"{company}");
+                    keys.Add($"{project}");
+                    keys.Add($"{company}{year}");
+                    keys.Add($"{project}{year}");
+                    keys.Add($"{company}, {project}");
+                    keys.Add($"{company}, {company}");
+                    keys.Add($"{project}, {project}");
+                }
+            }
+        }
+        
+        return keys.Distinct().ToList();
+    }
+
+    /// <summary>
+    /// Generate OEM-based keys for PLAN A
+    /// </summary>
+    public async Task<List<string>> GenerateOEMKeys(string filePath)
+    {
+        var keys = new List<string>();
+        
+        // Common OEM patterns
+        var companies = new[] { "Rockwell", "Allen", "Bradley", "Siemens", "Schneider", "Mitsubishi", "Omron", "GE", "Honeywell", "Emerson" };
+        var projects = new[] { "Main", "Project", "Demo", "Test", "Sample", "Example", "Production", "Line", "Station", "Cell" };
+        var years = new[] { "2020", "2021", "2022", "2023", "2024", "2025" };
+        
+        foreach (var company in companies)
+        {
+            foreach (var project in projects)
+            {
+                foreach (var year in years)
+                {
+                    keys.Add($"{company}");
+                    keys.Add($"{project}");
+                    keys.Add($"{company}{year}");
+                    keys.Add($"{project}{year}");
+                    keys.Add($"{company}, {project}");
+                }
+            }
+        }
+        
+        return keys.Distinct().ToList();
+    }
+
+    /// <summary>
+    /// Generate dictionary keys for PLAN A
+    /// </summary>
+    public async Task<List<string>> GenerateDictionaryKeys()
+    {
+        var keys = new List<string>();
+        
+        // Standard dictionary
+        keys.AddRange(new[]
+        {
+            "password", "admin", "123456", "12345", "1234", "test", "default", "user",
+            "root", "guest", "demo", "sample", "example", "main", "project", "system",
+            "master", "supervisor", "operator", "engineer", "technician", "service",
+            "maintenance", "factory", "production", "line", "station", "cell", "zone",
+            "area", "unit", "module", "device", "control", "automation", "plc", "hmi",
+            "scada", "dcs", "mes", "erp", "opc", "modbus", "ethernet", "profibus",
+            "profinet", "devicenet", "controlnet", "canbus", "fieldbus", "io", "ai",
+            "di", "do", "pid", "loop", "tag", "alarm", "event", "history", "trend",
+            "recipe", "batch", "sequence", "program", "routine", "logic", "ladder",
+            "function", "block", "instruction", "rung", "branch", "contact", "coil",
+            "timer", "counter", "compare", "math", "move", "copy", "file", "array",
+            "string", "real", "integer", "bool", "dint", "sint", "lint", "usint",
+            "uint", "udint", "ulint", "lreal", "time", "date", "datetime", "tod"
+        });
+        
+        return keys.Distinct().ToList();
     }
 }

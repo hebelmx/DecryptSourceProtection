@@ -1,0 +1,1506 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="30.01" TargetName="Output_Dms_Digital" TargetType="Routine" TargetSubType="RLL" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Wed Jul 16 18:20:41 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="Disa2070mk2">
+<DataTypes Use="Context">
+<DataType Name="Con" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Dms" DataType="Con_Dms" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Dmm" DataType="Con_Dmm" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Cse" DataType="Con_Cse" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Pmc" DataType="Con_Pmc" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Sbo" DataType="Con_Sbo" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ssc" DataType="Con_Ssc" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Ppc" DataType="Con_Ppc" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="Con_Dms"/>
+<Dependency Type="DataType" Name="Con_Dmm"/>
+<Dependency Type="DataType" Name="Con_Cse"/>
+<Dependency Type="DataType" Name="Con_Pmc"/>
+<Dependency Type="DataType" Name="Con_Sbo"/>
+<Dependency Type="DataType" Name="Con_Ssc"/>
+<Dependency Type="DataType" Name="Con_Ppc"/>
+</Dependencies>
+</DataType>
+<DataType Name="Con_Cse" Family="NoFamily" Class="User">
+<Members>
+<Member Name="INST" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[CSE Installed                (No: 0, CSE-right: 1, CSE-left: 2]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZCon_Cse1" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Overlap" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Cse1" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[CSE overlap installed (3061 & 3063)]]>
+</Description>
+</Member>
+<Member Name="AutoReset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Cse1" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[CSE light curtain auto reset]]>
+</Description>
+</Member>
+<Member Name="Acf" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Cse1" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ACF gate and Core-mask setting gate Installed]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="Con_Dmm" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ChamberSize" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DMM_SIZEDMM TYPE
+0=A 1=B 2=C 3=S]]>
+</Description>
+</Member>
+<Member Name="ChamberHeight" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ChamberWidth" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ZZZZZZZZZZCon_Dmm3" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="MouldPitchCorrectionDisabled" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dmm3" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="TcuPumpControlCardInst" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dmm3" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="TwoAirReceiversInst" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dmm3" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="DoubleCutOutHeatingElements" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dmm3" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Made at Mercedes by CMB and HRN]]>
+</Description>
+</Member>
+<Member Name="B_cams_on_DMS_BC" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dmm3" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[B-Cams on DMS B/C. (0 = A-cams only on 3065)]]>
+</Description>
+</Member>
+<Member Name="PP_Acc_Fb_Inst" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dmm3" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="SP_Acc_Fb_Inst" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dmm3" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="TwoFourShotValvesControl" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dmm3" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Control of 2/4 active shot valves installed (B+C only)]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZCon_Dmm12" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Blow_Off_F5_Extra" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dmm12" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ekstra blow-off installed. (From 3072) VDU F5 Control]]>
+</Description>
+</Member>
+<Member Name="Blow_Off_F3_Extra" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dmm12" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Ekstra blow-off installed. (From 3072) VDU F3 Control]]>
+</Description>
+</Member>
+<Member Name="Spray_RearFront_Control" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dmm12" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DMM control of rear/front spray nozzles]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="Con_Dms" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ZZZZZZZZZZCon_Dms0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="ForcedMode" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dms0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Forced Mode Installed]]>
+</Description>
+</Member>
+<Member Name="UdmNew" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dms0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PP/SP and PMC sensor updated]]>
+</Description>
+</Member>
+<Member Name="Guard_L_High_input_OK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dms0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DMM Left guard-gate, High input = OK (relay on)]]>
+</Description>
+</Member>
+<Member Name="Guard_R_High_input_OK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dms0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DMM Right guard-gate, High input = OK (relay on)]]>
+</Description>
+</Member>
+<Member Name="Guard_Ppc_High_input_OK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dms0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DMM PPC buffer, High input = OK (relay on)]]>
+</Description>
+</Member>
+<Member Name="DataTablesExtended" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dms0" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Tables extended (From 03.06.00) N28/49/53/54/72/74/78]]>
+</Description>
+</Member>
+<Member Name="AirCoolingInst" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dms0" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DMS oil air cooling installed]]>
+</Description>
+</Member>
+<Member Name="Power24VDC_Check" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dms0" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[24VDC Supervision Installed  (VDU ON if PWR is OFF)]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZCon_Dms9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="CodeReader" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dms9" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Code-reader Installed]]>
+</Description>
+</Member>
+<Member Name="OneMouldPoured" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dms9" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1 mould poured - signal from pouring unit In¬stalled]]>
+</Description>
+</Member>
+<Member Name="Vsf" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Dms9" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[VSF unit installed - Casting Ros]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="Con_Pmc" Family="NoFamily" Class="User">
+<Members>
+<Member Name="INST" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PMC/SBC Inst.                 (No: 0, PMC: 1, PMC+SBC: 2)]]>
+</Description>
+</Member>
+<Member Name="ReturnSpeed" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PMC return speed (std: 1400)]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="Con_Ppc" Family="NoFamily" Class="User">
+<Members>
+<Member Name="INST" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PPC Installed                 (No: 0, PPC-right: 1, PPC-left: 2)]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="Con_Sbo" Family="NoFamily" Class="User">
+<Members>
+<Member Name="INST" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[SBO Installed                    (No: 0, SBO: 1)]]>
+</Description>
+</Member>
+<Member Name="Mode" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[SBO active & passive mode          (Passive: 0, Active: 1)]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="Con_Ssc" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Inst" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[SSC Installed                     (0, 1, 2, 3)]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZCon_Ssc1" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Enable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZCon_Ssc1" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[SSC enable signal Installed]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="Plc" Family="NoFamily" Class="User">
+<Members>
+<Member Name="R2" DataType="PlcR2" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="PlcR2"/>
+</Dependencies>
+</DataType>
+<DataType Name="PlcR2" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Di05" DataType="PlcR2Di05" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Do06" DataType="PlcR2Do06" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="PlcR2Di05"/>
+<Dependency Type="DataType" Name="PlcR2Do06"/>
+</Dependencies>
+</DataType>
+<DataType Name="PlcR2Di05" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ZZZZZZZZZZPlcR2Di050" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="_00" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di050" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[VSF: 
+Active/selected C9-S772 ON]]>
+</Description>
+</Member>
+<Member Name="_01" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di050" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[VSF: 
+Item Set
+C9-S774 ON]]>
+</Description>
+</Member>
+<Member Name="_02" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di050" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[VSF: Clear of DMM - C9-S776 ON]]>
+</Description>
+</Member>
+<Member Name="_03" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di050" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="_04" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di050" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="_05" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di050" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="_06" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di050" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="_07" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di050" BitNumber="7" ExternalAccess="Read/Write"/>
+<Member Name="ZZZZZZZZZZPlcR2Di059" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="_08" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di059" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[VSF: SAF VSF-E-stop OK - C9-K688 ON]]>
+</Description>
+</Member>
+<Member Name="_09" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di059" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[VSF: SAF VSF-SP Guard Closed - C9-K692 ON]]>
+</Description>
+</Member>
+<Member Name="_10" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di059" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[VSF: SAF VSF-Opr. door Closed - C9-K696 ON]]>
+</Description>
+</Member>
+<Member Name="_11" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di059" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="_12" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di059" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="_13" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di059" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="_14" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di059" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="_15" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di059" BitNumber="7" ExternalAccess="Read/Write"/>
+<Member Name="ZZZZZZZZZZPlcR2Di0518" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="_16" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0518" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="_17" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0518" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="_18" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0518" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="_19" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0518" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="_20" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0518" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="_21" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0518" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="_22" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0518" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="_23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0518" BitNumber="7" ExternalAccess="Read/Write"/>
+<Member Name="ZZZZZZZZZZPlcR2Di0527" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="_24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0527" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="_25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0527" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="_26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0527" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="_27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0527" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="_28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0527" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="_29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0527" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="_30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0527" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="_31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Di0527" BitNumber="7" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="PlcR2Do06" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ZZZZZZZZZZPlcR2Do060" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="_00" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do060" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DISA>VSF: 
+Insertion Requested C9-K702 ON]]>
+</Description>
+</Member>
+<Member Name="_01" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do060" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DISA>VSF: 
+Insertion Received 
+C9-K704 ON]]>
+</Description>
+</Member>
+<Member Name="_02" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do060" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="_03" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do060" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="_04" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do060" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="_05" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do060" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="_06" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do060" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="_07" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do060" BitNumber="7" ExternalAccess="Read/Write"/>
+<Member Name="ZZZZZZZZZZPlcR2Do069" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="_08" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do069" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="_09" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do069" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="_10" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do069" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="_11" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do069" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="_12" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do069" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="_13" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do069" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="_14" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do069" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="_15" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do069" BitNumber="7" ExternalAccess="Read/Write"/>
+<Member Name="ZZZZZZZZZZPlcR2Do0618" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="_16" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0618" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="_17" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0618" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="_18" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0618" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="_19" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0618" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="_20" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0618" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="_21" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0618" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="_22" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0618" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="_23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0618" BitNumber="7" ExternalAccess="Read/Write"/>
+<Member Name="ZZZZZZZZZZPlcR2Do0627" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="_24" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0627" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="_25" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0627" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="_26" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0627" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="_27" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0627" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="_28" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0627" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="_29" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0627" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="_30" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0627" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="_31" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZPlcR2Do0627" BitNumber="7" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<Modules Use="Context">
+<Module Use="Reference" Name="Local">
+</Module>
+<Module Use="Reference" Name="x1Do13">
+</Module>
+<Module Use="Reference" Name="x1Do14">
+</Module>
+<Module Use="Reference" Name="x2Do01">
+</Module>
+<Module Use="Reference" Name="x2Do02">
+</Module>
+<Module Use="Reference" Name="x2Do03">
+</Module>
+<Module Use="Reference" Name="x2Do04">
+</Module>
+<Module Use="Reference" Name="x2Do06_Vsf">
+</Module>
+<Module Use="Reference" Name="x2EN2T00">
+</Module>
+</Modules>
+<Tags Use="Context">
+<Tag Name="Config" TagType="Base" DataType="Con" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[[-3,0],[1,800,950,-42,2],[1,0],[2,1500],[1,0],[0,0],[2]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="Con">
+<StructureMember Name="Dms" DataType="Con_Dms">
+<DataValueMember Name="ForcedMode" DataType="BOOL" Value="1"/>
+<DataValueMember Name="UdmNew" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Guard_L_High_input_OK" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Guard_R_High_input_OK" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Guard_Ppc_High_input_OK" DataType="BOOL" Value="1"/>
+<DataValueMember Name="DataTablesExtended" DataType="BOOL" Value="1"/>
+<DataValueMember Name="AirCoolingInst" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Power24VDC_Check" DataType="BOOL" Value="1"/>
+<DataValueMember Name="CodeReader" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OneMouldPoured" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Vsf" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Dmm" DataType="Con_Dmm">
+<DataValueMember Name="ChamberSize" DataType="INT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="ChamberHeight" DataType="INT" Radix="Decimal" Value="800"/>
+<DataValueMember Name="ChamberWidth" DataType="INT" Radix="Decimal" Value="950"/>
+<DataValueMember Name="MouldPitchCorrectionDisabled" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TcuPumpControlCardInst" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TwoAirReceiversInst" DataType="BOOL" Value="1"/>
+<DataValueMember Name="DoubleCutOutHeatingElements" DataType="BOOL" Value="0"/>
+<DataValueMember Name="B_cams_on_DMS_BC" DataType="BOOL" Value="1"/>
+<DataValueMember Name="PP_Acc_Fb_Inst" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SP_Acc_Fb_Inst" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TwoFourShotValvesControl" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Blow_Off_F5_Extra" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Blow_Off_F3_Extra" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Spray_RearFront_Control" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Cse" DataType="Con_Cse">
+<DataValueMember Name="INST" DataType="INT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="Overlap" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AutoReset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Acf" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Pmc" DataType="Con_Pmc">
+<DataValueMember Name="INST" DataType="INT" Radix="Decimal" Value="2"/>
+<DataValueMember Name="ReturnSpeed" DataType="INT" Radix="Decimal" Value="1500"/>
+</StructureMember>
+<StructureMember Name="Sbo" DataType="Con_Sbo">
+<DataValueMember Name="INST" DataType="INT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="Mode" DataType="INT" Radix="Decimal" Value="0"/>
+</StructureMember>
+<StructureMember Name="Ssc" DataType="Con_Ssc">
+<DataValueMember Name="Inst" DataType="INT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Enable" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Ppc" DataType="Con_Ppc">
+<DataValueMember Name="INST" DataType="INT" Radix="Decimal" Value="2"/>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="O" TagType="Produced" DataType="INT" Dimensions="48" Radix="Binary" Constant="false" ExternalAccess="Read/Write">
+<ProduceInfo PLCMappingFile="0"/>
+<Comments>
+<Comment Operand="[24]">
+<![CDATA[#1 DO 13 L]]>
+</Comment>
+<Comment Operand="[24].0">
+<![CDATA[C9_H262_1DISPLAY 1
+BCD DATA
+B0]]>
+</Comment>
+<Comment Operand="[24].1">
+<![CDATA[C9_H262_2DISPLAY 1
+BCD DATA
+B1]]>
+</Comment>
+<Comment Operand="[24].2">
+<![CDATA[C9_H262_3DISPLAY 1
+BCD DATA
+B2]]>
+</Comment>
+<Comment Operand="[24].3">
+<![CDATA[C9_H262_4DISPLAY 1
+BCD DATA
+B3]]>
+</Comment>
+<Comment Operand="[24].4">
+<![CDATA[C9_H262_5DISPLAY
+1+2
+DIGIT
+SELECT D1]]>
+</Comment>
+<Comment Operand="[24].5">
+<![CDATA[C9_H262_6DISPLAY
+1+2
+DIGIT
+SELECT D2]]>
+</Comment>
+<Comment Operand="[24].6">
+<![CDATA[C9_H262_7DISPLAY
+1+2
+DIGIT
+SELECT D3]]>
+</Comment>
+<Comment Operand="[24].7">
+<![CDATA[C9_H262_8DISPLAY
+1+2
+DIGIT
+SELECT D4]]>
+</Comment>
+<Comment Operand="[24].8">
+<![CDATA[C9_H282_1DISPLAY 2
+BCD DATA
+B0]]>
+</Comment>
+<Comment Operand="[24].9">
+<![CDATA[C9_H282_2DISPLAY 2
+BCD DATA
+B1]]>
+</Comment>
+<Comment Operand="[24].10">
+<![CDATA[C9_H282_3DISPLAY 2
+BCD DATA
+B2]]>
+</Comment>
+<Comment Operand="[24].11">
+<![CDATA[C9_H282_4DISPLAY 2
+BCD DATA
+B3]]>
+</Comment>
+<Comment Operand="[24].12">
+<![CDATA[KO_DMS_PRE_POUR_SIGN#1Do13L14
+C9-K612]]>
+</Comment>
+<Comment Operand="[24].13">
+<![CDATA[KO_DMS_45_MM_TRANSP#1Do13L15
+C9-K614]]>
+</Comment>
+<Comment Operand="[24].14">
+<![CDATA[KO_CAST_SORTING_NOW#1Do13L16
+C9-K616]]>
+</Comment>
+<Comment Operand="[24].15">
+<![CDATA[#1Do13L17
+C9-_618
+Spare]]>
+</Comment>
+<Comment Operand="[25]">
+<![CDATA[#1 DO 13 R]]>
+</Comment>
+<Comment Operand="[25].0">
+<![CDATA[C9_024MOTORS
+RUNNING]]>
+</Comment>
+<Comment Operand="[25].1">
+<![CDATA[C9_026WAITING
+FOR
+POURING]]>
+</Comment>
+<Comment Operand="[25].2">
+<![CDATA[C9_028WAITING
+FOR SAND]]>
+</Comment>
+<Comment Operand="[25].3">
+<![CDATA[C9_030WAITING
+FOR CORES]]>
+</Comment>
+<Comment Operand="[25].4">
+<![CDATA[C9_034ET GITTER Er ÅBENT]]>
+</Comment>
+<Comment Operand="[25].5">
+<![CDATA[C9_036DMS
+STOPPED]]>
+</Comment>
+<Comment Operand="[25].6">
+<![CDATA[C9_038NDSTOP]]>
+</Comment>
+<Comment Operand="[25].7">
+<![CDATA[EXT MODEL
+KODE
+FUNDET.
+HNDKODE
+LSER.]]>
+</Comment>
+<Comment Operand="[25].8">
+<![CDATA[C9_042VENSTRE GITTER ÅBENT]]>
+</Comment>
+<Comment Operand="[25].9">
+<![CDATA[C9_044LEFT GUARD
+GATE PANEL
+SELECTED]]>
+</Comment>
+<Comment Operand="[25].10">
+<![CDATA[C9_046HØJRE GITTER ÅBENT]]>
+</Comment>
+<Comment Operand="[25].11">
+<![CDATA[C9_048RIGHT
+GUARD GATE
+PANEL
+SELECTED]]>
+</Comment>
+<Comment Operand="[25].12">
+<![CDATA[C9_050CSE GUARD
+GATE OPEN,
+LIGHT
+CURTAIN]]>
+</Comment>
+<Comment Operand="[25].13">
+<![CDATA[C9_052CSE GUARD
+GATE ENTRY
+ALLOWED]]>
+</Comment>
+<Comment Operand="[25].14">
+<![CDATA[C5_019110 V AC
+DO OUTPUT
+TEST]]>
+</Comment>
+<Comment Operand="[25].15">
+<![CDATA[C9_K56WATCH DOG]]>
+</Comment>
+<Comment Operand="[26]">
+<![CDATA[#1 DO 14 L]]>
+</Comment>
+<Comment Operand="[26].0">
+<![CDATA[C9_K222DMM OPR. 1]]>
+</Comment>
+<Comment Operand="[26].1">
+<![CDATA[C9_K224DMM OPR. 2]]>
+</Comment>
+<Comment Operand="[26].2">
+<![CDATA[C9_K226DMM OPR.3A]]>
+</Comment>
+<Comment Operand="[26].3">
+<![CDATA[C9_K228DMM OPR.3B]]>
+</Comment>
+<Comment Operand="[26].4">
+<![CDATA[C9_K230DMM OPR.4A]]>
+</Comment>
+<Comment Operand="[26].5">
+<![CDATA[C9_K232DMM OPR.4B]]>
+</Comment>
+<Comment Operand="[26].6">
+<![CDATA[C9_K234DMM OPR. 5]]>
+</Comment>
+<Comment Operand="[26].7">
+<![CDATA[C9_K236DMM OPR. 6]]>
+</Comment>
+<Comment Operand="[26].8">
+<![CDATA[C9_K242POURING
+ALLOWED]]>
+</Comment>
+<Comment Operand="[26].9">
+<![CDATA[C9_K244SSU CLUTCH]]>
+</Comment>
+<Comment Operand="[26].10">
+<![CDATA[C9_K246DMS
+RUNNING]]>
+</Comment>
+<Comment Operand="[26].11">
+<![CDATA[C9_K248TEST
+SIGNAL
+FOR ACE]]>
+</Comment>
+<Comment Operand="[26].12">
+<![CDATA[C9_K250SIGNAL
+FOR ACE]]>
+</Comment>
+<Comment Operand="[26].13">
+<![CDATA[C9_K252CSE:
+SET NEW CORES IN CSE]]>
+</Comment>
+<Comment Operand="[26].14">
+<![CDATA[C9_K254CSE:
+NEW CORES SET IN CSE]]>
+</Comment>
+<Comment Operand="[26].15">
+<![CDATA[C9_K256FRSTE
+FORM EFTER
+MODELSKIFT]]>
+</Comment>
+<Comment Operand="[27]">
+<![CDATA[#1 DO 14 R]]>
+</Comment>
+<Comment Operand="[27].0">
+<![CDATA[PCB310_F8CTR-IN
+BIT 0]]>
+</Comment>
+<Comment Operand="[27].1">
+<![CDATA[PCB310_D8CTR-IN
+BIT 1]]>
+</Comment>
+<Comment Operand="[27].2">
+<![CDATA[PCB310_B8CTR-IN
+BIT 2]]>
+</Comment>
+<Comment Operand="[27].3">
+<![CDATA[PCB310_Z8CTR-IN
+BIT 3]]>
+</Comment>
+<Comment Operand="[27].4">
+<![CDATA[Acc.
+Feed-Back
+AFB_SEL]]>
+</Comment>
+<Comment Operand="[27].5">
+<![CDATA[Acc.
+Feed-Back
+SP_SEL]]>
+</Comment>
+<Comment Operand="[27].6">
+<![CDATA[Acc.
+Feed-Back
+PP_SEL]]>
+</Comment>
+<Comment Operand="[27].7">
+<![CDATA[Pressure
+Feed-back
+PMC_SEL]]>
+</Comment>
+<Comment Operand="[27].8">
+<![CDATA[C9_602MOVE PPC
+TOWARDS
+RIGHT FOR
+CORRECT
+POSITION]]>
+</Comment>
+<Comment Operand="[27].9">
+<![CDATA[C9_604PPC IN
+SP/PP
+PATTERN 
+CHANGE
+POSITION]]>
+</Comment>
+<Comment Operand="[27].10">
+<![CDATA[C9_606MOVE PPC
+TOWARDS
+LEFT FOR
+CORRECT
+POSITION]]>
+</Comment>
+<Comment Operand="[27].11">
+<![CDATA[C9_608PPC NOT
+READY]]>
+</Comment>
+<Comment Operand="[27].12">
+<![CDATA[C9_K302MOULD
+DEFECTIVE]]>
+</Comment>
+<Comment Operand="[27].13">
+<![CDATA[C9_K304DMS
+FAULTED]]>
+</Comment>
+<Comment Operand="[27].14">
+<![CDATA[C9_K306SBC moving
+forward in
+automatic]]>
+</Comment>
+<Comment Operand="[28]">
+<![CDATA[#1 DO 15 L - Gray-out PP]]>
+</Comment>
+<Comment Operand="[29]">
+<![CDATA[#1 DO 15 R - Gray-out SP]]>
+</Comment>
+<Comment Operand="[32]">
+<![CDATA[#2 DO 01]]>
+</Comment>
+<Comment Operand="[32].0">
+<![CDATA[C6_Q22DMM FLUID
+HEATING #1]]>
+</Comment>
+<Comment Operand="[32].1">
+<![CDATA[C6_Q24DMM FLUID
+HEATING #2
+or
+Cut-Out
+Relays]]>
+</Comment>
+<Comment Operand="[32].2">
+<![CDATA[C6_Q26PP VARME]]>
+</Comment>
+<Comment Operand="[32].3">
+<![CDATA[C6_Q28SP VARME]]>
+</Comment>
+<Comment Operand="[32].4">
+<![CDATA[C6_Q30CSE VACUUM]]>
+</Comment>
+<Comment Operand="[32].5">
+<![CDATA[C6_Q32DMM
+FLUID
+FILTERING]]>
+</Comment>
+<Comment Operand="[32].6">
+<![CDATA[C6_Y34OPEN RIGHT
+GATE
+PN356]]>
+</Comment>
+<Comment Operand="[32].7">
+<![CDATA[C6_Y36CLOSE
+RIGHT GATE
+PN357]]>
+</Comment>
+<Comment Operand="[32].8">
+<![CDATA[C6_K42DI TEST 0]]>
+</Comment>
+<Comment Operand="[32].9">
+<![CDATA[C6_K44DI TEST 1]]>
+</Comment>
+<Comment Operand="[32].10">
+<![CDATA[C6_K46110 V DO
+TEST]]>
+</Comment>
+<Comment Operand="[32].11">
+<![CDATA[C6_K48110 V DO
+TEST END]]>
+</Comment>
+<Comment Operand="[32].12">
+<![CDATA[C6_K50HY-RESTART]]>
+</Comment>
+<Comment Operand="[32].13">
+<![CDATA[C6_K52HY TEST
+ENABLE]]>
+</Comment>
+<Comment Operand="[32].14">
+<![CDATA[C6_Y54OPEN LEFT
+GATE
+PN354]]>
+</Comment>
+<Comment Operand="[32].15">
+<![CDATA[C6_Y56CLOSE LEFT
+GATE
+PN355]]>
+</Comment>
+<Comment Operand="[33]">
+<![CDATA[#2 DO 02]]>
+</Comment>
+<Comment Operand="[33].0">
+<![CDATA[C7_2DMM MOTOR]]>
+</Comment>
+<Comment Operand="[33].1">
+<![CDATA[C7_12SERVOMOTOR]]>
+</Comment>
+<Comment Operand="[33].2">
+<![CDATA[C7_22SSC MOTOR]]>
+</Comment>
+<Comment Operand="[33].3">
+<![CDATA[C7_24SSU MOTOR
+FORWARD]]>
+</Comment>
+<Comment Operand="[33].4">
+<![CDATA[C7_26SSU MOTOR
+REVERSE]]>
+</Comment>
+<Comment Operand="[33].5">
+<![CDATA[PPC
+AKTIVERET]]>
+</Comment>
+<Comment Operand="[33].6">
+<![CDATA[C7_K36SSC
+FAULTED]]>
+</Comment>
+<Comment Operand="[33].7">
+<![CDATA[C7_38SSC2 MOTOR]]>
+</Comment>
+<Comment Operand="[33].8">
+<![CDATA[C7_Y42RELIEF OF
+CORE MASK
+VACUUM
+PN211]]>
+</Comment>
+<Comment Operand="[33].9">
+<![CDATA[C7_Y44_SPRAY_REAR#2Do02-11]]>
+</Comment>
+<Comment Operand="[33].10">
+<![CDATA[C7_Y46_SPRAY_FRONT#2Do02-12]]>
+</Comment>
+<Comment Operand="[33].11">
+<![CDATA[C7_Y48SBC,PN407
+CONTROL,
+JAW CLUTCH
+ACTIVATED
+PN404]]>
+</Comment>
+<Comment Operand="[33].12">
+<![CDATA[C7_Y50SBC, BRAKE
+PN414]]>
+</Comment>
+<Comment Operand="[33].13">
+<![CDATA[C7_52CORE MASK
+FORWARD
+C83-Y24
+PN220]]>
+</Comment>
+<Comment Operand="[33].14">
+<![CDATA[C7_K54DMM MOLD
+COUNTER]]>
+</Comment>
+<Comment Operand="[33].15">
+<![CDATA[C7_K56CSE MOLD
+COUNTER]]>
+</Comment>
+<Comment Operand="[34]">
+<![CDATA[#2 DO 03]]>
+</Comment>
+<Comment Operand="[34].0">
+<![CDATA[C7_Y62MOLD
+BLOW-OFF
+PP
+IMPRESSION
+PN14]]>
+</Comment>
+<Comment Operand="[34].1">
+<![CDATA[C7_Y64PRESSURE
+PAD
+BLOW-OFF
+PN15]]>
+</Comment>
+<Comment Operand="[34].2">
+<![CDATA[C7_Y66PP
+VIBRATOR
+PN 17]]>
+</Comment>
+<Comment Operand="[34].3">
+<![CDATA[C7_Y68SP
+VIBRATOR
+PN 18]]>
+</Comment>
+<Comment Operand="[34].4">
+<![CDATA[C7_Y70CLOSE SAND
+HOPPER
+EXHAUST
+VALVE
+PN19 ]]>
+</Comment>
+<Comment Operand="[34].5">
+<![CDATA[C7_Y72SAND GATE
+CLOSE
+PN27]]>
+</Comment>
+<Comment Operand="[34].6">
+<![CDATA[C7_Y74SAND GATE
+OPEN
+PN28]]>
+</Comment>
+<Comment Operand="[34].7">
+<![CDATA[C7_Y76MOLD SIDE
+SUPPORT
+PN358]]>
+</Comment>
+<Comment Operand="[34].8">
+<![CDATA[C7_Y82OPEN PP
+PATTERN
+PLATE
+LOCKS
+PN98]]>
+</Comment>
+<Comment Operand="[34].9">
+<![CDATA[C7_Y84OPEN SP
+PATTERN
+PLATE
+LOCKS
+PN57]]>
+</Comment>
+<Comment Operand="[34].10">
+<![CDATA[C7_Y86PP CHAMBER
+SEALING
+PN84]]>
+</Comment>
+<Comment Operand="[34].11">
+<![CDATA[C7_Y88SP CHAMBER
+SEALING
+PN307]]>
+</Comment>
+<Comment Operand="[34].12">
+<![CDATA[C7_Y90ALL MOLD
+RETAINERS
+UP
+PN90]]>
+</Comment>
+<Comment Operand="[34].13">
+<![CDATA[C7_Y92LEFT MOLD
+RETAINER
+DOWN
+PN361]]>
+</Comment>
+<Comment Operand="[34].14">
+<![CDATA[C7_Y94CENTER
+MOLD
+RETAINER
+DOWN
+PN362]]>
+</Comment>
+<Comment Operand="[34].15">
+<![CDATA[C7_Y96RIGHT MOLD
+RETAINER
+DOWN
+PN363]]>
+</Comment>
+<Comment Operand="[35]">
+<![CDATA[#2 DO 04]]>
+</Comment>
+<Comment Operand="[35].0">
+<![CDATA[C7_Y102SAND VALVE
+SEALING
+PN86]]>
+</Comment>
+<Comment Operand="[35].1">
+<![CDATA[C7_Y104SPRAY PUMP
+PN308]]>
+</Comment>
+<Comment Operand="[35].2">
+<![CDATA[C7_Y106MOLD
+BLOW-OFF
+SP
+IMPRESSION
+PN324]]>
+</Comment>
+<Comment Operand="[35].3">
+<![CDATA[C7_Y108SPRAY AIR
+PN 340]]>
+</Comment>
+<Comment Operand="[35].4">
+<![CDATA[C7_Y110PMC FIXED
+GRATES UP
+PN101]]>
+</Comment>
+<Comment Operand="[35].5">
+<![CDATA[C7_Y112PMC FIXED
+GRATES
+DOWN
+PN102]]>
+</Comment>
+<Comment Operand="[35].6">
+<![CDATA[C7_Y114PMC
+MOVABLE
+GRATES UP
+PN103]]>
+</Comment>
+<Comment Operand="[35].7">
+<![CDATA[C7_Y116PMC
+MOVABLE
+GRATES
+DOWN
+PN104]]>
+</Comment>
+<Comment Operand="[35].8">
+<![CDATA[C7_Y122AIR SUPPLY
+DMM
+PN29]]>
+</Comment>
+<Comment Operand="[35].9">
+<![CDATA[C7_Y124AIR SUPPLY
+SANDSHOT
+AIR
+RECIEVER
+PN366]]>
+</Comment>
+<Comment Operand="[35].10">
+<![CDATA[C7_Y126PN381
+Opr.- 2/3A/3B
+SP top blow-off]]>
+</Comment>
+<Comment Operand="[35].11">
+<![CDATA[C7_Y128PN383
+Opr.- 3/6
+PP mould blow-off]]>
+</Comment>
+<Comment Operand="[35].12">
+<![CDATA[C7_Y130PN382
+Opr.- 4A
+SP mould blow-off]]>
+</Comment>
+<Comment Operand="[35].13">
+<![CDATA[C7_K132Oil air cool relays:C7-K132,-K133,
+C7-K138,-K139]]>
+</Comment>
+<Comment Operand="[35].14">
+<![CDATA[C7_Y134WATER
+SUPPLY DMM
+HY29]]>
+</Comment>
+<Comment Operand="[35].15">
+<![CDATA[C7_Y136SERVO
+PRESSURE
+HY42]]>
+</Comment>
+<Comment Operand="[36]">
+<![CDATA[#2 DO 05]]>
+</Comment>
+<Comment Operand="[37]">
+<![CDATA[#2 DO 06]]>
+</Comment>
+<Comment Operand="[38]">
+<![CDATA[#2 DO 07]]>
+</Comment>
+<Comment Operand="[38].0">
+<![CDATA[C81_Y2DMM OPR
+2-3A
+HY1]]>
+</Comment>
+<Comment Operand="[38].1">
+<![CDATA[C81_Y4DMM Op. 2-3B-6
+HY2]]>
+</Comment>
+<Comment Operand="[38].2">
+<![CDATA[C81_Y6DMM OPR
+2
+HY3]]>
+</Comment>
+<Comment Operand="[38].3">
+<![CDATA[C81_Y8DMM Op. 2-3A-3B-6
+HY4]]>
+</Comment>
+<Comment Operand="[38].4">
+<![CDATA[C81_Y10DMM OPR
+2-4A-5
+HY5]]>
+</Comment>
+<Comment Operand="[38].5">
+<![CDATA[C81_Y12DMM OPR 2
+HY6]]>
+</Comment>
+<Comment Operand="[38].6">
+<![CDATA[C81_Y14DMM OPR
+2-4A-4B-5
+HY7]]>
+</Comment>
+<Comment Operand="[38].7">
+<![CDATA[C81_Y16DMM OPR
+3A
+HY 8]]>
+</Comment>
+<Comment Operand="[38].8">
+<![CDATA[C81_Y22CONTROL OF
+HY10
+HY12]]>
+</Comment>
+<Comment Operand="[38].9">
+<![CDATA[C81_Y24CONTROL OF
+HY11
+HY44]]>
+</Comment>
+<Comment Operand="[38].10">
+<![CDATA[C81_Y26]]>
+</Comment>
+<Comment Operand="[38].11">
+<![CDATA[C81_Y28PMC 4B
+HY73C]]>
+</Comment>
+<Comment Operand="[38].12">
+<![CDATA[C81_Y30PMC 4B
+HY73D]]>
+</Comment>
+<Comment Operand="[38].13">
+<![CDATA[C81_Y32PMC 4B
+HY73E]]>
+</Comment>
+<Comment Operand="[38].14">
+<![CDATA[C81_Y34PMC
+FORWARD
+HY70]]>
+</Comment>
+<Comment Operand="[38].15">
+<![CDATA[C81_Y36PMC
+FORWARD
+HY72]]>
+</Comment>
+<Comment Operand="[39]">
+<![CDATA[#2 DO 08]]>
+</Comment>
+<Comment Operand="[39].0">
+<![CDATA[C82_Y2CONTROL OF
+HY22
+HYDRAULIC
+LOCK
+HY77]]>
+</Comment>
+<Comment Operand="[39].1">
+<![CDATA[C82_Y4CONTROL OF
+HY22
+HYDRAULIC
+LOCK
+HY137]]>
+</Comment>
+<Comment Operand="[39].3">
+<![CDATA[C82_Y8PMC RETURN
+EMPTYING
+PRESSURE
+HY76]]>
+</Comment>
+<Comment Operand="[39].4">
+<![CDATA[C82_Y10BOOSTER
+PRESSURE
+HY121]]>
+</Comment>
+<Comment Operand="[39].5">
+<![CDATA[C82_Y12CONTROL OF
+DMM FLOW
+CUT-OFF
+VALVES
+HY130]]>
+</Comment>
+<Comment Operand="[39].6">
+<![CDATA[C82_Y14CONTROL OF
+DMM PRESS.
+RELIEF
+VALVES
+HY131]]>
+</Comment>
+<Comment Operand="[39].7">
+<![CDATA[C82_Y16PRESSURE
+RELIEF
+END OPR 2
+HY132]]>
+</Comment>
+<Comment Operand="[39].8">
+<![CDATA[C82_Y22SHOT VALVE
+#1 PN7A]]>
+</Comment>
+<Comment Operand="[39].9">
+<![CDATA[C82_Y24SHOT VALVE
+#2 PN 7B]]>
+</Comment>
+<Comment Operand="[39].10">
+<![CDATA[C82_Y26SHOT VALVE
+#3 PN 7C]]>
+</Comment>
+<Comment Operand="[39].11">
+<![CDATA[C82_Y28SHOT VALVE
+#4 PN 7D]]>
+</Comment>
+<Comment Operand="[39].13">
+<![CDATA[C82_Y32]]>
+</Comment>
+<Comment Operand="[39].14">
+<![CDATA[C82_Y34CLOSE SP
+PATTERN
+PLATE
+LOCKS
+PN56]]>
+</Comment>
+<Comment Operand="[39].15">
+<![CDATA[C82_Y36CLOSE PP
+PATTERN
+PLATE
+LOCKS
+PN97]]>
+</Comment>
+<Comment Operand="[40]">
+<![CDATA[#2 DO 09]]>
+</Comment>
+<Comment Operand="[40].0">
+<![CDATA[C83_Y2PRESSURE
+FOR ROTARY
+ACTUATOR
+HY201]]>
+</Comment>
+<Comment Operand="[40].1">
+<![CDATA[C83_Y4HOLDING
+PRESSURE
+CROSS
+SLIDE
+HY202]]>
+</Comment>
+<Comment Operand="[40].2">
+<![CDATA[C83_Y6CROSS
+SLIDE OUT
+HY203A]]>
+</Comment>
+<Comment Operand="[40].3">
+<![CDATA[C83_Y8CROSS
+SLIDE IN
+HY203B]]>
+</Comment>
+<Comment Operand="[40].4">
+<![CDATA[C83_Y10SAFETY
+VALVE
+CROSS
+SLIDE OUT
+HY216 A1]]>
+</Comment>
+<Comment Operand="[40].5">
+<![CDATA[C83_Y12SAFETY
+VALVE
+CROSS
+SLIDE OUT
+HY216 A2]]>
+</Comment>
+<Comment Operand="[40].6">
+<![CDATA[C83_Y14CROSS
+SLIDE IN
+AND OUT
+HY218]]>
+</Comment>
+<Comment Operand="[40].7">
+<![CDATA[C83_Y16SHOCK
+ABSORBER
+RELEASED
+HY212]]>
+</Comment>
+<Comment Operand="[40].8">
+<![CDATA[C83_Y22CORE BLOW
+OFF
+PN218]]>
+</Comment>
+<Comment Operand="[40].9">
+<![CDATA[C83_Y24CORE MASK
+FORWARD
+PN220]]>
+</Comment>
+<Comment Operand="[40].10">
+<![CDATA[C83_Y26CORE MASK
+BACKWARD
+PN221]]>
+</Comment>
+<Comment Operand="[40].11">
+<![CDATA[C83_Y28DEACTIVATE
+CORE
+RETENTION
+PN224A]]>
+</Comment>
+<Comment Operand="[40].12">
+<![CDATA[C83_Y30DEACTIVATE
+CORE
+RETENTION
+PN224B]]>
+</Comment>
+<Comment Operand="[40].13">
+<![CDATA[C83_Q42AUTOMATIC
+MOLD
+RETAINER
+FORWARD]]>
+</Comment>
+<Comment Operand="[40].14">
+<![CDATA[C83_Q44AUTOMATIC
+MOLD
+RETAINER
+REVERSE]]>
+</Comment>
+<Comment Operand="[40].15">
+<![CDATA[C83_Y32PRESSURE
+FOR CSE
+INNER
+BUFFER
+PN 251]]>
+</Comment>
+<Comment Operand="[41]">
+<![CDATA[#2 DO 10 SBO]]>
+</Comment>
+<Comment Operand="[41].0">
+<![CDATA[C22_002SBO1 VARME]]>
+</Comment>
+<Comment Operand="[41].1">
+<![CDATA[C22_004SBO2 VARME]]>
+</Comment>
+<Comment Operand="[41].4">
+<![CDATA[C23_002SBO1 MOTOR]]>
+</Comment>
+<Comment Operand="[41].5">
+<![CDATA[C23_012SBO2 MOTOR]]>
+</Comment>
+<Comment Operand="[41].8">
+<![CDATA[C24_Y2SBO1
+VENTIL 1
+HY-1931]]>
+</Comment>
+<Comment Operand="[41].9">
+<![CDATA[C24_Y4SBO1
+VENTIL 2
+HY-1932]]>
+</Comment>
+<Comment Operand="[41].12">
+<![CDATA[C24_Y12SBO2
+VENTIL 1
+HY-2931]]>
+</Comment>
+<Comment Operand="[41].13">
+<![CDATA[C24_Y14SBO2
+VENTIL 2
+HY-2932]]>
+</Comment>
+</Comments>
+<Data Format="L5K">
+<![CDATA[[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4848,12289,5378,256,0,0,0,0,-26568,10383,-24542,-6296,0,0,895,-16269,566,0
+					,0,0,0,0,0,0]]]>
+</Data>
+<Data Format="Decorated">
+<Array DataType="INT" Dimensions="48" Radix="Binary">
+<Element Index="[0]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[1]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[2]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[3]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[4]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[5]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[6]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[7]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[8]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[9]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[10]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[11]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[12]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[13]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[14]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[15]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[16]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[17]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[18]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[19]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[20]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[21]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[22]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[23]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[24]" Value="2#0001_0010_1111_0000"/>
+<Element Index="[25]" Value="2#0011_0000_0000_0001"/>
+<Element Index="[26]" Value="2#0001_0101_0000_0010"/>
+<Element Index="[27]" Value="2#0000_0001_0000_0000"/>
+<Element Index="[28]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[29]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[30]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[31]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[32]" Value="2#1001_1000_0011_1000"/>
+<Element Index="[33]" Value="2#0010_1000_1000_1111"/>
+<Element Index="[34]" Value="2#1010_0000_0010_0010"/>
+<Element Index="[35]" Value="2#1110_0111_0110_1000"/>
+<Element Index="[36]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[37]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[38]" Value="2#0000_0011_0111_1111"/>
+<Element Index="[39]" Value="2#1100_0000_0111_0011"/>
+<Element Index="[40]" Value="2#0000_0010_0011_0110"/>
+<Element Index="[41]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[42]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[43]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[44]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[45]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[46]" Value="2#0000_0000_0000_0000"/>
+<Element Index="[47]" Value="2#0000_0000_0000_0000"/>
+</Array>
+</Data>
+</Tag>
+<Tag Name="Plc" TagType="Base" DataType="Plc" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[[[0,0,0,0],[0,0,0,0]]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="Plc">
+<StructureMember Name="R2" DataType="PlcR2">
+<StructureMember Name="Di05" DataType="PlcR2Di05">
+<DataValueMember Name="_00" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_01" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_02" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_03" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_04" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_05" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_06" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_07" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_08" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_09" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_10" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_11" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_12" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_13" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_14" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_15" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_16" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_17" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_18" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_19" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_20" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_21" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_22" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_23" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_24" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_25" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_26" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_27" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_28" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_29" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_30" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_31" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Do06" DataType="PlcR2Do06">
+<DataValueMember Name="_00" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_01" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_02" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_03" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_04" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_05" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_06" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_07" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_08" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_09" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_10" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_11" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_12" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_13" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_14" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_15" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_16" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_17" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_18" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_19" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_20" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_21" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_22" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_23" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_24" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_25" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_26" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_27" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_28" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_29" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_30" DataType="BOOL" Value="0"/>
+<DataValueMember Name="_31" DataType="BOOL" Value="0"/>
+</StructureMember>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+</Tags>
+<Programs Use="Context">
+<Program Use="Context" Name="Top">
+<Tags Use="Context">
+<Tag Name="Bip" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[1]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+</Tags>
+<Routines Use="Context">
+<EncodedData EncodedType="Routine" Name="Output_Dms_Digital" Type="RLL" EncryptionConfig="9">
+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</EncodedData>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>

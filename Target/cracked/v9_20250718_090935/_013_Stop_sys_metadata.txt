@@ -1,0 +1,9 @@
+V9 Intelligent Cracker Results
+=============================
+Original File: /mnt/e/Dynamic/Source/DecryptSourceProtection/target/_013_Stop_sys.L5X
+Cracked File: /mnt/e/Dynamic/Source/DecryptSourceProtection/target/cracked/v9_20250718_090935/_013_Stop_sys_CRACKED_Intelligence_Exxerpro__Exxerpro.L5X
+Method: Intelligence
+Key: Exxerpro, Exxerpro
+Timestamp: 2025-07-18 09:09:35
+Content Size: 63,852 characters
+Success: True
