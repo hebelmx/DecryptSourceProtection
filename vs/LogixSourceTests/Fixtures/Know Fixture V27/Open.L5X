@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="27.00" TargetName="Open" TargetType="Routine" TargetSubType="RLL" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Wed Jul 16 23:03:45 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="l71">
+<DataTypes Use="Context">
+</DataTypes>
+<Programs Use="Context">
+<Program Use="Context" Name="MainProgram">
+<Tags Use="Context">
+<Tag Name="Agitator_FB0" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="Agitator_FB1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="Chocolate_FB0" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="Chocolate_FB1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+</Tags>
+<Routines Use="Context">
+<EncodedData EncodedType="Routine" Name="Open" Type="RLL" EncryptionConfig="8">
+AAjYHZvqz2lUS0ksVp3lV/Q5vmBhovYOAi31zAo3B1ga3Dikr3ztvhMc/GHqk9hTpB5yE4sfsuBz4uV1oqhyWZHK+7l7SaGcKqStNTcjfk8IuxUg+ZH1jcBwhY30/RXqU8aMiQfNkz+2qJ3LDsmrA7GfW3tpd6yw9nF21MrWGzQ3nIafv5E3gSFBeaq86339OxgHaTS4pEhQMfzB2TlhJ6rY3dPdehzzn/gkLENQVBj/ky91vzp/rxZwGGbP/NueXk0f53njOXXaGB+lVCupqJDcG3c0bAB2eba74UqwSncA16x/UBhrDyntC2MECCQ5l6/u5q2wJnamLDsIMTKWOw4YLcPgPFdJbfXnGPA9M/by7Jm0CYD5cZ62XRyuuB8zqV4cVLQcrqt9+z0OCOx5QVwCVEmN42uXe2EL9Rv2jBUZlYSIgNknZfAYiTod1cMMVewK6UZTQKvIVDFusDngrEcJqNsUlX0O8JXxqiIFZLBYtYMIF0RF369k0bt6avqo/DYGI9R8C1cNKr82zA76Fe4DApeymYuamBqeneUbyZ7GmNyS0xy9fyyhAQvqB6+v+uSWSzprF0NZV6DRUXkLTJLP8VCm0ifpQzUnEUHgHgpbhAkyodiC4N0meIjFAQLjkNQ</EncodedData>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>

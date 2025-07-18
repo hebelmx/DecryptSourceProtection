@@ -1,0 +1,2045 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Skid Index In Action-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="32.02" TargetName="S025_SkidIndexInVDL" TargetType="Routine" TargetSubType="RLL" TargetClass="Standard" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Thu Jul 17 02:50:29 2025" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="RM21HWO10001C1">
+<DataTypes Use="Context">
+<DataType Name="za_Action" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Base Motion Action Data
+<@VER 1.000>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZza_Action0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Comp" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Complete]]>
+</Description>
+</Member>
+<Member Name="ProcComp" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Process Complete]]>
+</Description>
+</Member>
+<Member Name="Auto" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Auto Mode
+Conditions]]>
+</Description>
+</Member>
+<Member Name="AutoSetup" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Auto Mode
+Setup Conditions]]>
+</Description>
+</Member>
+<Member Name="Clear" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Clear Conditions]]>
+</Description>
+</Member>
+<Member Name="ClrSetup" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Clear Setup
+Conditions]]>
+</Description>
+</Member>
+<Member Name="OutPwr" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Output Power For Action]]>
+</Description>
+</Member>
+<Member Name="Cmd" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action0" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Command]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZza_Action9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Out" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Internal Output]]>
+</Description>
+</Member>
+<Member Name="Mem" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Memory]]>
+</Description>
+</Member>
+<Member Name="PB" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Pushbutton (manual request)]]>
+</Description>
+</Member>
+<Member Name="FLT" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Faulted]]>
+</Description>
+</Member>
+<Member Name="Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Is Active]]>
+</Description>
+</Member>
+<Member Name="EnableSkip" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Can Be Skipped]]>
+</Description>
+</Member>
+<Member Name="EnableBypass" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Can Be Bypassed]]>
+</Description>
+</Member>
+<Member Name="Bypassed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action9" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Is Bypassed]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZza_Action18" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Prompt" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Display Action's Prompt]]>
+</Description>
+</Member>
+<Member Name="OutPwrPrompt" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Output Power Prompt]]>
+</Description>
+</Member>
+<Member Name="Setup1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Setup Bit 1]]>
+</Description>
+</Member>
+<Member Name="Setup2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Setup Bit 2]]>
+</Description>
+</Member>
+<Member Name="Setup3" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Setup Bit 3]]>
+</Description>
+</Member>
+<Member Name="Setup4" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Setup Bit 4]]>
+</Description>
+</Member>
+<Member Name="AntiRept" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Anti Repeat Do / Undo Requests from HMIs]]>
+</Description>
+</Member>
+<Member Name="OneShot" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action18" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action One Shot]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZza_Action27" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="FltCheck" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action27" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Fault Check]]>
+</Description>
+</Member>
+<Member Name="RecipeEnable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZza_Action27" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Recipe Enable]]>
+</Description>
+</Member>
+<Member Name="Text" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Scrollist Text Value]]>
+</Description>
+</Member>
+<Member Name="StatusType" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Scrollist Status Type]]>
+</Description>
+</Member>
+<Member Name="TMR" DataType="TIMER" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Timer]]>
+</Description>
+</Member>
+<Member Name="Dwell" DataType="TIMER" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Dwell Timer]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="zc_kSL" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Constants used by Scrollist
+<@VER 1.000>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="Yellow" DataType="zz_StsActionTypes" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Yellow Colored Status Indicators]]>
+</Description>
+</Member>
+<Member Name="Green" DataType="zz_StsActionTypes" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Green Colored Status Indicators]]>
+</Description>
+</Member>
+<Member Name="Running" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Running Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Stopped" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Stopped Status Indicator]]>
+</Description>
+</Member>
+<Member Name="PwrSaver" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Power Save Mode Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Weld" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Hard Auto Weld Status Indicator]]>
+</Description>
+</Member>
+<Member Name="WeldgunClosed" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Hard Auto Weldgun Closed Status Indicator (Schedule not fired, Weldgun Valve Output is energized)]]>
+</Description>
+</Member>
+<Member Name="Complete" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[General Complete Indicator - used as a user indicator (trigger value 2900)]]>
+</Description>
+</Member>
+<Member Name="Robot" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[General Robot Action Status Indicator]]>
+</Description>
+</Member>
+<Member Name="RobotProcess" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Robot Process Action Status Indicator]]>
+</Description>
+</Member>
+<Member Name="RobotReturn" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Robot Return from Pounce Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Present" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Part Present Status Indicator]]>
+</Description>
+</Member>
+<Member Name="NotPresent" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Part Not Present Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Partial" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Part Not Fully Seated Status Indicator]]>
+</Description>
+</Member>
+<Member Name="MarkProcessAction" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Add to StatusType to mark it as a process action]]>
+</Description>
+</Member>
+<Member Name="Posn" DataType="DINT" Dimension="10" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[General Multi-position Status Indicator]]>
+</Description>
+</Member>
+<Member Name="NoAction" DataType="za_Action" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Passed to z103_DoUndo in 2nd parameter when SL Line doesn't have Undo capability]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="zz_StsActionTypes"/>
+<Dependency Type="DataType" Name="zz_StsActionTypes"/>
+<Dependency Type="DataType" Name="za_Action"/>
+</Dependencies>
+</DataType>
+<DataType Name="zc_SKInterlock" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Skid Power Roll Bed
+Interlocks
+<@VER 1.192>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZzc_SKInter0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Auto" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid in Auto]]>
+</Description>
+</Member>
+<Member Name="Man" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid in Manual]]>
+</Description>
+</Member>
+<Member Name="Maint" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid in Maintenance Mode (Conv)]]>
+</Description>
+</Member>
+<Member Name="DriveOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid Drive is OK]]>
+</Description>
+</Member>
+<Member Name="InPosition" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next Skid is In Position]]>
+</Description>
+</Member>
+<Member Name="NoCarrierPres" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter0" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid carrier not present]]>
+</Description>
+</Member>
+<Member Name="CarrierPres" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter0" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid carrier is present]]>
+</Description>
+</Member>
+<Member Name="CmpAndClear" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter0" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid station complete and clear]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzc_SKInter9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="IndexOutPB" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter9" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid Index Out PB active]]>
+</Description>
+</Member>
+<Member Name="RevInPB" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter9" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid Reverse In PB active]]>
+</Description>
+</Member>
+<Member Name="IndexInPB" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter9" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Prev Skid Index In PB Active]]>
+</Description>
+</Member>
+<Member Name="RevOutPB" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter9" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Prev Skid Reverse Out PB Active]]>
+</Description>
+</Member>
+<Member Name="HiSpdEn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter9" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid High Speed Enable]]>
+</Description>
+</Member>
+<Member Name="DrvRunningFwd" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter9" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid motor running forward]]>
+</Description>
+</Member>
+<Member Name="DrvRunningRev" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter9" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid motor running reverse]]>
+</Description>
+</Member>
+<Member Name="AtLoad" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter9" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid table at load position]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzc_SKInter18" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="AtUnload" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter18" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid table at unload position]]>
+</Description>
+</Member>
+<Member Name="SkdEntPRX" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter18" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid Entering Prox active]]>
+</Description>
+</Member>
+<Member Name="SkdPosPRX" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter18" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid In Position prox active]]>
+</Description>
+</Member>
+<Member Name="SkdLvgPRX" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter18" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid Leaving prox active]]>
+</Description>
+</Member>
+<Member Name="NextConvFull" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter18" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid Conevyor Full]]>
+</Description>
+</Member>
+<Member Name="SkdAtDecel" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter18" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid at Decel Prox]]>
+</Description>
+</Member>
+<Member Name="MatchSpdEn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter18" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next Skid Match Speed Enable]]>
+</Description>
+</Member>
+<Member Name="Spare23" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter18" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Spare23]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzc_SKInter27" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="ClrtoEnterRev" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter27" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next Skid Clear to Reverse In]]>
+</Description>
+</Member>
+<Member Name="RdytoExitFwd" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter27" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next Skid Ready to Exit Forward]]>
+</Description>
+</Member>
+<Member Name="JobinTransitFwd" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter27" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next Skid in Transit Forward]]>
+</Description>
+</Member>
+<Member Name="EarlyDecel" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter27" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Prev Skid Early Decel Detect During Index Out/In]]>
+</Description>
+</Member>
+<Member Name="FwdRecovery" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter27" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Prev Skid in Forward Recovery Mode]]>
+</Description>
+</Member>
+<Member Name="ClrtoEnterFwd" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter27" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Prev Skid Clear to Enter Forward]]>
+</Description>
+</Member>
+<Member Name="RdytoExitRev" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter27" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Prev Skid Ready to Exit Reverse]]>
+</Description>
+</Member>
+<Member Name="JobinTransitRev" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter27" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Prev Skid in Transit Reverse]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzc_SKInter36" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="JogFwdPB" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter36" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid Jog Fwd PB active]]>
+</Description>
+</Member>
+<Member Name="JogRevPB" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter36" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Prev
+Skid Jog Rev PB active]]>
+</Description>
+</Member>
+<Member Name="JogtoFwd" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter36" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next Skid Jog to Forward]]>
+</Description>
+</Member>
+<Member Name="JogtoRev" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter36" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Prev Skid Jog to Reverse]]>
+</Description>
+</Member>
+<Member Name="LoadPresent" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzc_SKInter36" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[To Next
+Skid load in present]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="zc_Station" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Station Mode/Status Data
+<@VER 1.000>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="Mode" DataType="zz_StaMode" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Mode Information]]>
+</Description>
+</Member>
+<Member Name="Sts" DataType="zz_StaStatus" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Status Information]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="zz_StaMode"/>
+<Dependency Type="DataType" Name="zz_StaStatus"/>
+</Dependencies>
+</DataType>
+<DataType Name="zp_SLInternals" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Internal Data for Managing the Scrollist
+<@VER 1.352>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZzp_SLInter0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="EnableAutoCursor" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Enable
+Auto Cursor
+Mode]]>
+</Description>
+</Member>
+<Member Name="CallDoUndo" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[z102_AddLine
+has detected that z103_DoUndo
+can be called]]>
+</Description>
+</Member>
+<Member Name="InGroup" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Scanning inside a group action]]>
+</Description>
+</Member>
+<Member Name="Search" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Search Mode is On
+Looking for line to
+place cursor on]]>
+</Description>
+</Member>
+<Member Name="Found" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action has been found. Point cursor to this line]]>
+</Description>
+</Member>
+<Member Name="NotVisible" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter0" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action not visible.  Do not display]]>
+</Description>
+</Member>
+<Member Name="PBAntiTieDown1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter0" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PB Anti Tie Down 
+HMI 1]]>
+</Description>
+</Member>
+<Member Name="PBAntiTieDown2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter0" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PB Anti Tie Down 
+HMI 2]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzp_SLInter9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="DoUndoPressed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter9" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[A Do PB or Undo PB
+is currently
+pressed]]>
+</Description>
+</Member>
+<Member Name="VersionOk" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter9" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Logic Version Ok Check]]>
+</Description>
+</Member>
+<Member Name="VerMismatch" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter9" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Scrollist Logic Version Mismatch]]>
+</Description>
+</Member>
+<Member Name="ThisLineActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter9" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Line is Active]]>
+</Description>
+</Member>
+<Member Name="ProcessAction" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter9" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Line is a Process Action]]>
+</Description>
+</Member>
+<Member Name="SkippedAction" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter9" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Line is a Skipped Process Action]]>
+</Description>
+</Member>
+<Member Name="ProcessOppAction" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter9" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Opposite Action is a Process Action]]>
+</Description>
+</Member>
+<Member Name="SkippedOppAction" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter9" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Opposite Action is a Skipped Process Action]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzp_SLInter18" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="GroupActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter18" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current group line
+has cursor focus]]>
+</Description>
+</Member>
+<Member Name="GrpActionBypassed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter18" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group contains a bypassed action]]>
+</Description>
+</Member>
+<Member Name="GrpActionSkipped" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter18" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group contains a skipped process action]]>
+</Description>
+</Member>
+<Member Name="GrpActionComp" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter18" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group contains a complete action]]>
+</Description>
+</Member>
+<Member Name="GrpActionProcComp" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter18" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group contains a process complete action]]>
+</Description>
+</Member>
+<Member Name="GrpActionNotActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter18" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group contains an inactive action]]>
+</Description>
+</Member>
+<Member Name="GrpActionInProg" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter18" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group contains an action in progress]]>
+</Description>
+</Member>
+<Member Name="GrpActionFlt" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter18" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group contains a faulted action]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzp_SLInter27" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="GrpOppActionBypassed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter27" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group contains a bypassed opposite action]]>
+</Description>
+</Member>
+<Member Name="GrpOppActionSkipped" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter27" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group contains a skipped process opposite action]]>
+</Description>
+</Member>
+<Member Name="GrpOppActionComp" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter27" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group contains a complete opposite action]]>
+</Description>
+</Member>
+<Member Name="GrpOppActionProcComp" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter27" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group contains a process complete opposite action]]>
+</Description>
+</Member>
+<Member Name="GrpOppActionNotActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter27" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group contains an inactive opposite action]]>
+</Description>
+</Member>
+<Member Name="GrpOppActionInProg" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter27" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group contains an opposite action in progress]]>
+</Description>
+</Member>
+<Member Name="GrpOppActionFlt" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter27" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group contains a faulted opposite action]]>
+</Description>
+</Member>
+<Member Name="GrpActionClrOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter27" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Testing each action within a group to see if the .Clear is on]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzp_SLInter36" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="GrpActionClrOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter36" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Testing each action within a group to see if the .Clear is off]]>
+</Description>
+</Member>
+<Member Name="FreezeCursor" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter36" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[User bit to prevent cursor motion]]>
+</Description>
+</Member>
+<Member Name="ThisLineBypassed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter36" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Line is bypassed]]>
+</Description>
+</Member>
+<Member Name="BypassesPresent" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter36" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bypasses Present in this scrollist]]>
+</Description>
+</Member>
+<Member Name="Error" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter36" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Error has been detected within the SL routines]]>
+</Description>
+</Member>
+<Member Name="ViewChange" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter36" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current View has changed]]>
+</Description>
+</Member>
+<Member Name="LineViewable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter36" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Line is Viewable]]>
+</Description>
+</Member>
+<Member Name="GroupViewable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter36" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group is Viewable]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzp_SLInter45" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="ClearListBypasses" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter45" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Clear all list bypasses request]]>
+</Description>
+</Member>
+<Member Name="FirstScan" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter45" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Set until a complete scan of the scrollist]]>
+</Description>
+</Member>
+<Member Name="EndFirstScan" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter45" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Entire Scrollist has been completely scanned once]]>
+</Description>
+</Member>
+<Member Name="InputParError" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzp_SLInter45" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Input Parameter
+JSR Error
+Detected]]>
+</Description>
+</Member>
+<Member Name="OneShot" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[One Shot
+Bits]]>
+</Description>
+</Member>
+<Member Name="Text" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Line Text ID Trigger]]>
+</Description>
+</Member>
+<Member Name="GrpText" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group Line Text ID Trigger]]>
+</Description>
+</Member>
+<Member Name="EndGrpText" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[End Group Text ID Trigger Matches the Current Scrollist Group]]>
+</Description>
+</Member>
+<Member Name="Status" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Line Status ID Value]]>
+</Description>
+</Member>
+<Member Name="BaseGrpActionSts" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group Action Status ID Value]]>
+</Description>
+</Member>
+<Member Name="BaseGrpOppActionSts" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Group Opposite Action Status ID Value]]>
+</Description>
+</Member>
+<Member Name="ExpandPtr" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Pointer that counts list as if it where always expanded]]>
+</Description>
+</Member>
+<Member Name="CollapsePtr" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Pointer that counts list as if it where always collapsed]]>
+</Description>
+</Member>
+<Member Name="AllLinesPtr" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Pointer that counts all lines]]>
+</Description>
+</Member>
+<Member Name="ScanPtr" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Scrollist Pointer that enables one DoUndo call per processor scan]]>
+</Description>
+</Member>
+<Member Name="GroupPtr" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Pointer to the current group line]]>
+</Description>
+</Member>
+<Member Name="BlankLines" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Calculate the number of lines to blank on the scrollist]]>
+</Description>
+</Member>
+<Member Name="LineOffset" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Calculate the number of lines to the top of the scrollist window]]>
+</Description>
+</Member>
+<Member Name="LastGroupLine" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Calculate the ending line of a group]]>
+</Description>
+</Member>
+<Member Name="StsOffset" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Calculate the status offset to add to the Status ID value]]>
+</Description>
+</Member>
+<Member Name="TempSts" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Temp Status Register]]>
+</Description>
+</Member>
+<Member Name="TempDetail" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Temp Detail Register]]>
+</Description>
+</Member>
+<Member Name="GroupDetail" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Temp Group Detail Register]]>
+</Description>
+</Member>
+<Member Name="ActiveView" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current Active View]]>
+</Description>
+</Member>
+<Member Name="LineError" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Line that has error]]>
+</Description>
+</Member>
+<Member Name="TimeLeft" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Calculate time left on ReleaseAccept Timer]]>
+</Description>
+</Member>
+<Member Name="InputParCompare" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Input Parameter
+Check Compare]]>
+</Description>
+</Member>
+<Member Name="AutoReptPB1" DataType="TIMER" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PB AutoRepeat Timer HMI 1]]>
+</Description>
+</Member>
+<Member Name="AutoReptPB2" DataType="TIMER" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PB AutoRepeat Timer HMI 2]]>
+</Description>
+</Member>
+<Member Name="SelectAutoCursor" DataType="TIMER" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Auto Mode Selection of Auto Cursor Timeout]]>
+</Description>
+</Member>
+<Member Name="ReleaseAccept" DataType="TIMER" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Time when to release SL Accept bit]]>
+</Description>
+</Member>
+<Member Name="Action" DataType="za_Action" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[1st Input & Return Parameter for z103_DoUndo Routine]]>
+</Description>
+</Member>
+<Member Name="OppAction" DataType="za_Action" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[2nd Input & 2nd Return Parameter for z103_DoUndo Routine]]>
+</Description>
+</Member>
+<Member Name="V" DataType="zz_Version" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Logic Version Number]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="za_Action"/>
+<Dependency Type="DataType" Name="za_Action"/>
+<Dependency Type="DataType" Name="zz_Version"/>
+</Dependencies>
+</DataType>
+<DataType Name="zz_StaMode" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Station Mode Information
+<@VER 1.000>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZzz_StaMode0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="AutoReqAntiRpt" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaMode0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Auto Request AntiRepeat]]>
+</Description>
+</Member>
+<Member Name="AutoRdy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaMode0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Ready for Auto]]>
+</Description>
+</Member>
+<Member Name="Auto" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaMode0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station in Auto Mode]]>
+</Description>
+</Member>
+<Member Name="ExtrnAutoRdy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaMode0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station External Auto Conditions Ready]]>
+</Description>
+</Member>
+<Member Name="Man" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaMode0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station in Manual Mode]]>
+</Description>
+</Member>
+<Member Name="Tryout" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaMode0" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station in Tryout Mode]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="zz_StaStatus" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Station Status Information
+<@VER 1.120>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZzz_StaStat0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="CommOK" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Communications are OK]]>
+</Description>
+</Member>
+<Member Name="NoParts" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station has no parts present]]>
+</Description>
+</Member>
+<Member Name="AllParts" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station has all parts present]]>
+</Description>
+</Member>
+<Member Name="EnteringAuto" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is entering Auto Mode]]>
+</Description>
+</Member>
+<Member Name="Man" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station in Manual Mode]]>
+</Description>
+</Member>
+<Member Name="Auto" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station in Auto Mode]]>
+</Description>
+</Member>
+<Member Name="Tryout" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station in Tryout Mode]]>
+</Description>
+</Member>
+<Member Name="Held" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat0" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is Held]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzz_StaStat9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="HoldActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Has an End of Cycle Hold Active]]>
+</Description>
+</Member>
+<Member Name="AtLoad" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station at Load Position]]>
+</Description>
+</Member>
+<Member Name="AtUnload" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station at Unload Position]]>
+</Description>
+</Member>
+<Member Name="Bypass" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is Bypassed]]>
+</Description>
+</Member>
+<Member Name="HasBypass" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station has a Scrollist / Switch Bypass]]>
+</Description>
+</Member>
+<Member Name="Faulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is faulted]]>
+</Description>
+</Member>
+<Member Name="InCycle" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is in cycle]]>
+</Description>
+</Member>
+<Member Name="AllProcessesComplete" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat9" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station all processes complete]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzz_StaStat18" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="NotClear" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is not clear for transfer]]>
+</Description>
+</Member>
+<Member Name="Idle" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is idle]]>
+</Description>
+</Member>
+<Member Name="ReadyForTryout" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station is ready for tryout mode]]>
+</Description>
+</Member>
+<Member Name="AirOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Air Is On]]>
+</Description>
+</Member>
+<Member Name="AirOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Air Is Off]]>
+</Description>
+</Member>
+<Member Name="WaterFlowOn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Water Flow is On]]>
+</Description>
+</Member>
+<Member Name="WaterFlowOff" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Water Flow is Off]]>
+</Description>
+</Member>
+<Member Name="ProcNotEnbld" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat18" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Has At Least One Process Not On]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzz_StaStat27" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="ProcEnbld" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_StaStat27" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Has At Least One Process Not Off]]>
+</Description>
+</Member>
+<Member Name="PartPres" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Individual Parts Present]]>
+</Description>
+</Member>
+<Member Name="PartNotPres" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Individual Parts Not Present]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="zz_StsActionTypes" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Constants for Scrollist Action Status
+<@VER 1.223>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="Close" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Close Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Open" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Open Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Advance" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Advance Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Return" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Return Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Engage" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Engage Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Disengage" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Disengage Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Raise" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Raise Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Lower" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Lower Status Indicator]]>
+</Description>
+</Member>
+<Member Name="On" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[On Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Off" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Off Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Forward" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Forward Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Back" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Back Status Indicator]]>
+</Description>
+</Member>
+<Member Name="InPosn" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[In Posn Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Work" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Work Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Home" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Home Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Increase" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Increase Status Indicator]]>
+</Description>
+</Member>
+<Member Name="Decrease" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Decrease Status Indicator]]>
+</Description>
+</Member>
+<Member Name="NoCarrier" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[No Carrier Indicator]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="zz_Version" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Generic Version Data
+<@VER 1.000>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="Type" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Version Type - Unique # to ID Model, Manufacturer, Firmware, etc.]]>
+</Description>
+</Member>
+<Member Name="Major" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Major Version #]]>
+</Description>
+</Member>
+<Member Name="Minor" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Minor Version #]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+<Tags Use="Context">
+<Tag Name="AlwaysOff" Class="Standard" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Always Off Bit
+For Permanent
+Block Only]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="kSL" Class="Standard" TagType="Base" DataType="zc_kSL" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[HMI Scroll List
+Status Indicator
+Constants]]>
+</Description>
+<Comments>
+<Comment Operand=".GREEN.CLOSE">
+<![CDATA[SL Status
+Green
+-Closed]]>
+</Comment>
+<Comment Operand=".GREEN.OPEN">
+<![CDATA[SL Status
+Green
+-Opened]]>
+</Comment>
+<Comment Operand=".GREEN.ADVANCE">
+<![CDATA[SL Status
+Green
+-Advanced]]>
+</Comment>
+<Comment Operand=".GREEN.RETURN">
+<![CDATA[SL Status
+Green
+-Returned]]>
+</Comment>
+<Comment Operand=".GREEN.ENGAGE">
+<![CDATA[SL Status
+Green
+-Engaged]]>
+</Comment>
+<Comment Operand=".GREEN.DISENGAGE">
+<![CDATA[SL Status
+Green
+-Disengaged]]>
+</Comment>
+<Comment Operand=".GREEN.RAISE">
+<![CDATA[SL Status
+Green
+-Raised]]>
+</Comment>
+<Comment Operand=".GREEN.LOWER">
+<![CDATA[SL Status
+Green
+-Lowered]]>
+</Comment>
+<Comment Operand=".GREEN.ON">
+<![CDATA[SL Status
+Green
+-On]]>
+</Comment>
+<Comment Operand=".GREEN.OFF">
+<![CDATA[SL Status
+Green
+-Off]]>
+</Comment>
+<Comment Operand=".GREEN.FORWARD">
+<![CDATA[SL Status
+Green
+-Forward]]>
+</Comment>
+<Comment Operand=".GREEN.BACK">
+<![CDATA[SL Status
+Green
+-Back]]>
+</Comment>
+<Comment Operand=".GREEN.INPOSN">
+<![CDATA[SL Status
+Green
+-In Position]]>
+</Comment>
+<Comment Operand=".GREEN.WORK">
+<![CDATA[SL Status
+Green
+-Work]]>
+</Comment>
+<Comment Operand=".GREEN.HOME">
+<![CDATA[SL Status
+Green
+-Home]]>
+</Comment>
+</Comments>
+<Data Format="L5K">
+<![CDATA[[[10,40,90,120,50,80,130,160,190,220,230,260,170,400,430,510,530,470],[30,20,110,100,70,60,160,140,210,200,250,240
+		,180,420,410,540,520,480],440,450,460,1100,2600,2900,980,1000,990,32002,32003,32004,10000,[300,310,320,330
+		,340,350,360,370,380,390],[0,0,0,0,0,0,[0,0,0],[0,0,0]]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="zc_kSL">
+<StructureMember Name="Yellow" DataType="zz_StsActionTypes">
+<DataValueMember Name="Close" DataType="DINT" Radix="Decimal" Value="10"/>
+<DataValueMember Name="Open" DataType="DINT" Radix="Decimal" Value="40"/>
+<DataValueMember Name="Advance" DataType="DINT" Radix="Decimal" Value="90"/>
+<DataValueMember Name="Return" DataType="DINT" Radix="Decimal" Value="120"/>
+<DataValueMember Name="Engage" DataType="DINT" Radix="Decimal" Value="50"/>
+<DataValueMember Name="Disengage" DataType="DINT" Radix="Decimal" Value="80"/>
+<DataValueMember Name="Raise" DataType="DINT" Radix="Decimal" Value="130"/>
+<DataValueMember Name="Lower" DataType="DINT" Radix="Decimal" Value="160"/>
+<DataValueMember Name="On" DataType="DINT" Radix="Decimal" Value="190"/>
+<DataValueMember Name="Off" DataType="DINT" Radix="Decimal" Value="220"/>
+<DataValueMember Name="Forward" DataType="DINT" Radix="Decimal" Value="230"/>
+<DataValueMember Name="Back" DataType="DINT" Radix="Decimal" Value="260"/>
+<DataValueMember Name="InPosn" DataType="DINT" Radix="Decimal" Value="170"/>
+<DataValueMember Name="Work" DataType="DINT" Radix="Decimal" Value="400"/>
+<DataValueMember Name="Home" DataType="DINT" Radix="Decimal" Value="430"/>
+<DataValueMember Name="Increase" DataType="DINT" Radix="Decimal" Value="510"/>
+<DataValueMember Name="Decrease" DataType="DINT" Radix="Decimal" Value="530"/>
+<DataValueMember Name="NoCarrier" DataType="DINT" Radix="Decimal" Value="470"/>
+</StructureMember>
+<StructureMember Name="Green" DataType="zz_StsActionTypes">
+<DataValueMember Name="Close" DataType="DINT" Radix="Decimal" Value="30"/>
+<DataValueMember Name="Open" DataType="DINT" Radix="Decimal" Value="20"/>
+<DataValueMember Name="Advance" DataType="DINT" Radix="Decimal" Value="110"/>
+<DataValueMember Name="Return" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="Engage" DataType="DINT" Radix="Decimal" Value="70"/>
+<DataValueMember Name="Disengage" DataType="DINT" Radix="Decimal" Value="60"/>
+<DataValueMember Name="Raise" DataType="DINT" Radix="Decimal" Value="160"/>
+<DataValueMember Name="Lower" DataType="DINT" Radix="Decimal" Value="140"/>
+<DataValueMember Name="On" DataType="DINT" Radix="Decimal" Value="210"/>
+<DataValueMember Name="Off" DataType="DINT" Radix="Decimal" Value="200"/>
+<DataValueMember Name="Forward" DataType="DINT" Radix="Decimal" Value="250"/>
+<DataValueMember Name="Back" DataType="DINT" Radix="Decimal" Value="240"/>
+<DataValueMember Name="InPosn" DataType="DINT" Radix="Decimal" Value="180"/>
+<DataValueMember Name="Work" DataType="DINT" Radix="Decimal" Value="420"/>
+<DataValueMember Name="Home" DataType="DINT" Radix="Decimal" Value="410"/>
+<DataValueMember Name="Increase" DataType="DINT" Radix="Decimal" Value="540"/>
+<DataValueMember Name="Decrease" DataType="DINT" Radix="Decimal" Value="520"/>
+<DataValueMember Name="NoCarrier" DataType="DINT" Radix="Decimal" Value="480"/>
+</StructureMember>
+<DataValueMember Name="Running" DataType="DINT" Radix="Decimal" Value="440"/>
+<DataValueMember Name="Stopped" DataType="DINT" Radix="Decimal" Value="450"/>
+<DataValueMember Name="PwrSaver" DataType="DINT" Radix="Decimal" Value="460"/>
+<DataValueMember Name="Weld" DataType="DINT" Radix="Decimal" Value="1100"/>
+<DataValueMember Name="WeldgunClosed" DataType="DINT" Radix="Decimal" Value="2600"/>
+<DataValueMember Name="Complete" DataType="DINT" Radix="Decimal" Value="2900"/>
+<DataValueMember Name="Robot" DataType="DINT" Radix="Decimal" Value="980"/>
+<DataValueMember Name="RobotProcess" DataType="DINT" Radix="Decimal" Value="1000"/>
+<DataValueMember Name="RobotReturn" DataType="DINT" Radix="Decimal" Value="990"/>
+<DataValueMember Name="Present" DataType="DINT" Radix="Decimal" Value="32002"/>
+<DataValueMember Name="NotPresent" DataType="DINT" Radix="Decimal" Value="32003"/>
+<DataValueMember Name="Partial" DataType="DINT" Radix="Decimal" Value="32004"/>
+<DataValueMember Name="MarkProcessAction" DataType="DINT" Radix="Decimal" Value="10000"/>
+<ArrayMember Name="Posn" DataType="DINT" Dimensions="10" Radix="Decimal">
+<Element Index="[0]" Value="300"/>
+<Element Index="[1]" Value="310"/>
+<Element Index="[2]" Value="320"/>
+<Element Index="[3]" Value="330"/>
+<Element Index="[4]" Value="340"/>
+<Element Index="[5]" Value="350"/>
+<Element Index="[6]" Value="360"/>
+<Element Index="[7]" Value="370"/>
+<Element Index="[8]" Value="380"/>
+<Element Index="[9]" Value="390"/>
+</ArrayMember>
+<StructureMember Name="NoAction" DataType="za_Action">
+<DataValueMember Name="Comp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ProcComp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Auto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AutoSetup" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Clear" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ClrSetup" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OutPwr" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cmd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Mem" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FLT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableSkip" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableBypass" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bypassed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Prompt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OutPwrPrompt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AntiRept" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OneShot" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FltCheck" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RecipeEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Text" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="StatusType" DataType="DINT" Radix="Decimal" Value="0"/>
+<StructureMember Name="TMR" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Dwell" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="RungComment" Class="Standard" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[1]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="WO1100EL01" Class="Standard" TagType="Base" DataType="zc_Station" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[[0],[0,0,0,0,0,0]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="zc_Station">
+<StructureMember Name="Mode" DataType="zz_StaMode">
+<DataValueMember Name="AutoReqAntiRpt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AutoRdy" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Auto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ExtrnAutoRdy" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Man" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Tryout" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Sts" DataType="zz_StaStatus">
+<DataValueMember Name="CommOK" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NoParts" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AllParts" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnteringAuto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Man" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Auto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Tryout" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Held" DataType="BOOL" Value="0"/>
+<DataValueMember Name="HoldActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AtLoad" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AtUnload" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bypass" DataType="BOOL" Value="0"/>
+<DataValueMember Name="HasBypass" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Faulted" DataType="BOOL" Value="0"/>
+<DataValueMember Name="InCycle" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AllProcessesComplete" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NotClear" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Idle" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ReadyForTryout" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AirOn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AirOff" DataType="BOOL" Value="0"/>
+<DataValueMember Name="WaterFlowOn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="WaterFlowOff" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ProcNotEnbld" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ProcEnbld" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PartPres" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="PartNotPres" DataType="DINT" Radix="Decimal" Value="0"/>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="WO1100ELIntlck" Class="Standard" TagType="Base" DataType="zc_SKInterlock" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[32,0,0,0,0]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="zc_SKInterlock">
+<DataValueMember Name="Auto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Man" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Maint" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DriveOK" DataType="BOOL" Value="0"/>
+<DataValueMember Name="InPosition" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NoCarrierPres" DataType="BOOL" Value="1"/>
+<DataValueMember Name="CarrierPres" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CmpAndClear" DataType="BOOL" Value="0"/>
+<DataValueMember Name="IndexOutPB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RevInPB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="IndexInPB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RevOutPB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="HiSpdEn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DrvRunningFwd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DrvRunningRev" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AtLoad" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AtUnload" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SkdEntPRX" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SkdPosPRX" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SkdLvgPRX" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NextConvFull" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SkdAtDecel" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MatchSpdEn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Spare23" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ClrtoEnterRev" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RdytoExitFwd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="JobinTransitFwd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EarlyDecel" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FwdRecovery" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ClrtoEnterFwd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RdytoExitRev" DataType="BOOL" Value="0"/>
+<DataValueMember Name="JobinTransitRev" DataType="BOOL" Value="0"/>
+<DataValueMember Name="JogFwdPB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="JogRevPB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="JogtoFwd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="JogtoRev" DataType="BOOL" Value="0"/>
+<DataValueMember Name="LoadPresent" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+</Tags>
+<Programs Use="Context">
+<Program Use="Context" Name="WO1100EL01" Class="Standard">
+<Tags Use="Context">
+<Tag Name="FromPrev" TagType="Base" DataType="zc_SKInterlock" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Power Roller Bed
+Interlock from Prev
+Power Roller Bed
+]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[[0,0,0,0,0]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="zc_SKInterlock">
+<DataValueMember Name="Auto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Man" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Maint" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DriveOK" DataType="BOOL" Value="0"/>
+<DataValueMember Name="InPosition" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NoCarrierPres" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CarrierPres" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CmpAndClear" DataType="BOOL" Value="0"/>
+<DataValueMember Name="IndexOutPB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RevInPB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="IndexInPB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RevOutPB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="HiSpdEn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DrvRunningFwd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DrvRunningRev" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AtLoad" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AtUnload" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SkdEntPRX" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SkdPosPRX" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SkdLvgPRX" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NextConvFull" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SkdAtDecel" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MatchSpdEn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Spare23" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ClrtoEnterRev" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RdytoExitFwd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="JobinTransitFwd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EarlyDecel" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FwdRecovery" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ClrtoEnterFwd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RdytoExitRev" DataType="BOOL" Value="0"/>
+<DataValueMember Name="JobinTransitRev" DataType="BOOL" Value="0"/>
+<DataValueMember Name="JogFwdPB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="JogRevPB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="JogtoFwd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="JogtoRev" DataType="BOOL" Value="0"/>
+<DataValueMember Name="LoadPresent" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="Interlock" TagType="Alias" AliasFor="WO1100ELIntlck" ExternalAccess="Read/Write"/>
+<Tag Name="Mode" TagType="Alias" AliasFor="WO1100EL01.Mode" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Station Mode Alias]]>
+</Description>
+</Tag>
+<Tag Name="SkidIndexIn" TagType="Base" DataType="za_Action" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Index Skid In
+]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[[64,0,65,0,999140,180,[0,0,0],[0,0,0]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="za_Action">
+<DataValueMember Name="Comp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ProcComp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Auto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AutoSetup" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Clear" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ClrSetup" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OutPwr" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Cmd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Mem" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FLT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableSkip" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableBypass" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bypassed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Prompt" DataType="BOOL" Value="1"/>
+<DataValueMember Name="OutPwrPrompt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AntiRept" DataType="BOOL" Value="1"/>
+<DataValueMember Name="OneShot" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FltCheck" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RecipeEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Text" DataType="DINT" Radix="Decimal" Value="999140"/>
+<DataValueMember Name="StatusType" DataType="DINT" Radix="Decimal" Value="180"/>
+<StructureMember Name="TMR" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Dwell" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="SkidReverseOut" TagType="Base" DataType="za_Action" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reverse Skid Out of Station
+]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[[1,0,0,0,999150,470,[0,25000,0],[0,0,0]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="za_Action">
+<DataValueMember Name="Comp" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ProcComp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Auto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AutoSetup" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Clear" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ClrSetup" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OutPwr" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cmd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Mem" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FLT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableSkip" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableBypass" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bypassed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Prompt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OutPwrPrompt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AntiRept" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OneShot" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FltCheck" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RecipeEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Text" DataType="DINT" Radix="Decimal" Value="999150"/>
+<DataValueMember Name="StatusType" DataType="DINT" Radix="Decimal" Value="470"/>
+<StructureMember Name="TMR" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="25000"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Dwell" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="SL" TagType="Base" DataType="zp_SLInternals" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[SL Driver
+]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[[0,2,0,0,64,4,3,999910,0,0,0,0,0,18,18,18,11,0,9,8,0,1,171,0,0,0,0,0,0,[771637,800,0],[0,800,0],[0,0,0],[0,0,0],[16,0,0,0,999399,170,[0,0,0],[0,0
+		,0]],[17,16,0,0,999398,170,[0,0,0],[0,0,0]],[2002,1,0]]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="zp_SLInternals">
+<DataValueMember Name="EnableAutoCursor" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CallDoUndo" DataType="BOOL" Value="0"/>
+<DataValueMember Name="InGroup" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Search" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Found" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NotVisible" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PBAntiTieDown1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PBAntiTieDown2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DoUndoPressed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="VersionOk" DataType="BOOL" Value="1"/>
+<DataValueMember Name="VerMismatch" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ThisLineActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ProcessAction" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SkippedAction" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ProcessOppAction" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SkippedOppAction" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GroupActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpActionBypassed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpActionSkipped" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpActionComp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpActionProcComp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpActionNotActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpActionInProg" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpActionFlt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpOppActionBypassed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpOppActionSkipped" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpOppActionComp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpOppActionProcComp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpOppActionNotActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpOppActionInProg" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpOppActionFlt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpActionClrOn" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GrpActionClrOff" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FreezeCursor" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ThisLineBypassed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="BypassesPresent" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Error" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ViewChange" DataType="BOOL" Value="0"/>
+<DataValueMember Name="LineViewable" DataType="BOOL" Value="1"/>
+<DataValueMember Name="GroupViewable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ClearListBypasses" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FirstScan" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EndFirstScan" DataType="BOOL" Value="1"/>
+<DataValueMember Name="InputParError" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OneShot" DataType="SINT" Radix="Decimal" Value="3"/>
+<DataValueMember Name="Text" DataType="DINT" Radix="Decimal" Value="999910"/>
+<DataValueMember Name="GrpText" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EndGrpText" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="BaseGrpActionSts" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="BaseGrpOppActionSts" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ExpandPtr" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="CollapsePtr" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="AllLinesPtr" DataType="DINT" Radix="Decimal" Value="18"/>
+<DataValueMember Name="ScanPtr" DataType="DINT" Radix="Decimal" Value="11"/>
+<DataValueMember Name="GroupPtr" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="BlankLines" DataType="DINT" Radix="Decimal" Value="9"/>
+<DataValueMember Name="LineOffset" DataType="DINT" Radix="Decimal" Value="8"/>
+<DataValueMember Name="LastGroupLine" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="StsOffset" DataType="DINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="TempSts" DataType="DINT" Radix="Decimal" Value="171"/>
+<DataValueMember Name="TempDetail" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="GroupDetail" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ActiveView" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="LineError" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="TimeLeft" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="InputParCompare" DataType="DINT" Radix="Decimal" Value="0"/>
+<StructureMember Name="AutoReptPB1" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="800"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="AutoReptPB2" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="800"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="SelectAutoCursor" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="ReleaseAccept" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Action" DataType="za_Action">
+<DataValueMember Name="Comp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ProcComp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Auto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AutoSetup" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Clear" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ClrSetup" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OutPwr" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cmd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Mem" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FLT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableSkip" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableBypass" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bypassed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Prompt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OutPwrPrompt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AntiRept" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OneShot" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FltCheck" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RecipeEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Text" DataType="DINT" Radix="Decimal" Value="999399"/>
+<DataValueMember Name="StatusType" DataType="DINT" Radix="Decimal" Value="170"/>
+<StructureMember Name="TMR" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Dwell" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+</StructureMember>
+<StructureMember Name="OppAction" DataType="za_Action">
+<DataValueMember Name="Comp" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ProcComp" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Auto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AutoSetup" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Clear" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ClrSetup" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OutPwr" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cmd" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Out" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Mem" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FLT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Active" DataType="BOOL" Value="1"/>
+<DataValueMember Name="EnableSkip" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableBypass" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Bypassed" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Prompt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OutPwrPrompt" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup1" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup2" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup3" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Setup4" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AntiRept" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OneShot" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FltCheck" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RecipeEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Text" DataType="DINT" Radix="Decimal" Value="999398"/>
+<DataValueMember Name="StatusType" DataType="DINT" Radix="Decimal" Value="170"/>
+<StructureMember Name="TMR" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Dwell" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+</StructureMember>
+<StructureMember Name="V" DataType="zz_Version">
+<DataValueMember Name="Type" DataType="DINT" Radix="Decimal" Value="2002"/>
+<DataValueMember Name="Major" DataType="DINT" Radix="Decimal" Value="1"/>
+<DataValueMember Name="Minor" DataType="DINT" Radix="Decimal" Value="0"/>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+</Tags>
+<Routines Use="Context">
+<Routine Use="Target" Name="S025_SkidIndexInVDL" Type="RLL">
+<Description>
+<![CDATA[Skid Index In Action]]>
+</Description>
+<RLLContent>
+<Rung Number="0" Type="N">
+<Comment>
+<![CDATA[<@VER 1.342><@NO EDITS>
+<@INFO>
+################################################################
+# Skid Index In
+# VDL
+# Add clear conditions to SkidIndexIn.Setup2 coil in B020_Setup routine if needed.
+################################################################]]>
+</Comment>
+<Text>
+<![CDATA[OTE(RungComment);]]>
+</Text>
+</Rung>
+<Rung Number="1" Type="N">
+<Text>
+<![CDATA[XIC(Interlock.InPosition)OTE(SkidIndexIn.Comp);]]>
+</Text>
+</Rung>
+<Rung Number="2" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Run Forward - Enter Forward Setup
+################################################################]]>
+</Comment>
+<Text>
+<![CDATA[[XIC(FromPrev.RdytoExitFwd) XIC(Interlock.ClrtoEnterFwd) ,XIC(Mode.Tryout) XIC(Interlock.AtLoad) XIO(Interlock.InPosition) ]OTE(SkidIndexIn.ClrSetup);]]>
+</Text>
+</Rung>
+<Rung Number="3" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Unit Auto Forward Motion Conditions
+################################################################]]>
+</Comment>
+<Text>
+<![CDATA[XIC(SkidIndexIn.ClrSetup)[XIC(FromPrev.Auto) ,XIC(FromPrev.IndexOutPB) ]OTE(SkidIndexIn.Auto);]]>
+</Text>
+</Rung>
+<Rung Number="4" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Clear conditions for forward motion
+################################################################]]>
+</Comment>
+<Text>
+<![CDATA[XIC(SkidIndexIn.ClrSetup)XIC(SkidIndexIn.OutPwr)OTE(SkidIndexIn.Clear);]]>
+</Text>
+</Rung>
+<Rung Number="5" Type="N">
+<Text>
+<![CDATA[[XIC(Mode.Auto) XIC(SkidIndexIn.Auto) ,XIC(Mode.Man) [XIC(SkidIndexIn.PB) ,XIC(FromPrev.IndexOutPB) ] ]XIC(SkidIndexIn.Clear)OTE(SkidIndexIn.Cmd);]]>
+</Text>
+</Rung>
+<Rung Number="6" Type="N">
+<Text>
+<![CDATA[XIC(SkidIndexIn.Cmd)XIO(SkidReverseOut.Cmd)XIO(SkidReverseOut.Out)OTE(SkidIndexIn.Out);]]>
+</Text>
+</Rung>
+<Rung Number="7" Type="N">
+<Text>
+<![CDATA[XIC(Interlock.DrvRunningFwd)OTE(SkidIndexIn.Mem);]]>
+</Text>
+</Rung>
+<Rung Number="8" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Scrollist Configuration Rung
+################################################################
+<@DIAG>
+#
+#	<SL[999140]: Index Skid In >
+#]]>
+</Comment>
+<Text>
+<![CDATA[MOV(999140,SkidIndexIn.Text)MOV(kSL.Green.InPosn,SkidIndexIn.StatusType);]]>
+</Text>
+</Rung>
+<Rung Number="9" Type="N">
+<Text>
+<![CDATA[XIO(AlwaysOff)OTE(SkidIndexIn.OutPwr);]]>
+</Text>
+</Rung>
+<Rung Number="10" Type="N">
+<Text>
+<![CDATA[XIO(SL.DoUndoPressed)OTU(SkidIndexIn.PB);]]>
+</Text>
+</Rung>
+<Rung Number="11" Type="N">
+<Text>
+<![CDATA[OTU(SL.NotVisible);]]>
+</Text>
+</Rung>
+<Rung Number="12" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+################################################################
+# Typical Action Found rung
+################################################################]]>
+</Comment>
+<Text>
+<![CDATA[XIC(SL.Search)XIC(SkidIndexIn.Auto)XIC(SkidIndexIn.Clear)XIO(SkidIndexIn.Comp)OTL(SL.Found);]]>
+</Text>
+</Rung>
+</RLLContent>
+</Routine>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>

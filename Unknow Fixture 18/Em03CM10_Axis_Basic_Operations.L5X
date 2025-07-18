@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="18.02" TargetName="CM10_Axis_Basic_Operations" TargetType="Routine" TargetSubType="RLL" ContainsContext="true" Owner="Exxerpro, Exxerpro" ExportDate="Wed Jul 16 23:32:58 2025" ExportOptions="References DecoratedData Context Dependencies AllProjDocTrans">
+<Controller Use="Context" Name="DSL_250A">
+<DataTypes Use="Context">
+<DataType Name="UDT_ServoVars" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Status" DataType="UDT_ServoStatus_ss" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="CamStatus" DataType="UDT_CAM_Status_cs" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="HMI" DataType="UDT_ServoHMI_sh" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Setup" DataType="UDT_ServoSetup_sd" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Cmd" DataType="UDT_ServoCommands_sc" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="UDT_ServoStatus_ss"/>
+<Dependency Type="DataType" Name="UDT_CAM_Status_cs"/>
+<Dependency Type="DataType" Name="UDT_ServoHMI_sh"/>
+<Dependency Type="DataType" Name="UDT_ServoSetup_sd"/>
+<Dependency Type="DataType" Name="UDT_ServoCommands_sc"/>
+</Dependencies>
+</DataType>
+<DataType Name="UDT_ServoStatus_ss" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ZZZZZZZZZZUDT_ServoS0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="On" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS0" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="Ok" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS0" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="Auto" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS0" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="Jogging" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS0" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="No_Motion" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS0" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="Homed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS0" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="Axis_Selected" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS0" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="Gear_Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS0" BitNumber="7" ExternalAccess="Read/Write"/>
+<Member Name="ZZZZZZZZZZUDT_ServoS9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Cam_Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS9" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="Move_Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS9" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="HomingActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS9" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="JogingActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS9" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="GearingStarted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS9" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="PCamStarted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS9" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="FaultSERCOS_Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS9" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="CAM_in_execution" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="CAM_is_pending" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="CAM_Position" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="UDT_ServoHMI_sh" Family="NoFamily" Class="User">
+<Members>
+<Member Name="Motor_RPM" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Product_Speed" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Units_Speed" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="UDT_ServoSetup_sd" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ZZZZZZZZZZUDT_ServoS0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Absolute_Axis_Type" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS0" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="DrivePolarity" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoS0" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="DriveResolution" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Unwind" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MAG_Master_Ratio_N" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MAG_Master_Ratio_Z" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MAG_Slave_Counts" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="MAG_Master_Counts" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="AxisNumber" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="RotaryAxis" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ConversionConstant" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Manual_Jog_Speed" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Manual_Jog_Accel" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Manual_Jog_Decel" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Zero_Speed_Tolerance" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="RunTorqueLimit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Master_PhaseOffset" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Auto_Accel" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Auto_Decel" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Physical_Unwind" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Check_Synchronization_High_Limit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Check_Synchronization_Low_Limit" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Position_Error_Tolerance" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Max_Motor_Speed" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Max_Motor_acceleration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Max_Motor_deceleration" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="UDT_ServoCommands_sc" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ZZZZZZZZZZUDT_ServoC0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Selected" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoC0" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="Do_PCam" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoC0" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="Do_Gearing" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoC0" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="Do_Move" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoC0" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="Do_CamRecovery" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoC0" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="Do_CAM_Dwell" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoC0" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="Do_CAM_Acc" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoC0" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="Do_CAM_Cruise" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoC0" BitNumber="7" ExternalAccess="Read/Write"/>
+<Member Name="ZZZZZZZZZZUDT_ServoC9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Do_CAM_dec" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoC9" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="Do_Single_Jog_Pos" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoC9" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="Do_Automatic_Synch_Move" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_ServoC9" BitNumber="2" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="UDT_CAM_Status_cs" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ZZZZZZZZZZUDT_CAM_St0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="CAMvalid" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_CAM_St0" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="CAMErr" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_CAM_St0" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="CAMErrNo" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="UDT_Commands" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ZZZZZZZZZZUDT_Comman0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Enable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Comman0" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="Disable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Comman0" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="Home" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Comman0" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="ActivateRun" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Comman0" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="EnableProduct" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Comman0" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="DisableProduct" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Comman0" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="EnableCycling" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Comman0" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="DisableCycling" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Comman0" BitNumber="7" ExternalAccess="Read/Write"/>
+<Member Name="ZZZZZZZZZZUDT_Comman9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Abort" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Comman9" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="FaultReset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Comman9" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="Stop" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Comman9" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="CheckFaults" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Comman9" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="ActivateSingleJog" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Comman9" BitNumber="4" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+<DataType Name="UDT_Unit" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ZZZZZZZZZZUDT_Unit0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="AutoRunStateActive" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Unit0" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="AutoMode" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Unit0" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="ManualMode" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Unit0" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="UnitFaulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Unit0" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="Commands" DataType="UDT_Commands" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Conditions_ALL" DataType="UDT_Conditions" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="UDT_Commands"/>
+<Dependency Type="DataType" Name="UDT_Conditions"/>
+</Dependencies>
+</DataType>
+<DataType Name="UDT_Conditions" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ZZZZZZZZZZUDT_Condit0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Faulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Condit0" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="EnableDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Condit0" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="DisableDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Condit0" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="HomeDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Condit0" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="ActivateRunDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Condit0" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="EnableProductDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Condit0" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="DisableProductDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Condit0" BitNumber="6" ExternalAccess="Read/Write"/>
+<Member Name="EnableCyclingdone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Condit0" BitNumber="7" ExternalAccess="Read/Write"/>
+<Member Name="ZZZZZZZZZZUDT_Condit9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="DisableCyclingDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Condit9" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="AbortingDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Condit9" BitNumber="1" ExternalAccess="Read/Write"/>
+<Member Name="StoppingDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Condit9" BitNumber="2" ExternalAccess="Read/Write"/>
+<Member Name="FaultResetDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Condit9" BitNumber="3" ExternalAccess="Read/Write"/>
+<Member Name="Selected" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Condit9" BitNumber="4" ExternalAccess="Read/Write"/>
+<Member Name="MyEMNo" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="NoOfAxisInThisEM" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ZZZZZZZZZZUDT_Condit17" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="ActivateSingleJogDone" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Condit17" BitNumber="0" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+<Modules Use="Context">
+<Module Use="Reference" Name="K300_Cutter">
+</Module>
+</Modules>
+<Tags Use="Context">
+<Tag Name="Fault_Reset" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01 00 00 00</Data>
+<Data Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="UNIT01_EM_03_Conditions" TagType="Base" DataType="UDT_Conditions" Constant="false" ExternalAccess="Read/Write">
+<Data>00 10 00 00 03 00 00 00 00 00 00 00 00 00 00 00</Data>
+<Data Format="Decorated">
+<Structure DataType="UDT_Conditions">
+<DataValueMember Name="Faulted" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DisableDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="HomeDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ActivateRunDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableProductDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DisableProductDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableCyclingdone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DisableCyclingDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AbortingDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StoppingDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FaultResetDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Selected" DataType="BOOL" Value="1"/>
+<DataValueMember Name="MyEMNo" DataType="DINT" Radix="Decimal" Value="3"/>
+<DataValueMember Name="NoOfAxisInThisEM" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ActivateSingleJogDone" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="EMCtrl_03" TagType="Base" DataType="UDT_ServoVars" Constant="false" ExternalAccess="Read/Write">
+<Data>32 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 40 1F 00 00 10 27 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 7A 44 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00</Data>
+<Data Format="Decorated">
+<Structure DataType="UDT_ServoVars">
+<StructureMember Name="Status" DataType="UDT_ServoStatus_ss">
+<DataValueMember Name="On" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Ok" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Auto" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Jogging" DataType="BOOL" Value="0"/>
+<DataValueMember Name="No_Motion" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Homed" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Axis_Selected" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Gear_Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Cam_Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Move_Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="HomingActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="JogingActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GearingStarted" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PCamStarted" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FaultSERCOS_Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CAM_in_execution" DataType="DINT" Radix="Decimal" Value="8"/>
+<DataValueMember Name="CAM_is_pending" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="CAM_Position" DataType="REAL" Radix="Float" Value="0.0"/>
+</StructureMember>
+<StructureMember Name="CamStatus" DataType="UDT_CAM_Status_cs">
+<DataValueMember Name="CAMvalid" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CAMErr" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CAMErrNo" DataType="DINT" Radix="Decimal" Value="0"/>
+</StructureMember>
+<StructureMember Name="HMI" DataType="UDT_ServoHMI_sh">
+<DataValueMember Name="Motor_RPM" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Product_Speed" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Units_Speed" DataType="REAL" Radix="Float" Value="0.0"/>
+</StructureMember>
+<StructureMember Name="Setup" DataType="UDT_ServoSetup_sd">
+<DataValueMember Name="Absolute_Axis_Type" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DrivePolarity" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DriveResolution" DataType="DINT" Radix="Decimal" Value="8000"/>
+<DataValueMember Name="Unwind" DataType="DINT" Radix="Decimal" Value="10000"/>
+<DataValueMember Name="MAG_Master_Ratio_N" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="MAG_Master_Ratio_Z" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="MAG_Slave_Counts" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="MAG_Master_Counts" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="AxisNumber" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="RotaryAxis" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ConversionConstant" DataType="REAL" Radix="Float" Value="1000.0"/>
+<DataValueMember Name="Manual_Jog_Speed" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Manual_Jog_Accel" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Manual_Jog_Decel" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Zero_Speed_Tolerance" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="RunTorqueLimit" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Master_PhaseOffset" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Auto_Accel" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Auto_Decel" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Physical_Unwind" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Check_Synchronization_High_Limit" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Check_Synchronization_Low_Limit" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Position_Error_Tolerance" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Max_Motor_Speed" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Max_Motor_acceleration" DataType="REAL" Radix="Float" Value="0.0"/>
+<DataValueMember Name="Max_Motor_deceleration" DataType="REAL" Radix="Float" Value="0.0"/>
+</StructureMember>
+<StructureMember Name="Cmd" DataType="UDT_ServoCommands_sc">
+<DataValueMember Name="Selected" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Do_PCam" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Do_Gearing" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Do_Move" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Do_CamRecovery" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Do_CAM_Dwell" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Do_CAM_Acc" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Do_CAM_Cruise" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Do_CAM_dec" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Do_Single_Jog_Pos" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Do_Automatic_Synch_Move" DataType="BOOL" Value="0"/>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="UN01_EP01_AutomaticStateMachine" TagType="Base" DataType="PHASE" ExternalAccess="Read/Write">
+<Data>00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 10 00 10 00 00 00 00 00 00 00 00 00</Data>
+<Data Format="Decorated">
+<Structure DataType="PHASE">
+<DataValueMember Name="State" DataType="DINT" Radix="Decimal" Value="512"/>
+<DataValueMember Name="Running" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Holding" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Restarting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Stopping" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Aborting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Resetting" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Idle" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Held" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Complete" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Stopped" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Aborted" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Substate" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Pausing" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Paused" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AutoPause" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StepIndex" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Failure" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="UnitID" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Owner" DataType="DINT" Radix="Hex" Value="16#0010_0010"/>
+<DataValueMember Name="PendingRequest" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="DownloadInputParameters" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DownloadInputParametersSubset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UploadOutputParameters" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UploadOutputParametersSubset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DownloadOutputParameterLimits" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AcquireResources" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ReleaseResources" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SendMessageToLinkedPhase" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SendMessageToLinkedPhaseAndWait" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ReceiveMessageFromLinkedPhase" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CancelMessageToLinkedPhase" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SendMessageToOperator" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ClearMessageToOperator" DataType="BOOL" Value="0"/>
+<DataValueMember Name="GenerateESignature" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DownloadBatchData" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DownloadMaterialTrackDataContainerInUse" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DownloadContainerBindingPriority" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DownloadSufficientMaterial" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DownloadMaterialTrackDatabaseData" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UploadMaterialTrackDataContainerInUse" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UploadContainerBindingPriority" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UploadMaterialTrackDatabaseData" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AbortingRequest" DataType="BOOL" Value="0"/>
+<DataValueMember Name="NewInputParameters" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Producing" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Standby" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="S02_Cutter" TagType="Base" DataType="AXIS_VIRTUAL" ExternalAccess="Read/Write">
+<Data Format="Axis">
+<AxisParameters ConversionConstant="1000.0" OutputCamExecutionTargets="0" PositionUnits="mm" AverageVelocityTimebase="0.25" RotaryAxis="Rotary" PositionUnwind="10000" HomeMode="Active" HomeDirection="Bi-directional Forward" HomeSequence="Immediate" HomeConfigurationBits="16#0000_0000" HomePosition="0.0"
+ HomeOffset="0.0" MaximumSpeed="50.0" MaximumAcceleration="1000.0" MaximumDeceleration="1000.0" ProgrammedStopMode="Fast Stop" MasterInputConfigurationBits="1" MasterPositionFilterBandwidth="0.1" MaximumAccelerationJerk="30000000.0" MaximumDecelerationJerk="30000000.0" DynamicsConfigurationBits="7"/>
+</Data>
+</Tag>
+<Tag Name="MSG_ClearFault_Cutter" TagType="Base" DataType="MESSAGE" ExternalAccess="Read/Write">
+<Data Format="Message">
+<MessageParameters MessageType="CIP Generic" RequestedLength="4" ConnectedFlag="2" ConnectionPath="K300_Cutter" CommTypeCode="0" ServiceCode="16#0010" ObjectType="16#0374" TargetObject="53" AttributeNumber="16#0000" LocalIndex="0" LocalElement="Fault_Reset"
+/>
+</Data>
+</Tag>
+<Tag Name="UNIT01" TagType="Base" DataType="UDT_Unit" Constant="false" ExternalAccess="Read/Write">
+<Data>02 00 00 00 00 08 00 00 A0 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00</Data>
+<Data Format="Decorated">
+<Structure DataType="UDT_Unit">
+<DataValueMember Name="AutoRunStateActive" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AutoMode" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ManualMode" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UnitFaulted" DataType="BOOL" Value="0"/>
+<StructureMember Name="Commands" DataType="UDT_Commands">
+<DataValueMember Name="Enable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Disable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Home" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ActivateRun" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableProduct" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DisableProduct" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableCycling" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DisableCycling" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Abort" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FaultReset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Stop" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CheckFaults" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ActivateSingleJog" DataType="BOOL" Value="0"/>
+</StructureMember>
+<StructureMember Name="Conditions_ALL" DataType="UDT_Conditions">
+<DataValueMember Name="Faulted" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DisableDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="HomeDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ActivateRunDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableProductDone" DataType="BOOL" Value="1"/>
+<DataValueMember Name="DisableProductDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableCyclingdone" DataType="BOOL" Value="1"/>
+<DataValueMember Name="DisableCyclingDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AbortingDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="StoppingDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FaultResetDone" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Selected" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MyEMNo" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="NoOfAxisInThisEM" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ActivateSingleJogDone" DataType="BOOL" Value="0"/>
+</StructureMember>
+</Structure>
+</Data>
+</Tag>
+</Tags>
+<Programs Use="Context">
+<Program Use="Context" Name="EM03_k300_Control_Cutter">
+<Tags Use="Context">
+<Tag Name="as_ABORTED" TagType="Alias" Radix="Decimal" AliasFor="L_Automatic_Phase.Aborted" ExternalAccess="Read/Write"/>
+<Tag Name="L_Commands" TagType="Alias" AliasFor="Unit.Commands" ExternalAccess="Read/Write"/>
+<Tag Name="Unit" TagType="Alias" AliasFor="UNIT01" ExternalAccess="Read/Write"/>
+<Tag Name="as_STOPPED" TagType="Alias" Radix="Decimal" AliasFor="L_Automatic_Phase.Stopped" ExternalAccess="Read/Write"/>
+<Tag Name="FaultReset_delay" TagType="Base" DataType="TIMER" Constant="false" ExternalAccess="Read/Write">
+<Data>B0 67 08 00 F4 01 00 00 00 00 00 00</Data>
+<Data Format="Decorated">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="500"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="MI_Stop_Auto" TagType="Base" DataType="MOTION_INSTRUCTION" Constant="false" ExternalAccess="Read/Write">
+<Data>00 00 00 92 0B 00 00 00 00 00 00 00 00 00 00 00</Data>
+<Data Format="Decorated">
+<Structure DataType="MOTION_INSTRUCTION">
+<DataValueMember Name="FLAGS" DataType="DINT" Radix="Decimal" Value="-1845493760"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="1"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ER" DataType="BOOL" Value="1"/>
+<DataValueMember Name="PC" DataType="BOOL" Value="0"/>
+<DataValueMember Name="IP" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AC" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ACCEL" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DECEL" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ERR" DataType="INT" Radix="Decimal" Value="11"/>
+<DataValueMember Name="STATUS" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="STATE" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="SEGMENT" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EXERR" DataType="SINT" Radix="Decimal" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="Toggle_Time_1" TagType="Base" DataType="TIMER" Constant="false" ExternalAccess="Read/Write">
+<Data>4B 9E 04 00 64 00 00 00 00 00 00 00</Data>
+<Data Format="Decorated">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="MI_ShutdownReset" TagType="Base" DataType="MOTION_INSTRUCTION" Constant="false" ExternalAccess="Read/Write">
+<Data>00 00 00 12 0B 00 00 00 00 00 00 00 00 00 00 00</Data>
+<Data Format="Decorated">
+<Structure DataType="MOTION_INSTRUCTION">
+<DataValueMember Name="FLAGS" DataType="DINT" Radix="Decimal" Value="301989888"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ER" DataType="BOOL" Value="1"/>
+<DataValueMember Name="PC" DataType="BOOL" Value="0"/>
+<DataValueMember Name="IP" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AC" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ACCEL" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DECEL" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ERR" DataType="INT" Radix="Decimal" Value="11"/>
+<DataValueMember Name="STATUS" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="STATE" DataType="SINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="SEGMENT" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EXERR" DataType="SINT" Radix="Decimal" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="L_Automatic_Phase" TagType="Alias" AliasFor="UN01_EP01_AutomaticStateMachine" ExternalAccess="Read/Write"/>
+<Tag Name="K300_Input_Data" TagType="Alias" AliasFor="K300_Cutter:I" ExternalAccess="Read/Write"/>
+<Tag Name="K300_Output_Data" TagType="Alias" AliasFor="K300_Cutter:O" ExternalAccess="Read/Write"/>
+<Tag Name="ServoAxis" TagType="Alias" AliasFor="S02_Cutter" ExternalAccess="Read/Write"/>
+<Tag Name="ServoAxisCtrl" TagType="Alias" AliasFor="EMCtrl_03" ExternalAccess="Read/Write"/>
+<Tag Name="Toggle_Time" TagType="Base" DataType="TIMER" Constant="false" ExternalAccess="Read/Write">
+<Data>78 D4 27 00 64 00 00 00 00 00 00 00</Data>
+<Data Format="Decorated">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="L_EMConditions" TagType="Alias" AliasFor="UNIT01_EM_03_Conditions" ExternalAccess="Read/Write"/>
+</Tags>
+<Routines Use="Context">
+<EncodedData EncodedType="Routine" Name="CM10_Axis_Basic_Operations" Type="RLL">
+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</EncodedData>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>
