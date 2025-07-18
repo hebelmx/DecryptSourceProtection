@@ -3,10 +3,9 @@ using LogyxSource.Models;
 using Microsoft.Extensions.Logging;
 using System;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 
-class V9TestProgram
+class V9IntelligentCrackerConsole
 {
     static async Task Main(string[] args)
     {
@@ -18,11 +17,11 @@ class V9TestProgram
         
         // Setup logging
         using var loggerFactory = LoggerFactory.Create(builder =>
-            builder.AddConsole().SetMinimumLevel(LogLevel.Information));
+            builder.SetMinimumLevel(LogLevel.Information));
         var logger = loggerFactory.CreateLogger<V9IntelligentCracker>();
         var decryptorLogger = loggerFactory.CreateLogger<L5XDecryptor>();
         
-        // Initialize components for intelligent cracking
+        // Initialize components
         var emptyKeyStore = new KeyStore(); // Start with empty keystore
         var decryptor = new L5XDecryptor(emptyKeyStore, decryptorLogger);
         var cracker = new V9IntelligentCracker(decryptor, logger);

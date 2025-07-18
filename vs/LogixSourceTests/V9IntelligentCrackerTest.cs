@@ -3,26 +3,37 @@ using LogyxSource.Models;
 using Microsoft.Extensions.Logging;
 using System;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
+using Xunit;
+using Xunit.Abstractions;
 
-class V9TestProgram
+namespace LogixSourceTests
 {
-    static async Task Main(string[] args)
+    public class V9IntelligentCrackerTest
     {
-        Console.WriteLine("🎯 V9 INTELLIGENT DICTIONARY CRACKER");
-        Console.WriteLine("=" + new string('=', 80));
-        Console.WriteLine("🔍 Intelligence-based + OEM patterns + Standard dictionary attack");
-        Console.WriteLine("💡 Based on real-world OEM password usage patterns");
-        Console.WriteLine();
+        private readonly ITestOutputHelper _output;
+
+        public V9IntelligentCrackerTest(ITestOutputHelper output)
+        {
+            _output = output;
+        }
+
+        [Fact]
+        public async Task CrackV9UnknownFiles_ShouldSucceed()
+        {
+            _output.WriteLine("🎯 V9 INTELLIGENT DICTIONARY CRACKER");
+            _output.WriteLine("=" + new string('=', 80));
+            _output.WriteLine("🔍 Intelligence-based + OEM patterns + Standard dictionary attack");
+            _output.WriteLine("💡 Based on real-world OEM password usage patterns");
+            _output.WriteLine("");
         
         // Setup logging
         using var loggerFactory = LoggerFactory.Create(builder =>
-            builder.AddConsole().SetMinimumLevel(LogLevel.Information));
+            builder.SetMinimumLevel(LogLevel.Information));
         var logger = loggerFactory.CreateLogger<V9IntelligentCracker>();
         var decryptorLogger = loggerFactory.CreateLogger<L5XDecryptor>();
         
-        // Initialize components for intelligent cracking
+        // Initialize components
         var emptyKeyStore = new KeyStore(); // Start with empty keystore
         var decryptor = new L5XDecryptor(emptyKeyStore, decryptorLogger);
         var cracker = new V9IntelligentCracker(decryptor, logger);
@@ -45,20 +56,20 @@ class V9TestProgram
         
         foreach (var (basePath, fileName, category) in testFiles)
         {
-            Console.WriteLine($"\n🎯 CRACKING: {fileName} ({category})");
-            Console.WriteLine("=" + new string('=', 80));
+            _output.WriteLine($"\n🎯 CRACKING: {fileName} ({category})");
+            _output.WriteLine("=" + new string('=', 80));
             
             try
             {
                 var filePath = Path.Combine(basePath, fileName);
                 if (!File.Exists(filePath))
                 {
-                    Console.WriteLine($"❌ File not found: {fileName}");
+                    _output.WriteLine($"❌ File not found: {fileName}");
                     continue;
                 }
                 
                 totalFiles++;
-                Console.WriteLine($"📂 Target: {filePath}");
+                _output.WriteLine($"📂 Target: {filePath}");
                 
                 var startTime = DateTime.Now;
                 
@@ -70,60 +81,64 @@ class V9TestProgram
                 if (result.Success)
                 {
                     totalSuccesses++;
-                    Console.WriteLine($"\n🎉 SUCCESS! File cracked in {elapsed.TotalSeconds:F1} seconds");
-                    Console.WriteLine($"🔑 Key found: '{result.Key}'");
-                    Console.WriteLine($"📝 Decrypted content length: {result.DecryptedContent.Length:N0} chars");
+                    _output.WriteLine($"\n🎉 SUCCESS! File cracked in {elapsed.TotalSeconds:F1} seconds");
+                    _output.WriteLine($"🔑 Key found: '{result.Key}'");
+                    _output.WriteLine($"📝 Decrypted content length: {result.DecryptedContent.Length:N0} chars");
                     
                     // Save decrypted content
                     var outputPath = Path.Combine("/tmp", $"{fileName}.CRACKED.xml");
                     await File.WriteAllTextAsync(outputPath, result.DecryptedContent);
-                    Console.WriteLine($"💾 Saved to: {outputPath}");
+                    _output.WriteLine($"💾 Saved to: {outputPath}");
                     
                     // Show sample
                     var sample = result.DecryptedContent.Length > 300 
                         ? result.DecryptedContent.Substring(0, 300) + "..."
                         : result.DecryptedContent;
-                    Console.WriteLine($"📋 Sample: {sample.Replace('\n', ' ').Replace('\r', ' ')}");
+                    _output.WriteLine($"📋 Sample: {sample.Replace('\n', ' ').Replace('\r', ' ')}");
                 }
                 else
                 {
-                    Console.WriteLine($"\n❌ FAILED: Could not crack {fileName} in {elapsed.TotalSeconds:F1} seconds");
-                    Console.WriteLine("🔍 Key not found in any attack phase");
+                    _output.WriteLine($"\n❌ FAILED: Could not crack {fileName} in {elapsed.TotalSeconds:F1} seconds");
+                    _output.WriteLine("🔍 Key not found in any attack phase");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"💥 EXCEPTION: {fileName} - {ex.Message}");
+                _output.WriteLine($"💥 EXCEPTION: {fileName} - {ex.Message}");
             }
         }
         
         // Summary
-        Console.WriteLine("\n🏆 V9 INTELLIGENT CRACKER RESULTS");
-        Console.WriteLine("=" + new string('=', 80));
-        Console.WriteLine($"📊 Success Rate: {totalSuccesses}/{totalFiles} ({(100.0 * totalSuccesses / totalFiles):F1}%)");
+        _output.WriteLine("\n🏆 V9 INTELLIGENT CRACKER RESULTS");
+        _output.WriteLine("=" + new string('=', 80));
+        _output.WriteLine($"📊 Success Rate: {totalSuccesses}/{totalFiles} ({(100.0 * totalSuccesses / totalFiles):F1}%)");
         
         if (totalSuccesses == totalFiles)
         {
-            Console.WriteLine("🎉 COMPLETE SUCCESS! All files cracked!");
+            _output.WriteLine("🎉 COMPLETE SUCCESS! All files cracked!");
         }
         else if (totalSuccesses > 0)
         {
-            Console.WriteLine($"✅ PARTIAL SUCCESS! {totalSuccesses} files cracked!");
+            _output.WriteLine($"✅ PARTIAL SUCCESS! {totalSuccesses} files cracked!");
         }
         else
         {
-            Console.WriteLine("❌ NO SUCCESS - May need additional keywords or patterns");
+            _output.WriteLine("❌ NO SUCCESS - May need additional keywords or patterns");
         }
         
-        Console.WriteLine("\n💡 RECOMMENDATIONS:");
+        _output.WriteLine("\n💡 RECOMMENDATIONS:");
         if (totalSuccesses < totalFiles)
         {
-            Console.WriteLine("- Add more company/project specific keywords");
-            Console.WriteLine("- Check for additional password patterns in documentation");
-            Console.WriteLine("- Consider extending dictionary with domain-specific terms");
-            Console.WriteLine("- Analyze any successful patterns for insights");
+            _output.WriteLine("- Add more company/project specific keywords");
+            _output.WriteLine("- Check for additional password patterns in documentation");
+            _output.WriteLine("- Consider extending dictionary with domain-specific terms");
+            _output.WriteLine("- Analyze any successful patterns for insights");
         }
         
-        Console.WriteLine("\n🎯 V9 Intelligent Cracker Complete!");
+        _output.WriteLine("\n🎯 V9 Intelligent Cracker Complete!");
+        
+        // Assert at least one success for validation
+        Assert.True(totalSuccesses > 0, "At least one file should be successfully cracked");
+    }
     }
 }

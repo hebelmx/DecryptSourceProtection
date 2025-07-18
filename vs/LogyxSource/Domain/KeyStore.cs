@@ -49,6 +49,29 @@ public class KeyStore
         return Result<IReadOnlyList<string>>.Success(_candidateKeys.AsReadOnly());
     }
 
+    public void AddKey(string key)
+    {
+        if (!string.IsNullOrWhiteSpace(key) && !_allKeys.Contains(key))
+        {
+            _allKeys.Add(key);
+        }
+    }
+
+    public void AddKeys(IEnumerable<string> keys)
+    {
+        foreach (var key in keys)
+        {
+            AddKey(key);
+        }
+    }
+
+    public void ClearKeys()
+    {
+        _allKeys.Clear();
+        _keysByConfig.Clear();
+        _candidateKeys.Clear();
+    }
+
     private void InitializeFromJsonFile()
     {
         try
